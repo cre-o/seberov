@@ -1,0 +1,20 @@
+/*
+ * application.css.scss
+ *
+ * Important! Do *not* use Sprockets "require" syntax.
+ * Use @import to include other stylesheets
+ */
+
+@import "variables"; // Global variables
+@import "bourbon";   // Bourbon helpful mixins
+@import "angular";   // Angular styles
+@import "all_pages"; // Application global styles
+@import "fonts";     // Fonts
+@import "font-awesome";
+@import "foundation_and_overrides";
+@import "foundation_misc";
+@import "layout";
+@import "main";
+
+/* Development mode styles *______*/
+@import "development"; // Use it only in development mode!

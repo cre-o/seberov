@@ -1,0 +1,132 @@
+// Slider
+.row.collapse.main-slider
+  .small-12.large-12.columns
+    ul.main-orbit data-orbit=""
+      li
+        = image_tag 'main/slider/1.jpg'
+        .orbit-caption
+          | New apartments and blah-blah-blah.
+      li.active
+        = image_tag 'main/slider/2.jpg'
+        .orbit-caption
+          | Caption Two.
+
+.row.collapse.main-info
+  .small-4.large-4.columns
+    header.upcase.grey.map
+      h1 Map
+      i.fa.fa-2x.fa-chevron-right
+    // Google map!
+    .gmap.flex-video
+      iframe frameborder="0" height="455" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0" width="400"
+
+  .small-8.large-8.columns
+    header.upcase.green
+      h1 Benefits
+      i.fa.fa-2x.fa-chevron-right
+
+    ul.benefits
+      - 5.times do
+        li
+          h4.upcase nature reserve area Protected by the state
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt Ut enim ad minim veniam, quis.
+
+// You can view
+.row.collapse.main-preview
+  / Selector
+  .small-2.large-2.columns
+    .buttons.action
+      .button.exterior
+        | Exterior
+      .button.interior.active
+        | Interior
+      .button.area
+        | Area
+      .button.webcams
+        | Webcams
+
+  / Main slider
+  .small-8.large-8.columns.screen
+    = image_tag 'main/slide-preview.png', width: 745, height: 457
+
+  / Buttons
+  .small-2.large-2.columns.options
+    .option
+      .wrap
+        .text
+          | Download
+          br
+          | Price List
+        .icon.pdf
+
+    .option
+      .wrap
+        .text
+          | Choose
+          br
+          | an Apartment
+        .icon.plan
+
+section.main-steps-info
+  .row
+    .small-6.small-offset-2.small-offset-2
+      h1.upcase Procedure of purchasing:
+
+  / Steps
+  .row
+    .small-11.small-offset-1
+      ol.steps.large-block-grid-3
+        li
+          .step 1
+          .info
+            h5 Заявка
+            p на сайте ли по телефону
+        li
+          .step 2
+          .info
+            h5 Осмотр дома и квартир
+            p в удобное для вас время
+        li
+          .step 3
+          .info
+            h5 Первая оплата
+            p
+              | 115 000 Крон (с НДС) до 5 дней
+                со дня подписания договора о резервации
+        li
+          .step 4
+          .info
+            h5 Вторая оплата
+            p
+              | 15% от полной стоимости  (с НДС) до 10 дней со дня
+                подписания договора о будущей купле-продажеli
+        li
+          .step 5
+          .info
+            h5 Последняя оплата
+            p
+              | 15% от полной стоимости  (с НДС) до 10 дней со дня
+                подписания договора о будущей купле-продаже
+        li
+          .step 6
+          .info
+            h5 Въезд
+            p
+              | в вашу новую квартиру. Мы оформляем все необходимые
+                документы и делаем запись в кадастре недвижимости.
+
+  .row
+    .small-10.small-offset-2
+      h1.upcase Our Projects:
+      = image_tag 'main/projects.jpg'
+
+
+
+
+
+
+
+
+

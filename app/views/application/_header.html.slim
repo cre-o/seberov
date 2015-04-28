@@ -1,0 +1,48 @@
+header.application
+  .row
+    .small-3.large-3.columns
+      = link_to root_path, class: 'logo', title: 'На главную' do
+        = image_tag 'logo.png', width: 216, height: 130
+    .small-6.large-6.columns
+      nav
+        ul.upcase
+          li.active
+            a href="#" the project
+          li
+            = link_to "location", location_path
+          li
+            a href="#" standards
+          li
+            a href="#" apartments
+          li
+            a href="#" contacts
+          li
+            a href="#" references
+
+    .small-1.large-1.columns
+      ul.languages
+        li.active
+          a href="#" english
+        li
+          a href="#" czech
+        li
+          a href="#" russian
+
+    .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
+      a.opener.upcase href="#" ng-click="infoBlock.toggle()"
+        i.fa.fa-angle-down
+        | push to call
+      .dropdown.small-2.large-2.columns.ng-hidee ng-hide="infoBlock.show"
+        ul.about-info
+          li.phone
+            i.fa.fa-phone.fa-lg
+            | 604-933-909
+            a href="tel:604-933-909"
+              span.label viber
+          li.skype.upcase.
+            i.fa.fa-skype.fa-lg
+            a href="skype:statekseverov?call" statekseverov
+          li.pdf.upcase
+            i.fa.fa-file-pdf-o.fa-lg
+            a href="#" download price list
+

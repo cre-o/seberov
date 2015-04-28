@@ -1,0 +1,262 @@
+@import 'variables';
+
+body {
+  background-color: $white;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+header.application {
+  $height: 50px; // Default block height
+  %b-height {
+    height: $height;
+  }
+  $index: 5;
+
+  background-color: $white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  @extend %b-height;
+
+  .logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: $index;
+  }
+
+  ul { margin: 0; }
+
+  // Main navigational styles
+  nav {
+    position: absolute;
+    font-size: rem_calc(16);
+    font-weight: 300;
+    background-color: #fff;
+    z-index: $index;
+
+    @extend %b-height;
+
+    ul {
+      margin-left: 5px;
+    }
+
+    li {
+      display: inline-block;
+      line-height: $height;
+      padding-left: rem_calc(27);
+      @extend %b-height;
+
+      a {
+        color: $purple;
+      }
+
+      &.active {
+        height: 57px;
+        padding: 0 rem_calc(10) 0 rem_calc(10);
+        background-color: $green;
+        text-align: center;
+        a { color: $white; }
+      }
+    }
+  }
+
+  // Languages selection
+  ul.languages {
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem_calc(10);
+    position: absolute;
+    z-index: $index;
+
+    li {
+      display: inline-block;
+      float: left;
+      width: 15px;
+
+      a {
+        display: block;
+        color: $black;
+        line-height: 68px;
+        @include transform(rotate(-90deg));
+      }
+
+      &.active {
+        background-color: $light-green;
+        height: 60px;
+        width: 30px;
+        font-size: rem_calc(12);
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .info-block {
+    @extend %b-height;
+
+    .opener {
+      font-size: rem_calc(10);
+      margin-right: rem_calc(7);
+      position: absolute;
+      bottom: 0;
+      right: rem_calc(10);
+
+      i.fa {
+        padding-right: 4px;
+      }
+    }
+
+    .dropdown {
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.5);
+      bottom: -95px;
+      font-weight: bold;
+      height: 95px;
+      padding: 10px 10px;
+      position: absolute;
+      z-index: $index;
+      right: 0;
+      width: 100%;
+
+      a {
+        color: $white;
+      }
+
+      i.fa {
+        padding-right: 10px;
+      }
+
+      li {
+        padding-bottom: 5px;
+      }
+
+      .phone {
+        font-size: rem_calc(17);
+
+        .label {
+          background-color: rgba(0, 0, 0, 0.9);
+          margin-left: 10px;
+          padding: 3px;
+          font-size: rem_calc(11);
+          font-weight: 500;
+        }
+      }
+
+      .skype, .pdf {
+        font-size: rem_calc(13);
+      }
+    }
+  }
+}
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+
+  // Informational container
+  .container {
+    background-color: #5e9472;
+    color: $white;
+    height: 190px;
+    padding-top: 30px;
+    font-size: rem_calc(14);
+
+    a {
+      color: $white;
+      font-size: rem_calc(14)
+    }
+
+    h6 {
+      color: $white;
+      font-size: rem_calc(14);
+      font-weight: bold;
+    }
+  }
+
+  .small-logo {
+    background: image_url('small-logo.png');
+    height: 77px;
+  }
+
+  .address {
+    padding: 5px 45px;
+    font-weight: 300;
+    line-height: rem_calc(18);
+  }
+
+  nav {
+    margin-left: 20px;
+    padding-right: 40px;
+    font-weight: bold;
+
+    ul {
+      border-right: 1px solid $white;
+    }
+
+    li {
+      line-height: rem_calc(29);
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  .investment {
+    margin-left: 20px;
+
+    p {
+      width: 140px;
+    }
+  }
+
+  .contacts {
+    .phone {
+      background-color: #477455;
+      padding: 3px;
+      float: right;
+      text-align: right;
+      line-height: 16px;
+
+      &:after {
+        content: "";
+        clear: both;
+      }
+
+      span {
+        font-weight: bold;
+        padding-right: 10px;
+      }
+
+      a {
+        text-decoration: underline;
+        font-size: rem_calc(12);
+      }
+    }
+
+    p {
+      float: right;
+      padding-right: 80px;
+      margin-top: 10px;
+    }
+  }
+
+  .madeby {
+    background-color: #477455;
+    color: $white;
+    font-size: rem_calc(12);
+    text-align: center;
+    line-height: 25px;
+
+    a {
+      color: $white;
+      padding-left: 5px;
+      font-weight: 300;
+      text-decoration: underline;
+    }
+  }
+}

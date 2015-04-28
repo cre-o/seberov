@@ -1,0 +1,15 @@
+doctype html
+html lang="en" ng-app="statek"
+  head
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    title = content_for?(:title) ? yield(:title) : "Statek seberov"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .inner-wrap class=(ENV['LOGNAME'] == 'laminelli' ? 'development' : nil)
+      = render 'header'
+      = yield
+      = render 'footer'

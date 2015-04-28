@@ -1,0 +1,50 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          sidekiq
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Manage sidekiq
+# Description:       Start, stop, restart sidekiq for a specific application.
+### END INIT INFO
+set -e
+
+# Feel free to change any of the following variables for your app:
+TIMEOUT=${TIMEOUT-60}
+APP_ROOT=<%= current_path %>
+PID=<%= sidekiq_pid %>
+CMD="cd <%= current_path %> && rvm <%= rvm_ruby_string %> do bundle exec sidekiq -C <%= current_path %>/config/sidekiq.yml -e <%= rails_env %> -P <%= shared_path %>/pids/sidekiq.pid -L <%= current_path %>/log/sidekiq.log"
+CMD_STOP="if [ -d $APP_ROOT ] && [ -f $PID ]; then cd $APP_ROOT && rvm <%= rvm_ruby_string %> do bundle exec sidekiqctl stop $SIDEKIQ_PID 10 ; fi"
+AS_USER=<%= user %>
+set -u
+
+sig () {
+test -s "$PID" && kill -$1 `cat $PID`
+}
+
+run () {
+if [ "$(id -un)" = "$AS_USER" ]; then
+eval $1
+else
+su -c "$1" - $AS_USER
+fi
+}
+
+case "$1" in
+start)
+sig 0 && echo >&2 "Sidekiq already running" && exit 0
+run "$CMD" && echo "Sidekiq start OK"
+;;
+stop)
+run "$CMD_STOP"
+;;
+restart|reload)
+run "$CMD_STOP"
+run "$CMD"
+;;
+*)
+echo >&2 "Usage: $0 <start|stop|restart>"
+exit 1
+;;
+esac

@@ -6,12 +6,12 @@ header.application
     .small-6.large-6.columns
       nav
         ul.upcase
-          li.active
-            a href="#" the project
           li
-            = link_to "location", location_path
+            = active_link_to "the project", root_path, active: :exclusive
           li
-            a href="#" standards
+            = active_link_to "location", location_path, active: :exclusive
+          li
+            = active_link_to "standards", standards_path, active: :exclusive
           li
             a href="#" apartments
           li
@@ -29,10 +29,10 @@ header.application
           a href="#" russian
 
     .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
-      a.opener.upcase href="#" ng-click="infoBlock.toggle()"
+      a.opener.upcase href="javascript:void(0);" ng-click="infoBlock.toggle()"
         i.fa.fa-angle-down
         | push to call
-      .dropdown.small-2.large-2.columns.ng-hidee ng-hide="infoBlock.show"
+      .dropdown.small-2.large-2.columns.ng-hide ng-hide="infoBlock.show"
         ul.about-info
           li.phone
             i.fa.fa-phone.fa-lg

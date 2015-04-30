@@ -6,4 +6,7 @@ class ApplicationController < ActionController::Base
 
   def location
   end
+
+  def standards
+  end
 end

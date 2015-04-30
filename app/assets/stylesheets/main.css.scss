@@ -1,233 +1,234 @@
-.main-slider {
-  min-height: 1px;
-}
-
-.main-info {
-  font-family: 'Open Sans Condensed', sans-serif;
+.l-main-page {
   background-color: $white;
-  min-height: rem_calc(460);
+
+  .main-slider {
+    min-height: 1px;
+  }
+
+  .main-info {
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: $white;
+    min-height: rem_calc(460);
 
 
-  header {
-    width: 280px; // @TODO queries
+    header {
+      $height: rem_calc(50);
+      height: $height;
+      margin-top: 28px;
 
-    $height: rem_calc(50);
-    height: $height;
-    margin-top: 28px;
+      h1 {
+        color: $white;
+        display: inline-block;
+        font-size: rem_calc(34);
+        font-weight: 400;
+        height: $height;
+        width: 80%;
+        text-align: center;
+        margin: 0;
+      }
+
+      i {
+        color: $white;
+        margin-left: 15px;
+      }
+
+      &.map {
+        position: absolute;
+        z-index: 10;
+      }
+
+      &.grey {
+        background: rgba(127, 127, 127, 0.5);
+        h1 {
+          background-color: $grey;
+        }
+      }
+
+      &.green {
+        background: rgba(94, 148, 114, 0.5);
+        h1 {
+          background-color: #5e9472;
+        }
+      }
+    }
+
+    .gmap {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    ul.benefits {
+      font-family: 'Open Sans', sans-serif;
+      padding: 50px 20px 20px 50px;
+
+      li {
+        list-style-type: none;
+        list-style-image: image_url('icons/bullet.png');
+      }
+
+      h4 {
+        color: $black;
+        font-size: rem_calc(18);
+        margin: 0;
+      }
+
+      p {
+        font-size: rem_calc(12);
+        color: $grey;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .main-preview {
+    font-family: 'Open Sans', sans-serif;
+
+    .action.buttons {
+      color: $white;
+      text-transform: uppercase;
+
+      .button {
+        height: 100px;
+        font-size: rem_calc(24);
+        padding-right: 15px;
+        line-height: rem_calc(100);
+        text-align: right;
+        cursor: pointer;
+
+        &.exterior {
+          background-image: image_url('main/exterior-btn.png');
+        }
+
+        &.interior {
+          background-image: image_url('main/interior-btn.png');
+        }
+
+        &.area {
+          background-image: image_url('main/area-btn.png');
+        }
+
+        &.webcams {
+          background-image: image_url('main/webcams-btn.png');
+        }
+
+        &.active {
+          height: 153px;
+          font-size: rem_calc(36);
+          font-weight: bold;
+          line-height: 150px;
+        }
+      }
+    }
+
+    .screen {
+      @media #{$large-up} { width: 745px !important; }
+      background-color: $white;
+
+      padding: {
+        left: 4px !important;
+        right: 3px !important;
+      }
+    }
+
+    .options {
+      @media #{$large-up} { width: 222px; }
+
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: rem_calc(25);
+      font-weight: bold;
+      text-transform: uppercase;
+
+      color: $white;
+      float:left !important;
+
+      .option {
+        margin-bottom: 3px;
+        background-color: #5e9472;
+        cursor: pointer;
+        padding: 6px;
+
+        @media #{$large-up} {
+          width: 222px;
+          height: 225px;
+        }
+
+        .wrap {
+          border: 1px solid $white;
+          padding-top: 30px;
+          height: 100%;
+        }
+
+        .text {
+          text-align: center;
+          line-height: rem_calc(30);
+        }
+
+        .icon {
+          width: 42px;
+          height: 42px;
+          margin: 50px auto;
+
+          &.pdf {
+            background-image: image_url('icons/pdf-icon42.png');
+          }
+
+          &.plan {
+            background-image: image_url('icons/plan-icon42.png');
+          }
+        }
+      }
+    }
+  }
+
+  .main-steps-info {
+    color: $grey;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 4px;
+
+    h1,h5 { color: $grey; }
 
     h1 {
-      color: $white;
-      display: inline-block;
-      font-size: rem_calc(34);
-      font-weight: 400;
-      height: $height;
-      width: 80%;
-      text-align: center;
-      margin: 0;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      font-size: rem_calc(28);
+      margin-top: 54px;
     }
 
-    i {
-      color: $white;
-      margin-left: 20px;
-    }
-
-    &.map {
-      position: absolute;
-      z-index: 10;
-    }
-
-    &.grey {
-      background: rgba(127, 127, 127, 0.5);
-      h1 {
-        background-color: $grey;
-      }
-    }
-
-    &.green {
-      background: rgba(94, 148, 114, 0.5);
-      h1 {
-        background-color: #5e9472;
-      }
-    }
-  }
-
-  .gmap {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  ul.benefits {
-    font-family: 'Open Sans', sans-serif;
-    padding: 50px 20px 20px 50px;
-
-    li {
+    ol.steps {
+      margin-top: 45px;
       list-style-type: none;
-      list-style-image: image_url('icons/bullet.png');
-    }
 
-    h4 {
-      color: $black;
-      font-size: rem_calc(18);
-      margin: 0;
-    }
-
-    p {
-      font-size: rem_calc(12);
-      color: $grey;
-      margin-bottom: 5px;
-    }
-  }
-}
-
-.main-preview {
-  font-family: 'Open Sans', sans-serif;
-
-  .action.buttons {
-    color: $white;
-    text-transform: uppercase;
-
-    .button {
-      height: 100px;
-      font-size: rem_calc(24);
-      padding-right: 15px;
-      line-height: rem_calc(100);
-      text-align: right;
-      cursor: pointer;
-
-      &.exterior {
-        background-image: image_url('main/exterior-btn.png');
-      }
-
-      &.interior {
-        background-image: image_url('main/interior-btn.png');
-      }
-
-      &.area {
-        background-image: image_url('main/area-btn.png');
-      }
-
-      &.webcams {
-        background-image: image_url('main/webcams-btn.png');
-      }
-
-      &.active {
-        height: 153px;
-        font-size: rem_calc(36);
+      .step {
+        font-family: 'Open Sans', sans-serif;
+        border: 1px solid $green;
         font-weight: bold;
-        line-height: 150px;
-      }
-    }
-  }
-
-  .screen {
-    @media #{$large-up} { width: 745px !important; }
-    background-color: $white;
-
-    padding: {
-      left: 4px !important;
-      right: 3px !important;
-    }
-  }
-
-  .options {
-    @media #{$large-up} { width: 222px; }
-
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: rem_calc(25);
-    font-weight: bold;
-    text-transform: uppercase;
-
-    color: $white;
-    float:left !important;
-
-    .option {
-      margin-bottom: 3px;
-      background-color: #5e9472;
-      cursor: pointer;
-      padding: 6px;
-
-      @media #{$large-up} {
-        width: 222px;
-        height: 225px;
-      }
-
-      .wrap {
-        border: 1px solid $white;
-        padding-top: 30px;
-        height: 100%;
-      }
-
-      .text {
+        font-size: rem_calc(27);
+        line-height: 40px;
         text-align: center;
-        line-height: rem_calc(30);
+        width: 44px;
+        height: 44px;
+        float: left;
+        margin-right: 13px;
       }
 
-      .icon {
-        width: 42px;
-        height: 42px;
-        margin: 50px auto;
-
-        &.pdf {
-          background-image: image_url('icons/pdf-icon42.png');
-        }
-
-        &.plan {
-          background-image: image_url('icons/plan-icon42.png');
-        }
+      .info {
+        padding-left: 54px;
       }
-    }
-  }
-}
 
-.main-steps-info {
-  background-color: $white;
-  color: $grey;
-  font-family: 'Open Sans', sans-serif;
-  padding-bottom: 4px;
+      h5 {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: rem_calc(15);
+        font-weight: bold;
+        margin-top: 0;
+        line-height: .8;
+      }
 
-  h1,h5 { color: $grey; }
-
-  h1 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    font-size: rem_calc(28);
-    margin-top: 54px;
-  }
-
-  ol.steps {
-    margin-top: 45px;
-    list-style-type: none;
-
-    .step {
-      font-family: 'Open Sans', sans-serif;
-      border: 1px solid $green;
-      font-weight: bold;
-      font-size: rem_calc(27);
-      line-height: 40px;
-      text-align: center;
-      width: 44px;
-      height: 44px;
-      float: left;
-      margin-right: 13px;
-    }
-
-    .info {
-      padding-left: 54px;
-    }
-
-    h5 {
-      font-family: 'Open Sans', sans-serif;
-      text-transform: uppercase;
-      font-size: rem_calc(15);
-      font-weight: bold;
-      margin-top: 0;
-      line-height: .8;
-    }
-
-    p {
-      font-size: rem_calc(14);
-      font-weight: 500;
+      p {
+        font-size: rem_calc(14);
+        font-weight: 500;
+      }
     }
   }
 }

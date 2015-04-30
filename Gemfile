@@ -32,6 +32,8 @@ gem 'bourbon'
 gem 'font-awesome-rails'
 # Javascript features
 gem 'angularjs-rails'
+# Images lazy loading
+gem "lazyload-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,6 +43,8 @@ gem 'unicorn'
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
 
+# Misc
+gem 'active_link_to'
 
 group :development do
   gem 'guard', '>= 2.2.2', require: false

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'application#index'
 
   get 'location', to: 'application#location'
+  get 'standards', to: 'application#standards'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

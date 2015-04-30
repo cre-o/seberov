@@ -9,14 +9,14 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+//! turbolinks
 //
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require angular
 //= require angular/application
-//= require foundation
+//= require lazyload
 //= require_tree .
 
 $(function(){
@@ -25,7 +25,7 @@ $(function(){
         animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
         timer_speed: 3000, // Sets the amount of time in milliseconds before transitioning a slide
         pause_on_hover: true, // Pauses on the current slide while hovering
-        resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
+        resume_on_mouseout: true, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
         next_on_click: true, // Advance to next slide on click
         animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
         stack_on_small: false,
@@ -57,4 +57,7 @@ $(function(){
         //after_slide_change: noop // Execute a function after the slide changes
     }
   });
+
+  $("img").lazyload();
 });
+

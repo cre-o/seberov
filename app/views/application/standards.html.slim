@@ -1,0 +1,130 @@
+.l-standards
+  .row
+    .small-6.columns
+      section.left
+        header
+          h1 Земляные работы
+
+        .content
+          ul
+            li траншеи для фундаментов - земляные работы проводятся с помощью механизации и ручной финальной зачистки
+            li котлован для подземного гаража выполнен открытым способом
+            li
+              | использование вынутого грунта производится в соответствии с его качеством либо для озеленения прилегающей территории,  либо вывозится на складирование в специально предназначенные для этого места
+
+    .small-6.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/1-1-full') do
+            = image_tag 'standards/1-1'
+        li
+          = link_to image_url('standards/1-2-full') do
+            = image_tag 'standards/1-2'
+
+  .row
+    .small-5.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/2-1-full') do
+              = image_tag 'standards/2-1'
+        li
+          = link_to image_url('standards/2-2-full') do
+              = image_tag 'standards/2-2'
+
+    .small-6.columns
+      section.right
+        header.text-right
+          h1 Фундамент
+
+        .content
+          ul
+            li защита фундамента  подсыпкой гравия
+            li фундаменты выполнены из бетона и дополнены бетонными блоками пролитыми бетонной смесью с усилением арматурой
+            li
+              | в основе подземного гаража - монолитная железобетонная плита, подвальные стены подземного гаража из водонепроницаемого бетона (белая ванна)
+
+  .row
+    .small-6.columns
+      section.left
+        header
+          h1 Горизонтальные конструкции
+
+        .content.small
+          ul
+            li гипсокартонные подвесные потолки или гипсовая штукатурка
+            li керамические панели, усиленные железобетонными балками
+            li
+              | акустическая изоляция – твержёный пенопласт типа EPS 150 S
+                толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
+            li разделительная пленка
+            li цементная стяжка
+            li гидроизоляция ванных комнат
+            li покрытие пола
+
+    .small-6.columns
+      .image-broadcaster ng-controller="ImageBroadcasterController as broadcaster"
+        img ng-src="#{image_url('standards/3-1')}"
+        .controls.small-5
+          ol
+            li ng-class="{ active: broadcaster.isSet(1) }" ng-attr-image="#{image_url('standards/3-1')}"
+              a href="" ng-click="broadcaster.setImage(1)" 1
+              .title.ng-hide ng-show="broadcaster.isSet(1)"
+                | Скрытый текст
+            li ng-class="{ active: broadcaster.isSet(2) }" ng-attr-image="#{image_url('standards/3-2')}"
+              a href="" ng-click="broadcaster.setImage(2)" 2
+              .title.ng-hidden ng-show="broadcaster.isSet(2)"
+                | Скрытый текст
+            li ng-class="{ active: broadcaster.isSet(3) }" ng-attr-image="#{image_url('standards/3-3')}"
+              a href="" ng-click="broadcaster.setImage(3)" 3
+              .title.ng-hidden ng-show="broadcaster.isSet(3)"
+                | Скрытый текст
+            li ng-class="{ active: broadcaster.isSet(4) }" ng-attr-image="#{image_url('standards/3-4')}"
+              a href="" ng-click="broadcaster.setImage(4)" 4
+              .title.ng-hidden ng-show="broadcaster.isSet(4)"
+                | Скрытый текст
+
+
+  .row
+    .small-5.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+            = link_to image_url('standards/4-1-full') do
+                = image_tag 'standards/4-1', lazy: true
+        li
+          = link_to image_url('standards/4-2-full') do
+              = image_tag 'standards/4-2', lazy: true
+
+    .small-6.columns
+      section.right
+        header
+          h1 Конструкция стен
+
+        .content
+
+  .row
+    .small-6.columns
+      section.left
+        header
+          h1 Кровля
+
+        .content
+          ul
+            li керамическая черепица Tondach
+            li система надстропильной теплоизоляции THERMANO толщины 140 mm, экстратвёрдый пенопласт PIR
+            li
+              | несущая конструкция крыши – фермы из клееного бруса в сочетании с деревянными стропилами KVH
+            li подвесные потолки гипсокартонные с части видимой конструкции крыши (деревянные стропила)
+
+    .small-6.columns.images
+      ul.small-block-grid-2 data-clearing=""
+          li
+            = link_to image_url('standards/5-1-full') do
+                = image_tag 'standards/5-1', lazy: true
+
+
+
+
+
+
+
+

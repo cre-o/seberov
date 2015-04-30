@@ -1,0 +1,57 @@
+.l-standards {
+  padding-top: 125px;
+  $column-gutter: rem-calc(90);
+
+  .row {
+    margin-bottom: 15px;
+  }
+
+  section {
+    color: $dark_grey;
+
+    &.left {
+      background: image_url('standards/ruler-left-s') -30px 20px no-repeat;
+      padding-left: 13%;
+    }
+
+    &.right {
+      background: image_url('standards/ruler-right-s') 100% 20px no-repeat;
+      padding-right: 15%;
+
+      h1 {
+        padding-right: 20px;
+      }
+    }
+
+    h1 {
+      color: $grey;
+      font: {
+        family: 'Open Sans Condensed', sans-serif;
+        size: rem_calc(28);
+        weight: bold;
+      }
+      text-transform: uppercase;
+    }
+
+    .content {
+      clear: both;
+
+      li {
+        font-family: 'Open Sans', sans-serif;
+        font-size: rem_calc(15);
+        list-style-type: disc;
+        line-height: rem_calc(25);
+        padding-bottom: 18px;
+      }
+
+      &.small, &.small > ul > li {
+        font-size: rem_calc(13);
+        line-height: rem_calc(15);
+      }
+    }
+  }
+
+  .images {
+    padding-top: 33px;
+  }
+}

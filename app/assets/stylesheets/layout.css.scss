@@ -10,12 +10,14 @@ body {
 
 header.application {
   $height: 50px; // Default block height
+  $index: 5;
+
   %b-height {
     height: $height;
   }
-  $index: 5;
 
   background-color: $white;
+  border-bottom: 1px solid #e8e8e8;
   font-family: 'Open Sans Condensed', sans-serif;
   @extend %b-height;
 
@@ -26,14 +28,12 @@ header.application {
     z-index: $index;
   }
 
-  ul { margin: 0; }
-
   // Main navigational styles
   nav {
     position: absolute;
     font-size: rem_calc(16);
     font-weight: 300;
-    background-color: #fff;
+    background-color: $white;
     z-index: $index;
 
     @extend %b-height;
@@ -44,20 +44,22 @@ header.application {
 
     li {
       display: inline-block;
-      line-height: $height;
       padding-left: rem_calc(27);
-      @extend %b-height;
 
       a {
-        color: $purple;
-      }
+        display: inline-block;
+        line-height: $height;
+        @extend %b-height;
 
-      &.active {
-        height: 57px;
-        padding: 0 rem_calc(10) 0 rem_calc(10);
-        background-color: $green;
-        text-align: center;
-        a { color: $white; }
+        color: $purple;
+
+        &.active {
+          color: $white;
+          height: 57px;
+          padding: 0 rem_calc(10) 0 rem_calc(10);
+          background-color: $green;
+          text-align: center;
+        }
       }
     }
   }
@@ -67,6 +69,7 @@ header.application {
     font-family: 'Open Sans', sans-serif;
     font-size: rem_calc(10);
     position: absolute;
+    margin: 0;
     z-index: $index;
 
     li {
@@ -249,7 +252,6 @@ footer {
     background-color: #477455;
     color: $white;
     font-size: rem_calc(12);
-    text-align: center;
     line-height: 25px;
 
     a {

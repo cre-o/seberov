@@ -1,5 +1,5 @@
 doctype html
-html lang="en" ng-app="statek"
+html lang="en" ng-app="seberov"
   head
     meta charset="utf-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
@@ -8,8 +8,8 @@ html lang="en" ng-app="statek"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
-    .inner-wrap class=(ENV['LOGNAME'] == 'laminelli' ? 'development' : nil)
+  body#wtf ng-controller="ApplicationController"
+    .inner-wrap ng-init="development = false" ng-class="{ development: development == true }"
       = render 'header'
       = yield
       = render 'footer'

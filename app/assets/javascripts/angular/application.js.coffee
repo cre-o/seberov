@@ -1,14 +1,18 @@
 # Initialisation
-angular.module('statek', [])
+angular.module('seberov', [])
 
-angular.module('statek').directive 'backImg', ->
+angular.module('seberov').directive 'backImg', ->
   (scope, element, attrs) ->
     attrs.$observe 'backImg', (value) ->
       element.css
         'background-image': 'url(' + value + ')'
         'background-size': 'cover'
 
-angular.module('statek').controller 'InfoBlockController', ->
+# Application controller
+angular.module('seberov').controller 'ApplicationController', ->
+  return @
+
+angular.module('seberov').controller 'InfoBlockController', ->
   @.show = true
 
   @.toggle = ->
@@ -17,7 +21,7 @@ angular.module('statek').controller 'InfoBlockController', ->
   return @
 
 
-angular.module('statek').controller 'MainPageController', ->
+angular.module('seberov').controller 'MainPageController', ->
   @.mapWidth  = 200
   @.mapHeight = 455
 
@@ -34,13 +38,16 @@ angular.module('statek').controller 'MainPageController', ->
 
 
 # Image broadcaster
-angular.module('statek').controller 'ImageBroadcasterController', ->
-  @.image = 1
+angular.module('seberov').controller 'ImageBroadcasterController', ->
+  @.imageNumber = 1
+  @.imageUrl = ""
 
-  @.setImage = (newValue) ->
-    @.image = newValue
+  @.setImage = (newValue, newImageUrl) ->
+    @.imageNumber = newValue
+    @.imageUrl = newImageUrl
 
-  @.isSet = (imageName) ->
-    @.image == imageName
+  @.isSet = (imageNumber) ->
+    @.imageNumber == imageNumber
+
 
   return @

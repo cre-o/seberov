@@ -1466,13 +1466,14 @@ $primary-color: #549350;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 
-// @import 'foundation';
-// Import only needed modules
-@import
-  "foundation/components/type",
-  "foundation/components/grid",
-  "foundation/components/block-grid",
-  "foundation/components/clearing",
-  "foundation/components/joyride",
-  "foundation/components/orbit",
-  "foundation/components/visibility";
+@import 'foundation';
+// OR mport only needed modules
+// @import
+//   "foundation/components/type",
+//   "foundation/components/grid",
+//   "foundation/components/accordion",
+//   "foundation/components/block-grid",
+//   "foundation/components/clearing",
+//   "foundation/components/joyride",
+//   "foundation/components/orbit",
+//   "foundation/components/visibility";

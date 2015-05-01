@@ -1,7 +1,8 @@
 .l-standards
+  // 1
   .row
     .small-6.columns
-      section.left
+      section.left-side
         header
           h1 Земляные работы
 
@@ -16,23 +17,23 @@
       ul.small-block-grid-2 data-clearing=""
         li
           = link_to image_url('standards/1-1-full') do
-            = image_tag 'standards/1-1'
+            = image_tag 'standards/1-1', width: 440, height: 440
         li
           = link_to image_url('standards/1-2-full') do
-            = image_tag 'standards/1-2'
-
+            = image_tag 'standards/1-2', width: 440, height: 440
+  // 2
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
           = link_to image_url('standards/2-1-full') do
-              = image_tag 'standards/2-1'
+              = image_tag 'standards/2-1', width: 440, height: 440
         li
           = link_to image_url('standards/2-2-full') do
-              = image_tag 'standards/2-2'
+              = image_tag 'standards/2-2', width: 440, height: 440
 
     .small-6.columns
-      section.right
+      section.right-side
         header.text-right
           h1 Фундамент
 
@@ -42,14 +43,14 @@
             li фундаменты выполнены из бетона и дополнены бетонными блоками пролитыми бетонной смесью с усилением арматурой
             li
               | в основе подземного гаража - монолитная железобетонная плита, подвальные стены подземного гаража из водонепроницаемого бетона (белая ванна)
-
+  // 3
   .row
     .small-6.columns
-      section.left
+      section.left-side
         header
           h1 Горизонтальные конструкции
 
-        .content.small
+        .content
           ul
             li гипсокартонные подвесные потолки или гипсовая штукатурка
             li керамические панели, усиленные железобетонными балками
@@ -63,47 +64,77 @@
 
     .small-6.columns
       .image-broadcaster ng-controller="ImageBroadcasterController as broadcaster"
-        img ng-src="#{image_url('standards/3-1')}"
+        img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1')}'" ng-src="{{broadcaster.imageUrl}}"
         .controls.small-5
           ol
-            li ng-class="{ active: broadcaster.isSet(1) }" ng-attr-image="#{image_url('standards/3-1')}"
-              a href="" ng-click="broadcaster.setImage(1)" 1
+            li ng-class="{ active: broadcaster.isSet(1) }"
+              a href="" ng-click="broadcaster.setImage(1, '#{image_url('standards/3-1')}')" 1
               .title.ng-hide ng-show="broadcaster.isSet(1)"
-                | Скрытый текст
-            li ng-class="{ active: broadcaster.isSet(2) }" ng-attr-image="#{image_url('standards/3-2')}"
-              a href="" ng-click="broadcaster.setImage(2)" 2
+                | Скрытый текст 1
+            li ng-class="{ active: broadcaster.isSet(2) }"
+              a href="" ng-click="broadcaster.setImage(2, '#{image_url('standards/3-2')}')" 2
               .title.ng-hidden ng-show="broadcaster.isSet(2)"
-                | Скрытый текст
-            li ng-class="{ active: broadcaster.isSet(3) }" ng-attr-image="#{image_url('standards/3-3')}"
-              a href="" ng-click="broadcaster.setImage(3)" 3
+                | Скрытый текст 2
+            li ng-class="{ active: broadcaster.isSet(3) }"
+              a href="" ng-click="broadcaster.setImage(3, '#{image_url('standards/3-3')}')" 3
               .title.ng-hidden ng-show="broadcaster.isSet(3)"
-                | Скрытый текст
-            li ng-class="{ active: broadcaster.isSet(4) }" ng-attr-image="#{image_url('standards/3-4')}"
-              a href="" ng-click="broadcaster.setImage(4)" 4
+                | Скрытый текст 3
+            li ng-class="{ active: broadcaster.isSet(4) }"
+              a href="" ng-click="broadcaster.setImage(4, '#{image_url('standards/3-4')}')" 4
               .title.ng-hidden ng-show="broadcaster.isSet(4)"
-                | Скрытый текст
-
-
+                | Скрытый текст 4
+            li ng-class="{ active: broadcaster.isSet(5) }"
+              a href="" ng-click="broadcaster.setImage(5, '#{image_url('standards/3-5')}')" 5
+              .title.ng-hidden ng-show="broadcaster.isSet(5)"
+                | Скрытый текст 5
+            li ng-class="{ active: broadcaster.isSet(6) }"
+              a href="" ng-click="broadcaster.setImage(6, '#{image_url('standards/3-6')}')" 6
+              .title.ng-hidden ng-show="broadcaster.isSet(6)"
+                | Скрытый текст 6
+            li ng-class="{ active: broadcaster.isSet(7) }"
+              a href="" ng-click="broadcaster.setImage(7, '#{image_url('standards/3-7')}')" 7
+              .title.ng-hidden ng-show="broadcaster.isSet(7)"
+                | Скрытый текст 7
+  // 4
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-            = link_to image_url('standards/4-1-full') do
-                = image_tag 'standards/4-1', lazy: true
+          = link_to image_url('standards/4-1-full') do
+            = image_tag 'standards/4-1', width: 440, height: 440, lazy: true
         li
           = link_to image_url('standards/4-2-full') do
-              = image_tag 'standards/4-2', lazy: true
+            = image_tag 'standards/4-2', width: 440, height: 440, lazy: true
 
     .small-6.columns
-      section.right
+      section.right-side.long
         header
           h1 Конструкция стен
 
         .content
+          ul class="accordion" data-accordion=""
+            li.accordion-navigation
+              a href="#panel1a"  несущие внешние стены
+              #panel1a.content
+                | Wtf?
+                // @TODO content
+            li.accordion-navigation
+              a href="#panel2a"  несущие внутренние стены
+              #panel2a.content.active
+                ul
+                  li кирпич типа Porotherm 24 P + D
+                  li стены между квартирами - кирпич типа Porotherm  AKU 30
+                  li железобетонные стены или столбы
 
+            li.accordion-navigation
+              a href="#panel3a"  внутренние перегородки
+              #panel3a.content
+                | Wtf?
+                // @TODO content
+  // 5
   .row
     .small-6.columns
-      section.left
+      section.left-side
         header
           h1 Кровля
 
@@ -116,15 +147,200 @@
             li подвесные потолки гипсокартонные с части видимой конструкции крыши (деревянные стропила)
 
     .small-6.columns.images
+      ul. data-clearing=""
+        li
+          = link_to image_url('standards/5-1-full') do
+            = image_tag 'standards/5-1', width: 440, height: 440, lazy: true
+  // 6
+  .row
+    .small-5.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/6-1-full') do
+            = image_tag 'standards/6-1', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/6-2-full') do
+            = image_tag 'standards/6-2', width: 440, height: 440, lazy: true
+
+    .small-6.columns
+      section.long.right-side
+        header
+          h1 Окна, двери
+
+        .content
+          ul
+            li керамическая черепица Tondach
+            li система надстропильной теплоизоляции THERMANO толщины 140 mm, экстратвёрдый пенопласт PIR
+            li
+              | несущая конструкция крыши – фермы из клееного бруса в сочетании с деревянными стропилами KVH
+            li подвесные потолки гипсокартонные с части видимой конструкции крыши (деревянные стропила)
+
+  // 7
+  .row
+    .small-5.columns
+      section.long.left-side
+        header.text-right
+          h1 Отделка
+
+        .content
+          ul class="accordion" data-accordion=""
+            li.accordion-navigation
+              a href="#panel1b"  наружная всепогодная штукатурка
+              #panel1b.content
+                | Wtf?
+                // @TODO content
+            li.accordion-navigation
+              a href="#panel2b"  внутренняя штукатурка
+              #panel2b.content
+                | Wtf?
+                // @TODO content
+            li.accordion-navigation
+              a href="#panel3b"  облицовочная плитка
+              #panel3b.content
+                | Wtf?
+                // @TODO content
+            li.accordion-navigation
+              a href="#panel4b"  напольная плитка
+              #panel4b.content
+                ul
+                  li в ванной комнате
+                  li в туалете
+                  li в коридорах
+                  li в подсобных помещениях, кладовых
+                  li в подъездах, колясочной
+
+            li.accordion-navigation
+              a href="#panel5b"  покрытия пола
+
+    .small-5.columns
       ul.small-block-grid-2 data-clearing=""
           li
-            = link_to image_url('standards/5-1-full') do
-                = image_tag 'standards/5-1', lazy: true
+            = link_to image_url('standards/7-1-full') do
+              = image_tag 'standards/7-1', width: 440, height: 440, lazy: true
+          li
+            = link_to image_url('standards/7-2-full') do
+              = image_tag 'standards/7-2', width: 440, height: 440, lazy: true
+          li
+            = link_to image_url('standards/7-3-full') do
+              = image_tag 'standards/7-3', width: 440, height: 440, lazy: true
+  // 8
+  .row
+    .small-5.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/8-1-full') do
+            = image_tag 'standards/8-1', width: 440, height: 440, lazy: true
 
+    .small-6.columns
+      section.right-side
+        header.text-right
+          h1 Столярные элементы
 
+        .content
+          p
+           | Внутренние лестницы в квартирах кроме галереи изготовлены из монолитного железобетона, ступеньки обложены
+             массивным  многослойным лепленым деревом с финальным покрытием бук
+             Перила внутренних лестниц - деревянные, не профилированные столбики, поручень из профилированного дерева бук
+             Внутренние лестницы и перила галереи поставляются под заказ за дополнительную оплату.
 
+  // 9
+  .row
+    .small-6.columns
+      section.left-side
+        header
+          h1 Водосточные и кровельные конструкции
 
+        .content
+          p
+           | Покрытие крыши над мансардными окнами и надкровельные элементы выполнены из меди, замансардное корыто из
+            пластифицированной ПВХ пленки
+            Наружные подоконники выполнены из механически окрашенного листа LINDAB медь
 
+    .small-6.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/9-1-full') do
+            = image_tag 'standards/9-1', width: 440, height: 440
+        li
+          = link_to image_url('standards/9-2-full') do
+            = image_tag 'standards/9-2', width: 440, height: 440
 
+  // 10
+  .row
+    .small-5.columns.images
+      ul.small-block-grid-2 data-clearing=""
+        li
+          = link_to image_url('standards/10-1-full') do
+            = image_tag 'standards/10-1', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/10-2-full') do
+            = image_tag 'standards/10-2', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/10-3-full') do
+            = image_tag 'standards/10-3', width: 440, height: 440, lazy: true
 
+    .small-6.columns
+      section.right-side
+        header.text-right
+          h1 Техническое оборудование здания
 
+        .content
+          | Контент
+          // @TODO content
+
+  // 11
+  .row
+    .small-6.columns
+      section.left-side
+        header
+          h1 Покрытие коммуникаций
+
+        .content
+          p
+           | Целый двор, вкл. парковку и тротуары вымощена плиткой
+
+    .small-6.columns.images
+      H1 НЕТ КАРТИНОК!
+
+  .row.last
+    .small-6.columns.images
+      ul.small-block-grid-3 data-clearing=""
+        li
+          = link_to image_url('standards/11-1-full') do
+            = image_tag 'standards/11-1', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/11-2-full') do
+            = image_tag 'standards/11-2', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/11-3-full') do
+            = image_tag 'standards/11-3', width: 440, height: 440, lazy: true
+
+    .small-5.columns
+      section.right-side
+        header.text-right
+          h1 Надстандарт
+
+        .content
+          | Изменения в этом списке стандартов можно осуществлять исходя из пожеланий заказчика. Изменения в стандартах будут оценены дополнительно.
+
+  .row.architector
+    .small-2.columns
+      .alert-box.warning.round data-alert=""
+        | Нужна фотка архитектора
+
+    .small-10.columns
+      header
+        h1 СЛОВО АРХИТЕКТОРА
+      .content
+        h2 Новостройки квартир в Чехии от застройщика Усадьба Шеберов
+        p
+          |
+            Здание бывшей усадьбы, расположенное рядом с церковью Святого Прокопа, отслеживает историю не так далекую, как сама церковь, однако, иллюстрирует и помогает создать образ центра бывшего посёлка Грнчире. Несмотря на то, что способ использования недвижимости в Чехии Усадьба Шеберов с течением времени менялся, и как результат развития пригорода Праги, было сохранено богатое пространственное решение и достоинство двора средневековой усадьбы с исторической атмосферой. Именно сохранение исторической атмосферы и впечатления от наблюдаемого исторического развития недвижимости в Чехии является одним из ключевых принципов проекта Новостройки квартир в Чехии от застройщика Усадьба Шеберов, который придаст этому месту новую энергию и силы к жизни. Поврежденные первоначальные структуры здания будут заменены на новые, соответствующие действующим требованиям к качеству строительства - экологически чистыми и экономичными с точки зрения потребления энергии.
+        p
+          |
+            В сравнении с актуальными проектами строительства новостроек в Чехии от застройщика в столице Праге, наш новый жилой комплекс является уникальным не только своим месторасположением, но и в смысле взаимных отношений соседей, живущих в просторах исторического здания: полузакрытого жилого комплекса с центральным входом во двор, задачей которого будет служить уже не конюшней для лошадей и экипажей, а «конюшней» для автомобилей жителей - как во дворе, так и в гаражах новостройки в Праге. Из этого же двора все дороги ведут к отдельным квартирам без потери возможностей как для непринуждённого соседского разговора, так и незаметного и спонтанного контроля чужих. Так как входы в отдельные квартиры ориентированы на общую центральную площадь, так и все квартиры ориентированы главными окнами наружу, где открываются прекрасные виды на нетронутую зелень охраняемого природного заповедника, является второй – изолированной от посторонних – характерной чертой нашего проекта Новостройки квартир в Чехии от застройщика Усадьба Шеберов.
+        p
+          |
+            Просторное, эксклюзивное решение планировок квартир, сохраняющих конфиденциальность в сочетании со спонтанной идентификации с одним входом - одним адресом – одним двором, наличие гения места и исторических элементов этого вида строительства, все это создает предпосылки для качественной жилой среды с уникальным характером и атмосферой.
+
+        span.author.right Архитектор проекта Петр Марушиак

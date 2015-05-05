@@ -1,17 +1,17 @@
 // Location page
 .l-location {
-  margin-top: 109px;
+  margin-top: rem_calc(139);
 
   fieldset {
     border: 2px solid #a9a4a4;
-    padding: 25px 30px;
+    padding: rem_calc(25) rem_calc(30);
   }
 
   .active-map {
-    padding: 25px;
+    padding: rem_calc(25);
   }
 
   .active-map-icons {
-    padding: 40px;
+    padding: rem_calc(40);
   }
 }

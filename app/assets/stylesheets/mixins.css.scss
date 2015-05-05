@@ -1,0 +1,42 @@
+@mixin custom-row-gutter(
+  $small-size: false,
+  $medium-size: false,
+  $large-size: false,
+  $xlarge-size: false) {
+
+  $gutter-size: 0;
+
+  @media #{$small-up} {
+    @if $small-size != false {
+      $gutter-size: $small-size;
+    }
+  }
+
+  @media #{$medium-up} {
+    @if $medium-size != false {
+      $gutter-size: $medium-size;
+    }
+  }
+
+  @media #{$large-up} {
+    @if $large-size != false {
+      $gutter-size: $large-size;
+    }
+  }
+
+  %padding {
+    padding-left: rem_calc($gutter-size);
+    padding-right: rem_calc($gutter-size);
+  }
+
+  .row {
+    &.collapse {
+      .column, .columns {
+        padding: 0 !important;
+      }
+    }
+    .columns {
+      @extend %padding;
+    }
+  }
+}

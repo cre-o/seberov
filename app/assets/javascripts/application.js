@@ -13,10 +13,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require utility
 //= require foundation
 //= require angular
+//= require angular-scroll
 //= require angular/application
 //= require lazyload
+//= require jquery.nouislider.all.min
+//= require apartments
 //= require_tree .
 
 $(function(){

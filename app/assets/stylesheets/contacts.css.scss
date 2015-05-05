@@ -1,0 +1,61 @@
+#l-contacts {
+  margin-top: rem_calc(185);
+
+  .main-info {
+    padding-bottom: rem_calc(30);
+    border-bottom: 1px solid $light_grey;
+    margin-bottom: rem_calc(40);
+
+    h2, h3 {
+      font-family: 'Open Sans Condensed', sans-serif;
+    }
+
+    h2 {
+      font-size: rem_calc(15);
+      font-weight: bold;
+      color: $dark_grey;
+    }
+
+    h3 {
+      color: $green;
+      font-size: rem_calc(28);
+      font-weight: bold;
+    }
+
+    .contacts {
+      font-family: 'Open Sans', sans-serif;
+      font-size: rem_calc(14);
+      color: $grey;
+    }
+  }
+
+  .authors {
+    margin-bottom: rem_calc(50);
+
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: rem_calc(14);
+      color: $grey;
+      text-decoration: underline;
+    }
+
+    h5 {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      font-size: rem_calc(14);
+      color: $dark_grey;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: rem_calc(13);
+      font-weight: 400;
+    }
+
+    .logo-small {
+      margin-top: rem_calc(60);
+    }
+  }
+
+  @include custom-row-gutter(10, 20);
+}

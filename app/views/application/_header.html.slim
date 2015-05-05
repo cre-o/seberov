@@ -1,4 +1,4 @@
-header.application
+header.application ng-class="{ fixed: fixedHeader == true }"
   .row
     .small-3.large-3.columns
       = link_to root_path, class: 'logo', title: 'На главную' do
@@ -13,11 +13,11 @@ header.application
           li
             = active_link_to "standards", standards_path, active: :exclusive
           li
-            a href="#" apartments
+            = active_link_to "apartments", apartments_path, active: :exclusive
           li
-            a href="#" contacts
+            = active_link_to "contacts", contacts_path, active: :exclusive
           li
-            a href="#" references
+            = active_link_to "references", references_path, active: :exclusive
 
     .small-1.large-1.columns
       ul.languages
@@ -29,10 +29,10 @@ header.application
           a href="#" russian
 
     .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
-      a.opener.upcase href="javascript:void(0);" ng-click="infoBlock.toggle()"
+      a.opener.upcase href="#{js_void}" ng-click="toggle()"
         i.fa.fa-angle-down
         | push to call
-      .dropdown.small-2.large-2.columns.ng-hide ng-hide="infoBlock.show"
+      .dropdown.small-2.large-2.columns.ng-hide ng-show="shown"
         ul.about-info
           li.phone
             i.fa.fa-phone.fa-lg
@@ -45,4 +45,3 @@ header.application
           li.pdf.upcase
             i.fa.fa-file-pdf-o.fa-lg
             a href="#" download price list
-

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get 'location', to: 'application#location'
   get 'standards', to: 'application#standards'
+  get 'contacts', to: 'application#contacts'
+  get 'apartments', to: 'application#apartments'
+  get 'references', to: 'application#references'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

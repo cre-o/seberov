@@ -1,9 +1,8 @@
 // With love & pation
-
 .development {
   &::after {
     content: "";
-    background: image_url('development/standards-page') no-repeat !important;
+    background: image_url('development/location-page') no-repeat !important;
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -11,6 +10,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
+    width: 1200px;
     height: 3000px;
   }
 

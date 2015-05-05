@@ -9,4 +9,13 @@ class ApplicationController < ActionController::Base
 
   def standards
   end
+
+  def contacts
+  end
+
+  def apartments
+  end
+
+  def references
+  end
 end

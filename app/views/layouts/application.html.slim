@@ -8,8 +8,8 @@ html lang="en" ng-app="seberov"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body#wtf ng-controller="ApplicationController"
-    .inner-wrap ng-init="development = false" ng-class="{ development: development == true }"
+  body ng-controller="ApplicationController as app"
+    .inner-wrap ng-init="app.development = false" ng-class="{ development: app.development == true }"
       = render 'header'
       = yield
       = render 'footer'

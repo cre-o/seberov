@@ -1,5 +1,5 @@
 # Initialisation
-angular.module('seberov', [])
+angular.module('seberov', ['duScroll'])
 
 angular.module('seberov').directive 'backImg', ->
   (scope, element, attrs) ->
@@ -9,16 +9,31 @@ angular.module('seberov').directive 'backImg', ->
         'background-size': 'cover'
 
 # Application controller
-angular.module('seberov').controller 'ApplicationController', ->
-  return @
+angular.module('seberov').controller 'ApplicationController', ($scope, $document) ->
+  $scope.fixedHeader = true
 
-angular.module('seberov').controller 'InfoBlockController', ->
-  @.show = true
+  # Main page scroll feature
+  if angular.element('#l-main').size() > 0 && Foundation.utils.is_large_up()
+    $scope.fixedHeader = false
 
-  @.toggle = ->
-    @.show = if @.show == true then false else true
+    $document.on 'scroll', ->
+      $scope.fixedHeader = if $document.scrollTop() > 700 then true else false
+      return $scope.$apply()
 
-  return @
+  return $scope
+
+# Info block
+angular.module('seberov').controller 'InfoBlockController', ($scope, $document) ->
+  $scope.shown = true
+
+  $document.on 'scroll', ->
+    $scope.shown = false
+    return $scope.$apply()
+
+  $scope.toggle = ->
+    $scope.shown = if $scope.shown == true then false else true
+
+  return $scope
 
 
 angular.module('seberov').controller 'MainPageController', ->

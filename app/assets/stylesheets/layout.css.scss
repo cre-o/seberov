@@ -9,11 +9,17 @@ body {
 }
 
 header.application {
+  width: 100%;
   $height: 50px; // Default block height
   $index: 5;
 
   %b-height {
     height: $height;
+  }
+
+  &.fixed {
+    position: fixed;
+    z-index: 9999;
   }
 
   background-color: $white;

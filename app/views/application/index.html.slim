@@ -1,4 +1,4 @@
- .l-main-page ng-controller="MainPageController as MainPage"
+#l-main ng-controller="MainPageController as MainPage"
   // Slider
   .row.fluid.collapse.main-slider
     .small-12.large-12.columns
@@ -26,7 +26,7 @@
         h1 Map
         i.fa.fa-2x.fa-chevron-right
       // Google map!
-      .gmap.flex-video
+      .gmap
         iframe frameborder="0" width="{{MainPage.mapWidth}}" height="{{MainPage.mapHeight}}" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
 
     .small-8.columns

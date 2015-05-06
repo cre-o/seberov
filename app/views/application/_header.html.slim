@@ -2,22 +2,23 @@ header.application ng-class="{ fixed: fixedHeader == true }"
   .row
     .small-3.large-3.columns
       = link_to root_path, class: 'logo', title: 'На главную' do
-        = image_tag 'logo.png', width: 216, height: 130
+          = image_tag 'logo', width: 219, height: 131, class: 'ng-hide', :'ng-show' => 'fixedHeader == false'
+          = image_tag 'logo-fixed', width: 138, height: 48, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
     .small-6.large-6.columns
       nav
         ul.upcase
           li
-            = active_link_to "the project", root_path, active: :exclusive
+            = active_link_to 'the project', root_path, active: :exclusive
           li
-            = active_link_to "location", location_path, active: :exclusive
+            = active_link_to 'location', location_path, active: :exclusive
           li
-            = active_link_to "standards", standards_path, active: :exclusive
+            = active_link_to 'standards', standards_path, active: :exclusive
           li
-            = active_link_to "apartments", apartments_path, active: :exclusive
+            = active_link_to 'apartments', apartments_path, active: :exclusive
           li
-            = active_link_to "contacts", contacts_path, active: :exclusive
+            = active_link_to 'contacts', contacts_path, active: :exclusive
           li
-            = active_link_to "references", references_path, active: :exclusive
+            = active_link_to 'references', references_path, active: :exclusive
 
     .small-1.large-1.columns
       ul.languages

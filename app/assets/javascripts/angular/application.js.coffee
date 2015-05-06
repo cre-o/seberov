@@ -10,15 +10,12 @@ angular.module('seberov').directive 'backImg', ->
 
 # Application controller
 angular.module('seberov').controller 'ApplicationController', ($scope, $document) ->
-  $scope.fixedHeader = true
+  $scope.fixedHeader = false
 
   # Main page scroll feature
-  if angular.element('#l-main').size() > 0 && Foundation.utils.is_large_up()
-    $scope.fixedHeader = false
-
-    $document.on 'scroll', ->
-      $scope.fixedHeader = if $document.scrollTop() > 700 then true else false
-      return $scope.$apply()
+  $document.on 'scroll', ->
+    $scope.fixedHeader = true
+    return $scope.$apply()
 
   return $scope
 

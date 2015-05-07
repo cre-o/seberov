@@ -47,18 +47,43 @@
     / Selector
     .small-2.large-2.columns
       .buttons.action
-        .button.exterior
-          | Exterior
-        .button.interior.active
-          | Interior
-        .button.area
-          | Area
-        .button.webcams
-          | Webcams
+        .btn.exterior.active
+          | Визуализация
+        .btn.interior
+          | Фотографии
+        .btn.tour
+          | Виртуальный тур
+        .btn.webcams
+          | Камера
 
     / Main slider
     .small-8.large-8.columns.screen
-      = image_tag 'main/slide-preview.png', width: 745, height: 457
+      #orbit-exterior-photos
+        ul.main-orbit data-orbit=""
+          li
+            img src="#{image_path('main/preview-widget/exterior/1-l.jpg')}" data-interchange="
+              [#{image_path('main/preview-widget/exterior/1-l.jpg')}, (large)],
+              [#{image_path('main/preview-widget/exterior/1-xl.jpg')}, (xlarge)]"
+            .orbit-caption
+              | First image description
+          li
+            img src="#{image_path('main/preview-widget/exterior/2-l.jpg')}" data-interchange="
+              [#{image_path('main/preview-widget/exterior/2-l.jpg')}, (large)],
+              [#{image_path('main/preview-widget/exterior/2-xl.jpg')}, (xlarge)]"
+            .orbit-caption
+              | Second image description
+          li
+            img src="#{image_path('main/preview-widget/exterior/3-l.jpg')}" data-interchange="
+              [#{image_path('main/preview-widget/exterior/3-l.jpg')}, (large)],
+              [#{image_path('main/preview-widget/exterior/3-xl.jpg')}, (xlarge)]"
+            .orbit-caption
+              | Third image description
+          li
+            img src="#{image_path('main/preview-widget/exterior/4-l.jpg')}" data-interchange="
+              [#{image_path('main/preview-widget/exterior/4-l.jpg')}, (large)],
+              [#{image_path('main/preview-widget/exterior/4-xl.jpg')}, (xlarge)]"
+            .orbit-caption
+              | Four image description
 
     / Buttons
     .small-2.large-2.columns.options

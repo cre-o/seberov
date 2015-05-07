@@ -88,41 +88,58 @@
       color: $white;
       text-transform: uppercase;
 
-      .button {
+      .btn {
         height: 100px;
         font-size: rem_calc(24);
         padding-right: 15px;
         line-height: rem_calc(100);
         text-align: right;
         cursor: pointer;
+        @include filter(brightness(0.7));
 
         &.exterior {
-          background-image: image_url('main/exterior-btn.png');
+          background-image: image_url('main/preview-widget/exterior-btn');
+
+          &.active {
+            background-image: image_url('main/preview-widget/exterior-btn-active');
+          }
         }
 
         &.interior {
-          background-image: image_url('main/interior-btn.png');
+          background-image: image_url('main/preview-widget/interior-btn');
+
+          &.active {
+            background-image: image_url('main/preview-widget/interior-btn-active');
+          }
         }
 
-        &.area {
-          background-image: image_url('main/area-btn.png');
+        &.tour {
+          background-image: image_url('main/preview-widget/tour-btn.png');
+
+          &.active {
+            background-image: image_url('main/preview-widget/tour-btn-active');
+          }
         }
 
         &.webcams {
-          background-image: image_url('main/webcams-btn.png');
+          background-image: image_url('main/preview-widget/webcams-btn.png');
+
+          &.active {
+            background-image: image_url('main/preview-widget/webcams-btn-active');
+          }
         }
 
         &.active {
           height: 153px;
-          font-size: rem_calc(36);
+          font-size: rem_calc(24);
           font-weight: bold;
           line-height: 150px;
+          @include filter(brightness(1));
         }
       }
     }
 
     .screen {
-      @media #{$large-up} { width: 745px !important; }
       background-color: $white;
 
       padding: {
@@ -132,7 +149,6 @@
     }
 
     .options {
-      @media #{$large-up} { width: 222px; }
 
       font-family: 'Open Sans Condensed', sans-serif;
       font-size: rem_calc(25);
@@ -143,19 +159,14 @@
       float:left !important;
 
       .option {
-        margin-bottom: 3px;
+        margin-bottom: rem_calc(3);
         background-color: #5e9472;
         cursor: pointer;
-        padding: 6px;
-
-        @media #{$large-up} {
-          width: 222px;
-          height: 225px;
-        }
+        padding: rem_calc(6);
 
         .wrap {
           border: 1px solid $white;
-          padding-top: 30px;
+          padding-top: rem_calc(10);
           height: 100%;
         }
 
@@ -165,8 +176,8 @@
         }
 
         .icon {
-          width: 42px;
-          height: 42px;
+          width: 41px;
+          height: 40px;
           margin: 50px auto;
 
           &.pdf {

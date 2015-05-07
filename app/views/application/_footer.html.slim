@@ -14,15 +14,17 @@ footer
       nav
         ul.footer-nav
           li
-            a href="#" Projects
+            = active_link_to 'the project', root_path, active: :exclusive
           li
-            a href="#" Location
+            = active_link_to 'location', location_path, active: :exclusive
           li
-            a href="#" Standards
+            = active_link_to 'standards', standards_path, active: :exclusive
           li
-            a href="#" Apartments
+            = active_link_to 'apartments', apartments_path, active: :exclusive
           li
-            a href="#" Contacts
+            = active_link_to 'contacts', contacts_path, active: :exclusive
+          li
+            = active_link_to 'references', references_path, active: :exclusive
 
     .small-2.columns
       .credit

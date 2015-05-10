@@ -8,7 +8,6 @@
 @import "variables"; // Global variables
 @import "bourbon";   // Bourbon helpful mixins
 @import "angular";   // Angular styles
-@import "all_pages"; // Application global styles
 @import "fonts";     // Fonts
 @import "mixins";
 @import "font-awesome";
@@ -16,6 +15,7 @@
 @import "foundation_misc";
 @import "image_broadcaster";
 @import "semantic";
+@import "all_pages"; // Application global styles
 @import "layout";
 @import "main";
 @import "location";

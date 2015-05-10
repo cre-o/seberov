@@ -170,8 +170,7 @@ footer {
   .container {
     background-color: #5e9472;
     color: $white;
-    height: 190px;
-    padding-top: 30px;
+    padding-top: rem_calc(30);
     font-size: rem_calc(14);
 
     a {
@@ -191,37 +190,36 @@ footer {
   }
 
   .address {
-    padding: 5px 45px;
+    padding: rem_calc(5 45);
     font-weight: 300;
     line-height: rem_calc(18);
   }
 
-  nav {
-    margin-left: 20px;
-    padding-right: 40px;
-    font-weight: bold;
+  .footer-nav  {
+    nav {
+      margin-left: 20px;
+    }
 
     ul {
       border-right: 1px solid $white;
-    }
-
-    li {
-      line-height: rem_calc(29);
+      padding-right: 40px;
+      font-weight: bold;
+      display: inline-block;
     }
   }
 
   p {
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: rem_calc(14);
+    margin-top: rem_calc(20);
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem_calc(24);
   }
 
   .investment {
-    margin-left: 20px;
+    margin-left: rem_calc(20);
 
     p {
-      width: 140px;
+      width: rem_calc(140);
     }
   }
 
@@ -269,7 +267,7 @@ footer {
 
     a {
       color: $white;
-      padding-left: 5px;
+      padding-left: rem_calc(5);
       font-weight: 300;
       text-decoration: underline;
     }

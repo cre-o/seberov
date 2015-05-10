@@ -11,20 +11,8 @@ footer
         | prodej@statekseberov.cz
 
     .small-2.columns
-      nav
-        ul.footer-nav
-          li
-            = active_link_to 'the project', root_path, active: :exclusive
-          li
-            = active_link_to 'location', location_path, active: :exclusive
-          li
-            = active_link_to 'standards', standards_path, active: :exclusive
-          li
-            = active_link_to 'apartments', apartments_path, active: :exclusive
-          li
-            = active_link_to 'contacts', contacts_path, active: :exclusive
-          li
-            = active_link_to 'references', references_path, active: :exclusive
+      .footer-nav
+        = render partial: 'application/nav'
 
     .small-2.columns
       .credit

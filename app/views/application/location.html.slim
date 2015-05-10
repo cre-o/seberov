@@ -1,24 +1,91 @@
-.l-location
+#l-location ng-controller="LocationController as location"
   .row.b-map
     .small-12.columns
       fieldset
-        legend Усадьба Шеберов
+        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508
         .row
-          .small-6.columns.active-map
-            iframe frameborder="0" width="330" height="370" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
-          .small-6.columns
-            | Я не пойму какой текст тут должен быть
+          .small-5.columns.active-map
+            iframe ng-init="location.address='Statek Seberov Praha'" ng-src="{{location.url + location.address | trusted}}" frameborder="0" width="430" height="470" style="border:0"
+          .small-7.columns
+            ul.description
+              li
+                i.rectangle
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quos nihil veniam. Et, unde voluptas est quas hic modi. Saepe, expedita aliquid. Impedit deleniti voluptates, repellat recusandae dolor facilis cumque.
+              li
+                i.rectangle
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, repellendus repellat incidunt quod consequuntur reiciendis voluptatibus dignissimos. Praesentium mollitia delectus quia earum, eaque ratione. Voluptates est blanditiis dicta ratione optio.
+              li
+                i.rectangle
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nulla saepe nostrum expedita cum cumque, itaque eos autem laborum molestias, distinctio repudiandae, ratione quibusdam nobis numquam, iure animi laboriosam. Similique.
+  .row
+    .small-12.columns.b-map-controls
+      ul.map-icons.small-block-grid-3
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov medicine'"
+            i.medicine
+            | Районная больница и аптека
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov autobus'"
+            i.autobus
+            | Автобусная остановка прямо у дома
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov relax'"
+            i.relax
+            | Центр досуга и свободного времени
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov skola'"
+            i.school
+            | Начальная и средняя школы
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov'"
+            i.administration
+            | Городское управление
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov policie'"
+            i.police
+            | Полицейский участок
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov knihovna'"
+            i.library
+            | Библиотека
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov playground'"
+            i.playground
+            | Детская площадка
+        li
+          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov gym'"
+            i.sports
+            | Спортивный ареал
 
   .row
-    .small-12.columns
-      ul.active-map-icons.small-block-grid-3
-        li Районная больница и аптека
-        li Автобусная остановка прямо у дома
-        li Центр досуга и свободного времени
-        li Начальная и средняя школы
-        li Городское управление
-        li Полицейский участок
-        li Библиотека
-        li Детская площадка
-        li Спортивный ареал
+    .small-12.columns.location-slider
+      ul.main-orbit data-orbit="" data-options="timer:false;"
+        li
+          img src="#{image_path('main/slider/1-small.jpg')}" data-interchange="
+            [#{image_path('main/slider/1-small.jpg')}, (default)],
+            [#{image_path('main/slider/1-medium.jpg')}, (medium)],
+            [#{image_path('main/slider/1-large.jpg')}, (large)],
+            [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
+          .orbit-caption
+            | First image description
+        li
+          img src="#{image_path('main/slider/2-small.jpg')}" data-interchange="
+            [#{image_path('main/slider/2-small.jpg')}, (small)],
+            [#{image_path('main/slider/2-medium.jpg')}, (medium)],
+            [#{image_path('main/slider/2-large.jpg')}, (large)],
+            [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
+          .orbit-caption
+            | Second image description
 
+  .row.b-bottom-images
+    .small-6.columns
+      figure
+        = image_tag 'main/slider/1-medium.jpg'
+        figcaption
+          | Kolorovaná fotografie statu z 18. století
+
+    .small-6.columns
+      figure
+        = image_tag 'main/slider/2-medium.jpg'
+        figcaption
+          | Aktuální fotografie

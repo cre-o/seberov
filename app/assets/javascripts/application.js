@@ -17,6 +17,7 @@
 //= require foundation
 //= require angular
 //= require angular-scroll
+//= require angular-google-maps
 //= require angular/application
 //= require lazyload
 //= require jquery.nouislider.all.min
@@ -62,6 +63,6 @@ $(function(){
     }
   });
 
-  $("img").lazyload();
+  $('img').lazyload();
 });
 

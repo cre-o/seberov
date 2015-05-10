@@ -1,0 +1,14 @@
+nav
+  ul
+    li
+      = active_link_to 'The project', root_path, active: :exclusive
+    li
+      = active_link_to 'Location', location_path, active: :exclusive
+    li
+      = active_link_to 'Standards', standards_path, active: :exclusive
+    li
+      = active_link_to 'Apartments', apartments_root_path, active: :exclusive
+    li
+      = active_link_to 'Contacts', contacts_path, active: :exclusive
+    li
+      = active_link_to 'References', references_path, active: :exclusive

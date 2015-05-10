@@ -1,12 +1,13 @@
 # Initialisation
 angular.module('seberov', ['duScroll'])
 
-angular.module('seberov').directive 'backImg', ->
-  (scope, element, attrs) ->
-    attrs.$observe 'backImg', (value) ->
-      element.css
-        'background-image': 'url(' + value + ')'
-        'background-size': 'cover'
+# Filter for url trusting
+# Example
+# ng-src="{ object.url | trusted }"
+angular.module('seberov').filter 'trusted', ['$sce', ($sce) ->
+    return (url) ->
+      return $sce.trustAsResourceUrl(url)
+]
 
 # Application controller
 angular.module('seberov').controller 'ApplicationController', ($scope, $document) ->
@@ -48,6 +49,13 @@ angular.module('seberov').controller 'MainPageController', ->
 
   return @
 
+# LocationController
+angular.module('seberov').controller 'LocationController', ['$sce', ($sce) ->
+  location = @
+  location.url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q="
+
+  return location
+]
 
 # Image broadcaster
 angular.module('seberov').controller 'ImageBroadcasterController', ->
@@ -63,3 +71,10 @@ angular.module('seberov').controller 'ImageBroadcasterController', ->
 
 
   return @
+
+angular.module('seberov').directive 'backImg', ->
+  (scope, element, attrs) ->
+    attrs.$observe 'backImg', (value) ->
+      element.css
+        'background-image': 'url(' + value + ')'
+        'background-size': 'cover'

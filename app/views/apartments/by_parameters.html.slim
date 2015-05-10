@@ -1,0 +1,146 @@
+#l-apartments.parameters
+  .row
+    .b-nav-tabs.small-3.small-offset-7.columns
+      ul.upcase
+        li.small-6.columns
+          a href="#" by planning
+        li.active.small-6.columns
+          a href="#" by parameters
+
+  .row.collapse
+    .small-12.columns.wrap
+      .row.collapse.b-parameters
+        .small-12.columns
+          h1.upcase Parameters:
+          .b-filters
+            form
+              .row
+                // Price
+                .small-4.columns
+                  .row.collapse
+                    .small-12.columns
+                      h3.upcase Price:
+                  // Inputs
+                  .row.collapse
+                    .small-2.columns.text-left
+                      label for="price-start-label" from
+                    .small-4.columns
+                      input#price-start-label type="text"
+                    .small-2.columns.text-center
+                      label for="price-end-label" to
+                    .small-4.columns.left
+                      input#price-end-label type="text"
+                  .row.collapse
+                    // Minimum price and maximum price gets from database
+                    .small-12.columns
+                      #appartments-price-slider data-min-value="10000" data-max-value="9999999"
+
+                // Floorspace
+                .small-4.columns
+                  .row.collapse
+                    .small-12.columns
+                      h3.upcase Floorspace:
+                  // Inputs
+                  .row.collapse
+                    .small-2.columns.text-left
+                      label for="foorspace-start-label" from
+                    .small-4.columns
+                      input#foorspace-start-label type="text"
+                    .small-2.columns.text-center
+                      label for="floorspace-end-label" to
+                    .small-4.columns
+                      input#floorspace-end-label type="text"
+                  .row.collapse
+                    // Minimum price and maximum price gets from database
+                    .small-.columns
+                      #appartments-floorspace-slider data-min-value="40" data-max-value="100"
+
+                // Floor
+                .small-4.columns
+                  .row.collapse
+                    .small-12.columns
+                      h3.upcase Floor:
+                  // Inputs
+                  .row.collapse
+                    .small-2.columns.text-left
+                      label for="floor-start-label"  from
+                    .small-2.columns
+                      input#floor-start-label type="text"
+                    .small-2.columns.text-center
+                      label for="floor-end-label"  to
+                    .small-2.columns.left
+                      input#floor-end-label type="text"
+                  .row.collapse
+                    // Minimum price and maximum price gets from database
+                    .small-10.left.columns
+                      #appartments-floor-slider data-min-value="3" data-max-value="10"
+
+            .row.rooms
+              .small-2.columns
+                h3.upcase Rooms:
+
+              .small-10.left.columns
+                ul.small-block-grid-6
+                  li
+                    input#one-room type="checkbox"
+                    label for="one-room" one
+                  li
+                    input#two-rooms type="checkbox"
+                    label for="two-rooms" two
+                  li
+                    input#three-rooms type="checkbox"
+                    label for="three-rooms" three
+                  li
+                    input#four-rooms type="checkbox"
+                    label for="four-rooms" four
+                  li
+                    input#penthouse type="checkbox"
+                    label for="penthouse" penthouse
+                  li
+                    input#grounds type="checkbox"
+                    label for="grounds" grounds
+      // Results
+      .row.collapse.b-results
+        .small-12.columns
+          .row
+            .small-8.columns
+              h1.upcase Results:
+            .small-2.right.columns.total
+              | {total_found}
+          .row.collapse.items
+            .small-12.columns
+              - 5.times do
+                .row.item
+                  .small-4.columns
+                    .id
+                      | #1
+                    .clear
+                    = image_tag 'standards/1-1', width: 220, height: 220
+                  .small-5.columns
+                    ul.attributes.small-block-grid-2
+                      li
+                        ' podlaží:
+                        b value
+                      li
+                        ' jednotka číslo:
+                        b value
+                      li
+                        ' dispozice:
+                        b value
+                      li
+                        ' velikost balkon / terasy:
+                        b value
+                      li
+                        ' velikost bytu:
+                        b value
+
+                    .price
+                      ' сena včetně DPH:
+                      span.upcase 5 977 574 Kč \ 120 000 EUR
+
+                  .small-3.columns.go
+                    .more.upcase
+                       = link_to 'see more', js_void
+
+
+

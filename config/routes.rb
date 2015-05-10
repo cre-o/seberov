@@ -8,8 +8,14 @@ Rails.application.routes.draw do
   get 'location', to: 'application#location'
   get 'standards', to: 'application#standards'
   get 'contacts', to: 'application#contacts'
-  get 'apartments', to: 'application#apartments'
   get 'references', to: 'application#references'
+
+  namespace :apartments do
+    root to: :by_parameters
+
+    get 'by_planning'
+    get 'by_parameters'
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

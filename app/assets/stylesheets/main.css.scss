@@ -130,7 +130,7 @@
         }
 
         &.active {
-          height: 153px;
+          height: rem_calc(150);
           font-size: rem_calc(24);
           font-weight: bold;
           line-height: 150px;

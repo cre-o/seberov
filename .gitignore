@@ -15,5 +15,9 @@
 !/log/.keep
 /tmp
 
+# MacOS
 .DS_Store
+
+# Sublime files
 *.sublime-workspace
+*.sublime-project

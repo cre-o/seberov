@@ -1,4 +1,4 @@
-angular.module('seberov').controller 'MainPageController', ($scope, $window, $timeout) ->
+angular.module('seberov').controller 'MainPageController', ($scope, $window, $interval) ->
   # Map resize
   @.mapWidth  = 200
   @.mapHeight = 455
@@ -12,18 +12,10 @@ angular.module('seberov').controller 'MainPageController', ($scope, $window, $ti
   if Foundation.utils.is_xlarge_only()
     @.mapWidth  = 550
 
-  # Orbit
-  $scope.orbitHeight = 450
-  $timeout ->
-    $scope.orbitHeight = angular.element('#main-second-orbit').height();
-  , 300
-
   # Orbit styling
-  # $window.on 'resize', ->
-  #   console.log $('#main-second-orbit').height()
-
-  # $scope.notifyServiceOnChage = ->
-  #    console.log $scope.windowHeight
+  $scope.orbitHeight = 450
+  $interval ->
+    $scope.orbitHeight = angular.element('#main-second-orbit').height();
+  , 500
 
   return $scope
-

@@ -13,7 +13,7 @@ angular.module('seberov').controller 'MainPageController', ($scope, $window, $ti
     @.mapWidth  = 550
 
   # Orbit
-  $scope.orbitHeight = 100
+  $scope.orbitHeight = 450
   $timeout ->
     $scope.orbitHeight = angular.element('#main-second-orbit').height();
   , 300

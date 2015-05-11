@@ -1,24 +1,49 @@
+// Page info
+- title t('main_page.title')
+- description t('main_page.description')
+- keywords t('main_page.keywords')
+
 #l-main ng-controller="MainPageController as MainPage"
   // Slider
   .row.fluid.collapse.main-slider
     .small-12.columns
-      ul.main-orbit data-orbit=""
+      ul#main-orbit data-orbit=""
         li
           img src="#{image_path('main/slider/1-small.jpg')}" data-interchange="
             [#{image_path('main/slider/1-small.jpg')}, (default)],
             [#{image_path('main/slider/1-medium.jpg')}, (medium)],
             [#{image_path('main/slider/1-large.jpg')}, (large)],
             [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption
-            | First image description
+          .orbit-caption-middle
+            h1
+              ' New apartments in the private sector of Prague 4 from the builder.
+              br
+              ' only
+              b 24 apartments
+              ', with a layout from
+              b 2 to 5 bedrooms Left
+              '!
+            = link_to apartments_root_path, class: 'choose-apartment' do
+              i.map
+              | choose an apartment
         li
           img src="#{image_path('main/slider/2-small.jpg')}" data-interchange="
             [#{image_path('main/slider/2-small.jpg')}, (small)],
             [#{image_path('main/slider/2-medium.jpg')}, (medium)],
             [#{image_path('main/slider/2-large.jpg')}, (large)],
             [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption
-            | Second image description
+          .orbit-caption-middle
+            h1
+              ' New apartments in the private sector of Prague 4 from the builder.
+              br
+              ' only
+              b 24 apartments
+              ', with a layout from
+              b 2 to 5 bedrooms Left
+              '!
+            = link_to apartments_root_path, class: 'choose-apartment' do
+              i.map
+              | choose an apartment
 
   .row.fluid.main-info
     .small-4.columns
@@ -47,47 +72,37 @@
     / Selector
     .small-2.columns
       .buttons.action
-        .btn.exterior.active
-          | Визуализация
-        .btn.interior
-          | Фотографии
-        .btn.tour
-          | Виртуальный тур
-        .btn.webcams
-          | Камера
+        .btn.exterior.active ng-style="{'height': orbitHeight/4}"
+          .text
+            span Визуализация
+          .image
+        .btn.interior ng-style="{'height': orbitHeight/4}"
+          .text
+            span Фотографии
+          .image
+        .btn.tour ng-style="{'height': orbitHeight/4}"
+          .text
+            | Виртуальный
+            br
+            | тур
+          .image
+        .btn.webcams ng-style="{'height': orbitHeight/4}"
+          .text
+            span Камера
+          .image
 
     / Main slider
+    / Using manual initialisation with custom buttons
     .small-8.large-8.columns.screen
-      #orbit-exterior-photos
-        ul.main-orbit data-orbit=""
-          li
-            img src="#{image_path('main/preview-widget/exterior/1-l.jpg')}" data-interchange="
-              [#{image_path('main/preview-widget/exterior/1-l.jpg')}, (large)],
-              [#{image_path('main/preview-widget/exterior/1-xl.jpg')}, (xlarge)]"
-            .orbit-caption
-              | First image description
-          li
-            img src="#{image_path('main/preview-widget/exterior/2-l.jpg')}" data-interchange="
-              [#{image_path('main/preview-widget/exterior/2-l.jpg')}, (large)],
-              [#{image_path('main/preview-widget/exterior/2-xl.jpg')}, (xlarge)]"
-            .orbit-caption
-              | Second image description
-          li
-            img src="#{image_path('main/preview-widget/exterior/3-l.jpg')}" data-interchange="
-              [#{image_path('main/preview-widget/exterior/3-l.jpg')}, (large)],
-              [#{image_path('main/preview-widget/exterior/3-xl.jpg')}, (xlarge)]"
-            .orbit-caption
-              | Third image description
-          li
-            img src="#{image_path('main/preview-widget/exterior/4-l.jpg')}" data-interchange="
-              [#{image_path('main/preview-widget/exterior/4-l.jpg')}, (large)],
-              [#{image_path('main/preview-widget/exterior/4-xl.jpg')}, (xlarge)]"
-            .orbit-caption
-              | Four image description
+        ul#main-second-orbit data-orbit=""
+          = render partial: 'main_second_orbit_data', locals: { img_num: 1, description: 'First image description' }
+          = render partial: 'main_second_orbit_data', locals: { img_num: 2, description: 'Second image description' }
+          = render partial: 'main_second_orbit_data', locals: { img_num: 3, description: 'Third image description' }
+          = render partial: 'main_second_orbit_data', locals: { img_num: 4, description: 'Fourth image description' }
 
     / Buttons
-    .small-2.columns.options
-      .option
+    .small-2.columns.options.left
+      .option ng-style="{'height': orbitHeight/2-2}"
         .wrap
           .text
             | Download
@@ -95,7 +110,7 @@
             | Price List
           .icon.pdf
 
-      .option
+      .option ng-style="{'height': orbitHeight/2-2}"
         .wrap
           .text
             | Choose

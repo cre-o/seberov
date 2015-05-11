@@ -3,7 +3,10 @@ html lang="en" ng-app="seberov"
   head
     meta charset="utf-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    title = content_for?(:title) ? yield(:title) : "Statek seberov"
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : t('page.empty_description')}"
+    meta name="keywords" content="#{content_for?(:keywords) ? yield(:keywords) : t('page.empty_keywords')}"
+    meta name="author" content=""
+    title = content_for?(:title) ? yield(:title) : 'Statek seberov'
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true

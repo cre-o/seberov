@@ -1,3 +1,6 @@
+#= require_self
+#= require angular/main
+
 # Initialisation
 angular.module('seberov', ['duScroll'])
 
@@ -33,22 +36,6 @@ angular.module('seberov').controller 'InfoBlockController', ($scope, $document) 
 
   return $scope
 
-
-angular.module('seberov').controller 'MainPageController', ->
-  @.mapWidth  = 200
-  @.mapHeight = 455
-
-  if Foundation.utils.is_medium_only()
-    @.mapWidth  = 300
-
-  if Foundation.utils.is_large_only()
-    @.mapWidth  = 400
-
-  if Foundation.utils.is_xlarge_only()
-    @.mapWidth  = 550
-
-  return @
-
 # LocationController
 angular.module('seberov').controller 'LocationController', ['$sce', ($sce) ->
   location = @
@@ -78,3 +65,27 @@ angular.module('seberov').directive 'backImg', ->
       element.css
         'background-image': 'url(' + value + ')'
         'background-size': 'cover'
+
+
+# Resize directive
+angular.module('seberov').directive 'resize', ($window) ->
+  (scope, element, attr) ->
+    w = angular.element($window)
+    scope.$watch (->
+      {
+        'h': window.innerHeight
+        'w': window.innerWidth
+      }
+    ), ((newValue, oldValue) ->
+      console.log newValue, oldValue
+      scope.windowHeight = newValue.h
+      scope.windowWidth = newValue.w
+
+      scope.resizeWithOffset = (offsetH) ->
+        scope.$eval attr.notifier
+        { 'height': newValue.h - offsetH + 'px' }
+
+      return
+    ), true
+    w.bind 'resize', ->
+      scope.$apply()

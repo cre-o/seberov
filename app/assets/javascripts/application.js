@@ -21,6 +21,7 @@
 //= require angular/application
 //= require lazyload
 //= require jquery.nouislider.all.min
+//= require main
 //= require apartments
 //= require_tree .
 
@@ -63,6 +64,7 @@ $(function(){
     }
   });
 
+  // Lazy load images (not load before user can see it)
   $('img').lazyload();
 });
 

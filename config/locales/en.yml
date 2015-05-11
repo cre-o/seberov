@@ -18,6 +18,11 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  page:
+    empty_description: 'Projekt New apartments Prague 4 - Šeberov Homestead offers its prospective owners 39 flats of categories 2 + kk to 5 + kk, including garage parking or parking spaces.'
+    empty_keywords: ''
+  main_page:
+    title: 'New apartments Prague 4 - Šeberov Homestead | Šeberov Farm'
+    description: ''
+    keywords: ''

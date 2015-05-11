@@ -39,7 +39,6 @@ header.application {
   // Main navigational styles
   nav {
     position: absolute;
-    font-size: rem_calc(16);
     font-weight: 300;
     background-color: $white;
     z-index: $index;
@@ -47,12 +46,31 @@ header.application {
     @extend %b-height;
 
     ul {
-      margin-left: 5px;
+      margin-left: rem_calc(5);
+      font-size: rem_calc(16);
+
+      @media #{$small-only} {
+        font-size: rem_calc(16/1.5);
+      }
+
+      @media #{$medium-only} {
+        font-size: rem_calc(16/1.2);
+      }
     }
 
     li {
       display: inline-block;
+      // <-- Media queries
       padding-left: rem_calc(27);
+
+      @media #{$small-only} {
+        padding-left: rem_calc(27/1.5);
+      }
+
+      @media #{$medium-only} {
+        padding-left: rem_calc(27/1.2);
+      }
+      // -->
 
       a {
         display: inline-block;
@@ -97,7 +115,19 @@ header.application {
         background-color: #4d7c5d;
         height: 60px;
         width: 30px;
+
+        // <-- Media queries
         font-size: rem_calc(12);
+
+        @media #{$small-only} {
+          font-size: rem_calc(12/1.5);
+        }
+
+        @media #{$medium-only} {
+          font-size: rem_calc(12/1.2);
+        }
+        // -->
+
         a {
           color: $white;
         }

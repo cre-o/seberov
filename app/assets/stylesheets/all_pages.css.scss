@@ -1,5 +1,5 @@
 body {
-  font-family: $default_font;
+  font-family: $default-font;
 }
 
 .upcase {
@@ -12,4 +12,8 @@ body {
 
 .margin-f {
   margin: 0 !important;
+}
+
+h1, h2, h3 {
+  font-family: $second-font;
 }

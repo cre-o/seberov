@@ -10,9 +10,11 @@
 @import "angular";   // Angular styles
 @import "fonts";     // Fonts
 @import "mixins";
-@import "font-awesome";
 @import "foundation_and_overrides";
+@import "font-awesome"; // Gem
+@import "font_awesome"; // Local
 @import "foundation_misc";
+@import "foundation_orbit";
 @import "image_broadcaster";
 @import "semantic";
 @import "all_pages"; // Application global styles

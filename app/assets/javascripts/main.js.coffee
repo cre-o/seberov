@@ -2,6 +2,8 @@ jQuery ->
 
   $('#main-orbit').foundation
     orbit: {
+      timer_speed: 3000,
+      animation_speed: 500,
       navigation_arrows: false,
       bullets: false,
       caption_class: 'orbit-caption-middle',

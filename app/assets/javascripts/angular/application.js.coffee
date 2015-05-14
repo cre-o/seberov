@@ -2,7 +2,7 @@
 #= require angular/main
 
 # Initialisation
-angular.module('seberov', ['duScroll'])
+angular.module('seberov', ['duScroll', 'ui.mask'])
 
 # Filter for url trusting
 # Example

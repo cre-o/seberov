@@ -26,4 +26,8 @@ cz:
     title: 'Nové byty Praha 4 – Statek Šeberov | Statek Šeberov'
     description: ''
     keywords: ''
-
+  form:
+    name: 'name'
+    phone: 'phone'
+  controller:
+    callback_mail_send: 'Мы скоро с вами свяжемся!'

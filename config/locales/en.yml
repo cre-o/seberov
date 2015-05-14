@@ -19,10 +19,22 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
-  page:
+  all_pages:
     empty_description: 'Projekt New apartments Prague 4 - Šeberov Homestead offers its prospective owners 39 flats of categories 2 + kk to 5 + kk, including garage parking or parking spaces.'
     empty_keywords: ''
+    empty_title: ''
   main_page:
     title: 'New apartments Prague 4 - Šeberov Homestead | Šeberov Farm'
     description: ''
     keywords: ''
+  form:
+    name: 'name'
+    phone: 'phone'
+    callback:
+      header: 'Оставьте свой номер телефона'
+      subheader: 'и наш менеджер перезвонит вам в ближайшее время'
+  footer:
+    order_callback: 'order callback'
+  controller:
+    callback_mail_send: 'Мы скоро с вами свяжемся!'
+    callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'

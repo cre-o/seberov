@@ -11,11 +11,13 @@ Rails.application.routes.draw do
   get 'references', to: 'application#references'
 
   namespace :apartments do
-    root to: :by_parameters
+    root action: :by_parameters
 
     get 'by_planning'
     get 'by_parameters'
   end
+
+  post 'callback', to: 'application#callback'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

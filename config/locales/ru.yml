@@ -26,3 +26,9 @@ ru:
     title: 'квартиры в Праге | Šeberov Farm'
     description: ''
     keywords: ''
+  form:
+    name: 'name'
+    phone: 'phone'
+    callback:
+      h1: 'Оставьте свой номер телефона'
+      subheader: 'и наш менеджер перезвонит вам в ближайшее время'

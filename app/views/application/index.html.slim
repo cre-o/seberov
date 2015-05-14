@@ -9,7 +9,7 @@
     .small-12.columns
       ul#main-orbit data-orbit=""
         li
-          img src="#{image_path('main/slider/1-small.jpg')}" data-interchange="
+          img src="#{image_path('main/slider/1-large.jpg')}" data-interchange="
             [#{image_path('main/slider/1-small.jpg')}, (default)],
             [#{image_path('main/slider/1-medium.jpg')}, (medium)],
             [#{image_path('main/slider/1-large.jpg')}, (large)],
@@ -27,8 +27,8 @@
               i.map
               | choose an apartment
         li
-          img src="#{image_path('main/slider/2-small.jpg')}" data-interchange="
-            [#{image_path('main/slider/2-small.jpg')}, (small)],
+          img src="#{image_path('main/slider/2-large.jpg')}" data-interchange="
+            [#{image_path('main/slider/2-small.jpg')}, (default)],
             [#{image_path('main/slider/2-medium.jpg')}, (medium)],
             [#{image_path('main/slider/2-large.jpg')}, (large)],
             [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
@@ -101,7 +101,7 @@
           = render partial: 'main_second_orbit_data', locals: { img_num: 4, description: 'Fourth image description' }
 
     / Buttons
-    .small-2.columns.options.left
+    .small-2.columns.options.end
       .option ng-style="{'height': orbitHeight/2-2}"
         .wrap
           .text
@@ -169,4 +169,14 @@
     .row
       .small-10.small-offset-2
         h1.upcase Our Projects:
-        = image_tag 'main/projects.jpg'
+        .row
+          .small-8.columns
+            ul.small-block-grid-3
+            li
+              a href="#" 1
+            li
+              a href="#" 2
+            li
+              a href="#" 3
+
+        //= image_tag 'main/projects.jpg'

@@ -42,7 +42,27 @@ footer
       .contacts
         .phone
           span +420 123 456 78
-          a href="#" order callback
+          a href="#" data-reveal-id="callbackModal" = t 'footer.order_callback'
+          // Callback modal window
+          #callbackModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
+            .row
+              .small-8.small-centered.columns
+                header
+                  h2.upcase = t 'form.callback.header'
+                  .subheader.upcase = t 'form.callback.subheader'
+
+            .row
+              .small-8.small-centered.columns
+                = form_tag :callback do
+                  .small-4.columns
+                    = text_field_tag 'name', '', placeholder: t('form.name'), required: true
+                  .small-4.columns
+                    = text_field_tag 'phone', '', placeholder: t('form.phone'), required: true
+                  .small-4.columns
+                    = submit_tag 'Отправить'
+
+              a.close-reveal-modal aria-label="Close"  ×
+
         p
           | STAV-SV s.r.o.
           br

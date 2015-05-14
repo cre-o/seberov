@@ -3,10 +3,10 @@ html lang="en" ng-app="seberov"
   head
     meta charset="utf-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    meta name="description" content="#{content_for?(:description) ? yield(:description) : t('page.empty_description')}"
-    meta name="keywords" content="#{content_for?(:keywords) ? yield(:keywords) : t('page.empty_keywords')}"
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : t('all_pages.empty_description')}"
+    meta name="keywords" content="#{content_for?(:keywords) ? yield(:keywords) : t('all_pages.empty_keywords')}"
     meta name="author" content=""
-    title = content_for?(:title) ? yield(:title) : 'Statek seberov'
+    title = content_for?(:title) ? yield(:title) : t('all_pages.empty_title')
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
@@ -14,5 +14,11 @@ html lang="en" ng-app="seberov"
   body ng-controller="ApplicationController as app"
     .inner-wrap ng-init="app.development = false" ng-class="{ development: app.development == true }"
       = render 'header'
+      // Flash
+      - if flash.present?
+        .alert-box.info data-alert="" style="z-index: 9999;"
+          - flash.each do |name, msg|
+            = content_tag :div, msg, class: name
+          a.close href="#"  &times;
       = yield
       = render 'footer'

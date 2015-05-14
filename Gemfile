@@ -45,6 +45,7 @@ gem 'unicorn'
 
 # Misc
 gem 'active_link_to'
+gem 'rails_config'
 
 group :development do
   gem 'guard', '>= 2.2.2', require: false
@@ -53,6 +54,7 @@ group :development do
   gem 'rb-fsevent', require: false
 
   gem 'rename' # Renaming project
+  gem 'better_errors'       # Better errors for debugging
   #gem 'capistrano', '>= 2', '< 3', require: false # "Deploying standard for ruby"
   #gem 'capistrano-deploy'   # Additional libraries
   #gem 'rvm-capistrano'      # RVM integration

@@ -1,0 +1,39 @@
+.reveal-modal {
+  border: none;
+  box-shadow: 2px 0 0 #999;
+  border-radius: 0;
+  box-shadow: 0px 2px 0 #888;
+
+  h2 {
+    font-family: $second_font;
+    font-size: rem_calc(30);
+    font-weight: bold;
+    color: $green;
+  }
+
+  header {
+    margin-bottom: rem_calc(50);
+  }
+
+  .subheader {
+    font-family: $second_font;
+    font-size: rem_calc(23);
+    font-weight: bold;
+    color: #979797;
+  }
+
+  input {
+    height: rem_calc(30);
+  }
+
+  input[type="submit"] {
+    background-color: $green;
+    border: none;
+    color: $white;
+    font-size: rem_calc(16);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: rem_calc(30);
+    padding-right: rem_calc(30);
+  }
+}

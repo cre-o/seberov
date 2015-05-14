@@ -58,24 +58,32 @@
             | Спортивный ареал
 
   .row
-    .small-12.columns.location-slider
-      ul.main-orbit data-orbit="" data-options="timer:false;"
+    .small-12.columns
+      ul#location-orbit data-orbit=""
         li
           img src="#{image_path('main/slider/1-small.jpg')}" data-interchange="
             [#{image_path('main/slider/1-small.jpg')}, (default)],
             [#{image_path('main/slider/1-medium.jpg')}, (medium)],
             [#{image_path('main/slider/1-large.jpg')}, (large)],
             [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption
-            | First image description
+          .orbit-caption-bottom
+            | Text 1
+            a href="#" class="orbit-prev-bottom"
+              .fa.fa-1.z5x.fa-chevron-left
+            a href="#" class="orbit-next-bottom"
+              .fa.fa-1.z5x.fa-chevron-right
         li
           img src="#{image_path('main/slider/2-small.jpg')}" data-interchange="
             [#{image_path('main/slider/2-small.jpg')}, (small)],
             [#{image_path('main/slider/2-medium.jpg')}, (medium)],
             [#{image_path('main/slider/2-large.jpg')}, (large)],
             [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption
-            | Second image description
+          .orbit-caption-bottom
+            | Text 2
+            a href="#" class="orbit-prev-bottom"
+              .fa.fa-1.z5x.fa-chevron-left
+            a href="#" class="orbit-next-bottom"
+              .fa.fa-1.z5x.fa-chevron-right
 
   .row.b-bottom-images
     .small-6.columns

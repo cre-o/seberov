@@ -13,6 +13,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lodash
 //= require utility
 //= require foundation
 //= require angular
@@ -24,6 +25,7 @@
 //= require jquery.nouislider.all.min
 //= require main
 //= require apartments
+//= require location
 //= require_tree .
 
 $(function(){

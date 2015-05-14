@@ -52,7 +52,10 @@
         i.fa.fa-2x.fa-chevron-right
       // Google map!
       .gmap
-        iframe frameborder="0" width="{{MainPage.mapWidth}}" height="{{MainPage.mapHeight}}" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
+        ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" style="width: 200px; height: 300px;"
+          ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
+
+        // iframe frameborder="0" width="{{MainPage.mapWidth}}" height="{{MainPage.mapHeight}}" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
 
     .small-8.columns
       header.small-8.large-4.upcase.green

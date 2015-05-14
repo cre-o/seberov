@@ -8,8 +8,10 @@ html lang="en" ng-app="seberov"
     meta name="author" content=""
     title = content_for?(:title) ? yield(:title) : t('all_pages.empty_title')
     = stylesheet_link_tag    "application"
+    // Passing server data into JS
+    = Gon::Base.render_data({camel_case: true})
     = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_include_tag "application"
     = csrf_meta_tags
   body ng-controller="ApplicationController as app"
     .inner-wrap ng-init="app.development = false" ng-class="{ development: app.development == true }"

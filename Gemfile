@@ -32,6 +32,8 @@ gem 'bourbon'
 gem 'font-awesome-rails'
 # Javascript features
 gem 'angularjs-rails'
+gem 'lodash-rails' # javascript features
+gem 'gon' # passing variables into JS
 # Images lazy loading
 gem "lazyload-rails"
 # Use ActiveModel has_secure_password

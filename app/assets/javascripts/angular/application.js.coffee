@@ -2,7 +2,14 @@
 #= require angular/main
 
 # Initialisation
-angular.module('seberov', ['duScroll', 'ui.mask'])
+angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'ui.mask'])
+
+# Configuration
+angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
+  uiGmapGoogleMapApiProvider.configure
+    key: gon.global.gmaps_key,
+    v: '3.17',
+    libraries: 'weather, geometry, visualization'
 
 # Filter for url trusting
 # Example

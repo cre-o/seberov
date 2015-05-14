@@ -170,13 +170,14 @@
       .small-10.small-offset-2
         h1.upcase Our Projects:
         .row
-          .small-8.columns
+          .small-10.columns
             ul.small-block-grid-3
-            li
-              a href="#" 1
-            li
-              a href="#" 2
-            li
-              a href="#" 3
-
-        //= image_tag 'main/projects.jpg'
+              li
+                = link_to '#', title: 'wtf1' do
+                  = image_tag 'main/projects/1'
+              li
+                = link_to '#', title: 'wtf2' do
+                  = image_tag 'main/projects/2'
+              li
+                = link_to '#', title: 'wtf3' do
+                  = image_tag 'main/projects/3'

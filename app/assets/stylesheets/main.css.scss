@@ -100,6 +100,7 @@
       padding: 50px 20px 20px 50px;
 
       li {
+        padding: rem_calc(10 10);
         list-style-type: none;
         list-style-image: image_url('icons/bullet.png');
       }
@@ -217,10 +218,19 @@
 
     .screen {
       background-color: $white;
+      position: relative;
 
       padding: {
         left: rem_calc(4) !important;
         right: rem_calc(3) !important;
+      }
+
+      .orbit-slides-container {
+        display: none;
+
+        &.active {
+          display: inherit;
+        }
       }
     }
 
@@ -252,14 +262,14 @@
         .icon {
           width: 42px;
           height: 42px;
-          margin: rem_calc(50) auto;
+          margin: 15% auto;
 
           &.pdf {
-            background-image: image_url('icons/pdf-icon42.png');
+            background-image: image_url('icons/pdf-icon42');
           }
 
           &.plan {
-            background-image: image_url('icons/plan-icon42.png');
+            background-image: image_url('icons/plan-icon42');
           }
         }
       }

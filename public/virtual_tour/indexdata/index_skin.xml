@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.18.3">
+
+    
+  <!-- Spot Style - Default Point Spot Style 1 -->
+  <style name="IconDefaultPointSpotStyle1"
+         url="%FIRSTXML%/spots/hotspot_neutral_sequence_user_defaultpoint0.png"
+         visible="false"
+         frame="0"
+         lastframe="17"
+         framewidth="70"
+         frameheight="70"
+         stopspotsequence="false"
+         crop="0|0|70|70"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconDefaultPointSpotStyle1"
+         onover="onoverIconDefaultPointSpotStyle1"
+         onout="onoutIconDefaultPointSpotStyle1"
+         height="40"
+         width="40"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle1">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconDefaultPointSpotStyle1">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle1">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+  <!-- unsupported kind of display : PointMap -->
+
+
+    
+  <!-- Spot Style - Koupelna -->
+  <style name="IconKoupelna"
+         url="%FIRSTXML%/spots/hotspot_image_frame_user_defaultpoint1.png"
+         visible="false"
+         onhover="onhoverIconKoupelna"
+         onover="onoverIconKoupelna"
+         onout="onoutIconKoupelna"
+         height="40"
+         width="40"
+         />
+  <action name="onhoverIconKoupelna">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconKoupelna">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconKoupelna">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - WC -->
+  <style name="IconWC"
+         url="%FIRSTXML%/spots/hotspot_image_frame_user_defaultpoint2.png"
+         visible="false"
+         onhover="onhoverIconWC"
+         onover="onoverIconWC"
+         onout="onoutIconWC"
+         height="40"
+         width="40"
+         />
+  <action name="onhoverIconWC">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconWC">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconWC">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+  <!-- ******************* -->
+  <!-- Classic Control Bar -->
+  <!-- ******************* -->
+
+  <krpano theme2barbuilt="false" theme2backgroundwidthwhenclosed="0" theme2backgroundwidthwhenopened="0" theme2IsOpened="false" />
+  <events name="theme2events" onxmlcomplete="theme2buildMenuBar();" keep="true"/>
+  <action name="theme2buildMenuBar">
+    ifnot (theme2barbuilt, theme2buildMenu(); set(theme2barbuilt, true););
+  </action>
+
+  <action name="theme2buildMenu">
+    
+    set(theme2button_pos, 20);
+
+    set(layer[theme2btn_hidecontrols].x, get(theme2button_pos));
+    set(layer[theme2btn_showcontrols].x, get(theme2button_pos));
+    inc(theme2button_pos, 36);
+    add(theme2backgroundwidthwhenclosed, get(theme2button_pos), 20);
+
+
+
+    if (device.fullscreensupport,
+      set(layer[theme2btn_openfs ].x, get(theme2button_pos));
+      set(layer[theme2btn_closefs].x, get(theme2button_pos));
+      inc(theme2button_pos, 36);
+    );
+
+
+    set(layer[theme2btn_display_floorplan].x, get(theme2button_pos));
+    set(layer[theme2btn_hide_floorplan   ].x, get(theme2button_pos));
+    inc(theme2button_pos, 36);
+
+
+
+
+
+
+    if (device.desktop,
+        set(layer[theme2btn_right].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+        set(layer[theme2btn_left].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+    );
+    if (device.desktop,
+        set(layer[theme2btn_down].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+        set(layer[theme2btn_up].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+    );
+    if (device.desktop,
+        set(layer[theme2btn_out].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+        set(layer[theme2btn_in].x, get(theme2button_pos));
+        inc(theme2button_pos, 36);
+    );
+    inc(theme2button_pos, 20);
+
+    set(theme2backgroundwidthwhenopened, get(theme2button_pos));
+    
+    
+    add(theme2VerifyVisibility, 20, 20);
+    if(theme2backgroundwidthwhenopened == 20,
+      set(theme2backgroundwidthwhenopened, 0);
+    );
+
+	
+	
+  </action>
+
+	<events name="theme2StartTourEvents" onTourStart="theme2CallOnStartTour();" keep="true" />
+
+	<action name="theme2CallOnStartTour">
+		
+		set(layer[theme2menu_controlbar_bg_img].width, get(theme2button_pos));
+		set(layer[theme2menu_controlbar_bg].width, get(theme2button_pos));
+		theme2showMenuControls();
+	</action>
+
+  <style name="theme2_btn_style"
+         keep="true"
+         alpha="0.8"
+         edge="right" align="right"
+         width="36" height="36"
+         zorder="2"
+         onover="theme2ctrlbaronoveraction();"
+         onout="theme2ctrlbaronoutaction();"
+	onhover="showTooltip('plugin', theme2menuTooltipStyle, bottom);"
+         />
+  <action name="theme2ctrlbaronoveraction">
+    tween(alpha,1,0.1,easeoutquad);
+    tween(y,-2,0.1,easeoutquad);
+  </action>  
+  <action name="theme2ctrlbaronoutaction">
+    tween(alpha,0.8);
+    tween(y,0,0.1,easeoutquad);
+    hideTooltip();
+  </action>
+
+  <layer name="theme2menu_controlbar_bg_img"
+         keep="true"
+         align="bottom"
+         x="0" y="10"
+         url="%FIRSTXML%/graphics/classiccontrolbar/footer.png"
+         zorder="0"
+         width="40"
+         height="40"
+         scale9grid="10|10|80|80"
+         visible="false"
+         />
+  <layer name="theme2menu_controlbar_bg"
+         keep="true"
+         align="bottom"
+         x="0" y="10"
+         type="container"
+         zorder="1"
+         width="40"
+         height="40"
+         visible="false"
+         alpha="1.0"
+         >
+
+
+
+    <layer name="theme2btn_in"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_zoom_in.png"
+            ondown="set(fov_moveforce, -1);
+"
+            onup="set(fov_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classiczoomInTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme2btn_out"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_zoom_out.png"
+            ondown="set(fov_moveforce, +1);
+"
+            onup="set(fov_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classiczoomOutTip"
+            devices="desktop"
+            visible="false"
+            />
+
+    <layer name="theme2btn_left"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_move_left.png"
+            ondown="set(hlookat_moveforce, -1);
+"
+            onup="set(hlookat_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classicmoveLeftTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme2btn_right"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_move_right.png"
+            ondown="set(hlookat_moveforce, +1);
+"
+            onup="set(hlookat_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classicmoveRightTip"
+            devices="desktop"
+            visible="false"
+            />
+
+    <layer name="theme2btn_up"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_move_up.png"
+            ondown="set(vlookat_moveforce, -1);
+"
+            onup="set(vlookat_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classicmoveUpTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme2btn_down"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_move_down.png"
+            ondown="set(vlookat_moveforce, +1);
+"
+            onup="set(vlookat_moveforce, 0);
+"
+            style="theme2_btn_style"
+            tooltip="controlBar_classicmoveDownTip"
+            devices="desktop"
+            visible="false"
+            />
+
+
+
+
+    <layer name="theme2btn_display_floorplan"
+           url="%FIRSTXML%/graphics/classiccontrolbar/btn_floorplan.png"
+           onclick="showFloorplan();
+"
+           style="theme2_btn_style"
+           visible="false"
+           tooltip="controlBar_classicdisplayFloorplanTip"
+           />
+    <layer name="theme2btn_hide_floorplan"
+           url="%FIRSTXML%/graphics/classiccontrolbar/btn_floorplan.png"
+           onclick="hideFloorplan();
+"
+           style="theme2_btn_style"
+           visible="false"
+           tooltip="controlBar_classichideFloorplanTip"
+           />
+
+
+    <layer name="theme2btn_openfs"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_enter_fs.png"
+            onclick="enterFullscreen();
+"
+            style="theme2_btn_style"
+            devices="fullscreensupport"
+            visible="false"
+            tooltip="controlBar_classicopenFsTip"
+            />
+    <layer name="theme2btn_closefs"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_close_fs.png"
+            onclick="exitFullscreen();
+"
+            style="theme2_btn_style"
+            visible="false"
+            devices="fullscreensupport"
+            tooltip="controlBar_classiccloseFsTip"
+            />
+
+
+
+
+
+    <layer name="theme2btn_hidecontrols"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_hide_controls.png"
+            style="theme2_btn_style"
+            onclick="theme2hideMenuControls();hideTourControls();
+"
+            visible="false"
+            tooltip="controlBar_classichideControlsTip"
+            />
+    <layer name="theme2btn_showcontrols"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_show_controls.png"
+            style="theme2_btn_style"
+            onclick="theme2showMenuControls();showTourControls();
+"
+            tooltip="controlBar_classicdisplayControlsTip"
+            visible="false"
+            />
+  </layer>
+
+
+
+
+  <action name="theme2hideMenuControls">
+    set(theme2IsOpened, false);
+    set(layer[theme2btn_hidecontrols].visible, false);
+    set(layer[theme2btn_showcontrols].visible, true);
+    theme2updateFullscreenButtons();
+
+
+
+
+    set(layer[theme2btn_up].visible  , false);
+    set(layer[theme2btn_down].visible, false);
+    set(layer[theme2btn_right].visible, false);
+    set(layer[theme2btn_left].visible , false);
+    set(layer[theme2btn_in].visible , false);
+    set(layer[theme2btn_out].visible, false);
+
+    theme2updateFloorplanButtons();
+
+
+
+
+
+    if(theme2backgroundwidthwhenclosed == 0,
+      set(layer[theme2menu_controlbar_bg_img].visible, false);
+      set(layer[theme2menu_controlbar_bg].visible, false);
+    ,
+      set(layer[theme2menu_controlbar_bg_img].visible, true);
+      set(layer[theme2menu_controlbar_bg].visible, true);
+    );
+    tween(layer[theme2menu_controlbar_bg_img].width , get(theme2backgroundwidthwhenclosed));
+    tween(layer[theme2menu_controlbar_bg].width , get(theme2backgroundwidthwhenclosed));
+    tween(layer[theme2menu_controlbar_bg_img].alpha, 0.8);
+  </action>
+  <action name="theme2showMenuControls">
+    set(theme2IsOpened, true);
+    set(layer[theme2btn_hidecontrols].visible, true);
+    set(layer[theme2btn_showcontrols].visible, false);
+    if(theme2backgroundwidthwhenopened == 0,
+      set(layer[theme2menu_controlbar_bg_img].visible, false);
+      set(layer[theme2menu_controlbar_bg].visible, false);
+    ,
+      set(layer[theme2menu_controlbar_bg_img].visible, true);
+      set(layer[theme2menu_controlbar_bg].visible, true);
+    );
+    tween(layer[theme2menu_controlbar_bg_img].alpha, 0.8);
+    tween(layer[theme2menu_controlbar_bg_img].width, get(theme2backgroundwidthwhenopened), 0.5, easeOutQuad, theme2showMenuButtons(););
+    tween(layer[theme2menu_controlbar_bg].width, get(theme2backgroundwidthwhenopened), 0.5, easeOutQuad, theme2showMenuButtons(););
+  </action>
+  <action name="theme2showMenuButtons">
+    if (device.desktop,
+    set(layer[theme2btn_up].visible  , true);
+    set(layer[theme2btn_down].visible, true);
+    );
+    if (device.desktop,
+    set(layer[theme2btn_right].visible, true);
+    set(layer[theme2btn_left].visible , true);
+    );
+    if (device.desktop,
+    set(layer[theme2btn_in].visible , true);
+    set(layer[theme2btn_out].visible, true);
+    );
+
+    theme2updateFloorplanButtons();
+
+
+
+
+
+    theme2updateFullscreenButtons();
+
+
+
+
+  </action>
+
+
+	<events name="theme2DisplayFloorPlanEvents" 
+		onshowtourfloorplan="theme2updateFloorplanButtons();" 
+		onhidetourfloorplan="theme2updateFloorplanButtons();" 
+		keep="true" />
+	<action name="theme2HideFloorplanButtons">
+		set(layer[theme2btn_display_floorplan].visible, false);
+		set(layer[theme2btn_hide_floorplan].visible, false);
+	</action>
+	<action name="theme2ShowFloorplanButtons">
+		if (tour_displayfloorplan,
+			set(layer[theme2btn_hide_floorplan].visible, true);
+			set(layer[theme2btn_display_floorplan].visible, false);
+		,
+			set(layer[theme2btn_display_floorplan].visible, true);
+			set(layer[theme2btn_hide_floorplan].visible, false);
+		);
+	</action>
+	<action name="theme2updateFloorplanButtons">
+		set(theme2DisplayFloorplanButtons, false);
+		if (theme2IsOpened, set(theme2DisplayFloorplanButtons, true););
+		if (theme2DisplayFloorplanButtons,
+			theme2ShowFloorplanButtons();
+		,
+			theme2HideFloorplanButtons();
+		);
+	</action>
+
+
+	<events name="theme2menufullscreenchangeevent"
+		onenterfullscreen="theme2updateFullscreenButtons();"
+		onexitfullscreen="theme2updateFullscreenButtons();"
+		keep="true"/>
+	<action name="theme2HideFullscreenButtons">
+		set(layer[theme2btn_openfs].visible , false);
+		set(layer[theme2btn_closefs].visible, false);
+	</action>
+	<action name="theme2ShowFullscreenButtons">
+		if (device.fullscreensupport,
+			if(tour_fullscreen,
+				set(layer[theme2btn_openfs].visible , false);
+				set(layer[theme2btn_closefs].visible, true);
+			,
+				set(layer[theme2btn_openfs].visible ,true);
+				set(layer[theme2btn_closefs].visible,false);
+			);
+		,
+			theme2HideFullscreenButtons();
+		);
+	</action>
+	<action name="theme2updateFullscreenButtons">
+		set(theme2DisplayFullscreenButtons, false);
+		if (theme2IsOpened, set(theme2DisplayFullscreenButtons, true););
+		if (theme2DisplayFullscreenButtons,
+			theme2ShowFullscreenButtons();
+		,
+			theme2HideFullscreenButtons();
+		);
+	</action>
+
+
+
+
+<layer name="theme2menuTooltipStyle"
+	keep="true"
+	enabled="false"
+	capture="false"
+	url="%FIRSTXML%/graphics/textfield.swf"
+	align="center"
+	background="false"
+	border="false"
+	textshadow="1" textshadowrange="4.0" textshadowangle="45" textshadowcolor="0x000000" textshadowalpha="1"
+	css="color:#e6e6e6;font-family:Helvetica;font-weight:bold;font-size:14px;text-align:left;"
+	height="20"
+	autoheight="true"
+	autowidth="auto"
+	selectable="false"
+	zorder="0"
+	visible="false"
+	html=""
+	padding="2"
+	xoffset="0"
+	yoffset="0"
+	edge="bottom"
+	/>
+
+
+<!-- ************ -->
+<!-- Context Menu -->
+<!-- ************ -->
+  <contextmenu fullscreen="false" versioninfo="false" touch="true">
+    <item name="website1" onclick="getmessage(urltoopen,contextmenuwebsiteurl1);openurl(get(urltoopen),_blank);" />
+    <item name="website2" onclick="getmessage(urltoopen,contextmenuwebsiteurl2);openurl(get(urltoopen),_blank);" />
+    <item name="website3" onclick="getmessage(urltoopen,contextmenuwebsiteurl3);openurl(get(urltoopen),_blank);" />
+    <item name="fullscreenentry" onclick="enterFullscreen();
+" separator="true"/>
+  </contextmenu>
+
+  <events name="contextmenuevents" keep="true" onenterfullscreen="updateContextMenu" onexitfullscreen="updateContextMenu" onxmlcomplete="updateContextMenu"/>
+  <action name="updateContextMenu">
+    getmessage(contextmenu.item[website1].caption, contextmenuopenwebsitelabel1);
+    getmessage(contextmenu.item[website2].caption, contextmenuopenwebsitelabel2);
+    getmessage(contextmenu.item[website3].caption, contextmenuopenwebsitelabel3);
+    if (device.fullscreensupport,
+      if(tour_fullscreen,
+        getmessage(contextmenu.item[fullscreenentry].caption, contextmenucloseFsLabel);
+        set(contextmenu.item[fullscreenentry].onclick, exitFullscreen();
+);
+       ,
+        getmessage(contextmenu.item[fullscreenentry].caption, contextmenuopenFsLabel);
+        set(contextmenu.item[fullscreenentry].onclick, enterFullscreen();
+);
+      );
+     ,
+      set(contextmenu.item[fullscreenentry].visible, false);
+    );
+  </action>
+
+
+
+
+	
+	<!-- ********* -->
+	<!-- FloorPlan -->
+	<!-- ********* -->
+	
+	<ptplugin name="floorPlan" engine="KolorFloorPlan">
+		<settings>
+			<option name="background_color" value="f2f2f2" type="string" />
+			<option name="background_lighter_color" value="ffffff" type="string" />
+			<option name="background_darker_color" value="cacaca" type="string" />
+			<option name="background_alpha" value="0" type="float" />
+			<option name="text_color" value="000000" type="string" />
+			<option name="resize" value="true" type="bool" />
+			<option name="fp_selector" value="one" type="string" />
+			<option name="fp_selector_label" value="floorPlanmenu_label" type="string" />
+			<option name="display_title" value="false" type="bool" />
+			<option name="title_font" value="Verdana" type="string" />
+			<option name="title_size" value="14" type="int" />
+			<option name="title_weight" value="normal" type="string" />
+			<option name="title_decoration" value="normal" type="string" />
+			<option name="title_color" value="000000" type="string" />
+			<option name="display_orientation" value="false" type="bool" />
+			<option name="display_radar" value="true" type="bool" />
+			<option name="radar_radius" value="50" type="int" />
+			<option name="radar_line_width" value="1" type="int" />
+			<option name="radar_line_color" value="ffffff" type="string" />
+			<option name="radar_line_alpha" value="0.500007629510948" type="float" />
+			<option name="radar_fill_color" value="777777" type="string" />
+			<option name="radar_fill_alpha" value="0.500007629510948" type="float" />
+			<option name="selected_effect" value="pulsate" type="string" />
+			<option name="close_on_click" value="false" type="bool" />
+			<option name="zorder" value="4" type="int" />
+		</settings>
+		
+		<floorplanItems selectedItem="fpitemmain" selectedSpot="" selectedSpotScene="" selectedSpotHeading="" selectedSpotFov="">
+				
+				<floorplanItem 
+					name="fpitemmain" 
+					width="448" 
+					height="644" 
+					groupName="" 
+					url="floorplan/plan2_e-01.png" 
+					title="project_floor_title"
+					heading="0">
+							<spot name="spotmap1569" posX="0.600551" posY="0.275335" heading="-12.8000000000001" desc="spotmap1569_tooltip" descType="tooltip" groupName="" isScene="true" scene="pano1531" jsClick="spotmap1569ActionSpotFloorPlan">
+								<icon url="spots/hotspot_plan_user_defaultmap0.png" iconWidth="30" iconHeight="30" iconAnchor="center" />
+							</spot>
+							<spot name="spotmap1570" posX="0.289256" posY="0.260038" heading="-24.9999999999998" desc="spotmap1570_tooltip" descType="tooltip" groupName="" isScene="true" scene="pano1528" jsClick="spotmap1570ActionSpotFloorPlan">
+								<icon url="spots/hotspot_plan_user_defaultmap0.png" iconWidth="30" iconHeight="30" iconAnchor="center" />
+							</spot>
+							<spot name="spotmap1571" posX="0.556474" posY="0.6826" heading="16.3999999999996" desc="spotmap1571_tooltip" descType="tooltip" groupName="" isScene="true" scene="pano1529" jsClick="spotmap1571ActionSpotFloorPlan">
+								<icon url="spots/hotspot_plan_user_defaultmap0.png" iconWidth="30" iconHeight="30" iconAnchor="center" />
+							</spot>
+							<spot name="spotmap1572" posX="0.253444" posY="0.543021" heading="-88.2000000000003" desc="spotmap1572_tooltip" descType="tooltip" groupName="" isScene="true" scene="pano1530" jsClick="spotmap1572ActionSpotFloorPlan">
+								<icon url="spots/hotspot_plan_user_defaultmap0.png" iconWidth="30" iconHeight="30" iconAnchor="center" />
+							</spot>
+				</floorplanItem>
+			
+			
+		</floorplanItems>
+	</ptplugin>
+	
+	<action name="kolorFloorplanJsReady-floorPlan">
+		set(ptplugin[floorPlan].jsready, true);
+		
+		ifnot(ptplugin[floorPlan].floorplanItems[0].selectedSpot == "",
+			set(ptplugin[floorPlan].floorplanItems[0].selectedSpotFov, get(view.hfov));
+			js(invokePluginFunction(floorPlan, setKolorFloorPlanSelectedSpotOptions, get(xml.scene), get(view.hlookat), get(view.hfov)));
+		);
+	</action>
+	
+	
+		<!-- floorplan main spots counter : 4 -->
+			<action name="spotmap1569ActionSpotFloorPlan">
+          if (xml.scene != pano1531,
+            mainloadscene(pano1531);
+          );
+      lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+    
+
+</action>
+			<action name="spotmap1570ActionSpotFloorPlan">
+          if (xml.scene != pano1528,
+            mainloadscene(pano1528);
+          );
+      lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+    
+
+</action>
+			<action name="spotmap1571ActionSpotFloorPlan">
+          if (xml.scene != pano1529,
+            mainloadscene(pano1529);
+          );
+      lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+    
+
+</action>
+			<action name="spotmap1572ActionSpotFloorPlan">
+          if (xml.scene != pano1530,
+            mainloadscene(pano1530);
+          );
+      lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+    
+
+</action>
+	
+	
+	
+	<events name="floorPlanEvents" 
+	onxmlcomplete="ifnot(floorPlanFloorPlanLoaded,set(tour_displayfloorplan,true););floorPlanActivateDefaultSpot();" 
+	onviewchanged="floorPlanOnViewChange();" 
+	onhidetourfloorplan="floorPlanCloseTourFloorPlan();" 
+	onshowtourfloorplan="if(tour_displayfloorplan,floorPlanOpenTourFloorPlan(););" 
+	onTourStart="set(loadedState-floorPlanArea, get(tour_displaycontrols));floorPlanOpenTourFloorPlan();"
+	keep="true" />
+	
+	
+	<krpano floorPlanFloorPlanLoaded="false" />
+	
+	<action name="floorPlanHideTourFloorPlan">
+		hideKolorArea-floorPlanArea(false);
+	</action>
+	
+	<action name="floorPlanCloseTourFloorPlan">
+		if(ptplugin[floorPlanArea].isOpen,
+			closeKolorArea-floorPlanArea();
+		);
+	</action>
+	
+	<action name="floorPlanShowTourFloorPlan">
+		showKolorArea-floorPlanArea(false);
+	</action>
+	
+	<action name="floorPlanOpenTourFloorPlan">
+		ifnot(ptplugin[floorPlanArea].isOpen,
+			openKolorArea-floorPlanArea();
+		);
+	</action>
+	
+	<action name="floorPlanOnViewChange">
+		if (floorPlanFloorPlanLoaded == true,
+			ifnot(ptplugin[floorPlan].floorplanItems[0].selectedSpot == "",
+				ifnot(scene[get(xml.scene)].planar,
+					js(invokePluginFunction(floorPlan, changeDirection, get(xml.scene), get(view.hlookat), get(view.hfov)));
+				);
+			);
+		);
+	</action>
+	
+	<action name="floorPlanActivateSpot">
+		
+		set(ptplugin[floorPlan].floorplanItems[0].selectedSpot, %1);
+		set(ptplugin[floorPlan].floorplanItems[0].selectedItem, %2);
+		
+		ifnot(%1 == "",
+			set(ptplugin[floorPlan].floorplanItems[0].selectedSpotScene, get(xml.scene));
+			set(ptplugin[floorPlan].floorplanItems[0].selectedSpotHeading, get(view.hlookat));
+			set(ptplugin[floorPlan].floorplanItems[0].selectedSpotFov, get(view.hfov));
+		);
+		
+		js(invokePluginFunction(floorPlan, selectSpot, %1, %2, %3));
+
+		ifnot(%1 == "",
+			if(scene[get(xml.scene)].planar,
+				js(invokePluginFunction(floorPlan, hideRadar));
+			,
+				js(invokePluginFunction(floorPlan, changeDirection, get(xml.scene), get(view.hlookat), get(view.hfov)));
+			);
+		);
+	</action>
+	
+	<action name="floorPlanDeactivateSpot">
+		set(ptplugin[floorPlan].floorplanItems[0].selectedSpot, "");
+		
+		js(invokePluginFunction(floorPlan, unselectSpot));
+	</action>
+	
+	<action name="floorPlanActivateDefaultSpot">
+		set(floorPlanFloorPlanLoaded, true);
+		
+		set(floorPlanSpotFound, "");
+		set(floorPlanSpotScene, "");
+		set(floorPlanItemFound, "");
+		set(floorPlanItemSearch, true);
+		set(floorPlanSpotSearchActivated, true);
+		set(floorPlanSpotSearchContinue, true);
+		
+		
+		set(defaultfloorplaniteminc-wait,50);
+		for(set(defaultfloorplaniteminc,0), defaultfloorplaniteminc LT ptplugin[floorPlan].floorplanItems[0].floorplanItem.count , inc(defaultfloorplaniteminc),
+			if(defaultfloorplaniteminc-wait == defaultfloorplaniteminc,
+				add(defaultfloorplaniteminc-wait,50);
+				wait(0);
+			);
+			if(floorPlanSpotSearchActivated == true,
+				
+				if(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].groupName == scene[get(xml.scene)].group,
+					set(floorPlanItemFound, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].name));
+					set(ptplugin[floorPlan].floorplanItems[0].selectedItem, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].name));
+					set(floorPlanItemSearch, false);
+				,
+					
+					if(floorPlanItemFound == "",
+						set(floorPlanItemFound, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[fpitemmain].name));
+						set(ptplugin[floorPlan].floorplanItems[0].selectedItem, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[fpitemmain].name));
+					);
+				);
+			);
+			if(floorPlanSpotSearchActivated == true,
+				set(defaultspotinc-wait,50);
+				for(set(defaultspotinc,0), defaultspotinc LT ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].spot.count , inc(defaultspotinc),
+					if(defaultspotinc-wait == defaultspotinc,
+						add(defaultspotinc-wait,50);
+						wait(0);
+					);
+					if(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].spot[get(defaultspotinc)].isScene == true,
+					
+						if(floorPlanSpotSearchContinue == true,
+							if(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].spot[get(defaultspotinc)].scene == xml.scene,
+								set(floorPlanSpotFound, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].spot[get(defaultspotinc)].name));
+								set(floorPlanSpotScene, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].spot[get(defaultspotinc)].scene));
+								set(ptplugin[floorPlan].floorplanItems[0].selectedItem, get(ptplugin[floorPlan].floorplanItems[0].floorplanItem[get(defaultfloorplaniteminc)].name));
+								if(floorPlanItemSearch == false,
+									set(floorPlanSpotSearchContinue, false);
+									set(floorPlanSpotSearchActivated, false);
+								);
+							);
+						);
+					);
+					
+				);
+			);
+		);
+		
+		if(floorPlanSpotFound == "",
+			
+			
+			floorPlanDeactivateSpot();
+			
+			
+			set(ptplugin[floorPlan].floorplanItems[0].selectedItem, get(floorPlanItemFound));
+			
+			
+			ifnot(ptplugin[floorPlan].floorplanItems[0].selectedItem == "",
+				floorPlanActivateSpot("", get(ptplugin[floorPlan].floorplanItems[0].selectedItem), "");
+			);
+		,
+			
+			floorPlanActivateSpot(get(floorPlanSpotFound), get(ptplugin[floorPlan].floorplanItems[0].selectedItem), get(floorPlanSpotScene));
+		);
+	</action>
+	
+	<action name="floorPlanChangeTitle">
+		js(invokePluginFunction(floorPlan, changeTitle, %1));
+	</action>
+	
+	<ptplugin name="floorPlanArea" engine="kolorArea">
+	<settings>
+		<option name="position" value="topright" type="string" />
+		<option name="start_position" value="left" type="string" />
+		<option name="margin_x" value="20" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="display_title" value="false" type="bool" />
+		<option name="title_font" value="Verdana" type="string" />
+		<option name="title_size" value="14" type="int" />
+		<option name="title_weight" value="normal" type="string" />
+		<option name="title_decoration" value="normal" type="string" />
+		<option name="title_color" value="000000" type="string" />
+		<option name="close_displayed" value="true" type="bool" />
+		<option name="background_color" value="f2f2f2" type="string" />
+		<option name="background_alpha" value="0" type="float" />
+		<option name="overlay_displayed" value="false" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.500007629510948" type="float" />
+		<option name="padding" value="0" type="int" />
+		<option name="topleft_radius" value="0" type="int" />
+		<option name="topright_radius" value="0" type="int" />
+		<option name="bottomleft_radius" value="0" type="int" />
+		<option name="bottomright_radius" value="0" type="int" />
+		<option name="area_border_width" value="0" type="int" />
+		<option name="area_border_color" value="f2f2f2" type="string" />
+		<option name="area_width" value="250" type="int" />
+		<option name="area_height" value="400" type="int" />
+		<option name="area_width_unit" value="pixel" type="string" />
+		<option name="area_height_unit" value="pixel" type="string" />
+		<option name="animation" value="false" type="bool" />
+		<option name="animation_duration" value="500" type="int" />
+		<option name="close_on_click" value="false" type="bool" />
+		<option name="refresh_content" value="false" type="bool" />
+		<option name="open_callback" value="addKolorFloorPlan('floorPlan', 'floorPlanArea-floorplanDIV');" type="string" />
+		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback-floorPlanArea')" type="string" />
+		<option name="zorder" value="4" type="int" />
+	</settings>
+	</ptplugin>
+	
+	<action name="kolorAreaJsReady-floorPlanArea">
+		set(ptplugin[floorPlanArea].jsready, true);
+
+	</action>
+	
+	<action name="openKolorArea-floorPlanArea">
+		ifnot(ptplugin[floorPlanArea].isOpen,
+			set(ptplugin[floorPlanArea].isOpen, true);
+			set(ptplugin[floorPlanArea].visible, true);
+			set(ptplugin[floorPlanArea].doNotDeleteMe, false);
+			
+			js(showKolorArea(floorPlanArea, &lt;div id="floorPlanArea-floorplanDIV"&gt;&lt;/div&gt;));
+			events.dispatch(onremovedisplayedobject);
+		);
+	</action>
+	
+	<action name="closeKolorArea-floorPlanArea">
+		if(ptplugin[floorPlanArea].isOpen,
+			js(invokePluginFunction(floorPlanArea, closeKolorArea));
+		);
+	</action>
+	
+	<action name="toggleKolorArea-floorPlanArea">
+		if(ptplugin[floorPlanArea].isOpen,
+			closeKolorArea-floorPlanArea();
+		,
+			openKolorArea-floorPlanArea();
+		);
+	</action>
+	
+	<action name="closeKolorAreaCallback-floorPlanArea">
+		set(ptplugin[floorPlanArea].isOpen, false);hideFloorplan();
+
+	</action>
+	
+	<action name="changeTitleKolorArea-floorPlanArea">
+		js(invokePluginFunction(floorPlanArea, changeTitle, %1));
+	</action>
+	
+	<action name="showKolorArea-floorPlanArea">
+		set(ptplugin[floorPlanArea].visible, true);
+		set(ptplugin[floorPlanArea].doNotDeleteMe, false);
+		
+		js(invokePluginFunction(floorPlanArea, showKolorArea, %1));
+		events.dispatch(onremovedisplayedobject);
+	</action>
+		
+	<action name="hideKolorArea-floorPlanArea">
+		
+		set(ptplugin[floorPlanArea].visible, false);
+		js(invokePluginFunction(floorPlanArea, hideKolorArea, %1));
+	</action>
+	
+	<events name="kolorAreaEvents-floorPlanArea" 
+		keep="true"
+		hidetourcontrols="if(loadedState-floorPlanArea,hideKolorArea-floorPlanArea(false););"
+		showtourcontrols="if(tour_displayfloorplan,showKolorArea-floorPlanArea(false););set(loadedState-floorPlanArea, get(tour_displaycontrols));"
+	/>
+	
+	
+
+<!-- ******* -->
+<!-- Gallery -->
+<!-- ******* -->
+
+<ptplugin name="gallery" engine="kolorBox">
+	<settings>
+		<option name="position" value="center" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="draggable_box" value="false" type="bool" />
+		<option name="slideshow_autoplay" value="false" type="bool" />
+		<option name="slideshow" value="5000" type="int" />
+		<option name="container_auto_size" value="true" type="bool" />
+		<option name="container_width" value="100" type="int" />
+		<option name="container_width_unit" value="percent" type="string" />
+		<option name="container_height" value="100" type="int" />
+		<option name="container_height_unit" value="percent" type="string" />
+		<option name="container_color" value="ffffff" type="string" />
+		<option name="container_alpha" value="0.8" type="float" />
+		<option name="container_topleft_border_radius" value="15" type="int" />
+		<option name="container_topright_border_radius" value="15" type="int" />
+		<option name="container_bottomleft_border_radius" value="15" type="int" />
+		<option name="container_bottomright_border_radius" value="15" type="int" />
+		<option name="container_border_width" value="0" type="int" />
+		<option name="container_border_color" value="ffffff" type="string" />
+		<option name="overlay_displayed" value="true" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.500007629510948" type="float" />
+		<option name="item_border_width" value="0" type="int" />
+		<option name="item_border_color" value="ffffff" type="string" />
+		
+		<option name="title_displayed" value="false" type="bool" />
+		
+		<option name="caption_displayed" value="false" type="bool" />
+		
+		<option name="play_displayed" value="true" type="bool" />
+		<option name="play_position" value="bottomleft" type="string" /> 
+		<option name="navigation_displayed" value="true" type="bool" />
+		<option name="navigation_position" value="bottom" type="string" />
+		<option name="navigation_arrows" value="true" type="bool" />
+		<option name="fullscreen_displayed" value="true" type="bool" />
+		<option name="fullscreen_position" value="topleft" type="string" />
+		<option name="close_displayed" value="true" type="bool" />
+		<option name="close_position" value="topright" type="string" />
+		<option name="close_callback" value="invokeKrFunction('closeKolorBoxCallback-gallery')" type="string" />
+		<option name="zorder" value="5" type="int" />
+	</settings>
+	<internaldata>
+		<item name="item_1" title="gallerypicture_title0" caption="gallerypicture_caption0" value="indexdata/graphics/gallery/img_5575_dxo2.jpg"/>
+		<item name="item_2" title="gallerypicture_title1" caption="gallerypicture_caption1" value="indexdata/graphics/gallery/img_5587_dxo2.jpg"/>
+	</internaldata>
+</ptplugin>
+
+<action name="kolorBoxJsReady-gallery">
+	set(ptplugin[gallery].jsready, true);
+</action>
+
+<action name="showGallery-gallery">
+	ifnot(ptplugin[gallery].isOpen,
+		set(ptplugin[gallery].isOpen, true);
+		set(ptplugin[gallery].doNotDeleteMe, false);
+		pauseautorotation(forceplugin);
+
+		js(invokePluginFunction(gallery, openKolorBox, %1));
+		events.dispatch(onremovedisplayedobject);
+	);
+</action>
+
+<action name="toggleGallery-gallery">
+	js(invokePluginFunction(gallery, toggleKolorBox, %1));
+</action>
+
+
+<action name="closeKolorBox-gallery">
+	js(invokePluginFunction(gallery, closeKolorBox));
+</action>
+
+<action name="closeKolorBoxCallback-gallery">
+	resumeautorotation(forceplugin);
+
+	set(ptplugin[gallery].isOpen, false);
+</action>
+
+<events name="kolorBoxEvents-gallery" 
+	keep="true"
+/>
+
+
+
+
+<!-- ******* -->
+<!-- Gallery -->
+<!-- ******* -->
+
+<ptplugin name="gallery1" engine="kolorBox">
+	<settings>
+		<option name="position" value="center" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="draggable_box" value="false" type="bool" />
+		<option name="slideshow_autoplay" value="false" type="bool" />
+		<option name="slideshow" value="5000" type="int" />
+		<option name="container_auto_size" value="true" type="bool" />
+		<option name="container_width" value="100" type="int" />
+		<option name="container_width_unit" value="percent" type="string" />
+		<option name="container_height" value="100" type="int" />
+		<option name="container_height_unit" value="percent" type="string" />
+		<option name="container_color" value="ffffff" type="string" />
+		<option name="container_alpha" value="0.8" type="float" />
+		<option name="container_topleft_border_radius" value="15" type="int" />
+		<option name="container_topright_border_radius" value="15" type="int" />
+		<option name="container_bottomleft_border_radius" value="15" type="int" />
+		<option name="container_bottomright_border_radius" value="15" type="int" />
+		<option name="container_border_width" value="0" type="int" />
+		<option name="container_border_color" value="ffffff" type="string" />
+		<option name="overlay_displayed" value="true" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.500007629510948" type="float" />
+		<option name="item_border_width" value="0" type="int" />
+		<option name="item_border_color" value="ffffff" type="string" />
+		
+		<option name="title_displayed" value="false" type="bool" />
+		
+		<option name="caption_displayed" value="false" type="bool" />
+		
+		<option name="play_displayed" value="true" type="bool" />
+		<option name="play_position" value="bottomleft" type="string" /> 
+		<option name="navigation_displayed" value="true" type="bool" />
+		<option name="navigation_position" value="bottom" type="string" />
+		<option name="navigation_arrows" value="true" type="bool" />
+		<option name="fullscreen_displayed" value="true" type="bool" />
+		<option name="fullscreen_position" value="topleft" type="string" />
+		<option name="close_displayed" value="true" type="bool" />
+		<option name="close_position" value="topright" type="string" />
+		<option name="close_callback" value="invokeKrFunction('closeKolorBoxCallback-gallery1')" type="string" />
+		<option name="zorder" value="6" type="int" />
+	</settings>
+	<internaldata>
+		<item name="item_1" title="gallery1picture_title0" caption="gallery1picture_caption0" value="indexdata/graphics/gallery1/img_5563_dxo2.jpg"/>
+	</internaldata>
+</ptplugin>
+
+<action name="kolorBoxJsReady-gallery1">
+	set(ptplugin[gallery1].jsready, true);
+</action>
+
+<action name="showGallery-gallery1">
+	ifnot(ptplugin[gallery1].isOpen,
+		set(ptplugin[gallery1].isOpen, true);
+		set(ptplugin[gallery1].doNotDeleteMe, false);
+		pauseautorotation(forceplugin);
+
+		js(invokePluginFunction(gallery1, openKolorBox, %1));
+		events.dispatch(onremovedisplayedobject);
+	);
+</action>
+
+<action name="toggleGallery-gallery1">
+	js(invokePluginFunction(gallery1, toggleKolorBox, %1));
+</action>
+
+
+<action name="closeKolorBox-gallery1">
+	js(invokePluginFunction(gallery1, closeKolorBox));
+</action>
+
+<action name="closeKolorBoxCallback-gallery1">
+	resumeautorotation(forceplugin);
+
+	set(ptplugin[gallery1].isOpen, false);
+</action>
+
+<events name="kolorBoxEvents-gallery1" 
+	keep="true"
+/>
+
+
+
+
+  <!-- FLOORPLAN -->
+  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
+  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
+
+
+  <!-- Hide / Show Controls -->
+  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
+  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
+
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
+</krpano>

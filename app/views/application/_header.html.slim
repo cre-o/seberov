@@ -3,7 +3,7 @@ header.application ng-class="{ fixed: fixedHeader == true }"
     .small-3.large-3.columns
       = link_to root_path, class: 'logo', title: 'На главную' do
           = image_tag 'logo', width: 219, height: 131, class: 'ng-hide', :'ng-show' => 'fixedHeader == false'
-          = image_tag 'logo-fixed', width: 138, height: 48, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
+          = image_tag 'logo-fixed', width: 109, height: 38, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
     .small-6.large-6.columns.upcase
       = render partial: 'application/nav'
 

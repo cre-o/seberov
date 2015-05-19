@@ -1,11 +1,12 @@
+// Page info
+- title t('apartments_parameters_page.title')
+- description t('apartments_parameters_page.description')
+- keywords t('apartments_parameters_page.keywords')
+
 #l-apartments.parameters
   .row
     .b-nav-tabs.small-3.small-offset-7.columns
-      ul.upcase
-        li.small-6.columns
-          a href="#" by planning
-        li.active.small-6.columns
-          a href="#" by parameters
+      = render 'nav'
 
   .row.collapse
     .small-12.columns.wrap
@@ -19,15 +20,15 @@
                 .small-4.columns
                   .row.collapse
                     .small-12.columns
-                      h3.upcase Price:
+                      h3.upcase = t('forms.price')+':'
                   // Inputs
                   .row.collapse
                     .small-2.columns.text-left
-                      label for="price-start-label" from
+                      label for="price-start-label" = t('forms.from')
                     .small-4.columns
                       input#price-start-label type="text"
                     .small-2.columns.text-center
-                      label for="price-end-label" to
+                      label for="price-end-label" = t('forms.to')
                     .small-4.columns.left
                       input#price-end-label type="text"
                   .row.collapse
@@ -39,15 +40,15 @@
                 .small-4.columns
                   .row.collapse
                     .small-12.columns
-                      h3.upcase Floorspace:
+                      h3.upcase = t('forms.floorspace')+':'
                   // Inputs
                   .row.collapse
                     .small-2.columns.text-left
-                      label for="foorspace-start-label" from
+                      label for="foorspace-start-label" = t('forms.from')
                     .small-4.columns
                       input#foorspace-start-label type="text"
                     .small-2.columns.text-center
-                      label for="floorspace-end-label" to
+                      label for="floorspace-end-label" = t('forms.to')
                     .small-4.columns
                       input#floorspace-end-label type="text"
                   .row.collapse
@@ -59,15 +60,15 @@
                 .small-4.columns
                   .row.collapse
                     .small-12.columns
-                      h3.upcase Floor:
+                      h3.upcase = t('forms.floor')+':'
                   // Inputs
                   .row.collapse
                     .small-2.columns.text-left
-                      label for="floor-start-label"  from
+                      label for="floor-start-label" = t('forms.from')
                     .small-2.columns
                       input#floor-start-label type="text"
                     .small-2.columns.text-center
-                      label for="floor-end-label"  to
+                      label for="floor-end-label" = t('forms.to')
                     .small-2.columns.left
                       input#floor-end-label type="text"
                   .row.collapse
@@ -77,34 +78,34 @@
 
             .row.rooms
               .small-2.columns
-                h3.upcase Rooms:
+                h3.upcase = t('forms.rooms')+':'
 
               .small-10.left.columns
                 ul.small-block-grid-6
                   li
                     input#one-room type="checkbox"
-                    label for="one-room" one
+                    label for="one-room" = t('forms.one')
                   li
                     input#two-rooms type="checkbox"
-                    label for="two-rooms" two
+                    label for="two-rooms" = t('forms.two')
                   li
                     input#three-rooms type="checkbox"
-                    label for="three-rooms" three
+                    label for="three-rooms" = t('forms.three')
                   li
                     input#four-rooms type="checkbox"
-                    label for="four-rooms" four
+                    label for="four-rooms" = t('forms.four')
                   li
                     input#penthouse type="checkbox"
-                    label for="penthouse" penthouse
+                    label for="penthouse" = t('forms.penthouse')
                   li
                     input#grounds type="checkbox"
-                    label for="grounds" grounds
+                    label for="grounds" = t('forms.grounds')
       // Results
       .row.collapse.b-results
         .small-12.columns
           .row
             .small-8.columns
-              h1.upcase Results:
+              h1.upcase = t('forms.results')+':'
             .small-2.right.columns.total
               | {total_found}
           .row.collapse.items

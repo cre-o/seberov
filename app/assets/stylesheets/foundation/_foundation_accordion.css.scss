@@ -1,1 +1,27 @@
 // redefined styles
+.accordion {
+  .accordion-navigation > a, .accordion-navigation > a:hover  {
+    background: none;
+  }
+
+  .accordion-navigation.active > a, .accordion dd.active > a {
+    background: none;
+  }
+
+  .accordion-navigation {
+    list-style-image: image_url('icons/bullet-down-green');
+
+    &.active {
+      list-style-image: image_url('icons/bullet-down-grey');
+    }
+
+    .content li {
+      list-style-type: disc !important;
+      list-style-image: none;
+    }
+  }
+
+  .accordion-navigation, .accordion dd {
+    display: list-item;
+  }
+}

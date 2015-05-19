@@ -14,7 +14,7 @@ jQuery ->
     }
 
   # Exterior slider
-  $('#main-second-orbit').foundation
+  $('.js-main-screen.orbit').foundation
     orbit: {
       animation: 'slide',
       next_on_click: true,

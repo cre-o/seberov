@@ -17,12 +17,23 @@
 
   // Navigation
   .b-nav-tabs {
+    position: relative;
     margin-bottom: -2px;
     z-index: 10;
+    min-height: 1px;
 
     li {
+      padding: 0;
+    }
+
+    a {
       background-color: #86af95;
+      color: $white;
       padding: rem_calc(5 0 5 10);
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      font-size: rem_calc(16);
+      display: block;
 
       &.active {
         background-color: $green;
@@ -40,15 +51,43 @@
         }
       }
     }
+  }
 
-    a {
-      font-family: 'Open Sans Condensed', sans-serif;
-      font-weight: bold;
-      font-size: rem_calc(16);
-      color: $white;
+  // Planning page
+  &.planning {
+
+    .b-building-selector, .b-flat-selector {
+      padding: rem_calc(20);
+    }
+
+    .b-building-selector {
+      border-right: 1px solid #a39e9e;
+
+      h2 {
+        color: $green;
+        font-family: $default_font;
+        font-size: rem_calc(16);
+        font-weight: 800;
+      }
+
+      form label {
+        font-size: rem_calc(15);
+        font-weight: bold;
+      }
+
+      .b-active-map {
+        .compass {
+          position: absolute;
+          left: -63px;
+          background-image: image_url('apartments/compass');
+          width: 80px;
+          height: 80px;
+        }
+      }
     }
   }
 
+  // Parameters page
   .b-parameters {
     border-bottom: 1px solid $light_grey;
 

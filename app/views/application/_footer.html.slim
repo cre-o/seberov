@@ -42,22 +42,22 @@ footer
       .contacts
         .phone
           span +420 123 456 78
-          a href="#" data-reveal-id="callbackModal" = t 'footer.order_callback'
+          a href="#" data-reveal-id="callbackModal" = t('footer.order_callback')
           // Callback modal window
           #callbackModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
             .row
               .small-8.small-centered.columns
                 header
-                  h2.upcase = t 'form.callback.header'
-                  .subheader.upcase = t 'form.callback.subheader'
+                  h2.upcase = t('forms.callback.header')
+                  .subheader.upcase = t('forms.callback.subheader')
 
             .row
               .small-8.small-centered.columns
                 = form_tag :callback do
                   .small-4.columns
-                    = text_field_tag 'name', '', placeholder: t('form.name'), required: true
+                    = text_field_tag 'name', '', placeholder: t('forms.name'), required: true
                   .small-4.columns
-                    = text_field_tag 'phone', '', placeholder: t('form.phone'), required: true
+                    = text_field_tag 'phone', '', placeholder: t('forms.phone'), required: true
                   .small-4.columns
                     = submit_tag 'Отправить'
 

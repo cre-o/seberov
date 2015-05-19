@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[Novostavby v Praze 4 v projektu Statek Šeberov]]></data>
+
+
+
+  <data name="en_pano1529_title"><![CDATA[Obyvak]]></data>
+  <data name="en_spotpoint1538_tooltip"><![CDATA[Chodba]]></data>
+  <data name="en_spotpoint1539_tooltip"><![CDATA[Galerie]]></data>
+
+
+  <data name="en_pano1528_title"><![CDATA[Pokoj]]></data>
+  <data name="en_spotpoint1542_tooltip"><![CDATA[Chodba]]></data>
+
+
+  <data name="en_pano1530_title"><![CDATA[Patro]]></data>
+  <data name="en_spotpoint1540_tooltip"><![CDATA[Obývací pokoj]]></data>
+  <data name="en_spotpoint1541_tooltip"><![CDATA[Obývací pokoj]]></data>
+
+
+  <data name="en_pano1531_title"><![CDATA[Chodba]]></data>
+  <data name="en_spotpoint1536_tooltip"><![CDATA[Obývací pokoj]]></data>
+  <data name="en_spotpoint1537_tooltip"><![CDATA[Ložnice]]></data>
+  <data name="en_spotpoint1565_tooltip"><![CDATA[Koupelna]]></data>
+  <data name="en_spotpoint1567_tooltip"><![CDATA[WC]]></data>
+
+
+
+
+	<data name="en_project_floor_title"><![CDATA[Novostavby v Praze 4 v projektu Statek Šeberov]]></data>
+	<data name="en_spotmap1569_tooltip"><![CDATA[Chodba]]></data>
+	<data name="en_spotmap1570_tooltip"><![CDATA[Ložnice]]></data>
+	<data name="en_spotmap1571_tooltip"><![CDATA[Obývací pokoj]]></data>
+	<data name="en_spotmap1572_tooltip"><![CDATA[Galerie]]></data>
+
+
+  <data name="en_controlBar_classiczoomInTip"><![CDATA[Přiblížit]]></data>
+  <data name="en_controlBar_classiczoomOutTip"><![CDATA[Oddáli]]></data>
+  <data name="en_controlBar_classicmoveLeftTip"><![CDATA[Vlevo]]></data>
+  <data name="en_controlBar_classicmoveRightTip"><![CDATA[Vpravo]]></data>
+  <data name="en_controlBar_classicmoveUpTip"><![CDATA[Nahoru]]></data>
+  <data name="en_controlBar_classicmoveDownTip"><![CDATA[Dolů]]></data>
+  <data name="en_controlBar_classicopenFsTip"><![CDATA[Na celou obrazovku]]></data>
+  <data name="en_controlBar_classiccloseFsTip"><![CDATA[Zmenšit]]></data>
+  <data name="en_controlBar_classicdisplayFloorplanTip"><![CDATA[Ukázat mapu]]></data>
+  <data name="en_controlBar_classichideFloorplanTip"><![CDATA[Schovat mapu]]></data>
+  <data name="en_controlBar_classicdisplayControlsTip"><![CDATA[Ukázat navigační tlačítka]]></data>
+  <data name="en_controlBar_classichideControlsTip"><![CDATA[Schovat navigační tlačítka]]></data>
+  <data name="en_contextmenuopenwebsitelabel1"><![CDATA[Statek Šeberov]]></data>
+  <data name="en_contextmenuwebsiteurl1"><![CDATA[http://www.statekseberov.cz/]]></data>
+  <data name="en_contextmenuopenwebsitelabel2"><![CDATA[Web Reactor]]></data>
+  <data name="en_contextmenuwebsiteurl2"><![CDATA[http://www.web-reactor.eu]]></data>
+  <data name="en_contextmenuopenwebsitelabel3"><![CDATA[Virtual Tour]]></data>
+  <data name="en_contextmenuwebsiteurl3"><![CDATA[http://vrlab.cz/]]></data>
+  <data name="en_contextmenuopenFsLabel"><![CDATA[Enter Fullscreen]]></data>
+  <data name="en_contextmenucloseFsLabel"><![CDATA[Exit Fullscreen]]></data>
+  <data name="en_gallerypicture_title0"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption0"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title1"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption1"><![CDATA[]]></data>
+  <data name="en_gallery1picture_title0"><![CDATA[]]></data>
+  <data name="en_gallery1picture_caption0"><![CDATA[]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

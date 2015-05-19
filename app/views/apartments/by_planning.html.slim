@@ -1,0 +1,39 @@
+// Page info
+- title t('apartments_planning_page.title')
+- description t('apartments_planning_page.description')
+- keywords t('apartments_planning_page.keywords')
+
+#l-apartments.planning
+  .row
+    .b-nav-tabs.small-3.small-offset-7.columns
+      = render 'nav'
+
+  .row.collapse
+    .small-11.small-centered.columns.wrap
+      .row
+        // Select from image map
+        .small-6.columns.b-building-selector
+          = form_tag 'selector', class: 'row' do
+            .small-5.columns
+              h2.upcase = t('apartments_planning_page.select_floor')
+            .small-2.small-offset-1.columns.text-right
+              label.upcase for="building-select-label" = t('forms.building')+':'
+            .small-1.columns
+              select#building-select-label
+                option value="1" 1
+                option value="2" 2
+                option value="3" 3
+            .small-2.columns.text-right
+              label.upcase for="floor-select-label" = t('forms.floor')+':'
+            .small-1.columns
+              select#floor-select-label
+                option value="1" 1
+                option value="2" 2
+                option value="3" 3
+
+          .row.b-active-map
+            .small-12.columns
+              .compass
+
+        // Select from flats
+        .small-6.columns.b-flat-selector

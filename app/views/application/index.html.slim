@@ -3,7 +3,7 @@
 - description t('main_page.description')
 - keywords t('main_page.keywords')
 
-#l-main ng-controller="MainPageController as MainPage"
+#l-main ng-controller="MainPageController as mainPage"
   // Slider
   .row.fluid.collapse.main-slider
     .small-12.columns
@@ -55,57 +55,102 @@
         ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" style="width: 200px; height: 300px;"
           ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
 
-        // iframe frameborder="0" width="{{MainPage.mapWidth}}" height="{{MainPage.mapHeight}}" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
-
     .small-8.columns
       header.small-8.large-4.upcase.green
         h1 Benefits
         i.fa.fa-2x.fa-chevron-right
 
       ul.benefits
-        - 5.times do
-          li
-            h4.upcase nature reserve area Protected by the state
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt Ut enim ad minim veniam, quis.
+        li
+          h4.upcase = t 'main_page.benefits.first.h'
+          p = t 'main_page.benefits.first.p'
+        li
+          h4.upcase = t 'main_page.benefits.second.h'
+          p = t 'main_page.benefits.second.p'
+        li
+          h4.upcase = t 'main_page.benefits.third.h'
+          p = t 'main_page.benefits.third.p'
+        li
+          h4.upcase = t 'main_page.benefits.fourth.h'
+          p = t 'main_page.benefits.fourth.p'
+        li
+          h4.upcase = t 'main_page.benefits.fifth.h'
+          p = t 'main_page.benefits.fifth.p'
 
   // You can view
   .row.fluid.collapse.main-preview
     / Selector
     .small-2.columns
       .buttons.action
-        .btn.exterior.active ng-style="{'height': orbitHeight/4}"
+        .btn.exterior[
+          ng-class="{ active: mainPage.isCurrentScreen(1) }"
+          ng-click="mainPage.setScreen(1); refreshOrbit()"
+          ng-style="mainPage.isCurrentScreen(1) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
             span Визуализация
           .image
-        .btn.interior ng-style="{'height': orbitHeight/4}"
+        .btn.interior[
+          ng-class="{ active: mainPage.isCurrentScreen(2) }"
+          ng-click="mainPage.setScreen(2); refreshOrbit()"
+          ng-style="mainPage.isCurrentScreen(2) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
             span Фотографии
           .image
-        .btn.tour ng-style="{'height': orbitHeight/4}"
+        .btn.tour[
+          ng-class="{ active: mainPage.isCurrentScreen(3) }"
+          ng-click="mainPage.setScreen(3)"
+          ng-style="mainPage.isCurrentScreen(3) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
             | Виртуальный
             br
             | тур
           .image
-        .btn.webcams ng-style="{'height': orbitHeight/4}"
+        .btn.webcams[
+          ng-class="{ active: mainPage.isCurrentScreen(4) }"
+          ng-click="mainPage.setScreen(4); loadWebcam()"
+          ng-style="mainPage.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
             span Камера
           .image
 
-    / Main slider
     / Using manual initialisation with custom buttons
     .small-8.large-8.columns.screen
-        ul#main-second-orbit data-orbit=""
-          = render partial: 'main_second_orbit_data', locals: { img_num: 1, description: 'First image description' }
-          = render partial: 'main_second_orbit_data', locals: { img_num: 2, description: 'Second image description' }
-          = render partial: 'main_second_orbit_data', locals: { img_num: 3, description: 'Third image description' }
-          = render partial: 'main_second_orbit_data', locals: { img_num: 4, description: 'Fourth image description' }
+        // Exterior
+        ul#exterior-orbit.js-main-screen.orbit[
+           data-orbit=""
+           ng-class="{active: mainPage.isCurrentScreen(1)}"]
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'exterior/1', description: 'First image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'exterior/2', description: 'Second image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'exterior/3', description: 'Third image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'exterior/4', description: 'Fourth image description' }
+        // Interior
+        ul#interior-orbit.js-main-screen.orbit[
+          data-orbit=""
+          ng-class="{active: mainPage.isCurrentScreen(2)}"]
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/1', description: 'First image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/2', description: 'Second image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/3', description: 'Third image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/4', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/5', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/6', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/7', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/8', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/9', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/10', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/11', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/12', description: 'Fourth image description' }
+          = render partial: 'main_screen_orbit_data', locals: { img_path: 'interior/13', description: 'Fourth image description' }
+        div ng-if="mainPage.isCurrentScreen(3)"
+          .flex-video.widescreen.js-main-screen
+            iframe#virtual-tour ng-src="virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
+        div ng-if="mainPage.isCurrentScreen(4)"
+          .js-main-screen.text-center
+            img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
+
 
     / Buttons
     .small-2.columns.options.end
-      .option ng-style="{'height': orbitHeight/2-2}"
+      .option ng-style="{'height': screenHeight/4-2}"
         .wrap
           .text
             | Download
@@ -113,7 +158,7 @@
             | Price List
           .icon.pdf
 
-      .option ng-style="{'height': orbitHeight/2-2}"
+      .option ng-style="{'height': screenHeight/4-2}"
         .wrap
           .text
             | Choose

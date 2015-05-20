@@ -59,42 +59,28 @@
             | Спортивный ареал
 
   .row
-    .small-12.columns
+    .small-8.small-centered.medium-centered.large-8.large-centered.columns.text-center
       ul#location-orbit data-orbit=""
-        li
-          img src="#{image_path('main/slider/1-small.jpg')}" data-interchange="
-            [#{image_path('main/slider/1-small.jpg')}, (default)],
-            [#{image_path('main/slider/1-medium.jpg')}, (medium)],
-            [#{image_path('main/slider/1-large.jpg')}, (large)],
-            [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption-bottom
-            | Text 1
-            a href="#" class="orbit-prev-bottom"
-              .fa.fa-1.z5x.fa-chevron-left
-            a href="#" class="orbit-next-bottom"
-              .fa.fa-1.z5x.fa-chevron-right
-        li
-          img src="#{image_path('main/slider/2-small.jpg')}" data-interchange="
-            [#{image_path('main/slider/2-small.jpg')}, (small)],
-            [#{image_path('main/slider/2-medium.jpg')}, (medium)],
-            [#{image_path('main/slider/2-large.jpg')}, (large)],
-            [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption-bottom
-            | Text 2
-            a href="#" class="orbit-prev-bottom"
-              .fa.fa-1.z5x.fa-chevron-left
-            a href="#" class="orbit-next-bottom"
-              .fa.fa-1.z5x.fa-chevron-right
-
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/1', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/2', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/3', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/4', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/5', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/6', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/7', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/8', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/9', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/10', description: 'wtf?' }
+        = render partial: 'orbit_data', locals: { img_path: 'location/slider/11', description: 'wtf?' }
   .row.b-bottom-images
     .small-6.columns
       figure
-        = image_tag 'main/slider/1-medium.jpg'
+        = image_tag 'location/old-version'
         figcaption
           | Kolorovaná fotografie statu z 18. století
 
     .small-6.columns
       figure
-        = image_tag 'main/slider/2-medium.jpg'
+        = image_tag 'location/new-version'
         figcaption
           | Aktuální fotografie

@@ -4,7 +4,7 @@
 		{
 			"follow_symlinks": true,
 			"path": "/Users/laminelli/Webdev/projects/seberov",
-      "file_exclude_patterns": ["*.cache", "materials/*"]
+      "file_exclude_patterns": ["*.cache", "materials/*", "public/virtual_tour"]
 		}
 	]
 }

@@ -118,6 +118,12 @@
         height: 30px;
       }
     }
+
+    .rooms {
+      input[type="checkbox"] {
+        border: 2px solid #bdc9c1;
+      }
+    }
   }
 
   .b-results {

@@ -13,68 +13,67 @@
       .row.collapse.b-parameters
         .small-12.columns
           h1.upcase Parameters:
-          .b-filters
-            form
-              .row
-                // Price
-                .small-4.columns
-                  .row.collapse
-                    .small-12.columns
-                      h3.upcase = t('forms.price')+':'
-                  // Inputs
-                  .row.collapse
-                    .small-2.columns.text-left
-                      label for="price-start-label" = t('forms.from')
-                    .small-4.columns
-                      input#price-start-label type="text"
-                    .small-2.columns.text-center
-                      label for="price-end-label" = t('forms.to')
-                    .small-4.columns.left
-                      input#price-end-label type="text"
-                  .row.collapse
-                    // Minimum price and maximum price gets from database
-                    .small-12.columns
-                      #appartments-price-slider data-min-value="10000" data-max-value="9999999"
+          form.b-filters
+            .row
+              // Price
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.price')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="price-start-label" = t('forms.from')
+                  .small-4.columns
+                    input#price-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="price-end-label" = t('forms.to')
+                  .small-4.columns.left
+                    input#price-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-12.columns
+                    #appartments-price-slider data-min-value="10000" data-max-value="9999999"
 
-                // Floorspace
-                .small-4.columns
-                  .row.collapse
-                    .small-12.columns
-                      h3.upcase = t('forms.floorspace')+':'
-                  // Inputs
-                  .row.collapse
-                    .small-2.columns.text-left
-                      label for="foorspace-start-label" = t('forms.from')
-                    .small-4.columns
-                      input#foorspace-start-label type="text"
-                    .small-2.columns.text-center
-                      label for="floorspace-end-label" = t('forms.to')
-                    .small-4.columns
-                      input#floorspace-end-label type="text"
-                  .row.collapse
-                    // Minimum price and maximum price gets from database
-                    .small-.columns
-                      #appartments-floorspace-slider data-min-value="40" data-max-value="100"
+              // Floorspace
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.floorspace')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="foorspace-start-label" = t('forms.from')
+                  .small-4.columns
+                    input#foorspace-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="floorspace-end-label" = t('forms.to')
+                  .small-4.columns
+                    input#floorspace-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-.columns
+                    #appartments-floorspace-slider data-min-value="40" data-max-value="100"
 
-                // Floor
-                .small-4.columns
-                  .row.collapse
-                    .small-12.columns
-                      h3.upcase = t('forms.floor')+':'
-                  // Inputs
-                  .row.collapse
-                    .small-2.columns.text-left
-                      label for="floor-start-label" = t('forms.from')
-                    .small-2.columns
-                      input#floor-start-label type="text"
-                    .small-2.columns.text-center
-                      label for="floor-end-label" = t('forms.to')
-                    .small-2.columns.left
-                      input#floor-end-label type="text"
-                  .row.collapse
-                    // Minimum price and maximum price gets from database
-                    .small-10.left.columns
-                      #appartments-floor-slider data-min-value="3" data-max-value="10"
+              // Floor
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.floor')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="floor-start-label" = t('forms.from')
+                  .small-2.columns
+                    input#floor-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="floor-end-label" = t('forms.to')
+                  .small-2.columns.left
+                    input#floor-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-10.left.columns
+                    #appartments-floor-slider data-min-value="3" data-max-value="10"
 
             .row.rooms
               .small-2.columns

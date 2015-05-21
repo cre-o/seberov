@@ -248,13 +248,16 @@ footer {
   .footer-nav  {
     nav {
       margin-left: 20px;
+
+      a:hover {
+        font-size: rem_calc(16);
+      }
     }
 
     ul {
       border-right: 1px solid $white;
-      padding-right: 40px;
+      margin-right: 40px;
       font-weight: bold;
-      display: inline-block;
     }
   }
 

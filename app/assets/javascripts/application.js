@@ -24,6 +24,7 @@
 //= require foundation/foundation.orbit
 //= require foundation/foundation.offcanvas
 //= require foundation/foundation.tooltip
+//= require foundation/foundation.reveal
 //= require angular-scroll
 //= require angular-google-maps
 //= require angular-ui-utils/mask

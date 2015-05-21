@@ -30,8 +30,6 @@ gem 'slim-rails'
 gem 'foundation-rails'
 # CSS Mixins
 gem 'bourbon'
-# Font icons
-gem 'font-awesome-rails', group: :assets
 # Javascript features
 gem 'angularjs-rails'
 gem 'lodash-rails' # javascript features
@@ -88,3 +86,6 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 # i18n support
 gem 'refinerycms-i18n'
+
+# Font icons
+gem 'font-awesome-rails'

@@ -5,7 +5,8 @@ preload_app true
 stdout_path './log/unicorn.log'
 stderr_path './log/unicorn_error.log'
 
-listen './tmp/sockets/unicorn.sock', backlog: 64
+pid "#{ENV['SEBEROV_RAILS_HOME_PATH']}/tmp/pids/unicorn.pid"
+listen "#{ENV['SEBEROV_RAILS_HOME_PATH']}/tmp/sockets/unicorn.sock", backlog: 64
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
@@ -13,8 +14,8 @@ before_fork do |server, worker|
     Process.kill 'QUIT', Process.pid
   end
 
-  #defined?(ActiveRecord::Base) and
-  #  ActiveRecord::Base.connection.disconnect!
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.connection.disconnect!
 end
 
 after_fork do |server, worker|
@@ -22,6 +23,6 @@ after_fork do |server, worker|
     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
 
-  #defined?(ActiveRecord::Base) and
-  #  ActiveRecord::Base.establish_connection
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
 end

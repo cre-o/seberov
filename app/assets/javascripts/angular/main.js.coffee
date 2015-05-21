@@ -23,7 +23,6 @@ angular.module('seberov').controller 'MainPageController', ($scope,  $window, ui
   $scope.refreshOrbit = ->
     $timeout ->
       $(document).foundation('orbit', 'reflow')
-      console.log '123'
     , 100
 
   $scope.loadWebcam = ->

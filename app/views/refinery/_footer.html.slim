@@ -12,7 +12,7 @@ footer
 
     .small-2.columns
       .footer-nav
-        = render partial: 'application/nav'
+        = render partial: 'refinery/nav'
 
     .small-2.columns
       .credit
@@ -53,7 +53,7 @@ footer
 
             .row
               .small-8.small-centered.columns
-                = form_tag :callback do
+                = form_tag refinery.callback_path do
                   .small-4.columns
                     = text_field_tag 'name', '', placeholder: t('forms.name'), required: true
                   .small-4.columns

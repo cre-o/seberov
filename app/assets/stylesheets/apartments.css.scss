@@ -39,14 +39,10 @@
         background-color: $green;
 
         &:after {
+          @include triangle(14px, $green, down);
           content: ' ';
-          height: 0;
-          position: absolute;
-          width: 0;
-          border-left: 7px solid transparent;
-          border-right: 7px solid transparent;
-          border-top: 7px solid $green;
           bottom: rem_calc(-7);
+          position: absolute;
           left: rem_calc(30);
         }
       }
@@ -108,10 +104,6 @@
         font-weight: bold;
         font-size: rem_calc(18);
         padding-bottom: rem_calc(26);
-      }
-
-      label {
-        line-height: rem_calc(25);
       }
 
       input[type="text"] {

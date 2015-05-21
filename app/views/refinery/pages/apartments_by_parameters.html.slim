@@ -1,12 +1,7 @@
-// Page info
-- title t('apartments_parameters_page.title')
-- description t('apartments_parameters_page.description')
-- keywords t('apartments_parameters_page.keywords')
-
 #l-apartments.parameters
   .row
     .b-nav-tabs.small-3.small-offset-7.columns
-      = render 'nav'
+      = render 'refinery/pages/apartments_nav'
 
   .row.collapse
     .small-12.columns.wrap
@@ -141,6 +136,4 @@
                   .small-3.columns.go
                     .more.upcase
                        = link_to 'see more', js_void
-
-
 

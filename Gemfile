@@ -4,6 +4,8 @@ ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,7 +31,7 @@ gem 'foundation-rails'
 # CSS Mixins
 gem 'bourbon'
 # Font icons
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', group: :assets
 # Javascript features
 gem 'angularjs-rails'
 gem 'lodash-rails' # javascript features
@@ -60,6 +62,8 @@ group :development do
 
   gem 'rename' # Renaming project
   gem 'better_errors'       # Better errors for debugging
+  gem 'quiet_assets'
+  gem 'rails-footnotes', '>= 4', '<5' # Footnotes with dev information
   #gem 'capistrano', '>= 2', '< 3', require: false # "Deploying standard for ruby"
   #gem 'capistrano-deploy'   # Additional libraries
   #gem 'rvm-capistrano'      # RVM integration
@@ -76,3 +80,11 @@ group :development, :test do
   gem 'spring'
 end
 
+# Admin interface
+gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+# Add support for searching inside Refinery's admin interface.
+gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
+# Add support for Refinery's custom fork of the visual editor WYMeditor.
+gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+# i18n support
+gem 'refinerycms-i18n'

@@ -82,8 +82,10 @@ header.application {
         @extend %b-height;
 
         color: $purple;
+      }
 
-        &.active {
+      &.selected {
+        a {
           color: $white;
           height: 57px;
           padding: 0 rem_calc(10) 0 rem_calc(10);

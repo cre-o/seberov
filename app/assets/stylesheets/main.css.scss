@@ -48,6 +48,10 @@
     background-color: $white;
     min-height: rem_calc(460);
 
+    .columns:nth-child(2) {
+      box-shadow: 0px 0px 10px #999;
+    }
+
 
     header {
       $height: rem_calc(50);
@@ -225,11 +229,11 @@
         right: rem_calc(3) !important;
       }
 
-      .orbit-slides-container {
+      .orbit {
         display: none;
 
         &.active {
-          display: inherit;
+          display: block;
         }
       }
     }

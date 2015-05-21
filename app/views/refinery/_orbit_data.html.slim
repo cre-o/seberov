@@ -1,0 +1,28 @@
+- if defined?(size) && size.present? && size > 1
+  - size.times do |t|
+    - p = t.next
+    li
+      img src="#{image_path("#{img_path}/#{p}-s.jpg")}" data-interchange="
+        [#{image_path("#{img_path}/#{p}-s.jpg")}, (default)],
+        [#{image_path("#{img_path}/#{p}-m.jpg")}, (medium)],
+        [#{image_path("#{img_path}/#{p}-l.jpg")}, (large)],
+        [#{image_path("#{img_path}/#{p}-xl.jpg")}, (xlarge)]"
+      .orbit-caption-bottom
+        = descriptions[t]
+        a href="#" class="orbit-prev-bottom"
+          .fa.fa-1.z5x.fa-chevron-left
+        a href="#" class="orbit-next-bottom"
+          .fa.fa-1.z5x.fa-chevron-right
+- else
+  li
+    img src="#{image_path("#{img_path}-s.jpg")}" data-interchange="
+      [#{image_path("#{img_path}-s.jpg")}, (default)],
+      [#{image_path("#{img_path}-m.jpg")}, (medium)],
+      [#{image_path("#{img_path}-l.jpg")}, (large)],
+      [#{image_path("#{img_path}-xl.jpg")}, (xlarge)]"
+    .orbit-caption-bottom
+      = description
+      a href="#" class="orbit-prev-bottom"
+        .fa.fa-1.z5x.fa-chevron-left
+      a href="#" class="orbit-next-bottom"
+        .fa.fa-1.z5x.fa-chevron-right

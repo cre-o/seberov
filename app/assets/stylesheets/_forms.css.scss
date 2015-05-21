@@ -1,6 +1,5 @@
-// Squared input button
 form {
-
+  // Checkboxes
   input[type="checkbox"] {
     position:absolute;
     z-index:-1000;
@@ -15,13 +14,12 @@ form {
   }
 
   input[type="checkbox"] + label {
-    padding-left:27px;
+    padding-left:30px;
     height:21px;
     display:inline-block;
     line-height:21px;
     background-repeat:no-repeat;
     background-position: 0 0;
-    font-size:21px;
     vertical-align:middle;
     cursor:pointer;
     font-size: rem_calc(15);
@@ -39,5 +37,44 @@ form {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+
+  // No shadows
+  input[type="text"], input[type="password"], input[type="date"],
+  input[type="datetime"], input[type="datetime-local"], input[type="month"],
+  input[type="week"], input[type="email"], input[type="number"], input[type="search"],
+  input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+    box-shadow: none;
+  }
+
+  // Sliders
+  .noUi-target {
+    background-color: $green;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .noUi-horizontal {
+    height: 5px;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 23px;
+    left: -17px;
+    top: -9px;
+  }
+
+  .noUi-handle  {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: image_url('forms/slider-handle') no-repeat;
+  }
+
+  .noUi-handle:before, .noUi-handle:after {
+    display: inline;
+    position: static;
   }
 }

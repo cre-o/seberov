@@ -1,0 +1,172 @@
+#l-main ng-controller="MainPageController as mainPage"
+  // Slider
+  .row.fluid.collapse.main-slider
+    .small-12.columns
+      ul#main-orbit data-orbit=""
+        li
+          img src="#{image_path('main/slider/1-large.jpg')}" data-interchange="
+            [#{image_path('main/slider/1-small.jpg')}, (default)],
+            [#{image_path('main/slider/1-medium.jpg')}, (medium)],
+            [#{image_path('main/slider/1-large.jpg')}, (large)],
+            [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
+          .orbit-caption-middle
+            = raw @page.content_for(:slider_image)
+            //= link_to apartments_root_path, class: 'choose-apartment' do
+              i.map
+              | choose an apartment
+        li
+          img src="#{image_path('main/slider/2-large.jpg')}" data-interchange="
+            [#{image_path('main/slider/2-small.jpg')}, (default)],
+            [#{image_path('main/slider/2-medium.jpg')}, (medium)],
+            [#{image_path('main/slider/2-large.jpg')}, (large)],
+            [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
+          .orbit-caption-middle
+            h1
+              ' New apartments in the private sector of Prague 4 from the builder.
+              br
+              ' only
+              b 24 apartments
+              ', with a layout from
+              b 2 to 5 bedrooms Left
+              '!
+            //= link_to apartments_root_path, class: 'choose-apartment' do
+              i.map
+              | choose an apartment
+
+  .row.fluid.main-info
+    .small-4.columns
+      header.small-12.large-8.upcase.grey.map
+        h1 Map
+        i.fa.fa-2x.fa-chevron-right
+      // Google map!
+      .gmap
+        ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true"
+          ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
+
+    .small-8.columns
+      header.small-8.large-4.upcase.green
+        h1 Benefits
+        i.fa.fa-2x.fa-chevron-right
+
+      = raw @page.content_for(:benefits)
+
+  // You can view
+  .row.fluid.collapse.main-preview
+    / Selector
+    .small-2.columns
+      .buttons.action
+        .btn.exterior[
+          ng-class="{ active: mainPage.isCurrentScreen(1) }"
+          ng-click="mainPage.setScreen(1); refreshOrbit()"
+          ng-style="mainPage.isCurrentScreen(1) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span Визуализация
+          .image
+        .btn.interior[
+          ng-class="{ active: mainPage.isCurrentScreen(2) }"
+          ng-click="mainPage.setScreen(2); refreshOrbit()"
+          ng-style="mainPage.isCurrentScreen(2) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span Фотографии
+          .image
+        .btn.tour[
+          ng-class="{ active: mainPage.isCurrentScreen(3) }"
+          ng-click="mainPage.setScreen(3)"
+          ng-style="mainPage.isCurrentScreen(3) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            | Виртуальный
+            br
+            | тур
+          .image
+        .btn.webcams[
+          ng-class="{ active: mainPage.isCurrentScreen(4) }"
+          ng-click="mainPage.setScreen(4); loadWebcam()"
+          ng-style="mainPage.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span Камера
+          .image
+
+    / Using manual initialisation with custom buttons
+    .small-8.large-8.columns.screen
+        // Exterior
+        ul#exterior-orbit.js-main-screen.orbit[
+           data-orbit=""
+           ng-class="{active: mainPage.isCurrentScreen(1)}"]
+          = render partial: 'refinery/orbit_data',
+            locals: { img_path: 'main/preview-widget/exterior', size: 4,
+            descriptions: [ \
+              '1',
+              '2',
+              '3',
+              '4']}
+        // Interior
+        ul#interior-orbit.js-main-screen.orbit[
+          data-orbit=""
+          ng-class="{active: mainPage.isCurrentScreen(2)}"]
+          = render partial: 'refinery/orbit_data',
+            locals: { img_path: 'main/preview-widget/interior', size: 13,
+            descriptions: [ \
+              '1',
+              '2',
+              '3',
+              '4',
+              '5',
+              '6',
+              '7',
+              '8',
+              '9',
+              '10',
+              '11',
+              '12',
+              '13']}
+        div ng-if="mainPage.isCurrentScreen(3)"
+          .flex-video.widescreen.js-main-screen
+            iframe#virtual-tour ng-src="virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
+        div ng-if="mainPage.isCurrentScreen(4)"
+          .js-main-screen.text-center
+            img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
+
+
+    / Buttons
+    .small-2.columns.options.end
+      .option ng-style="{'height': screenHeight/4-2}"
+        .wrap
+          .text
+            | Download
+            br
+            | Price List
+          .icon.pdf
+
+      .option ng-style="{'height': screenHeight/4-2}"
+        .wrap
+          .text
+            | Choose
+            br
+            | an Apartment
+          .icon.plan
+
+  section.main-steps-info
+    .row.fuild
+      .small-6.small-offset-2.small-offset-2
+        h1.upcase Procedure of purchasing:
+
+    / Steps
+    .row
+      .small-11.small-offset-1
+        = raw @page.content_for(:procedure_of_purchasing)
+
+    .row
+      .small-10.small-offset-2
+        h1.upcase Our Projects:
+        .row
+          .small-10.columns
+            ul.small-block-grid-3
+              li
+                = link_to '#', title: 'wtf1' do
+                  = image_tag 'main/projects/1'
+              li
+                = link_to '#', title: 'wtf2' do
+                  = image_tag 'main/projects/2'
+              li
+                = link_to '#', title: 'wtf3' do
+                  = image_tag 'main/projects/3'

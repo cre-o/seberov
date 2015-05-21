@@ -1,23 +1,8 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
 
-  def location
-  end
-
-  def standards
-  end
-
-  def contacts
-  end
-
-  def apartments
-  end
-
-  def references
-  end
-
+  # POST /callback
   def callback
     callback_form = CallbackForm.new(callback_params)
 
@@ -32,7 +17,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def callback_params
-    params.permit(:name, :phone)
-  end
+  private
+    def callback_params
+      params.permit(:name, :phone)
+    end
 end

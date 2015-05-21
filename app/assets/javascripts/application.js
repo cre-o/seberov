@@ -13,10 +13,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
 //= require lodash
 //= require utility
-//= require foundation
-//= require angular
+//= require foundation/foundation
+//= require foundation/foundation.accordion
+//= require foundation/foundation.alert
+//= require foundation/foundation.interchange
+//= require foundation/foundation.slider
+//= require foundation/foundation.orbit
+//= require foundation/foundation.offcanvas
+//= require foundation/foundation.tooltip
 //= require angular-scroll
 //= require angular-google-maps
 //= require angular-ui-utils/mask

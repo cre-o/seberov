@@ -1,21 +1,18 @@
 doctype html
-html lang="en" ng-app="seberov"
+html lang="#{::I18n.locale}" ng-app="seberov"
   head
-    meta charset="utf-8"
-    meta content="width=device-width, initial-scale=1.0" name="viewport"
-    meta name="description" content="#{content_for?(:description) ? yield(:description) : t('all_pages.empty_description')}"
-    meta name="keywords" content="#{content_for?(:keywords) ? yield(:keywords) : t('all_pages.empty_keywords')}"
-    meta name="author" content=""
-    title = content_for?(:title) ? yield(:title) : t('all_pages.empty_title')
-    = stylesheet_link_tag    "application"
+    = render '/refinery/head'
     // Passing server data into JS
     = Gon::Base.render_data({camel_case: true})
-    = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
   body ng-controller="ApplicationController as app"
-    .inner-wrap ng-init="app.development = false" ng-class="{ development: app.development == true }"
-      = render 'header'
-      = render 'flash'
-      = yield
-      = render 'footer'
+    .inner-wrap id="#{canonical_id @page}" ng-init="app.development = false" ng-class="{ development: app.development == true }"
+      header.application ng-class="{ fixed: fixedHeader == true }"
+        = render 'refinery/header'
+      section#flash
+        = render 'refinery/flash'
+      section#page
+        = yield
+      footer
+        = render 'refinery/footer'
+
+      = javascript_include_tag 'application'

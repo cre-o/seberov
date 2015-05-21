@@ -26,6 +26,7 @@ header.application {
 
   &.fixed {
     position: fixed;
+    top: 0;
     z-index: 555;
 
     .logo {
@@ -38,6 +39,7 @@ header.application {
     right: 0;
     top: 0;
     z-index: $index;
+    display: block;
   }
 
   // Main navigational styles

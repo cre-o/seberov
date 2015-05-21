@@ -11,9 +11,6 @@
             [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
           .orbit-caption-middle
             = raw @page.content_for(:slider_image)
-            //= link_to apartments_root_path, class: 'choose-apartment' do
-              i.map
-              | choose an apartment
         li
           img src="#{image_path('main/slider/2-large.jpg')}" data-interchange="
             [#{image_path('main/slider/2-small.jpg')}, (default)],
@@ -21,17 +18,7 @@
             [#{image_path('main/slider/2-large.jpg')}, (large)],
             [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
           .orbit-caption-middle
-            h1
-              ' New apartments in the private sector of Prague 4 from the builder.
-              br
-              ' only
-              b 24 apartments
-              ', with a layout from
-              b 2 to 5 bedrooms Left
-              '!
-            //= link_to apartments_root_path, class: 'choose-apartment' do
-              i.map
-              | choose an apartment
+            = raw @page.content_for(:slider_image)
 
   .row.fluid.main-info
     .small-4.columns
@@ -132,9 +119,7 @@
       .option ng-style="{'height': screenHeight/4-2}"
         .wrap
           .text
-            | Download
-            br
-            | Price List
+            = t 'main_page.screen.download_button_text_html'
           .icon.pdf
 
       .option ng-style="{'height': screenHeight/4-2}"

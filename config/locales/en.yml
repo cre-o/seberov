@@ -19,37 +19,9 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
-  all_pages:
-    empty_description: 'Projekt New apartments Prague 4 - Šeberov Homestead offers its prospective owners 39 flats of categories 2 + kk to 5 + kk, including garage parking or parking spaces.'
-    empty_keywords: ''
-    empty_title: ''
-    nav:
-      the_project: 'The project'
-      location: 'Location'
-      standards: 'Standards'
-      apartments: 'Apartments'
-      contacts: 'Contacts'
-      references: 'References'
   main_page:
-    title: 'New apartments Prague 4 - Šeberov Homestead | Šeberov Farm'
-    description: ''
-    keywords: ''
-    benefits:
-      first:
-        h: 'Проект Новые квартиры в Праге 4 - Усадьба Шеберов'
-        p: 'расположен на улице К Шеберову в предместье Грнчире, которое формирует южную часть городского района Праги – Шеберов, прямо у костёла св. Прокопа.'
-      second:
-        h: 'Интересной чертой проекта Усадьба Шеберов является'
-        p: 'спокойная атмосфера в круглосуточно охраняемом ареале, посреди исторической застройки и, в тоже время, прямо на краю охраняемой государством природной резервации.'
-      third:
-        h: 'Тишина сельской местности в природе и хорошая доступность до центра '
-        p: 'Вы доедете до Вацлавской площади от нас на машине всего за 15 минут, поездка на автобусе до станции метро Опатов (линия С) займёт 7 минут.'
-      fourth:
-        h: 'Квартиры находится в спокойном частном секторе, с отличной инфраструктурой'
-        p: 'В непосредственной близости находятся детский сад и начальная школа, участковый доктор, рестораны или магазины с разнообразным ассортиментом.'
-      fifth:
-        h: 'Широкие возможности проведения досуга, которые предлагает район Грнчире'
-        p: 'Это могут быть пешие прогулки на близлежащие озёра, детские площадки или новый спортивный комплекс, велопрогулки по велосипедным дорожкам и многое другое.'
+    screen:
+      download_button_text_html: 'Download <br /> Price list'
   apartments_page:
     by_planning: 'by planning'
     by_parameters: 'by parameters'

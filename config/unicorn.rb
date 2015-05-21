@@ -5,6 +5,8 @@ preload_app true
 stdout_path './log/unicorn.log'
 stderr_path './log/unicorn_error.log'
 
+listen './tmp/sockets/unicorn.sock', backlog: 64
+
 before_fork do |server, worker|
   Signal.trap 'TERM' do
     puts 'Unicorn master intercepting TERM and sending myself QUIT instead'

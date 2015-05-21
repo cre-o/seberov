@@ -239,6 +239,10 @@ footer {
     padding: rem_calc(5 45);
     font-weight: 300;
     line-height: rem_calc(18);
+
+    p {
+      margin: 0;
+    }
   }
 
   .footer-nav  {

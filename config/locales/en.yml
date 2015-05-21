@@ -19,26 +19,77 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
+
   main_page:
     screen:
+      exterior_button_text_html: 'Визуализация'
+      interior_button_text_html: 'Фотографии'
+      tour_button_text_html: 'Виртуальный <br /> Тур'
+      webcam_button_text_html: 'Камера'
       download_button_text_html: 'Download <br /> Price list'
+      choose_an_apartment_button_text_html: 'Choose <br /> An apartment'
+
+      exterior:
+        descriptions:
+          - 'first description'
+          - '2'
+          - '3'
+          - '4'
+      interior:
+        descriptions:
+          - 'first description'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
+          - '11'
+          - '12'
+          - '13'
+
   apartments_page:
     by_planning: 'by planning'
     by_parameters: 'by parameters'
+
   apartments_parameters_page:
     title: 'Apartments parameters page!'
     description: 'Apartments parameters page!'
     keywords: 'Apartments parameters page!'
+
   apartments_planning_page:
     title: 'Apartments planning page!'
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
     select_floor: 'Выберите корпус и этаж:'
+
   location_page:
-    description:
-      one: 'Грнчире формируют южную часть Праги-Шеберов, не образуя непрерывную застройку - между двумя частями есть расстояние около 700 м. В Грнчире в последние годы построено много новых вилл, особенно на восточном и южном крае. Что касается размера населенных пунктов, Грнчире уже больше, чем Шеберов.'
-      two: 'Новая недвижимость в Чехии от застройщика Усадьба Шеберов благодаря своему уникальному расположению может предложить большое разнообразие проведения досуга. Это могут быть пешие прогулки на близлежащие озёра, детские площадки или новый спортивный комплекс, велопрогулки по велосипедным дорожкам и многое другое. Доехать до Вацлавской площади можно примерно за 15 минут (на машине), поездка на автобусе до станции метро Opatov занимает не более 7 минут.'
-      three: 'Новая недвижимость в Чехии от застройщика Усадьба Шеберов расположена недалеко районов Кунратисе и Пругонице, которые также предлагают большой спектр деятельности, включая лучшие рестораны Праги и самый большой Аквапарк в Чехии. Хотя Новостройки в Чехии от застройщика Усадьба Шеберов расположены в тихом районе, клиенты, которые примут решение купить новое жильё в Чехии, найдут здесь развитую городскую инфраструктуру, например, много престижных школ и детских садов (PORG, OPEN GATE, DINO, Sunny Canadian), Английскую гимназию. Не менее интересны также разнообразие магазинов в современных торговых центрах Честлице и Ходов.'
+    icons_text:
+      medicine: 'Районная больница и аптека'
+      autobus: 'Автобусная остановка прямо у дома'
+      relax: 'Центр досуга и свободного времени'
+      school: 'Начальная и средняя школы'
+      administration: 'Городское управление'
+      police: 'Полицейский участок'
+      library: 'Библиотека'
+      playground: 'Детская площадка'
+      sports: 'Спортивный ареал'
+    slider:
+      descriptions:
+        - 'First image'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
+        - '10'
+        - '11'
 
   forms:
     building: 'building'
@@ -57,6 +108,7 @@ en:
     penthouse: 'penthouse'
     grounds: 'grounds'
     results: 'results'
+    send: 'отправить'
     callback:
       header: 'Оставьте свой номер телефона'
       subheader: 'и наш менеджер перезвонит вам в ближайшее время'

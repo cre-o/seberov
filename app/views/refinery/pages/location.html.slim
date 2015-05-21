@@ -7,16 +7,7 @@
           .small-5.columns.active-map
             iframe ng-init="location.address='Statek Seberov Praha'" ng-src="{{location.url + location.address | trusted}}" frameborder="0" width="430" height="400" style="border:0"
           .small-7.columns
-            ul.description
-              li
-                i.rectangle
-                = t 'location_page.description.one'
-              li
-                i.rectangle
-                = t 'location_page.description.two'
-              li
-                i.rectangle
-                = t 'location_page.description.three'
+            = raw @page.content_for(:body)
 
   .row
     .small-12.columns.b-map-controls
@@ -24,54 +15,45 @@
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov medicine'"
             i.medicine
-            | Районная больница и аптека
+            = t 'medicine', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov autobus'"
             i.autobus
-            | Автобусная остановка прямо у дома
+            = t 'autobus', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov relax'"
             i.relax
-            | Центр досуга и свободного времени
+            = t 'relax', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov skola'"
             i.school
-            | Начальная и средняя школы
+            = t 'school', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov'"
             i.administration
-            | Городское управление
+            = t 'administration', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov policie'"
             i.police
-            | Полицейский участок
+            = t 'police', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov knihovna'"
             i.library
-            | Библиотека
+            = t 'library', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov playground'"
             i.playground
-            | Детская площадка
+            = t 'playground', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov gym'"
             i.sports
-            | Спортивный ареал
+            = t 'sports', scope: 'location_page.icons_text'
 
   .row
     .small-8.small-centered.medium-centered.large-8.large-centered.columns.text-center
       ul#location-orbit data-orbit=""
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/1', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/2', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/3', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/4', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/5', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/6', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/7', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/8', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/9', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/10', description: 'wtf?' }
-        = render partial: 'refinery/orbit_data', locals: { img_path: 'location/slider/11', description: 'wtf?' }
+        = render partial: 'refinery/orbit_data', \
+          locals: { img_path: 'location/slider', size: 11, translation_path: 'location_page.slider.descriptions' }
   .row.b-bottom-images
     .small-6.columns
       figure

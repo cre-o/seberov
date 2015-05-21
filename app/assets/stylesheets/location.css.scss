@@ -22,7 +22,7 @@
         padding-bottom: rem_calc(20);
       }
 
-      i.rectangle {
+      i.rectangle, em.rectangle {
         border-top: 7px solid transparent;
         border-left: 15px solid $green;
         border-bottom: 7px solid transparent;

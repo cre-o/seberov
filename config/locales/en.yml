@@ -56,7 +56,7 @@ en:
       police: 'Полицейский участок'
       library: 'Библиотека'
       playground: 'Детская площадка'
-      sports: 'Спортивный ареал'
+      sport: 'Спортивный ареал'
     slider:
       descriptions:
         - 'First image'

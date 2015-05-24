@@ -1,11 +1,14 @@
 #l-location ng-controller="LocationController as location"
   .row.b-map
     .small-12.columns
+      = image_path('location/icons/medicine-l.png')
       fieldset
-        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508
+        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508 {{map.markers.medicine.smallIcon}}
         .row
           .small-5.columns.active-map
-            iframe ng-init="location.address='Statek Seberov Praha'" ng-src="{{location.url + location.address | trusted}}" frameborder="0" width="430" height="400" style="border:0"
+            ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true"
+              = render partial: 'refinery/pages/location_markers'
+
           .small-7.columns
             = raw @page.content_for(:body)
 
@@ -47,8 +50,8 @@
             = t 'playground', scope: 'location_page.icons_text'
         li
           a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov gym'"
-            i.sports
-            = t 'sports', scope: 'location_page.icons_text'
+            i.sport
+            = t 'sport', scope: 'location_page.icons_text'
 
   .row
     .small-8.small-centered.medium-centered.large-8.large-centered.columns.text-center

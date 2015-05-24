@@ -1,23 +1,23 @@
-cz:
+cs:
 
   main_page:
     screen:
-      exterior_button_text_html: 'Визуализация'
-      interior_button_text_html: 'Фотографии'
-      tour_button_text_html: 'Виртуальный <br /> Тур'
-      webcam_button_text_html: 'Камера'
-      download_button_text_html: 'Download <br /> Price list'
-      choose_an_apartment_button_text_html: 'Choose <br /> An apartment'
+      exterior_button_text_html: 'Vizualizace'
+      interior_button_text_html: 'Fotografie'
+      tour_button_text_html: 'Virtuální <br /> prohlídka'
+      webcam_button_text_html: 'Online kamera'
+      download_button_text_html: 'Stáhnout <br /> ceník'
+      choose_an_apartment_button_text_html: 'Vybrat <br /> byt'
 
       exterior:
         descriptions:
-          - 'first description'
+          - '1'
           - '2'
           - '3'
           - '4'
       interior:
         descriptions:
-          - 'first description'
+          - '1'
           - '2'
           - '3'
           - '4'
@@ -32,8 +32,8 @@ cz:
           - '13'
 
   apartments_page:
-    by_planning: 'by planning'
-    by_parameters: 'by parameters'
+    by_planning: 'plánováním'
+    by_parameters: 'podle parametrů'
 
   apartments_parameters_page:
     title: 'Apartments parameters page!'
@@ -44,7 +44,7 @@ cz:
     title: 'Apartments planning page!'
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
-    select_floor: 'Выберите корпус и этаж:'
+    select_floor: 'Vyberte křídlo a podlahu:'
 
   location_page:
     icons_text:
@@ -72,28 +72,28 @@ cz:
         - '11'
 
   forms:
-    building: 'building'
-    name: 'name'
-    phone: 'phone'
-    price: 'price'
-    from: 'from'
-    to: 'to'
-    floorspace: 'floorspace'
-    floor: 'floor'
-    rooms: 'rooms'
-    one: 'one'
-    two: 'two'
-    three: 'three'
-    four: 'four'
-    penthouse: 'penthouse'
-    grounds: 'grounds'
-    results: 'results'
-    send: 'отправить'
+    building: 'budova'
+    name: 'jméno'
+    phone: 'telefon'
+    price: 'cena'
+    from: 'od'
+    to: 'do'
+    floorspace: 'podlahová plocha'
+    floor: 'podlaha'
+    rooms: 'pokoje'
+    one: 'jeden'
+    two: 'dvě'
+    three: 'tři'
+    four: 'čtyři'
+    penthouse: 'přístřešek'
+    grounds: 'pozemky'
+    results: 'výsledky'
+    send: 'poslat'
     callback:
-      header: 'Оставьте свой номер телефона'
-      subheader: 'и наш менеджер перезвонит вам в ближайшее время'
+      header: 'Nechte své telefonní číslo'
+      subheader: 'a náš manažer vám zavolá zpět brzo'
   footer:
-    order_callback: 'order callback'
+    order_callback: 'objednat zpětné volání'
   controller:
-    callback_mail_send: 'Мы скоро с вами свяжемся!'
-    callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
+    callback_mail_send: 'Budeme vás brzy kontaktovat!'
+    callback_mail_send_error: 'Při odesílání zpětné volání došlo k chybě'

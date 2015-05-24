@@ -28,10 +28,6 @@ header.application {
     position: fixed;
     top: 0;
     z-index: 555;
-
-    .logo {
-      margin-top: 5px;
-    }
   }
 
   .logo {
@@ -194,9 +190,9 @@ header.application {
           background-color: rgba(0, 0, 0, 0.9);
           margin-left: 10px;
           padding: 3px;
-          font-size: rem_calc(11);
+          font-size: rem_calc(13);
           font-weight: 500;
-          width: 20%;
+          width: 24%;
           display: inline-block;
           text-align: center;
         }

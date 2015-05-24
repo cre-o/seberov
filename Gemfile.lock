@@ -127,6 +127,11 @@ GEM
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3.0)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -337,6 +342,7 @@ DEPENDENCIES
   bourbon
   byebug
   coffee-rails (~> 4.1.0)
+  draper
   font-awesome-rails
   foundation-rails
   globalize (~> 5.0.0)

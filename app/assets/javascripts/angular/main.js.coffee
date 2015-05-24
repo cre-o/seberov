@@ -6,8 +6,13 @@ angular.module('seberov').controller 'MainPageController', ($scope,  $window, ui
   $scope.map =
     center: { latitude: objectLatitude, longitude: objectLongitude }
     marker:
-      coords: { latitude: objectLatitude, longitude: objectLongitude }
-      options: { labelContent: 'Statek Seberov' }
+      coords:
+        latitude: objectLatitude
+        longitude: objectLongitude
+      options:
+        labelContent: 'Statek Seberov'
+    options:
+      disableDefaultUI: true
     zoom: 13
 
   # Navigation

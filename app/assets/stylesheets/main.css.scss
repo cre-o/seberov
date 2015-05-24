@@ -3,6 +3,8 @@
 
   .main-slider {
     min-height: 1px;
+    position: relative;
+    z-index: 2;
 
     .choose-apartment {
       position: absolute;
@@ -49,9 +51,8 @@
     min-height: rem_calc(460);
 
     .columns:nth-child(2) {
-      box-shadow: 0px -10px 10px #999;
+      box-shadow: 0px -4px 4px #999;
     }
-
 
     header {
       $height: rem_calc(50);
@@ -97,6 +98,26 @@
     .gmap {
       top: 0;
       left: 0;
+      .angular-google-map-container {
+        // <-- Media queries
+        height: 400px;
+
+        @media #{$small-only} {
+          padding-left: rem_calc(27/1.5);
+        }
+
+        @media #{$medium-only} {
+          height: 710px;
+        }
+
+        @media #{$large-only} {
+          height: 684px;
+        }
+
+        @media #{$xlarge-only} {
+          height: 531px;
+        }
+      }
     }
 
     ul.benefits {

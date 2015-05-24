@@ -50,6 +50,10 @@
         background-color: #e7efea;
       }
 
+      &.active {
+        background-color: #e7efea;
+      }
+
       i {
         background: image_url('location/icons-sprite') no-repeat;
         display: inline-block;

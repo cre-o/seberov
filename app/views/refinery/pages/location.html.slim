@@ -1,13 +1,20 @@
 #l-location ng-controller="LocationController as location"
   .row.b-map
     .small-12.columns
-      = image_path('location/icons/medicine-l.png')
       fieldset
-        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508 {{map.markers.medicine.smallIcon}}
+        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508
         .row
           .small-5.columns.active-map
             ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true"
-              = render partial: 'refinery/pages/location_markers'
+              ui-gmap-marker*{'idKey'=>'map.markers.medicine.id', 'coords'=>'map.markers.medicine.coords', 'icon'=>'map.markers.medicine.icon'}
+              ui-gmap-marker*{'ng-repeat'=>'autobus in map.markers.autobus.items', 'idKey'=>'autobus.id', 'coords'=>'autobus.coords', 'icon'=>'map.markers.autobus.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.relax.id', 'coords'=>'map.markers.relax.coords', 'icon'=>'map.markers.relax.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.school.id', 'coords'=>'map.markers.school.coords', 'icon'=>'map.markers.school.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.administration.id', 'coords'=>'map.markers.administration.coords', 'icon'=>'map.markers.administration.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.police.id', 'coords'=>'map.markers.police.coords', 'icon'=>'map.markers.police.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.library.id', 'coords'=>'map.markers.library.coords', 'icon'=>'map.markers.library.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.playground.id', 'coords'=>'map.markers.playground.coords', 'icon'=>'map.markers.playground.icon'}
+              ui-gmap-marker*{'idKey'=>'map.markers.sport.id', 'coords'=>'map.markers.sport.coords', 'icon'=>'map.markers.sport.icon'}
 
           .small-7.columns
             = raw @page.content_for(:body)
@@ -17,39 +24,39 @@
     .small-12.columns.b-map-controls
       ul.map-icons.small-block-grid-3
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov medicine'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('medicine')" ng-class="{active: isCurrent('medicine')}"
             i.medicine
             = t 'medicine', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov autobus'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('autobus')" ng-class="{active: isCurrent('autobus')}"
             i.autobus
             = t 'autobus', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov relax'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('relax')" ng-class="{active: isCurrent('relax')}"
             i.relax
             = t 'relax', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov skola'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('school')" ng-class="{active: isCurrent('school')}"
             i.school
             = t 'school', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('address')" ng-class="{active: isCurrent('address')}"
             i.administration
             = t 'administration', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov policie'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('police')" ng-class="{active: isCurrent('police')}"
             i.police
             = t 'police', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov knihovna'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('library')" ng-class="{active: isCurrent('library')}"
             i.library
             = t 'library', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov playground'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('playground')" ng-class="{active: isCurrent('playground')}"
             i.playground
             = t 'playground', scope: 'location_page.icons_text'
         li
-          a href="#{js_void}" ng-click="location.address = 'Praha-Šeberov gym'"
+          a href="#{js_void}" ng-click="setCurrentMarkers('sport')" ng-class="{active: isCurrent('sport')}"
             i.sport
             = t 'sport', scope: 'location_page.icons_text'
 

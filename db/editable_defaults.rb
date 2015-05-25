@@ -1,4 +1,4 @@
-@home, @location, @standards, @footer = Hash.new
+@home, @location, @standards, @footer, @contacts, @references = Hash.new
 
 @home[:benefits] = <<-'HERE'
 <ul class="benefits">
@@ -50,6 +50,33 @@ HERE
   New apartments in the private sector of Prague 4 from the builder. <br />only <strong>24 apartments</strong>, with a layout from <strong>2 to 5 bedrooms Left</strong>!
 </h1>
 <a class="choose-apartment" href="#"><em class="map"></em>choose an apartment</a>
+HERE
+
+@home[:our_projects] = <<-'HERE'
+<h1 class="upcase">
+  Our Projects:
+</h1>
+<div class="row">
+  <div class="small-10 columns">
+    <ul class="small-block-grid-3">
+      <li>
+        <a title="wtf1" href="#">
+          <img src="http://placehold.it/210x54" alt="description">
+        </a>
+      </li>
+      <li>
+        <a title="wtf2" href="#">
+          <img src="http://placehold.it/210x54" alt="description">
+        </a>
+      </li>
+      <li>
+        <a title="wtf3" href="#">
+          <img src="http://placehold.it/210x54" alt="description">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 HERE
 
 # Location page
@@ -512,4 +539,398 @@ Praha 5
  <br />
 150 00
 </p>
+HERE
+
+# Contacts
+@contacts[:main] = <<-'HERE'
+<h2 class="subheader upcase">
+    Přímý prodej od developera a investora
+</h2>
+<h3 class="upcase">
+  John Doe
+</h3>
+<div class="contacts">
+  tel: +420 603 933 909
+  prodej@statekseberov.cz
+  skype: statekseberov
+</div>
+HERE
+
+@contacts[:authors] = <<-'HERE'
+<div class="small-2 columns credit">
+  <h5>
+    Hypotéky zajišťuje:
+  </h5>
+  <p>
+    GEPARD FINANCE a.s.
+    Na Příkopě 958/25
+    110 00 Praha 1 - Staré Město
+    tel: +420 603 950 299
+  </p>
+  <div class="logo-small">
+    <img src="http://placehold.it/400x400" alt="description">
+  </div>
+</div>
+<div class="small-3 columns investment">
+  <h5>
+    Investoři
+  </h5>
+  <p class="first">
+    Stavokonsalt SF s.r.o.
+    K Šeberovu 508
+    Praha 4
+    149 00
+  </p>
+  <p class="second">
+    STAV-SV s.r.o.
+    Před Rybníkem 111
+    Praha 5
+    150 00
+  </p>
+</div>
+<div class="small-3 columns architect">
+  <h5>
+    Architekt
+  </h5>
+  <p>
+    NAUTILA ARCHITEKTI
+    Na bitevní pláni 1155/48
+    140 00 Praha 4 - Nusle<br><a href="http://www.nautilaarchitekti.cz">http://www.nautilaarchitekti.cz</a>
+  </p>
+  <div class="logo-small">
+    <img src="http://placehold.it/400x400" alt="description">
+  </div>
+</div>
+<div class="small-2 columns">
+  <h5>
+    Materiál pro stavbu dodává
+  </h5>
+  <p>
+    IZOMAT Praha s.r.o.,
+    Praha 4 149 00 - Hrnčíře
+    K Labeškám E190<br><a href="izomat.cz">http://izomat.cz</a>
+  </p>
+  <div class="logo-small">
+    <img src="http://placehold.it/400x400" alt="description">
+  </div>
+  <div class="logo-small"></div>
+</div>
+<div class="small-2 columns">
+  <h5>
+    Главный поставщик стройматериалов
+  </h5>
+  <p>
+    Stavitelstvi SMID s.r.o.
+    Na Roudné 1550/176b
+    301 00 Pilsen<br><a href="http://www.stavitelstvi-smid.cz/">http://www.stavitelstvi-smid.cz/</a>
+    </p><div class="logo-small">
+      <img src="http://placehold.it/400x400" alt="description">
+    </div>
+  <p></p>
+</div>
+HERE
+
+@references[:body] = <<-'HERE'
+<div class="row">
+  <div class="small-12 columns">
+    <h1 class="upcase">
+      Референции. НОВАЯ НЕДВИЖИМОСТЬ В ПРАГЕ ОТ ЗАСТРОЙЩИКА.
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <header>
+        <h1 class="upcase">
+          Завершение строительства проекта Новая недвижимость в Праге 5 Репорие в садах:
+        </h1>
+        <h3>
+          • Проект застройки 99-и особняков Новая недвижимость в Праге Řeporyje в садах.
+        </h3>
+      </header>
+      <div class="content">
+        Низкоэнергетические современные дома от застройщика Новая недвижимость в Праге Řeporyje в садах, имеющие собственный палисадник, гараж и парковочное место, расположены в районе Прага 5 ул. Ve Výhledu / Horšovská и идеально совмещают жизнь в личном доме с преимуществами предместья чешской столицы Прага. Более подробную информацию Вы найдёте на www.reporyjevzahradach.cz
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <header>
+        <h3>
+          • Недвижимость в Праге 4
+        </h3>
+      </header>
+      <div class="content">
+        18 современных особняков Hrnčíře в садах находится в районе улиц V Úhoru и U Hrnčíř. Это тихая окраина котеджей столичного района Hrnčíře, которая находиться в южной части района Праги 4 - Šeberov. Ввод в эксплуатацию 12.2015.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <header>
+        <h3>
+          • На 2015 год мы готовим:
+        </h3>
+      </header>
+      <div class="content">
+        Строительство и продажу квартир в 3 жилых домах и 4 вилл в солнечной Хорватии.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <header>
+        <h3>
+          Инвестирование в новую недвижимость в Праге было начато в 1999 году.
+          за этот период были реализованы следующие проекты строительства
+          новой недвижимости в Праге:
+        </h3>
+      </header>
+      <div class="content">
+        • Вилла в Добреёвицих, Прага - восток. Ввод в эксплуатацию - весна 2008
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <div class="content">
+        • Новые квартиры в Праге 4 в улице Цигларова в категории от 1 + kk до 3 + kk.
+        Тридцати квартирный жилой дом также включал 26 гаражных мест и был
+        введён в эксплуатацию осенью 2007 года.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <div class="content">
+        • Новые квартиры повышенной комфортности в Праге 6 в 28 квартирном жилом доме на
+        углу улиц Над Завьеркой и Смирицкего с подземным гаражом на 40 машин.
+        Ввод в эксплуатацию - 2004 год.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <div class="content">
+        • Две виллы в Праге 4 на улице Леснэго и вилла в Праге 5 на улице
+        Пред рыбникем, ввод в эксплуатацию - 2003.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+         <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <div class="content">
+        • Новые квартиры повышенной комфортности в Праге 5 в восьми квартирном жилом доме на улице Бутовицка, коммерческими площадями на первом этаже и подземным гаражом на 10 машин. Введён в эксплуатацию в 2001 году.
+      </div>
+      <ul class="small-block-grid-6">
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+        <li>
+          <img src="http://placehold.it/400x400" alt="description">
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
 HERE

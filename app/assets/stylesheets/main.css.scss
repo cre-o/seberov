@@ -227,14 +227,14 @@
           }
         }
 
-        &.webcams {
+        &.webcam {
           .image {
-            background-image: image_url('main/preview-widget/webcams-btn');
+            background-image: image_url('main/preview-widget/webcam-btn');
           }
 
           &.active {
             .image {
-              background-image: image_url('main/preview-widget/webcams-btn-active');
+              background-image: image_url('main/preview-widget/webcam-btn-active');
             }
           }
         }

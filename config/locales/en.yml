@@ -1,6 +1,7 @@
 en:
 
   main_page:
+    download_price_list: 'Download price list'
     screen:
       exterior_button_text_html: 'Визуализация'
       interior_button_text_html: 'Фотографии'

@@ -6,7 +6,29 @@ module Refinery
         crudify :'refinery/apartments/apartment',
                 :title_attribute => 'unit_id'
 
+        alias_method :update_copy, :update
+
+        def update
+          strip_spaces
+          fix_colons
+          update_copy
+        end
+
         private
+
+        def strip_spaces
+          params['apartment']['price'] = params['apartment']['price'].gsub(/\s+/, '')
+        end
+
+        def fix_colons
+          floors_attributes_key = params['apartment']['apartment_floors_attributes'].keys.first
+
+          fixed = params['apartment']['apartment_floors_attributes'][floors_attributes_key].map do |k, str|
+            [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
+          end.to_h
+
+          params['apartment']['apartment_floors_attributes'][floors_attributes_key] = fixed
+        end
 
         # Only allow a trusted parameter "white list" through.
         def apartment_params

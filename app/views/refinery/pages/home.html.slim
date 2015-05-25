@@ -63,7 +63,7 @@
           .text
             span = t 'tour_button_text_html', scope: 'main_page.screen'
           .image
-        .btn.webcams[
+        .btn.webcam[
           ng-class="{ active: mainPage.isCurrentScreen(4) }"
           ng-click="mainPage.setScreen(4); loadWebcam()"
           ng-style="mainPage.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
@@ -120,16 +120,4 @@
 
     .row
       .small-10.small-offset-2
-        h1.upcase Our Projects:
-        .row
-          .small-10.columns
-            ul.small-block-grid-3
-              li
-                = link_to '#', title: 'wtf1' do
-                  = image_tag 'main/projects/1'
-              li
-                = link_to '#', title: 'wtf2' do
-                  = image_tag 'main/projects/2'
-              li
-                = link_to '#', title: 'wtf3' do
-                  = image_tag 'main/projects/3'
+        = raw @page.content_for(:our_projects)

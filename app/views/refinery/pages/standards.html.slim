@@ -1,18 +1,8 @@
 #l-standards
-  // 1
+  /! 1
   .row
     .small-6.columns
-      section.left-side
-        = @page.content_for(:section1)
-        header
-          h1 Земляные работы
-
-        .content
-          ul
-            li траншеи для фундаментов - земляные работы проводятся с помощью механизации и ручной финальной зачистки
-            li котлован для подземного гаража выполнен открытым способом
-            li
-              | использование вынутого грунта производится в соответствии с его качеством либо для озеленения прилегающей территории,  либо вывозится на складирование в специально предназначенные для этого места
+      = raw @page.content_for(:section1)
 
     .small-6.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -22,7 +12,7 @@
         li
           = link_to image_url('standards/1-2-full') do
             = image_tag 'standards/1-2', width: 440, height: 440
-  // 2
+  /! 2
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -34,34 +24,12 @@
               = image_tag 'standards/2-2', width: 440, height: 440
 
     .small-6.columns
-      section.right-side
-        header.text-right
-          h1 Фундамент
+      = raw @page.content_for(:section2)
 
-        .content
-          ul
-            li защита фундамента  подсыпкой гравия
-            li фундаменты выполнены из бетона и дополнены бетонными блоками пролитыми бетонной смесью с усилением арматурой
-            li
-              | в основе подземного гаража - монолитная железобетонная плита, подвальные стены подземного гаража из водонепроницаемого бетона (белая ванна)
-  // 3
+  /! 3
   .row
     .small-6.columns
-      section.left-side
-        header
-          h1 Горизонтальные конструкции
-
-        .content
-          ul
-            li гипсокартонные подвесные потолки или гипсовая штукатурка
-            li керамические панели, усиленные железобетонными балками
-            li
-              | акустическая изоляция – твержёный пенопласт типа EPS 150 S
-                толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
-            li разделительная пленка
-            li цементная стяжка
-            li гидроизоляция ванных комнат
-            li покрытие пола
+      = raw @page.content_for(:section3)
 
     .small-6.columns
       .image-broadcaster ng-controller="ImageBroadcasterController as broadcaster"
@@ -96,7 +64,7 @@
               a href="" ng-click="broadcaster.setImage(7, '#{image_url('standards/3-7')}')" 7
               .title.ng-hidden ng-show="broadcaster.isSet(7)"
                 | Скрытый текст 7
-  // 4
+  /! 4
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -108,51 +76,19 @@
             = image_tag 'standards/4-2', width: 440, height: 440, lazy: true
 
     .small-6.columns
-      section.right-side.long
-        header
-          h1 Конструкция стен
+      = raw @page.content_for(:section4)
 
-        .content
-          ul class="accordion" data-accordion=""
-            li.accordion-navigation
-              a href="#panel1a"  несущие внешние стены
-              #panel1a.content
-                | Wtf?
-                // @TODO content
-            li.accordion-navigation
-              a href="#panel2a"  несущие внутренние стены
-              #panel2a.content.active
-                ul
-                  li кирпич типа Porotherm 24 P + D
-                  li стены между квартирами - кирпич типа Porotherm  AKU 30
-                  li железобетонные стены или столбы
-
-            li.accordion-navigation
-              a href="#panel3a"  внутренние перегородки
-              #panel3a.content
-                | Wtf?
-                // @TODO content
-  // 5
+  /! 5
   .row
     .small-6.columns
-      section.left-side
-        header
-          h1 Кровля
-
-        .content
-          ul
-            li керамическая черепица Tondach
-            li система надстропильной теплоизоляции THERMANO толщины 140 mm, экстратвёрдый пенопласт PIR
-            li
-              | несущая конструкция крыши – фермы из клееного бруса в сочетании с деревянными стропилами KVH
-            li подвесные потолки гипсокартонные с части видимой конструкции крыши (деревянные стропила)
+      = raw @page.content_for(:section5)
 
     .small-6.columns.images
       ul. data-clearing=""
         li
           = link_to image_url('standards/5-1-full') do
             = image_tag 'standards/5-1', width: 440, height: 440, lazy: true
-  // 6
+  /! 6
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -164,54 +100,12 @@
             = image_tag 'standards/6-2', width: 440, height: 440, lazy: true
 
     .small-6.columns
-      section.long.right-side
-        header
-          h1 Окна, двери
+      = raw @page.content_for(:section6)
 
-        .content
-          ul
-            li керамическая черепица Tondach
-            li система надстропильной теплоизоляции THERMANO толщины 140 mm, экстратвёрдый пенопласт PIR
-            li
-              | несущая конструкция крыши – фермы из клееного бруса в сочетании с деревянными стропилами KVH
-            li подвесные потолки гипсокартонные с части видимой конструкции крыши (деревянные стропила)
-
-  // 7
+  /! 7
   .row
     .small-5.columns
-      section.long.left-side
-        header.text-right
-          h1 Отделка
-
-        .content
-          ul class="accordion" data-accordion=""
-            li.accordion-navigation
-              a href="#panel1b"  наружная всепогодная штукатурка
-              #panel1b.content
-                | Wtf?
-                // @TODO content
-            li.accordion-navigation
-              a href="#panel2b"  внутренняя штукатурка
-              #panel2b.content
-                | Wtf?
-                // @TODO content
-            li.accordion-navigation
-              a href="#panel3b"  облицовочная плитка
-              #panel3b.content
-                | Wtf?
-                // @TODO content
-            li.accordion-navigation
-              a href="#panel4b"  напольная плитка
-              #panel4b.content
-                ul
-                  li в ванной комнате
-                  li в туалете
-                  li в коридорах
-                  li в подсобных помещениях, кладовых
-                  li в подъездах, колясочной
-
-            li.accordion-navigation
-              a href="#panel5b"  покрытия пола
+      = raw @page.content_for(:section7)
 
     .small-5.columns
       ul.small-block-grid-2 data-clearing=""
@@ -224,7 +118,7 @@
           li
             = link_to image_url('standards/7-3-full') do
               = image_tag 'standards/7-3', width: 440, height: 440, lazy: true
-  // 8
+  /! 8
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -233,29 +127,12 @@
             = image_tag 'standards/8-1', width: 440, height: 440, lazy: true
 
     .small-6.columns
-      section.right-side
-        header.text-right
-          h1 Столярные элементы
+      = raw @page.content_for(:section8)
 
-        .content
-          p
-           | Внутренние лестницы в квартирах кроме галереи изготовлены из монолитного железобетона, ступеньки обложены
-             массивным  многослойным лепленым деревом с финальным покрытием бук
-             Перила внутренних лестниц - деревянные, не профилированные столбики, поручень из профилированного дерева бук
-             Внутренние лестницы и перила галереи поставляются под заказ за дополнительную оплату.
-
-  // 9
+  /! 9
   .row
     .small-6.columns
-      section.left-side
-        header
-          h1 Водосточные и кровельные конструкции
-
-        .content
-          p
-           | Покрытие крыши над мансардными окнами и надкровельные элементы выполнены из меди, замансардное корыто из
-            пластифицированной ПВХ пленки
-            Наружные подоконники выполнены из механически окрашенного листа LINDAB медь
+      = raw @page.content_for(:section9)
 
     .small-6.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -266,7 +143,7 @@
           = link_to image_url('standards/9-2-full') do
             = image_tag 'standards/9-2', width: 440, height: 440
 
-  // 10
+  /! 10
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
@@ -281,28 +158,17 @@
             = image_tag 'standards/10-3', width: 440, height: 440, lazy: true
 
     .small-6.columns
-      section.right-side
-        header.text-right
-          h1 Техническое оборудование здания
+      = raw @page.content_for(:section10)
 
-        .content
-          | Контент
-          // @TODO content
-
-  // 11
+  /! 11
   .row
     .small-6.columns
-      section.left-side
-        header
-          h1 Покрытие коммуникаций
-
-        .content
-          p
-           | Целый двор, вкл. парковку и тротуары вымощена плиткой
+      = raw @page.content_for(:section11)
 
     .small-6.columns.images
       H1 НЕТ КАРТИНОК!
 
+  /! 12
   .row.last
     .small-6.columns.images
       ul.small-block-grid-3 data-clearing=""
@@ -317,12 +183,7 @@
             = image_tag 'standards/11-3', width: 440, height: 440, lazy: true
 
     .small-5.columns
-      section.right-side
-        header.text-right
-          h1 Надстандарт
-
-        .content
-          | Изменения в этом списке стандартов можно осуществлять исходя из пожеланий заказчика. Изменения в стандартах будут оценены дополнительно.
+      = raw @page.content_for(:section12)
 
   .row.architector
     .small-2.columns

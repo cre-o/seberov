@@ -21,13 +21,21 @@ module Refinery
         end
 
         def fix_colons
-          floors_attributes_key = params['apartment']['apartment_floors_attributes'].keys.first
+          floors_attributes = params['apartment']['apartment_floors_attributes']
 
-          fixed = params['apartment']['apartment_floors_attributes'][floors_attributes_key].map do |k, str|
+          if floors_attributes.present?
+            fa_key = floors_attributes.keys.first
+
+            fixed = params['apartment']['apartment_floors_attributes'][fa_key].map do |k, str|
+              [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
+            end.to_h
+
+            params['apartment']['apartment_floors_attributes'][fa_key] = fixed
+          end
+
+          params['apartment'] = params['apartment'].map do |k, str|
             [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
           end.to_h
-
-          params['apartment']['apartment_floors_attributes'][floors_attributes_key] = fixed
         end
 
         # Only allow a trusted parameter "white list" through.

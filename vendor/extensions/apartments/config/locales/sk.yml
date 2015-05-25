@@ -1,0 +1,35 @@
+sk:
+  refinery:
+    plugins:
+      apartments:
+        title: Apartments
+    apartments:
+      admin:
+        apartments:
+          actions:
+            create_new: Pridať Apartment
+            reorder: Preusporiadať Apartments
+            reorder_done: Koniec radenia Apartments
+          records:
+            title: Apartments
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Apartments. Kliknite na "Pridať Apartment" pre pridanie prvého apartment.
+          apartment:
+            view_live_html: Zobraziť náhľad apartment<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť apartment
+            delete: Zmazať apartment
+      apartments:
+        show:
+          other: Daľšie Apartments
+  activerecord:
+    attributes:
+      'refinery/apartments/apartment':
+        block: Block
+        unit_id: Unit
+        floor: Floor
+        total_floors: Total Floors
+        layout: Layout
+        apartment_area: Apartment Area
+        balcony_terace_area: Balcony Terace Area
+        front_yard_area: Front Yard Area
+        price: Price

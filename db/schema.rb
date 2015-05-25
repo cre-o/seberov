@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519165334) do
+ActiveRecord::Schema.define(version: 20150525071245) do
+
+  create_table "refinery_apartment_floors", force: :cascade do |t|
+    t.integer  "refinery_apartments_id", null: false
+    t.integer  "floor_number",           null: false
+    t.float    "corridor_area"
+    t.float    "wc_area"
+    t.float    "workroom_area"
+    t.float    "kitchen_area"
+    t.float    "chamber_area"
+    t.float    "bathroom"
+    t.float    "staircase"
+    t.float    "room1"
+    t.float    "room2"
+    t.float    "room3"
+    t.float    "room4"
+    t.float    "room5"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_apartment_floors", ["floor_number"], name: "index_refinery_apartment_floors_on_floor_number"
+
+  create_table "refinery_apartments", force: :cascade do |t|
+    t.string   "block"
+    t.string   "unit_id"
+    t.integer  "floor"
+    t.string   "total_floors"
+    t.string   "layout"
+    t.float    "apartment_area"
+    t.float    "balcony_terace_area"
+    t.float    "front_yard_area"
+    t.decimal  "price"
+    t.integer  "position"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_images", force: :cascade do |t|
     t.string   "image_mime_type"

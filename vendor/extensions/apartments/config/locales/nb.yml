@@ -1,0 +1,35 @@
+nb:
+  refinery:
+    plugins:
+      apartments:
+        title: Apartments
+    apartments:
+      admin:
+        apartments:
+          actions:
+            create_new: Lag en ny Apartment
+            reorder: Endre rekkefølgen på Apartments
+            reorder_done: Ferdig å endre rekkefølgen Apartments
+          records:
+            title: Apartments
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Apartments enda. Klikk på "Lag en ny Apartment" for å legge til din første apartment.
+          apartment:
+            view_live_html: Vis hvordan denne apartment ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne apartment
+            delete: Fjern denne apartment permanent
+      apartments:
+        show:
+          other: Andre Apartments
+  activerecord:
+    attributes:
+      'refinery/apartments/apartment':
+        block: Block
+        unit_id: Unit
+        floor: Floor
+        total_floors: Total Floors
+        layout: Layout
+        apartment_area: Apartment Area
+        balcony_terace_area: Balcony Terace Area
+        front_yard_area: Front Yard Area
+        price: Price

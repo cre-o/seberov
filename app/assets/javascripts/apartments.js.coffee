@@ -9,7 +9,7 @@ jQuery ->
         'min': [ minValue ],
         'max': [ maxValue ]
 
-  if $('#l-apartments').size() > 0
+  if $('#l-apartments.parameters').size() > 0
     # Price slider
     setupSlider $('#appartments-price-slider')
     # Floorspace slider

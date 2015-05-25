@@ -1,7 +1,7 @@
 .row
   .small-3.large-3.columns
     .logo
-      = link_to root_path, title: 'На главную' do
+      = link_to refinery.root_path, title: 'На главную' do
           = image_tag 'logo', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
           = image_tag 'logo-fixed', width: 217, height: 57, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
   .small-6.large-6.columns.upcase

@@ -47,6 +47,11 @@ form {
     box-shadow: none;
   }
 
+  select {
+    border-color: #689b7b;
+    background-color: $white;
+  }
+
   // Sliders
   .noUi-target {
     background-color: $green;

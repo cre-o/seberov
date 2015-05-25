@@ -89,6 +89,7 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 # i18n support
 gem 'refinerycms-i18n'
+gem 'refinerycms-apartments', path: 'vendor/extensions'
 
 # Font icons
 gem 'font-awesome-rails'

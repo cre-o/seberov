@@ -1,0 +1,35 @@
+nl:
+  refinery:
+    plugins:
+      apartments:
+        title: Apartments
+    apartments:
+      admin:
+        apartments:
+          actions:
+            create_new: Nieuwe Apartment toevoegen
+            reorder: De volgorde van de Apartments wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Apartment-volgorde
+          records:
+            title: Apartments
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Apartments. Druk op 'Nieuwe Apartment toevoegen' om de eerste toe te voegen.
+          apartment:
+            view_live_html: Deze apartment op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze apartment
+            delete: Deze apartment definitief verwijderen
+      apartments:
+        show:
+          other: Andere Apartments
+  activerecord:
+    attributes:
+      'refinery/apartments/apartment':
+        block: Block
+        unit_id: Unit
+        floor: Floor
+        total_floors: Total Floors
+        layout: Layout
+        apartment_area: Apartment Area
+        balcony_terace_area: Balcony Terace Area
+        front_yard_area: Front Yard Area
+        price: Price

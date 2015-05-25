@@ -1,0 +1,35 @@
+it:
+  refinery:
+    plugins:
+      apartments:
+        title: Apartments
+    apartments:
+      admin:
+        apartments:
+          actions:
+            create_new: Aggiungi Nuovo Apartment
+            reorder: Riordina Apartments
+            reorder_done: Termina il Riordino di Apartments
+          records:
+            title: Apartments
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Apartments. Clicca "Aggiungi Nuovo Apartment" per aggiungere il tuo primo apartment.
+          apartment:
+            view_live_html: Guarda live questo apartment <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo apartment
+            delete: Rimuovi per sempre questo apartment
+      apartments:
+        show:
+          other: Altri Apartments
+  activerecord:
+    attributes:
+      'refinery/apartments/apartment':
+        block: Block
+        unit_id: Unit
+        floor: Floor
+        total_floors: Total Floors
+        layout: Layout
+        apartment_area: Apartment Area
+        balcony_terace_area: Balcony Terace Area
+        front_yard_area: Front Yard Area
+        price: Price

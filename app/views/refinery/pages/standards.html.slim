@@ -27,12 +27,25 @@
       = raw @page.content_for(:section2)
 
   /! 3
-  .row
+  .row ng-controller="ImageBroadcasterController as broadcaster"
     .small-6.columns
-      = raw @page.content_for(:section3)
+      div ng-show="broadcaster.isSet(1)"
+        = t('standards_page.horisontal_constructions')[0]
+      div ng-show="broadcaster.isSet(2)"
+        = t('standards_page.horisontal_constructions')[1]
+      div ng-show="broadcaster.isSet(3)"
+        = t('standards_page.horisontal_constructions')[2]
+      div ng-show="broadcaster.isSet(4)"
+        = t('standards_page.horisontal_constructions')[3]
+      div ng-show="broadcaster.isSet(5)"
+        = t('standards_page.horisontal_constructions')[4]
+      div ng-show="broadcaster.isSet(6)"
+        = t('standards_page.horisontal_constructions')[5]
+      div ng-show="broadcaster.isSet(7)"
+        = t('standards_page.horisontal_constructions')[6]
 
     .small-6.columns
-      .image-broadcaster ng-controller="ImageBroadcasterController as broadcaster"
+      .image-broadcaster
         img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1')}'" ng-src="{{broadcaster.imageUrl}}"
         .controls.small-5
           ol

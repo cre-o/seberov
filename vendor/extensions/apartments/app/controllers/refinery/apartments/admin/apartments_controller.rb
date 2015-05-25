@@ -7,6 +7,13 @@ module Refinery
                 :title_attribute => 'unit_id'
 
         alias_method :update_copy, :update
+        alias_method :create_copy, :create
+
+        def create
+          strip_spaces
+          fix_colons
+          create_copy
+        end
 
         def update
           strip_spaces
@@ -33,9 +40,9 @@ module Refinery
             params['apartment']['apartment_floors_attributes'][fa_key] = fixed
           end
 
-          params['apartment'] = params['apartment'].map do |k, str|
-            [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
-          end.to_h
+          params['apartment']['apartment_area'] = params['apartment']['apartment_area'].gsub(/,/, '.')
+          params['apartment']['balcony_terace_area'] = params['apartment']['balcony_terace_area'].gsub(/,/, '.')
+          params['apartment']['front_yard_area'] = params['apartment']['front_yard_area'].gsub(/,/, '.')
         end
 
         # Only allow a trusted parameter "white list" through.

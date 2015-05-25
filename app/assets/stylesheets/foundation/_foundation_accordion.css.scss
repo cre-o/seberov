@@ -22,10 +22,10 @@
   }
 
   .accordion-navigation {
-    list-style-image: image_url('icons/bullet-down-green');
+    list-style-image: image_url('icons/bullet-down-green.png');
 
     &.active {
-      list-style-image: image_url('icons/bullet-down-grey');
+      list-style-image: image_url('icons/bullet-down-grey.png');
     }
 
     .content {

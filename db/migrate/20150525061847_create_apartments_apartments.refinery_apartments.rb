@@ -5,6 +5,7 @@ class CreateApartmentsApartments < ActiveRecord::Migration
     create_table :refinery_apartments do |t|
       t.string :block
       t.string :unit_id
+      t.integer :photo_id
       t.integer :floor
       t.string :total_floors
       t.string :layout

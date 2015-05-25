@@ -11,7 +11,6 @@ module Refinery
           plugin.name = "apartments"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.apartments_admin_apartments_path }
           plugin.pathname = root
-          
         end
       end
 

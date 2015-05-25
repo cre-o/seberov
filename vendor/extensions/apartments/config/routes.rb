@@ -2,7 +2,9 @@ Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
   namespace :apartments do
-    resources :apartments, :path => '', :only => [:index, :show]
+    resources :apartments, :path => '', :only => [:index, :show] do
+      collection { get :by_parameters }
+    end
   end
 
   # Admin routes

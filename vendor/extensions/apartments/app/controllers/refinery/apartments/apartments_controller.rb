@@ -19,6 +19,10 @@ module Refinery
         present(@page)
       end
 
+      def by_parameters
+        present(@page)
+      end
+
     protected
 
       def find_all_apartments

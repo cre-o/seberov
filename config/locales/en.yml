@@ -47,6 +47,9 @@ en:
     select_floor: 'Выберите корпус и этаж:'
 
   location_page:
+    legend: 'Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508'
+    old_photo_title: 'Kolorovaná fotografie statu z 18. století'
+    new_photo_title: 'Aktuální fotografie'
     icons_text:
       medicine: 'Районная больница и аптека'
       autobus: 'Автобусная остановка прямо у дома'
@@ -97,3 +100,9 @@ en:
   controller:
     callback_mail_send: 'Мы скоро с вами свяжемся!'
     callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
+
+
+  refinery:
+    apartments:
+      by_planning: 'by planning'
+      by_parameters: 'by parameters'

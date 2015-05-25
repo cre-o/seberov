@@ -31,6 +31,7 @@
 //= require angular/application
 //= require lazyload
 //= require jquery.nouislider.all.min
+//= require cocoon
 //= require main
 //= require apartments
 //= require location

@@ -1,0 +1,142 @@
+#l-apartments.parameters
+  .row
+    .b-nav-tabs.small-3.small-offset-7.columns
+      = render 'nav'
+
+  .row.collapse
+    .small-12.columns.wrap
+      .row.collapse.b-parameters
+        .small-12.columns
+          h1.upcase Parameters:
+          form.b-filters
+            .row
+              // Price
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.price')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="price-start-label" = t('forms.from')
+                  .small-4.columns
+                    input#price-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="price-end-label" = t('forms.to')
+                  .small-4.columns.left
+                    input#price-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-12.columns
+                    #appartments-price-slider data-min-value="10000" data-max-value="9999999"
+
+              // Floorspace
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.floorspace')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="foorspace-start-label" = t('forms.from')
+                  .small-4.columns
+                    input#foorspace-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="floorspace-end-label" = t('forms.to')
+                  .small-4.columns
+                    input#floorspace-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-.columns
+                    #appartments-floorspace-slider data-min-value="40" data-max-value="100"
+
+              // Floor
+              .small-4.columns
+                .row.collapse
+                  .small-12.columns
+                    h3.upcase = t('forms.floor')+':'
+                // Inputs
+                .row.collapse
+                  .small-2.columns.text-left
+                    label for="floor-start-label" = t('forms.from')
+                  .small-2.columns
+                    input#floor-start-label type="text"
+                  .small-2.columns.text-center
+                    label for="floor-end-label" = t('forms.to')
+                  .small-2.columns.left
+                    input#floor-end-label type="text"
+                .row.collapse
+                  // Minimum price and maximum price gets from database
+                  .small-10.left.columns
+                    #appartments-floor-slider data-min-value="3" data-max-value="10"
+
+            .row.rooms
+              .small-2.columns
+                h3.upcase = t('forms.rooms')+':'
+
+              .small-10.left.columns
+                ul.small-block-grid-6
+                  li
+                    input#one-room type="checkbox"
+                    label for="one-room" = t('forms.one')
+                  li
+                    input#two-rooms type="checkbox"
+                    label for="two-rooms" = t('forms.two')
+                  li
+                    input#three-rooms type="checkbox"
+                    label for="three-rooms" = t('forms.three')
+                  li
+                    input#four-rooms type="checkbox"
+                    label for="four-rooms" = t('forms.four')
+                  li
+                    input#penthouse type="checkbox"
+                    label for="penthouse" = t('forms.penthouse')
+                  li
+                    input#grounds type="checkbox"
+                    label for="grounds" = t('forms.grounds')
+      // Results
+      .row.collapse.b-results
+        .small-12.columns
+          .row
+            .small-8.columns
+              h1.upcase = t('forms.results')+':'
+            .small-2.right.columns.total
+              = @apartments.size
+          .row.collapse.items
+            .small-12.columns
+              - @apartments.each do |apartment|
+                .row.item
+                  .small-4.columns
+                    .id
+                      = apartment.unit_id
+                    .clear
+                    = image_fu apartment.photo, '220x220'
+                  .small-5.columns
+                    ul.attributes.small-block-grid-2
+                      li
+                        ' layout:
+                        b = apartment.layout
+                      li
+                        ' floor:
+                        b = apartment.floor
+                      li
+                        ' balcony terace area:
+                        b = apartment.balcony_terace_area
+                      li
+                        ' Total floors:
+                        b = apartment.total_floors
+                      li
+                        ' velikost balkon / terasy:
+                        b = apartment.balcony_terace_area
+                      li
+                        ' velikost bytu:
+                        b = apartment.apartment_area
+
+                    .price
+                      ' сena včetně DPH:
+                      span.upcase = apartment.price
+
+                  .small-3.columns.go
+                    .more.upcase
+                      = link_to 'see more', refinery.apartments_apartment_path(apartment)
+

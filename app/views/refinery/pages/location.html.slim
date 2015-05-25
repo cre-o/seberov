@@ -2,7 +2,7 @@
   .row.b-map
     .small-12.columns
       fieldset
-        legend Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508
+        legend = t 'location_page.legend'
         .row
           .small-5.columns.active-map
             ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true"
@@ -70,10 +70,11 @@
       figure
         = image_tag 'location/old-version'
         figcaption
-          | Kolorovaná fotografie statu z 18. století
+          = t 'location_page.old_photo_title'
 
     .small-6.columns
       figure
         = image_tag 'location/new-version'
         figcaption
-          | Aktuální fotografie
+          = t 'location_page.new_photo_title'
+

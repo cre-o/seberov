@@ -41,3 +41,6 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 end
+
+gem 'cocoon' # easy nested forms
+gem 'simple_form' # easy forms

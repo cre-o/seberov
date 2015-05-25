@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525071245) do
+ActiveRecord::Schema.define(version: 20150525095218) do
 
   create_table "refinery_apartment_floors", force: :cascade do |t|
-    t.integer  "refinery_apartments_id", null: false
-    t.integer  "floor_number",           null: false
+    t.integer  "apartment_id",   null: false
+    t.integer  "floor_number",   null: false
     t.float    "corridor_area"
     t.float    "wc_area"
     t.float    "workroom_area"
     t.float    "kitchen_area"
     t.float    "chamber_area"
-    t.float    "bathroom"
-    t.float    "staircase"
-    t.float    "room1"
-    t.float    "room2"
-    t.float    "room3"
-    t.float    "room4"
-    t.float    "room5"
+    t.float    "bathroom_area"
+    t.float    "staircase_area"
+    t.float    "room1_area"
+    t.float    "room2_area"
+    t.float    "room3_area"
+    t.float    "room4_area"
+    t.float    "room5_area"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150525071245) do
   create_table "refinery_apartments", force: :cascade do |t|
     t.string   "block"
     t.string   "unit_id"
+    t.integer  "photo_id"
     t.integer  "floor"
     t.string   "total_floors"
     t.string   "layout"

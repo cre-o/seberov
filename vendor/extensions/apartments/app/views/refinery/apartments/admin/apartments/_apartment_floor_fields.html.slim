@@ -1,0 +1,39 @@
+.nested-fields
+  .field
+    = f.label :floor_number
+    = f.text_field :floor_number
+  .field
+    = f.label :corridor_area
+    = f.text_field :corridor_area
+  .field
+    = f.label :wc_area
+    = f.text_field :wc_area
+  .field
+    = f.label :kitchen_area
+    = f.text_field :kitchen_area
+  .field
+    = f.label :chamber_area
+    = f.text_field :chamber_area
+  .field
+    = f.label :bathroom_area
+    = f.text_field :bathroom_area
+  .field
+    = f.label :staircase_area
+    = f.text_field :staircase_area
+  .field
+    = f.label :room1_area
+    = f.text_field :room1_area
+  .field
+    = f.label :room2_area
+    = f.text_field :room2_area
+  .field
+    = f.label :room3_area
+    = f.text_field :room3_area
+  .field
+    = f.label :room4_area
+    = f.text_field :room4_area
+  .field
+    = f.label :room5_area
+    = f.text_field :room5_area
+
+  = link_to_remove_association "remove floor data", f

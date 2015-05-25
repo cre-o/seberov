@@ -1,5 +1,7 @@
 // redefined styles
 .accordion {
+  list-style-position: outside;
+
   .accordion-navigation > a, .accordion-navigation > a:hover  {
     background: none;
   }
@@ -15,9 +17,19 @@
       list-style-image: image_url('icons/bullet-down-grey');
     }
 
+    .content {
+      margin-left: rem_calc(-13);
+      font-family: 'Open Sans', sans-serif;
+      font-size: rem_calc(14);
+      line-height: rem_calc(23);
+      border-left: 2px solid $grey;
+      padding-left: rem_calc(30);
+    }
+
     .content li {
       list-style-type: disc !important;
       list-style-image: none;
+      font-size: 14px;
     }
   }
 

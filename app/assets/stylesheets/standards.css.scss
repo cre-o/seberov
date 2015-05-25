@@ -54,14 +54,6 @@
         margin: 0;
       }
 
-      li {
-        font-family: 'Open Sans', sans-serif;
-        font-size: rem_calc(15);
-        list-style-type: disc;
-        line-height: rem_calc(25);
-        //padding-bottom: 18px;
-      }
-
       &.small, &.small > ul > li {
         font-size: rem_calc(13);
         line-height: rem_calc(15);
@@ -73,7 +65,7 @@
     padding-top: 33px;
   }
 
-  .architector {
+  .architect {
     font-family: 'Open Sans', sans-serif;
     padding-bottom: 15px;
 

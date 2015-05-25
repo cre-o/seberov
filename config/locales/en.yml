@@ -62,18 +62,21 @@ en:
       sport: 'Спортивный ареал'
     slider:
       descriptions:
-        - 'First image'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
-        - '10'
-        - '11'
+        - First image
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
 
+  standards_page:
+    header:
+      architect: СЛОВО АРХИТЕКТОРА
   forms:
     building: 'building'
     name: 'name'

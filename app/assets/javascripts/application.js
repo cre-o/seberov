@@ -13,9 +13,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular
-//= require lodash
-//= require utility
 //= require foundation/foundation
 //= require foundation/foundation.accordion
 //= require foundation/foundation.alert
@@ -26,6 +23,9 @@
 //= require foundation/foundation.offcanvas
 //= require foundation/foundation.tooltip
 //= require foundation/foundation.reveal
+//= require angular
+//= require lodash
+//= require utility
 //= require angular-scroll
 //= require angular-google-maps
 //= require angular-ui-utils/mask

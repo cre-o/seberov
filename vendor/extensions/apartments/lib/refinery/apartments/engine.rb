@@ -4,6 +4,12 @@ module Refinery
       extend Refinery::Engine
       isolate_namespace Refinery::Apartments
 
+      config.to_prepare do
+        Dir.glob(Rails.root + "app/decorators/**/*_decorator*.rb").each do |c|
+          require_dependency(c)
+        end
+      end
+
       engine_name :refinery_apartments
 
       before_inclusion do

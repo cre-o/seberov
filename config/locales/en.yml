@@ -77,6 +77,14 @@ en:
   standards_page:
     header:
       architect: СЛОВО АРХИТЕКТОРА
+    image_broadcaster:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
   forms:
     building: 'building'
     name: 'name'

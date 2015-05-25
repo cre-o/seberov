@@ -20,8 +20,6 @@ end
 
 platforms :ruby do
   gem 'sqlite3'
-  gem 'mysql2'
-  gem 'pg'
 end
 
 group :development, :test do
@@ -44,3 +42,4 @@ end
 
 gem 'cocoon' # easy nested forms
 gem 'simple_form' # easy forms
+gem 'draper'

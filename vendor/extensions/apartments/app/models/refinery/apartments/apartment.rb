@@ -1,6 +1,7 @@
 module Refinery
   module Apartments
     class Apartment < Refinery::Core::BaseModel
+
       self.table_name = 'refinery_apartments'
       has_many :apartment_floors, dependent: :destroy
       belongs_to :photo, :class_name => '::Refinery::Image'

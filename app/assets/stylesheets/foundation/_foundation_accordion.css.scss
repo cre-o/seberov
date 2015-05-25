@@ -3,11 +3,22 @@
   list-style-position: outside;
 
   .accordion-navigation > a, .accordion-navigation > a:hover  {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: rem_calc(16);
     background: none;
+    padding: rem_calc(10);
+    color: $dark_grey;
   }
 
   .accordion-navigation.active > a, .accordion dd.active > a {
     background: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: rem_calc(16);
+    background: none;
+    padding: rem_calc(10);
+    color: $dark_grey;
   }
 
   .accordion-navigation {

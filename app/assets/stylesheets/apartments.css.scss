@@ -184,7 +184,7 @@
   &.__item_page {
     fieldset {
       border: 2px solid #a9a4a4;
-      padding: rem_calc(25) rem_calc(30);
+      padding: rem_calc(45) rem_calc(90);
 
       legend {
         color: #5e9472;
@@ -204,6 +204,192 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .b-preview {
+        padding-bottom: 30px;
+      }
+
+      .b-parameters {
+        border-top: 1px solid #b0b0b0;
+        padding-left: 23px;
+        padding-top: 47px;
+      }
+    }
+
+    #building-map {
+      position: relative;
+      width: 193px;
+      height: auto;
+
+      #a, #b, #c, #d {
+        position: absolute;
+        background-color: $green;
+        opacity: 0.5;
+      }
+
+      #a {
+        width: 39px;
+        height: 143px;
+        bottom: 5px;
+        left: 0;
+      }
+
+      #b {
+        width: 193px;
+        height: 45px;
+        top: 0;
+      }
+
+      #c {
+        width: 40px;
+        height: 126px;
+        top: 45px;
+        right: 10px;
+      }
+
+      #d {
+        width: 66px;
+        height: 30px;
+        bottom: 0;
+        right: 29px;
+      }
+
+      .text-center {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 33px;
+        font-size: rem_calc(16);
+        color: #4e4e4e;
+      }
+    }
+
+    #floors-map {
+      width: 140px;
+      height: auto;
+      border-top-right-radius: 80px;
+      border-top-left-radius: 80px;
+      overflow: hidden;
+      position: relative;
+
+      #f-1, #f-2, #f-3 {
+        position: absolute;
+        opacity: 0.5;
+      }
+
+      #f-1 {
+        height: 53px;
+        background-color: #5e9472;
+        position: absolute;
+        top: 83px;
+        width: 140px;
+
+        &:before {
+          border-bottom: 32px solid $green;
+          border-left: 29px solid transparent;
+          content: "";
+          height: 0;
+          left: -4px;
+          position: absolute;
+          top: -32px;
+          width: 0;
+        }
+      }
+
+      #f-2 {
+        overflow: hidden;
+        width: 80px;
+        height: 20px;
+      }
+
+      #f-3 {
+
+      }
+
+      .text-center {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 29px;
+        font-size: rem_calc(16);
+        color: #4e4e4e;
+      }
+    }
+
+    .__numbers {
+      ul {
+        font-size: rem_calc(15);
+
+        span {
+          padding-right: 5px;
+        }
+      }
+    }
+
+    .b-calculator {
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 40px;
+
+      .wrap {
+        height: 75px;
+        border: 1px solid $green;
+      }
+
+      header {
+        position: absolute;
+        width: 100%;
+        top: -13px;
+
+        h4 {
+          font-family: 'Open Sans', sans-serif;
+          color: $green;
+          font-weight: bold;
+          font-size: rem_calc(15);
+          display: inline-block;
+          background-color: #fff;
+          margin-left: 20px;
+        }
+
+        .selectors {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          background-color: #fff;
+
+          a {
+            color: $grey;
+            font-weight: 700;
+            padding-right: 7px;
+
+            &.active {
+              color: $green;
+            }
+          }
+        }
+      }
+
+      .content {
+        h1 {
+          font-size: 18px;
+          font-weight: normal;
+          text-transform: uppercase;
+          text-align: center;
+          margin-top: 20px;
+
+          strong {
+            color: $green;
+            padding-left: 10px;
+          }
+        }
+      }
+
+      footer {
+        margin-top: -3px;
+        span { color: $grey; }
+
+        span, a {
+          background-color: #fff;
+          font-size: 13px;
+        }
       }
     }
   }

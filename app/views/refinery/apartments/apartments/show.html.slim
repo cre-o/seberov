@@ -3,67 +3,97 @@
     .small-12.columns
       fieldset
         legend = breadcrumbs(@apartment)
+        .row.b-preview
+          .small-5.columns.text-right
+            = image_tag 'http://placehold.it/390x330'
+          .small-5.columns
+            = image_tag 'http://placehold.it/390x330'
 
-/ <% content_for :body_content_title do %>
-/   <%= @apartment.block %>
-/ <% end %>
+        .row.b-parameters
+          .small-6.columns.__maps
+            .row
+              .small-7.columns
+                #building-map
+                  = image_tag 'apartments/building-map.png'
+                  div id="#{@apartment.block}"
 
-/ <% content_for :body do %>
-/   <section>
-/     <h1>Block</h1>
-/     <p>
-/       <%=raw @apartment.block %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Unit</h1>
-/     <p>
-/       <%=raw @apartment.unit_id %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Floor</h1>
-/     <p>
-/       <%=raw @apartment.floor %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Total Floors</h1>
-/     <p>
-/       <%=raw @apartment.total_floors %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Layout</h1>
-/     <p>
-/       <%=raw @apartment.layout %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Apartment Area</h1>
-/     <p>
-/       <%=raw @apartment.apartment_area %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Balcony Terace Area</h1>
-/     <p>
-/       <%=raw @apartment.balcony_terace_area %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Front Yard Area</h1>
-/     <p>
-/       <%=raw @apartment.front_yard_area %>
-/     </p>
-/   </section>
-/   <section>
-/     <h1>Price</h1>
-/     <p>
-/       <%=raw @apartment.price %>
-/     </p>
-/   </section>
-/ <% end %>
+                  .text-center building #{@apartment.block}
+
+              .small-4.columns.end
+                #floors-map
+                  = image_tag 'apartments/floors-map.png'
+
+                  div#f-1 class=(@apartment.floor == 1 ? 'active' : nil)
+                  div#f-2 class=(@apartment.floor == 2 ? 'active' : nil)
+                  div#f-3 class=(@apartment.floor == 3 ? 'active' : nil)
+
+                  .text-center floor #{@apartment.floor}
+
+          .small-6.columns.__numbers
+            ul.small-block-grid-2
+              li
+                span block:
+                strong = @apartment.block
+              li
+                span unit:
+                strong = @apartment.unit_id
+              li
+                span floor:
+                strong = @apartment.floor
+              li
+                span total floors:
+                strong = @apartment.total_floors
+              li
+                span layout:
+                strong = @apartment.layout
+              li
+                span apartment area:
+                strong = @apartment.apartment_area
+
+            .b-calculator
+              .wrap
+                header
+                  h4 count mortgage payment
+                  .selectors.upcase
+                    a.active href="#" czk
+                    a href="#" eur
+                    a href="#" usd
+
+                .content
+                  h1
+                    |Cena včetně DPH:
+                    strong #{@apartment.price} Kč
+                footer.text-center
+                  span +парковочное место в подземном гараже: 260 000 Kč
+                  br
+                  a href="#" показать схему парковки
+
+            ul.small-block-grid-2
+              li
+                span balcony terace area:
+                strong = @apartment.balcony_terace_area
+              li
+                span front yard area:
+                strong = @apartment.front_yard_area
+              li
+                span floor:
+                strong = @apartment.floor
+              li
+                span total_floors:
+                strong = @apartment.total_floors
+              li
+                span layout:
+                strong = @apartment.layout
+              li
+                span apartment_area:
+                strong = @apartment.apartment_area
+
+
+
+
+
+
+
 
 / <% content_for :side_body do %>
 /   <aside>

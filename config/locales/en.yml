@@ -1,6 +1,12 @@
 en:
 
+  language_menu:
+    english: english
+    czech: czech
+    russian: russian
+
   main_page:
+    procedure_of_purchasing: 'Procedure of purchasing:'
     download_price_list: 'Download price list'
     screen:
       exterior_button_text_html: 'Визуализация'
@@ -87,7 +93,7 @@ en:
       - 6
       - 7
     horisontal_constructions:
-      - | 
+      - |
         гипсокартонные подвесные потолки или гипсовая штукатурка
         керамические панели, усиленные железобетонными балками
         акустическая изоляция – твержёный пенопласт типа EPS 150 S толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм

@@ -181,6 +181,33 @@
     }
   }
 
+  &.__item_page {
+    fieldset {
+      border: 2px solid #a9a4a4;
+      padding: rem_calc(25) rem_calc(30);
+
+      legend {
+        color: #5e9472;
+        font-family: 'Open Sans', sans-serif;
+        font-size: rem_calc(15);
+        font-weight: 400;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: image_url('apartments/compass-for-center.jpg');
+        width: 78px;
+        height: 54px;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
   .wrap {
     border: 2px solid #a9a4a4;
   }

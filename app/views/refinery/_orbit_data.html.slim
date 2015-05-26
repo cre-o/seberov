@@ -2,7 +2,7 @@
   - size.times do |t|
     - p = t.next
     li
-      img src="#{image_path("#{img_path}/#{p}-s.jpg")}" data-interchange="
+      img data-interchange="
         [#{image_path("#{img_path}/#{p}-s.jpg")}, (default)],
         [#{image_path("#{img_path}/#{p}-m.jpg")}, (medium)],
         [#{image_path("#{img_path}/#{p}-l.jpg")}, (large)],
@@ -15,7 +15,7 @@
           .fa.fa-1.z5x.fa-chevron-right
 - else
   li
-    img src="#{image_path("#{img_path}-s.jpg")}" data-interchange="
+    img data-interchange="
       [#{image_path("#{img_path}-s.jpg")}, (default)],
       [#{image_path("#{img_path}-m.jpg")}, (medium)],
       [#{image_path("#{img_path}-l.jpg")}, (large)],

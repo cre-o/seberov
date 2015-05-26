@@ -4,7 +4,7 @@
     .small-12.columns
       ul#main-orbit data-orbit=""
         li
-          img src="#{image_path('main/slider/1-large.jpg')}" data-interchange="
+          img data-interchange="
             [#{image_path('main/slider/1-small.jpg')}, (default)],
             [#{image_path('main/slider/1-medium.jpg')}, (medium)],
             [#{image_path('main/slider/1-large.jpg')}, (large)],
@@ -12,7 +12,7 @@
           .orbit-caption-middle
             = raw @page.content_for(:slider_image)
         li
-          img src="#{image_path('main/slider/2-large.jpg')}" data-interchange="
+          img data-interchange="
             [#{image_path('main/slider/2-small.jpg')}, (default)],
             [#{image_path('main/slider/2-medium.jpg')}, (medium)],
             [#{image_path('main/slider/2-large.jpg')}, (large)],
@@ -89,7 +89,7 @@
           .flex-video.widescreen.js-main-screen
             iframe#virtual-tour ng-src="virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
         div ng-if="mainPage.isCurrentScreen(4)"
-          .js-main-screen.text-center
+          .js-main-screen.webcam.text-center
             img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
 
 
@@ -111,7 +111,7 @@
   section.main-steps-info
     .row.fuild
       .small-6.small-offset-2.small-offset-2
-        h1.upcase Procedure of purchasing:
+        h1.upcase = t 'main_page.procedure_of_purchasing'
 
     / Steps
     .row

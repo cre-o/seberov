@@ -106,12 +106,16 @@ header.application {
     li {
       display: inline-block;
       float: left;
-      width: 15px;
+      width: 20px;
+      overflow: hidden;
 
       a {
         display: block;
         color: $black;
-        line-height: 68px;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 65px;
+        white-space: nowrap;
         @include transform(rotate(-90deg));
       }
 
@@ -125,20 +129,20 @@ header.application {
         height: 60px;
         width: 30px;
 
-        // <-- Media queries
-        font-size: rem_calc(12);
-
-        @media #{$small-only} {
-          font-size: rem_calc(12/1.5);
-        }
-
-        @media #{$medium-only} {
-          font-size: rem_calc(12/1.2);
-        }
-        // -->
-
         a {
           color: $white;
+
+          // <-- Media queries
+          font-size: rem_calc(12);
+
+          @media #{$small-only} {
+            font-size: rem_calc(12/1.5);
+          }
+
+          @media #{$medium-only} {
+            font-size: rem_calc(12/1.2);
+          }
+          // -->
         }
       }
     }

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  before_action :set_locale
 
   # POST /callback
   def callback
@@ -15,6 +16,14 @@ class ApplicationController < ActionController::Base
     else
       redirect_to root_url, status: 301, alert: callback_form.errors.full_messages
     end
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
   end
 
   private

@@ -17,16 +17,16 @@ Refinery::PagesController.class_eval do
             playground: ActionController::Base.helpers.asset_path('location/markers/playground-l.png'),
             sport: ActionController::Base.helpers.asset_path('location/markers/playground-l.pgn')
           },
-          small: {
-            medicine: ActionController::Base.helpers.asset_path('location/markers/medicine-s.png'),
-            autobus: ActionController::Base.helpers.asset_path('location/markers/autobus-s.png'),
-            relax: ActionController::Base.helpers.asset_path('location/markers/relax-s.png'),
-            school: ActionController::Base.helpers.asset_path('location/markers/school-s.png'),
-            administration: ActionController::Base.helpers.asset_path('location/markers/administration-s.png'),
-            police: ActionController::Base.helpers.asset_path('location/markers/police-s.png'),
-            library: ActionController::Base.helpers.asset_path('location/markers/library-s.png'),
-            playground: ActionController::Base.helpers.asset_path('location/markers/playground-s.png'),
-            sport: ActionController::Base.helpers.asset_path('location/markers/playground-s.png')
+          grey: {
+            medicine: ActionController::Base.helpers.asset_path('location/markers/medicine-grey-s.png'),
+            autobus: ActionController::Base.helpers.asset_path('location/markers/autobus-grey-s.png'),
+            relax: ActionController::Base.helpers.asset_path('location/markers/relax-grey-s.png'),
+            school: ActionController::Base.helpers.asset_path('location/markers/school-grey-s.png'),
+            administration: ActionController::Base.helpers.asset_path('location/markers/administration-grey-s.png'),
+            police: ActionController::Base.helpers.asset_path('location/markers/police-grey-s.png'),
+            library: ActionController::Base.helpers.asset_path('location/markers/library-grey-s.png'),
+            playground: ActionController::Base.helpers.asset_path('location/markers/playground-grey-s.png'),
+            sport: ActionController::Base.helpers.asset_path('location/markers/playground-grey-s.png')
           }
         }
       })

@@ -29,6 +29,7 @@
   /! 3
   .row ng-controller="ImageBroadcasterController as broadcaster"
     .small-6.columns
+      = raw @page.content_for(:section3)
       div ng-show="broadcaster.isSet(1)"
         = t('standards_page.horisontal_constructions')[0]
       div ng-show="broadcaster.isSet(2)"
@@ -47,7 +48,7 @@
     .small-6.columns
       .image-broadcaster
         img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1')}'" ng-src="{{broadcaster.imageUrl}}"
-        .controls.small-5
+        .controls.small-7
           ol
             li ng-class="{ active: broadcaster.isSet(1) }"
               a href="" ng-click="broadcaster.setImage(1, '#{image_url('standards/3-1')}')" 1

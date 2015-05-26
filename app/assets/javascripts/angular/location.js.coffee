@@ -1,8 +1,8 @@
 angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogleMapApi) ->
   map = {
     center:
-      latitude: 49.999243
-      longitude: 14.516158
+      latitude: 50.0063763
+      longitude: 14.514913
     options:
       scrollwheel: false
     markers:
@@ -11,7 +11,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 49.997150
           longitude: 14.516002
-        smallIcon: { url: gon.mapMarkerIcons.small.medicine }
+        smallIcon: { url: gon.mapMarkerIcons.grey.medicine }
         bigIcon: { url: gon.mapMarkerIcons.big.medicine }
 
       autobus:
@@ -35,7 +35,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
               longitude: 14.515993
           }
         ],
-        smallIcon: { url: gon.mapMarkerIcons.small.autobus }
+        smallIcon: { url: gon.mapMarkerIcons.grey.autobus }
         bigIcon: { url: gon.mapMarkerIcons.big.autobus }
 
       relax:
@@ -43,7 +43,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 49.996779
           longitude: 14.517268
-        smallIcon: { url: gon.mapMarkerIcons.small.relax }
+        smallIcon: { url: gon.mapMarkerIcons.grey.relax }
         bigIcon: { url: gon.mapMarkerIcons.big.relax }
 
       school:
@@ -51,7 +51,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 50.012353
           longitude: 14.510415
-        smallIcon: { url: gon.mapMarkerIcons.small.school }
+        smallIcon: { url: gon.mapMarkerIcons.grey.school }
         bigIcon: { url: gon.mapMarkerIcons.big.school }
 
       administration:
@@ -59,7 +59,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 50.011395
           longitude: 14.514031
-        smallIcon: { url: gon.mapMarkerIcons.small.administration }
+        smallIcon: { url: gon.mapMarkerIcons.grey.administration }
         bigIcon: { url: gon.mapMarkerIcons.big.administration }
 
       police:
@@ -67,7 +67,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 50.013206
           longitude: 14.513536
-        smallIcon: { url: gon.mapMarkerIcons.small.police }
+        smallIcon: { url: gon.mapMarkerIcons.grey.police }
         bigIcon: { url: gon.mapMarkerIcons.big.police }
 
       library:
@@ -75,7 +75,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 50.013206
           longitude: 14.513536
-        smallIcon: { url: gon.mapMarkerIcons.small.library }
+        smallIcon: { url: gon.mapMarkerIcons.grey.library }
         bigIcon: { url: gon.mapMarkerIcons.big.library }
 
       playground:
@@ -83,7 +83,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 49.996603
           longitude: 14.517275
-        smallIcon: { url: gon.mapMarkerIcons.small.playground }
+        smallIcon: { url: gon.mapMarkerIcons.grey.playground }
         bigIcon: { url: gon.mapMarkerIcons.big.playground }
 
       sport:
@@ -91,7 +91,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
         coords:
           latitude: 50.009919
           longitude: 14.513655
-        smallIcon: { url: gon.mapMarkerIcons.small.sport }
+        smallIcon: { url: gon.mapMarkerIcons.grey.sport }
         bigIcon: { url: gon.mapMarkerIcons.big.sport }
   }
 
@@ -100,7 +100,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
     _.each map.markers, (n) ->
       n['icon'] = n.smallIcon
 
-  $scope.currentItem = 'school'
+  $scope.currentItem = 'autobus'
 
   $scope.setCurrentMarkers = (name) ->
     reset()
@@ -115,6 +115,6 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
   $scope.map =
     center: map.center
     markers: map.markers
-    zoom: 13
+    zoom: 14
 
   return $scope

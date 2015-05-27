@@ -1,4 +1,5 @@
-class AddApartmentsApartmentsChambers < ActiveRecord::Migration
+# This migration comes from refinery_apartments (originally 3)
+class AddApartmentsApartmentsFloorsChambers < ActiveRecord::Migration
 
   def change
     rename_column :refinery_apartment_floors, :chamber_area, :chamber1_area

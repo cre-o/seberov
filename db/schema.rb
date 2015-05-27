@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527170756) do
+ActiveRecord::Schema.define(version: 20150527181041) do
 
   create_table "refinery_apartment_floors", force: :cascade do |t|
     t.integer  "apartment_id",    null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150527170756) do
     t.float    "chamber3_area"
     t.float    "cloakroom1_area"
     t.float    "cloakroom2_area"
+    t.float    "gallery_area"
   end
 
   add_index "refinery_apartment_floors", ["floor_number"], name: "index_refinery_apartment_floors_on_floor_number"
@@ -53,8 +54,6 @@ ActiveRecord::Schema.define(version: 20150527170756) do
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "vestibule_area"
-    t.float    "gallery_area"
   end
 
   create_table "refinery_images", force: :cascade do |t|

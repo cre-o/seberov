@@ -43,9 +43,10 @@ module Refinery
             end
           end
 
-          params['apartment']['apartment_area'] = params['apartment']['apartment_area'].gsub(/,/, '.')
-          params['apartment']['balcony_terace_area'] = params['apartment']['balcony_terace_area'].gsub(/,/, '.')
-          params['apartment']['front_yard_area'] = params['apartment']['front_yard_area'].gsub(/,/, '.')
+          areas = params['apartment'].keys.select { |v| v =~ /_area/ }
+          areas.each do |v|
+            params['apartment'][v] = params['apartment'][v].gsub(/,/, '.')
+          end
         end
 
         # Only allow a trusted parameter "white list" through.
@@ -53,11 +54,14 @@ module Refinery
           params.require(:apartment).permit(
             :unit_id, :block, :floor, :photo_id, :total_floors,
             :layout, :apartment_area, :balcony_terace_area, :front_yard_area, :price,
+            :vestibule_area, :gallery_area,
             apartment_floors_attributes: [
               :id, :floor_number, :done, :_destroy,
               :corridor_area, :wc_area, :kitchen_area,
               :chamber_area, :bathroom_area, :staircase_area,
-              :room1_area, :room2_area, :room3_area, :room4_area, :room5_area]
+              :room1_area, :room2_area, :room3_area, :room4_area, :room5_area,
+              :chamber1_area, :chamber2_area, :chamber3_area,
+              :cloakroom1_area, :cloakroom2_area]
             )
         end
       end

@@ -52,7 +52,7 @@
 
             .b-calculator
               .wrap
-                header
+                .header
                   h4 count mortgage payment
                   .selectors.upcase
                     a.active href="#" czk
@@ -63,7 +63,7 @@
                   h1
                     |Cena včetně DPH:
                     strong #{@apartment.price} Kč
-                footer.text-center
+                .footer.text-center
                   span +парковочное место в подземном гараже: 260 000 Kč
                   br
                   a href="#" показать схему парковки
@@ -88,6 +88,25 @@
                 span apartment_area:
                 strong = @apartment.apartment_area
 
+        .row.b-apartment-application
+          .small-12.columns
+            .header
+              h5 = t 'sign_up_to_see', scope: 'apartment_page'
+              .subheader = t 'sign_up_to_see_advice', scope: 'apartment_page'
+            .content
+              .row
+                .small-3.columns
+                  input type="text" placeholder="your name"
+                .small-3.columns
+                  input type="text" placeholder="phone number"
+                .small-3.columns
+                  input type="text" placeholder="email"
+                .small-3.columns
+                  input type="submit" placeholder="submit"
+
+
+        .download-pdf
+          = t 'download_pdf', scope: 'apartment_page'
 
 
 

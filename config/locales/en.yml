@@ -130,6 +130,11 @@ en:
         перила – металлические кованные
         перегородки между соседними балконами выполнены в виде оцинкованной железной конструкции с лёгким заполнителем
 
+  apartment_page:
+    sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
+    sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
+    download_pdf: 'DOWNLOAD PDF'
+
   forms:
     building: 'building'
     name: 'name'

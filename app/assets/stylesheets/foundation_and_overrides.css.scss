@@ -128,7 +128,7 @@ $primary-color: #549350;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-family: $default-font;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -201,7 +201,7 @@ $primary-color: #549350;
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+$header-font-color: $green;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;

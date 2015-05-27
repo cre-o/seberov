@@ -31,13 +31,16 @@ module Refinery
           floors_attributes = params['apartment']['apartment_floors_attributes']
 
           if floors_attributes.present?
-            fa_key = floors_attributes.keys.first
+            fa_keys = floors_attributes.keys
 
-            fixed = params['apartment']['apartment_floors_attributes'][fa_key].map do |k, str|
-              [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
-            end.to_h
+            fa_keys.each do |i|
 
-            params['apartment']['apartment_floors_attributes'][fa_key] = fixed
+              floors_attributes[i] =
+                floors_attributes[i].map do |k, str|
+                  [k, /[0-9]+\,[0-9]+/ =~ str ? str.gsub(/,/, '.') : str]
+              end.to_h
+
+            end
           end
 
           params['apartment']['apartment_area'] = params['apartment']['apartment_area'].gsub(/,/, '.')

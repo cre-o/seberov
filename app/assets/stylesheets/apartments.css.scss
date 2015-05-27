@@ -389,6 +389,13 @@
         span, a {
           background-color: #fff;
           font-size: 13px;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+
+        a {
+          font-style: italic;
+          color: $green;
         }
       }
     }

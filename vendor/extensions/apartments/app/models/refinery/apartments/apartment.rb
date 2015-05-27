@@ -8,8 +8,10 @@ module Refinery
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 
-      validates :unit_id, :presence => true
-      validates :block, :presence => true
+      validates :unit_id, presence: true
+      validates :block, presence: true
+      validates :floor, presence: true, numericality: true
+      validates :total_floors, presence: true, numericality: true
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

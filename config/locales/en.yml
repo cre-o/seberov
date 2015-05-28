@@ -5,8 +5,8 @@ en:
     czech: czech
     russian: russian
 
-  main_page:
-    procedure_of_purchasing: 'Procedure of purchasing:'
+  home_page:
+    procedure_of_purchasing: 'Procedure of purchasing'
     download_price_list: 'Download price list'
     screen:
       exterior_button_text_html: 'Визуализация'

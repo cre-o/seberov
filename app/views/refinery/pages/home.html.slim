@@ -47,28 +47,28 @@
           ng-click="mainPage.setScreen(1); refreshOrbit()"
           ng-style="mainPage.isCurrentScreen(1) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
-            span = t 'exterior_button_text_html', scope: 'main_page.screen'
+            span = t 'exterior_button_text_html', scope: 'home_page.screen'
           .image
         .btn.interior[
           ng-class="{ active: mainPage.isCurrentScreen(2) }"
           ng-click="mainPage.setScreen(2); refreshOrbit()"
           ng-style="mainPage.isCurrentScreen(2) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
-            span = t 'interior_button_text_html', scope: 'main_page.screen'
+            span = t 'interior_button_text_html', scope: 'home_page.screen'
           .image
         .btn.tour[
           ng-class="{ active: mainPage.isCurrentScreen(3) }"
           ng-click="mainPage.setScreen(3)"
           ng-style="mainPage.isCurrentScreen(3) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
-            span = t 'tour_button_text_html', scope: 'main_page.screen'
+            span = t 'tour_button_text_html', scope: 'home_page.screen'
           .image
         .btn.webcam[
           ng-class="{ active: mainPage.isCurrentScreen(4) }"
           ng-click="mainPage.setScreen(4); loadWebcam()"
           ng-style="mainPage.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
           .text
-            span = t 'webcam_button_text_html', scope: 'main_page.screen'
+            span = t 'webcam_button_text_html', scope: 'home_page.screen'
           .image
 
     / Using manual initialisation with custom buttons
@@ -78,13 +78,13 @@
            data-orbit=""
            ng-class="{active: mainPage.isCurrentScreen(1)}"]
           = render partial: 'refinery/orbit_data',
-              locals: { img_path: 'main/preview-widget/exterior', size: 4, translation_path: 'main_page.screen.exterior' }
+              locals: { img_path: 'main/preview-widget/exterior', size: 4, translation_path: 'home_page.screen.exterior' }
         // Interior
         ul#interior-orbit.js-main-screen.orbit[
           data-orbit=""
           ng-class="{active: mainPage.isCurrentScreen(2)}"]
           = render partial: 'refinery/orbit_data',
-            locals: { img_path: 'main/preview-widget/interior', size: 13, translation_path: 'main_page.screen.interior' }
+            locals: { img_path: 'main/preview-widget/interior', size: 13, translation_path: 'home_page.screen.interior' }
         div ng-if="mainPage.isCurrentScreen(3)"
           .flex-video.widescreen.js-main-screen
             iframe#virtual-tour ng-src="virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
@@ -99,19 +99,19 @@
         .option ng-style="{'height': screenHeight/4-2}"
           .wrap
             .text
-              = t 'download_button_text_html', scope: 'main_page.screen'
+              = t 'download_button_text_html', scope: 'home_page.screen'
             .icon.pdf
 
         .option ng-style="{'height': screenHeight/4-2}"
           .wrap
             .text
-              = t 'choose_an_apartment_button_text_html', scope: 'main_page.screen'
+              = t 'choose_an_apartment_button_text_html', scope: 'home_page.screen'
             .icon.plan
 
   section.main-steps-info
     .row.fuild
       .small-6.small-offset-2.small-offset-2
-        h1.upcase = t 'main_page.procedure_of_purchasing'
+        h1.upcase = t 'home_page.procedure_of_purchasing'
 
     / Steps
     .row

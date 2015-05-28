@@ -1,7 +1,7 @@
 #l-apartments {
   margin-top: rem_calc(143);
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: rem_calc(30);
 
   // Media queries
   $gutter-size: rem_calc(15); // Small-screen
@@ -49,8 +49,8 @@
     }
   }
 
-  // Planning page
-  &.planning {
+  // Index page
+  &.__index-page {
 
     .b-building-selector, .b-flat-selector {
       padding: rem_calc(20);
@@ -84,8 +84,11 @@
   }
 
   // Parameters page
-  .b-parameters {
-    border-bottom: 1px solid $light_grey;
+  &.__parameters-page {
+
+    .b-parameters {
+      border-bottom: 1px solid $light_grey;
+    }
 
     // Filters by different parameters
     .b-filters {
@@ -105,88 +108,79 @@
         font-size: rem_calc(18);
         padding-bottom: rem_calc(26);
       }
+    }
 
-      input[type="text"] {
-        height: 30px;
+    .b-results {
+      font-family: 'Open Sans', sans-serif;
+
+      .total {
+        font-size: rem_calc(18);
+        color: #5e9472;
+        line-height: rem_calc(55);
       }
-    }
 
-    .rooms {
-      input[type="checkbox"] {
-        border: 2px solid #bdc9c1;
-      }
-    }
-  }
+      .items {
+        @extend %padding;
+        border-top: 1px solid $light_grey;
 
-  .b-results {
-    font-family: 'Open Sans', sans-serif;
+        .item {
+          border-bottom: 1px solid $light_grey;
+          padding-top: 20px;
+          padding-bottom: 20px;
 
-    .total {
-      font-size: rem_calc(18);
-      color: #5e9472;
-      line-height: rem_calc(55);
-    }
-
-    .items {
-      @extend %padding;
-      border-top: 1px solid $light_grey;
-
-      .item {
-        border-bottom: 1px solid $light_grey;
-        padding-top: rem_calc(20);
-        padding-bottom: rem_calc(20);
-
-        .id {
-          font-size: rem_calc(12);
-          color: $dark_grey;
-        }
-
-        .attributes {
-          font-size: rem_calc(15);
-          padding-top: rem_calc(20);
-        }
-
-        .price {
-          font-size: rem_calc(15);
-
-          span {
-            color: $green;
-            font-weight: bold;
+          .id {
+            font-size: rem_calc(12);
+            color: $dark_grey;
           }
-        }
 
-        .go {
-          text-align: center;
-          white-space: nowrap;
-
-          &:before {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-            margin-right: -0.25em;
+          .attributes {
+            font-size: rem_calc(15);
+            padding-top: 20px;
           }
-        }
 
-        .more {
-          a {
-            vertical-align: middle;
-            display: inline-block;
-            padding: rem_calc(20);
-            font-size: rem_calc(18);
-            border: 1px solid $green;
+          .price {
+            font-size: rem_calc(15);
+
+            span {
+              color: $green;
+              font-weight: bold;
+            }
+          }
+
+          .go {
+            text-align: center;
+            white-space: nowrap;
+
+            &:before {
+              content: '';
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+              margin-right: -0.25em;
+            }
+          }
+
+          .more {
+            a {
+              vertical-align: middle;
+              display: inline-block;
+              padding: 20px;
+              font-size: rem_calc(18);
+              border: 1px solid $green;
+            }
           }
         }
       }
     }
   }
 
-  &.__item_page {
-    margin-top: 115px;
+  &.__item-page {
+    margin-top: rem_calc(140);
 
     fieldset {
       border: 2px solid #a9a4a4;
-      padding: rem_calc(45) rem_calc(90);
+      padding: 25px 90px;
+      margin-bottom: 20px;
 
       legend {
         color: #5e9472;
@@ -215,8 +209,11 @@
       .b-parameters {
         border-top: 1px solid #b0b0b0;
         padding-left: 23px;
-        padding-top: 47px;
       }
+    }
+
+    .__maps {
+      padding-top: 45px;
     }
 
     #building-map {
@@ -259,7 +256,7 @@
 
       .text-center {
         font-family: 'Open Sans', sans-serif;
-        margin-top: 33px;
+        margin-top: 25px;
         font-size: rem_calc(16);
         color: #4e4e4e;
       }
@@ -272,6 +269,7 @@
       border-top-left-radius: 80px;
       overflow: hidden;
       position: relative;
+      margin-top: 55px;
 
       #f-1, #f-2, #f-3 {
         position: absolute;
@@ -309,13 +307,15 @@
 
       .text-center {
         font-family: 'Open Sans', sans-serif;
-        margin-top: 29px;
+        margin-top: 25px;
         font-size: rem_calc(16);
         color: #4e4e4e;
       }
     }
 
     .__numbers {
+      padding-top: 20px;
+
       ul {
         font-size: rem_calc(15);
 
@@ -324,14 +324,14 @@
         }
 
         li {
-          padding-bottom: 5px;
+          padding-bottom: 3px;
         }
       }
     }
 
     .b-parameters {
       padding-bottom: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .b-calculator {
@@ -342,7 +342,7 @@
       margin-top: 30px;
 
       .wrap {
-        height: 75px;
+        height: 73px;
         border: 1px solid $green;
       }
 
@@ -380,21 +380,23 @@
             color: $grey;
             font-weight: 700;
             padding-right: 7px;
+            text-decoration: underline;
 
             &.active {
               color: $green;
+              text-decoration: none;
             }
           }
         }
-      }
+      } // <-- __item_page
 
       .content {
         h1 {
-          font-size: 18px;
+          font-size: rem_calc(18);
           font-weight: normal;
           text-transform: uppercase;
           text-align: center;
-          margin-top: 17px;
+          margin-top: 13px;
 
           strong {
             color: $green;
@@ -421,6 +423,8 @@
     }
 
     .b-apartment-application {
+      @include custom-row-gutter(10, 10, 15, 20, true);
+
       .header {
         h5 {
           font-size: rem_calc(16);
@@ -437,6 +441,54 @@
       }
     }
 
+    .download-pdf {
+      background-color: #fff;
+      position: absolute;
+      font-weight: bold;
+      right: 100px;
+      bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      a {
+        text-decoration: underline;
+      }
+
+      &:before {
+        content: "";
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        @extend i.icon.pdf.green;
+      }
+    }
+
+    .b-multi-slider {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .b-apartment-text {
+      h1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: $green;
+        padding: 0;
+        text-decoration: underline;
+      }
+
+      p {
+        text-indent: 50px;
+        font-size: 14px;
+        color: $dark_grey;
+      }
+
+      .author {
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
   }
 
   .wrap {

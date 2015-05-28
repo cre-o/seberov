@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150527181041) do
     t.datetime "updated_at"
     t.float    "chamber2_area"
     t.float    "chamber3_area"
+    t.float    "vestibule_area"
     t.float    "cloakroom1_area"
     t.float    "cloakroom2_area"
     t.float    "gallery_area"

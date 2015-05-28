@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def refinery_get_page(path: nil, id: nil)
-    Refinery::Page.find_by_path_or_id(path, id)
+    Refinery::Page.find_by_path_or_id(path, id) rescue Refinery::Page.new
   end
 
   def js_void

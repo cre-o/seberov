@@ -13,36 +13,26 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require foundation/foundation
-#= require foundation/foundation.slider
-#= require home
-#= require foundation/foundation.accordion
-#= require foundation/foundation.alert
-#= require foundation/foundation.clearing
-#= require foundation/foundation.interchange
-#= require foundation/foundation.orbit
-#= require foundation/foundation.offcanvas
-#= require foundation/foundation.tooltip
-#= require foundation/foundation.reveal
-#= require angular
 #= require lodash
-#= require utility
+#= require foundation-init
+#= require angular
 #= require angular-scroll
 #= require angular-google-maps
 #= require angular-ui-utils/mask
 #= require angular/application
+#= require utility
 #= require lazyload
 #= require jquery.nouislider.all.min
-#= require apartments
-#= require location
 #= require_tree .
 
 jQuery ->
 
+  $(document).foundation()
+
   # Lazy load images (not load before user can see it)
   $('img').lazyload()
 
-  # Exterior slider
+  # Multi slider
   $('.js-multi-slider.orbit').foundation
     orbit: {
       animation: 'slide',

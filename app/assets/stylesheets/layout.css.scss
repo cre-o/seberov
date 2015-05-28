@@ -108,6 +108,7 @@ header.application {
       float: left;
       width: 20px;
       overflow: hidden;
+      cursor: pointer;
 
       a {
         display: block;
@@ -119,10 +120,17 @@ header.application {
         @include transform(rotate(-90deg));
       }
 
-      // &:hover {
-      //   background-color: $green;
-      //   @include transition(all 2.0s ease-in-out);
-      // }
+      &:hover {
+        background-color: #4d7c5d;
+        height: 60px;
+        width: 30px;
+
+        a {
+          color: $white;
+        }
+
+        @include transition(all 400ms ease-out);
+      }
 
       &.active {
         background-color: #4d7c5d;

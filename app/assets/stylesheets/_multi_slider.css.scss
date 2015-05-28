@@ -1,0 +1,148 @@
+.multi-slider {
+  .action.buttons {
+    color: $white;
+    text-transform: uppercase;
+
+    .btn {
+      height: rem_calc(100);
+      font-size: rem_calc(20);
+      cursor: pointer;
+      position: relative;
+
+      &.active {
+        font-size: rem_calc(20);
+        font-weight: bold;
+        height: rem_calc(150);
+      }
+
+      .text {
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        text-align: end;
+        top: 0;
+        left: rem_calc(10);
+        bottom: 0;
+        right: 0;
+        z-index: 4;
+        display: table;
+
+        span {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
+        @include filter(brightness(0.5));
+      }
+
+      &.active .image {
+        @include filter(brightness(1));
+      }
+
+      &.exterior {
+        .image {
+          background-image: image_url('main/preview-widget/exterior-btn.jpg');
+        }
+
+        &.active {
+          .image {
+            background-image: image_url('main/preview-widget/exterior-btn-active.jpg');
+          }
+        }
+      }
+
+      &.interior {
+        .image {
+          background-image: image_url('main/preview-widget/interior-btn.jpg');
+        }
+
+        &.active {
+          .image {
+            background-image: image_url('main/preview-widget/interior-btn-active.jpg');
+          }
+        }
+      }
+
+      &.tour {
+        .image {
+          background-image: image_url('main/preview-widget/tour-btn.jpg');
+        }
+
+        &.active {
+          .image {
+            background-image: image_url('main/preview-widget/tour-btn-active.jpg');
+          }
+        }
+      }
+
+      &.webcam {
+        .image {
+          background-image: image_url('main/preview-widget/webcam-btn.jpg');
+        }
+
+        &.active {
+          .image {
+            background-image: image_url('main/preview-widget/webcam-btn-active.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .screen {
+    position: relative;
+
+    padding: {
+      left: rem_calc(4) !important;
+      right: rem_calc(3) !important;
+    }
+
+    .orbit {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .webcam {
+      margin-top: 27%;
+    }
+  }
+
+  .options {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: rem_calc(25);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: $white;
+
+    .option {
+      margin-bottom: rem_calc(4);
+      background-color: #5e9472;
+      cursor: pointer;
+      padding: rem_calc(6);
+
+      .wrap {
+        border: 1px solid $white;
+        padding-top: rem_calc(10);
+        height: 100%;
+      }
+
+      .text {
+        text-align: center;
+        line-height: rem_calc(30);
+      }
+
+      .icon {
+        margin: 15% auto;
+        display: inherit;
+      }
+    }
+  }
+}

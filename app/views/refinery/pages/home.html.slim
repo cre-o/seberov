@@ -1,4 +1,4 @@
-#l-main ng-controller="MainPageController as mainPage"
+#l-main ng-controller="HomeController as home"
   // Slider
   .row.fluid.collapse.main-slider
     .small-12.columns
@@ -39,74 +39,8 @@
 
   // You can view
   .row.fluid.collapse.main-preview
-    / Selector
-    .small-2.columns
-      .buttons.action
-        .btn.exterior[
-          ng-class="{ active: mainPage.isCurrentScreen(1) }"
-          ng-click="mainPage.setScreen(1); refreshOrbit()"
-          ng-style="mainPage.isCurrentScreen(1) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
-          .text
-            span = t 'exterior_button_text_html', scope: 'home_page.screen'
-          .image
-        .btn.interior[
-          ng-class="{ active: mainPage.isCurrentScreen(2) }"
-          ng-click="mainPage.setScreen(2); refreshOrbit()"
-          ng-style="mainPage.isCurrentScreen(2) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
-          .text
-            span = t 'interior_button_text_html', scope: 'home_page.screen'
-          .image
-        .btn.tour[
-          ng-class="{ active: mainPage.isCurrentScreen(3) }"
-          ng-click="mainPage.setScreen(3)"
-          ng-style="mainPage.isCurrentScreen(3) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
-          .text
-            span = t 'tour_button_text_html', scope: 'home_page.screen'
-          .image
-        .btn.webcam[
-          ng-class="{ active: mainPage.isCurrentScreen(4) }"
-          ng-click="mainPage.setScreen(4); loadWebcam()"
-          ng-style="mainPage.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
-          .text
-            span = t 'webcam_button_text_html', scope: 'home_page.screen'
-          .image
-
-    / Using manual initialisation with custom buttons
-    .small-8.large-8.columns.screen
-        // Exterior
-        ul#exterior-orbit.js-main-screen.orbit[
-           data-orbit=""
-           ng-class="{active: mainPage.isCurrentScreen(1)}"]
-          = render partial: 'refinery/orbit_data',
-              locals: { img_path: 'main/preview-widget/exterior', size: 4, translation_path: 'home_page.screen.exterior' }
-        // Interior
-        ul#interior-orbit.js-main-screen.orbit[
-          data-orbit=""
-          ng-class="{active: mainPage.isCurrentScreen(2)}"]
-          = render partial: 'refinery/orbit_data',
-            locals: { img_path: 'main/preview-widget/interior', size: 13, translation_path: 'home_page.screen.interior' }
-        div ng-if="mainPage.isCurrentScreen(3)"
-          .flex-video.widescreen.js-main-screen
-            iframe#virtual-tour ng-src="virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
-        div ng-if="mainPage.isCurrentScreen(4)"
-          .js-main-screen.webcam.text-center
-            img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
-
-
-    / Buttons
-    .small-2.columns.options.end
-      .v-middle ng-style="{'margin-top': screenHeight/4}"
-        .option ng-style="{'height': screenHeight/4-2}"
-          .wrap
-            .text
-              = t 'download_button_text_html', scope: 'home_page.screen'
-            .icon.pdf
-
-        .option ng-style="{'height': screenHeight/4-2}"
-          .wrap
-            .text
-              = t 'choose_an_apartment_button_text_html', scope: 'home_page.screen'
-            .icon.plan
+    .small-12.columns
+      = render partial: 'refinery/multi_slider', locals: { render_parts: [:nav, :screen, :buttons] }
 
   section.main-steps-info
     .row.fuild

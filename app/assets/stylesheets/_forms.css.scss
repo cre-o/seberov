@@ -1,4 +1,25 @@
 form {
+  $input-height: 30px;
+
+  // Setup all input elements
+  // No shadows
+  #{$all-text-inputs} {
+    height: rem_calc($input-height);
+    box-shadow: none;
+  }
+
+  input[type="submit"] {
+    background-color: $green;
+    border: none;
+    color: $white;
+    font-size: rem_calc(16);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: rem_calc(30);
+    padding-right: rem_calc(30);
+    height: rem_calc($input-height);
+  }
+
   // Checkboxes
   input[type="checkbox"] {
     position:absolute;
@@ -37,14 +58,6 @@ form {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-
-  // No shadows
-  input[type="text"], input[type="password"], input[type="date"],
-  input[type="datetime"], input[type="datetime-local"], input[type="month"],
-  input[type="week"], input[type="email"], input[type="number"], input[type="search"],
-  input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
-    box-shadow: none;
   }
 
   select {

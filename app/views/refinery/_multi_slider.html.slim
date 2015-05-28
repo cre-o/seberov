@@ -1,0 +1,78 @@
+.row.collapse.multi-slider
+  / Selector
+  - if defined?(render_parts) && render_parts.include?(:nav)
+    .small-2.columns
+      .buttons.action
+        .btn.exterior[
+          ng-class="{ active: app.isCurrentScreen(1) }"
+          ng-click="app.setScreen(1); refreshOrbit()"
+          ng-style="app.isCurrentScreen(1) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span = t 'exterior_button_text_html', scope: 'multi_slider'
+          .image
+        .btn.interior[
+          ng-class="{ active: app.isCurrentScreen(2) }"
+          ng-click="app.setScreen(2); refreshOrbit()"
+          ng-style="app.isCurrentScreen(2) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span = t 'interior_button_text_html', scope: 'multi_slider'
+          .image
+        .btn.tour[
+          ng-class="{ active: app.isCurrentScreen(3) }"
+          ng-click="app.setScreen(3)"
+          ng-style="app.isCurrentScreen(3) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+          .text
+            span = t 'tour_button_text_html', scope: 'multi_slider'
+          .image
+
+        - unless defined?(exclude_parts) && exclude_parts.include?(:webcam)
+          .btn.webcam[
+            ng-class="{ active: app.isCurrentScreen(4) }"
+            ng-click="app.setScreen(4); loadWebcam()"
+            ng-style="app.isCurrentScreen(4) && {'height': screenHeight/3} || {'height': screenHeight/4.5}"]
+            .text
+              span = t 'webcam_button_text_html', scope: 'multi_slider'
+            .image
+
+  /! Using manual initialisation with custom buttons
+  - if defined?(render_parts) && render_parts.include?(:screen)
+    .columns.screen class=(render_parts.include?(:buttons) ? 'small-8' : 'small-10')
+
+        // Exterior
+        ul#exterior-orbit.js-multi-slider.orbit[
+           data-orbit=""
+           ng-class="{active: app.isCurrentScreen(1)}"]
+          = render partial: 'refinery/orbit_data',
+              locals: { img_path: 'main/preview-widget/exterior', size: 4, translation_path: 'multi_slider.exterior.descriptions' }
+
+        // Interior
+        ul#interior-orbit.js-multi-slider.orbit[
+          data-orbit=""
+          ng-class="{active: app.isCurrentScreen(2)}"]
+          = render partial: 'refinery/orbit_data',
+            locals: { img_path: 'main/preview-widget/interior', size: 13, translation_path: 'multi_slider.interior.descriptions' }
+        div ng-if="app.isCurrentScreen(3)"
+          .flex-video.widescreen.js-multi-slider
+            iframe#virtual-tour ng-src="/virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
+
+        - unless defined?(exclude_parts) && exclude_parts.include?(:webcam)
+          div ng-if="app.isCurrentScreen(4)"
+            .webcam.text-center.js-multi-slider
+              img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
+
+
+  /! Buttons
+  - if defined?(render_parts) && render_parts.include?(:buttons)
+    .small-2.columns.options.end
+      .v-middle ng-style="{'margin-top': screenHeight/4}"
+        .option ng-style="{'height': screenHeight/4-2}"
+          .wrap
+            .text
+              = t 'download_button_text_html', scope: 'multi_slider'
+            i.icon.pdf
+
+        .option ng-style="{'height': screenHeight/4-2}"
+          .wrap
+            .text
+              = t 'choose_an_apartment_button_text_html', scope: 'multi_slider'
+            i.icon.plan

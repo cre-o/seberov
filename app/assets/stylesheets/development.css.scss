@@ -2,7 +2,7 @@
 .development {
   &::after {
     content: "";
-    background: image_url('development/location-page') no-repeat !important;
+    background: image_url('development/apartment-page.png') no-repeat !important;
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -16,5 +16,9 @@
 
   .op {
     opacity: .88;
+  }
+
+  #footnotes_debug, footer {
+    display: none;
   }
 }

@@ -1,5 +1,7 @@
 #= require_self
-#= require angular/main
+#= require angular/controllers/application_controller
+#= require angular/controllers/home_controller
+#= require angular/controllers/location_controller
 
 # Initialisation
 angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'ui.mask'])
@@ -11,26 +13,9 @@ angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
     v: '3.17',
     libraries: 'weather, geometry, visualization'
 
-# Filter for url trusting
-# Example
-# ng-src="{ object.url | trusted }"
-angular.module('seberov').filter 'trusted', ['$sce', ($sce) ->
-    return (url) ->
-      return $sce.trustAsResourceUrl(url)
-]
-
-# Application controller
-angular.module('seberov').controller 'ApplicationController', ($scope, $document) ->
-  $scope.fixedHeader = false
-
-  # Main page scroll feature
-  $document.on 'scroll', ->
-    $scope.fixedHeader = true
-    return $scope.$apply()
-
-  return $scope
-
+#
 # Info block
+#
 angular.module('seberov').controller 'InfoBlockController', ($scope, $document) ->
   $scope.shown = true
 
@@ -43,15 +28,9 @@ angular.module('seberov').controller 'InfoBlockController', ($scope, $document) 
 
   return $scope
 
-# LocationController
-angular.module('seberov').controller 'LocationController', ['$sce', ($sce) ->
-  location = @
-  location.url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q="
-
-  return location
-]
-
+#
 # Image broadcaster
+#
 angular.module('seberov').controller 'ImageBroadcasterController', ->
   @.imageNumber = 1
   @.imageUrl = ""
@@ -66,6 +45,9 @@ angular.module('seberov').controller 'ImageBroadcasterController', ->
 
   return @
 
+#
+# Background image directive
+#
 angular.module('seberov').directive 'backImg', ->
   (scope, element, attrs) ->
     attrs.$observe 'backImg', (value) ->
@@ -73,8 +55,9 @@ angular.module('seberov').directive 'backImg', ->
         'background-image': 'url(' + value + ')'
         'background-size': 'cover'
 
-
+#
 # Resize directive
+#
 angular.module('seberov').directive 'resize', ($window) ->
   (scope, element, attr) ->
     w = angular.element($window)
@@ -96,3 +79,11 @@ angular.module('seberov').directive 'resize', ($window) ->
     ), true
     w.bind 'resize', ->
       scope.$apply()
+
+# Filter for url trusting
+# Example
+# ng-src="{ object.url | trusted }"
+angular.module('seberov').filter 'trusted', ['$sce', ($sce) ->
+    return (url) ->
+      return $sce.trustAsResourceUrl(url)
+]

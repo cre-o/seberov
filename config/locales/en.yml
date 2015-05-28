@@ -8,35 +8,6 @@ en:
   home_page:
     procedure_of_purchasing: 'Procedure of purchasing'
     download_price_list: 'Download price list'
-    screen:
-      exterior_button_text_html: 'Визуализация'
-      interior_button_text_html: 'Фотографии'
-      tour_button_text_html: 'Виртуальный <br /> Тур'
-      webcam_button_text_html: 'Камера'
-      download_button_text_html: 'Download <br /> Price list'
-      choose_an_apartment_button_text_html: 'Choose <br /> An apartment'
-
-      exterior:
-        descriptions:
-          - 'first description'
-          - '2'
-          - '3'
-          - '4'
-      interior:
-        descriptions:
-          - 'first description'
-          - '2'
-          - '3'
-          - '4'
-          - '5'
-          - '6'
-          - '7'
-          - '8'
-          - '9'
-          - '10'
-          - '11'
-          - '12'
-          - '13'
 
   apartments_page:
     by_planning: 'by planning'
@@ -162,6 +133,35 @@ en:
     callback_mail_send: 'Мы скоро с вами свяжемся!'
     callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
 
+  multi_slider:
+    exterior_button_text_html: 'Визуализация'
+    interior_button_text_html: 'Фотографии'
+    tour_button_text_html: 'Виртуальный <br /> Тур'
+    webcam_button_text_html: 'Камера'
+    download_button_text_html: 'Download <br /> Price list'
+    choose_an_apartment_button_text_html: 'Choose <br /> An apartment'
+
+    exterior:
+      descriptions:
+        - 'first description'
+        - '2'
+        - '3'
+        - '4'
+    interior:
+      descriptions:
+        - 'first description'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
+        - '10'
+        - '11'
+        - '12'
+        - '13'
 
   refinery:
     apartments:

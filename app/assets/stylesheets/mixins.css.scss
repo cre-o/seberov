@@ -2,7 +2,8 @@
   $small-size: false,
   $medium-size: false,
   $large-size: false,
-  $xlarge-size: false) {
+  $xlarge-size: false,
+  $no-sides: false) {
 
   $gutter-size: 0;
 
@@ -30,13 +31,25 @@
   }
 
   .row {
+
     &.collapse {
       .column, .columns {
         padding: 0 !important;
       }
     }
+
     .columns {
       @extend %padding;
+
+      @if $no-sides == true {
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
 }

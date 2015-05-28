@@ -1,21 +1,17 @@
-angular.module('seberov').controller 'MainPageController', ($scope,  $window, uiGmapGoogleMapApi, $interval, $timeout) ->
-  # Gmap setup
-  objectLatitude = 49.999243
-  objectLongitude = 14.516158
+#
+# Application controller
 
-  $scope.map =
-    center: { latitude: objectLatitude, longitude: objectLongitude }
-    marker:
-      coords:
-        latitude: objectLatitude
-        longitude: objectLongitude
-      options:
-        labelContent: 'Statek Seberov'
-    options:
-      disableDefaultUI: true
-    zoom: 13
+angular.module('seberov').controller 'ApplicationController', ($scope, $document, uiGmapGoogleMapApi, $interval, $timeout) ->
+  # <== Fixed header
+  $scope.fixedHeader = false
 
-  # Navigation
+  # Main page scroll feature
+  $document.on 'scroll', ->
+    $scope.fixedHeader = true
+    return $scope.$apply()
+  # <== Fixed header
+
+  # <== Multi Slider
   @.screenNum = 1
 
   @.setScreen = (number) ->
@@ -44,8 +40,9 @@ angular.module('seberov').controller 'MainPageController', ($scope,  $window, ui
 
   # Resizing
   $interval ->
-    if angular.element('.js-main-screen.active').height() > 0
-      $scope.screenHeight = angular.element('.js-main-screen.active').height()
+    if angular.element('.js-multi-slider.active').height() > 0
+      $scope.screenHeight = angular.element('.js-multi-slider.active').height()
   , 400
+  # <== Multi Slider
 
   return $scope

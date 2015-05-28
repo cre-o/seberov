@@ -1,13 +1,13 @@
-#l-apartments.__item_page
+#l-apartments.__item-page
   .row
     .small-12.columns
       fieldset
         legend = breadcrumbs(@apartment)
         .row.b-preview
           .small-5.columns.text-right
-            = image_tag 'http://placehold.it/390x330'
+            = image_tag 'http://placehold.it/390x310'
           .small-5.columns
-            = image_tag 'http://placehold.it/390x330'
+            = image_tag 'http://placehold.it/390x310'
 
         .row.b-parameters
           .small-6.columns.__maps
@@ -93,7 +93,8 @@
             .header
               h5 = t 'sign_up_to_see', scope: 'apartment_page'
               .subheader = t 'sign_up_to_see_advice', scope: 'apartment_page'
-            .content
+            //@TODO RealForm
+            form.content
               .row
                 .small-3.columns
                   input type="text" placeholder="your name"
@@ -104,27 +105,22 @@
                 .small-3.columns
                   input type="submit" placeholder="submit"
 
-
         .download-pdf
-          = t 'download_pdf', scope: 'apartment_page'
+          //@TODO Real URL
+          a href="#" = t 'download_pdf', scope: 'apartment_page'
 
+  .row.collapse.b-multi-slider
+    .small-12.columns
+      = render partial: 'refinery/multi_slider', locals: { render_parts: [:nav, :screen], exclude_parts: [:webcam] }
 
+  .row.b-apartment-text
+    .small-4.columns.text-right
+      = image_tag 'http://placehold.it/230x150'
 
+    .small-7.columns
+      h1.upcase Lorem ipsum
+      p
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat voluptates consequuntur dolore iure enim quae ut, adipisci magni expedita eaque ex blanditiis ipsum similique repudiandae nulla aspernatur corporis ipsa!
 
+      span.author.right wawawa!
 
-
-
-/ <% content_for :side_body do %>
-/   <aside>
-/     <h2><%= t('.other') %></h2>
-/     <ul id="apartments">
-/       <% @apartments.each do |apartment| %>
-/         <li>
-/           <%= link_to apartment.block, refinery.apartments_apartment_path(apartment) %>
-/         </li>
-/       <% end %>
-/     </ul>
-/   </aside>
-/ <% end %>
-
-/ <%= render '/refinery/content_page' %>

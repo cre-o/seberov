@@ -1,0 +1,19 @@
+i.icon {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+
+  &.pdf {
+    background-image: asset-url('icons/pdf-icon42.png');
+
+    &.green {
+      width: 24px;
+      height: 27px;
+      background-image: asset-url('icons/pdf-green-on-transparency-icon24x27.png');
+    }
+  }
+
+  &.plan {
+    background-image: asset-url('icons/plan-icon42.png');
+  }
+}

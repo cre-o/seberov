@@ -76,7 +76,7 @@
         .compass {
           position: absolute;
           left: -63px;
-          background-image: image_url('apartments/compass');
+          background-image: asset-url('apartments/compass.png');
           width: 80px;
           height: 80px;
           top: 50px;
@@ -199,7 +199,7 @@
       &:before {
         content: '';
         position: absolute;
-        background: image_url('apartments/compass-for-center.jpg');
+        background: image-url('apartments/compass-for-center.jpg');
         width: 78px;
         height: 54px;
         left: 0;

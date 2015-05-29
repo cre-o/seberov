@@ -21,23 +21,3 @@ h1, h2, h3 {
 input {
   font-family: $default-font !important;
 }
-
-i.icon {
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-
-  &.pdf {
-    background-image: image_url('icons/pdf-icon42.png');
-
-    &.green {
-      width: 24px;
-      height: 27px;
-      background-image: image_url('icons/pdf-green-on-transparency-icon24x27.png');
-    }
-  }
-
-  &.plan {
-    background-image: image_url('icons/plan-icon42.png');
-  }
-}

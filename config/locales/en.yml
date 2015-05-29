@@ -1,13 +1,14 @@
 en:
 
-  language_menu:
-    english: english
-    czech: czech
-    russian: russian
+  all_pages:
+    language_menu:
+      english: english
+      czech: czech
+      russian: russian
+    download_price_list: Download price list
 
   home_page:
     procedure_of_purchasing: 'Procedure of purchasing'
-    download_price_list: 'Download price list'
 
   apartments_page:
     by_planning: 'by planning'
@@ -139,7 +140,7 @@ en:
     tour_button_text_html: 'Виртуальный <br /> Тур'
     webcam_button_text_html: 'Камера'
     download_button_text_html: 'Download <br /> Price list'
-    choose_an_apartment_button_text_html: 'Choose <br /> An apartment'
+    choose_an_apartment_button_text: 'Choose An apartment'
 
     exterior:
       descriptions:

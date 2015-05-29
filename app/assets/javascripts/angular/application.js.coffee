@@ -2,6 +2,7 @@
 #= require angular/controllers/application_controller
 #= require angular/controllers/home_controller
 #= require angular/controllers/location_controller
+#= require angular/controllers/apartments_controller
 
 # Initialisation
 angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'ui.mask'])

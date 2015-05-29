@@ -1,5 +1,5 @@
 #l-apartments {
-  margin-top: rem_calc(143);
+  margin-top: rem_calc(110);
   position: relative;
   margin-bottom: rem_calc(30);
 
@@ -52,11 +52,11 @@
   // Index page
   &.__index-page {
 
-    .b-building-selector, .b-flat-selector {
+    .b-building-selectors, .b-flat-selector {
       padding: rem_calc(20);
     }
 
-    .b-building-selector {
+    .b-building-selectors {
       border-right: 1px solid #a39e9e;
 
       h2 {
@@ -72,12 +72,20 @@
       }
 
       .b-active-map {
+
         .compass {
           position: absolute;
           left: -63px;
           background-image: image_url('apartments/compass');
           width: 80px;
           height: 80px;
+          top: 50px;
+          z-index: 10;
+        }
+
+        .interactive-map {
+          position: relative;
+
         }
       }
     }
@@ -175,7 +183,6 @@
   }
 
   &.__item-page {
-    margin-top: rem_calc(140);
 
     fieldset {
       border: 2px solid #a9a4a4;

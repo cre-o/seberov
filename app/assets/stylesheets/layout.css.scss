@@ -129,7 +129,7 @@ header.application {
           color: $white;
         }
 
-        @include transition(all 400ms ease-out);
+        @include transition(all 300ms ease-out);
       }
 
       &.active {

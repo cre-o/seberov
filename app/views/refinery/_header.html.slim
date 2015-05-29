@@ -10,11 +10,11 @@
   .small-1.large-1.columns
     ul.languages
       li class=(en_locale?? 'active' : nil)
-        a href="#{change_lang_hack('en')}" = t('language_menu.english')
+        a href="#{change_lang_hack('en')}" = t('all_pages.language_menu.english')
       li class=(cs_locale?? 'active' : nil)
-        a href="#{change_lang_hack('cs')}" = t('language_menu.czech')
+        a href="#{change_lang_hack('cs')}" = t('all_pages.language_menu.czech')
       li class=(ru_locale?? 'active' : nil)
-        a href="#{change_lang_hack('ru')}" = t('language_menu.russian')
+        a href="#{change_lang_hack('ru')}" = t('all_pages.language_menu.russian')
 
   .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
     a.opener.upcase href="#{js_void}" ng-click="toggle()"
@@ -33,4 +33,4 @@
         li.pdf.upcase
           i.fa.fa-file-pdf-o.fa-lg
 
-          = link_to t('home_page.download_price_list'), price_list_url
+          = link_to t('all_pages.download_price_list'), price_list_url, target: '_blank'

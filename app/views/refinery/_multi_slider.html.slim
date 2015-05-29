@@ -43,14 +43,14 @@
            data-orbit=""
            ng-class="{active: app.isCurrentScreen(1)}"]
           = render partial: 'refinery/orbit_data',
-              locals: { img_path: 'main/preview-widget/exterior', size: 4, translation_path: 'multi_slider.exterior.descriptions' }
+              locals: { img_path: 'home/preview-widget/exterior', size: 4, translation_path: 'multi_slider.exterior.descriptions' }
 
         // Interior
         ul#interior-orbit.js-multi-slider.orbit[
           data-orbit=""
           ng-class="{active: app.isCurrentScreen(2)}"]
           = render partial: 'refinery/orbit_data',
-            locals: { img_path: 'main/preview-widget/interior', size: 13, translation_path: 'multi_slider.interior.descriptions' }
+            locals: { img_path: 'home/preview-widget/interior', size: 13, translation_path: 'multi_slider.interior.descriptions' }
         div ng-if="app.isCurrentScreen(3)"
           .flex-video.widescreen.js-multi-slider
             iframe#virtual-tour ng-src="/virtual_tour/index.html" width="100%" height="{{screenHeight}}" frameborder="0"
@@ -66,13 +66,11 @@
     .small-2.columns.options.end
       .v-middle ng-style="{'margin-top': screenHeight/4}"
         .option ng-style="{'height': screenHeight/4-2}"
-          .wrap
-            .text
-              = t 'download_button_text_html', scope: 'multi_slider'
-            i.icon.pdf
+            = link_to price_list_url, class: 'wrap', target: '_blank' do
+              .text = t 'all_pages.download_price_list'
+              i.icon.pdf
 
         .option ng-style="{'height': screenHeight/4-2}"
-          .wrap
-            .text
-              = t 'choose_an_apartment_button_text_html', scope: 'multi_slider'
-            i.icon.plan
+            = link_to refinery.apartments_apartments_path, class: 'wrap', target: '_blank' do
+              .text = t 'choose_an_apartment_button_text', scope: 'multi_slider'
+              i.icon.plan

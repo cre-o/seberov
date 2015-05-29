@@ -45,48 +45,48 @@
 
       &.exterior {
         .image {
-          background-image: image_url('main/preview-widget/exterior-btn.jpg');
+          background-image: image_url('home/preview-widget/exterior-btn.jpg');
         }
 
         &.active {
           .image {
-            background-image: image_url('main/preview-widget/exterior-btn-active.jpg');
+            background-image: image_url('home/preview-widget/exterior-btn-active.jpg');
           }
         }
       }
 
       &.interior {
         .image {
-          background-image: image_url('main/preview-widget/interior-btn.jpg');
+          background-image: image_url('home/preview-widget/interior-btn.jpg');
         }
 
         &.active {
           .image {
-            background-image: image_url('main/preview-widget/interior-btn-active.jpg');
+            background-image: image_url('home/preview-widget/interior-btn-active.jpg');
           }
         }
       }
 
       &.tour {
         .image {
-          background-image: image_url('main/preview-widget/tour-btn.jpg');
+          background-image: image_url('home/preview-widget/tour-btn.jpg');
         }
 
         &.active {
           .image {
-            background-image: image_url('main/preview-widget/tour-btn-active.jpg');
+            background-image: image_url('home/preview-widget/tour-btn-active.jpg');
           }
         }
       }
 
       &.webcam {
         .image {
-          background-image: image_url('main/preview-widget/webcam-btn.jpg');
+          background-image: image_url('home/preview-widget/webcam-btn.jpg');
         }
 
         &.active {
           .image {
-            background-image: image_url('main/preview-widget/webcam-btn-active.jpg');
+            background-image: image_url('home/preview-widget/webcam-btn-active.jpg');
           }
         }
       }
@@ -132,14 +132,14 @@
         border: 1px solid $white;
         padding-top: rem_calc(10);
         height: 100%;
-      }
-
-      .text {
+        display: inline-block;
         text-align: center;
         line-height: rem_calc(30);
+        color: $white;
       }
 
       .icon {
+        display: block;
         margin: 15% auto;
         display: inherit;
       }

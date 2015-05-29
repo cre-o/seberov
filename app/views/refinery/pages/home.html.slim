@@ -1,22 +1,22 @@
-#l-main ng-controller="HomeController as home"
+#l-home ng-controller="HomeController as home"
   // Slider
   .row.fluid.collapse.main-slider
     .small-12.columns
       ul#main-orbit data-orbit=""
         li
           img data-interchange="
-            [#{image_path('main/slider/1-small.jpg')}, (default)],
-            [#{image_path('main/slider/1-medium.jpg')}, (medium)],
-            [#{image_path('main/slider/1-large.jpg')}, (large)],
-            [#{image_path('main/slider/1-xlarge.jpg')}, (xlarge)]"
+            [#{image_path('home/slider/1-small.jpg')}, (default)],
+            [#{image_path('home/slider/1-medium.jpg')}, (medium)],
+            [#{image_path('home/slider/1-large.jpg')}, (large)],
+            [#{image_path('home/slider/1-xlarge.jpg')}, (xlarge)]"
           .orbit-caption-middle
             = raw @page.content_for(:slider_image)
         li
           img data-interchange="
-            [#{image_path('main/slider/2-small.jpg')}, (default)],
-            [#{image_path('main/slider/2-medium.jpg')}, (medium)],
-            [#{image_path('main/slider/2-large.jpg')}, (large)],
-            [#{image_path('main/slider/2-xlarge.jpg')}, (xlarge)]"
+            [#{image_path('home/slider/2-small.jpg')}, (default)],
+            [#{image_path('home/slider/2-medium.jpg')}, (medium)],
+            [#{image_path('home/slider/2-large.jpg')}, (large)],
+            [#{image_path('home/slider/2-xlarge.jpg')}, (xlarge)]"
           .orbit-caption-middle
             = raw @page.content_for(:slider_image)
 

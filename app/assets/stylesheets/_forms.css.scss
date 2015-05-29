@@ -20,6 +20,10 @@ form {
     height: rem_calc($input-height);
   }
 
+  select {
+    height: rem_calc($input-height);
+  }
+
   // Checkboxes
   input[type="checkbox"] {
     position:absolute;

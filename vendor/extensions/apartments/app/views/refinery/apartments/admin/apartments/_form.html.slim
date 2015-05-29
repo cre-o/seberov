@@ -45,6 +45,10 @@
       .field
         = f.label :price
         = f.text_field :price
+    li
+      .field
+        = f.label :state
+        = f.select :state, Refinery::Apartments::Apartment::STATES.collect { |p| [ p, p ] }
 
   .nested-fields
     = link_to_add_association 'add floor', f, :apartment_floors

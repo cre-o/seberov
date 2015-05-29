@@ -54,7 +54,7 @@ module Refinery
           params.require(:apartment).permit(
             :unit_id, :block, :floor, :photo_id, :total_floors,
             :layout, :apartment_area, :balcony_terace_area, :front_yard_area, :price,
-            :vestibule_area, :gallery_area,
+            :vestibule_area, :gallery_area, :state,
             apartment_floors_attributes: [
               :id, :floor_number, :done, :_destroy,
               :corridor_area, :wc_area, :kitchen_area,

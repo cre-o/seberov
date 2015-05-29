@@ -1,6 +1,7 @@
 module Refinery
   module Apartments
     class Apartment < Refinery::Core::BaseModel
+      STATES = %w(active reserved sold)
 
       self.table_name = 'refinery_apartments'
       has_many :apartment_floors, dependent: :destroy
@@ -12,6 +13,7 @@ module Refinery
       validates :block, presence: true
       validates :floor, presence: true, numericality: true
       validates :total_floors, presence: true, numericality: true
+      validates :state, inclusion: { in: Refinery::Apartments::Apartment::STATES }
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

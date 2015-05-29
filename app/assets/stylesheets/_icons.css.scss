@@ -7,7 +7,7 @@ i.icon {
     background-image: asset-url('icons/pdf-icon42.png');
 
     &.green {
-      background-image: image-url('icons/pdf-green24x27.png');
+      background-image: asset-url('icons/pdf-green24x27.png');
       width: 24px;
       height: 27px;
     }

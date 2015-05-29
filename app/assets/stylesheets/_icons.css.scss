@@ -4,16 +4,16 @@ i.icon {
   height: 42px;
 
   &.pdf {
-    background-image: asset-url('icons/pdf-icon42.png');
+    background-image: image-url('icons/pdf-icon42.png');
 
     &.green {
-      background-image: asset-url('icons/pdf-green-on-transparency-icon24x27.png');
+      background-image: image-url('icons/pdf-green-24x27.png');
       width: 24px;
       height: 27px;
     }
   }
 
   &.plan {
-    background-image: asset-url('icons/plan-icon42.png');
+    background-image: image-url('icons/plan-icon42.png');
   }
 }

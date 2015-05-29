@@ -55,7 +55,7 @@ form {
   }
 
   input[type="checkbox"] + label {
-    background-image: image_url('forms/cb-sprite');
+    background-image: image-url('forms/cb-sprite');
     webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -92,7 +92,7 @@ form {
     border-radius: 0;
     box-shadow: none;
     border: none;
-    background: image_url('forms/slider-handle') no-repeat;
+    background: image-url('forms/slider-handle') no-repeat;
   }
 
   .noUi-handle:before, .noUi-handle:after {

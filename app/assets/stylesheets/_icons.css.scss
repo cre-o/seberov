@@ -5,12 +5,12 @@ i.icon {
 
   &.pdf {
     background-image: asset-url('icons/pdf-icon42.png');
-  }
 
-  &.pdf.green {
-    background-image: asset-url('icons/pdf-green24x27.png');
-    width: 24px;
-    height: 27px;
+    &.green {
+      background-image: asset-url('icons/pdf-green-on-transparency-icon24x27.png');
+      width: 24px;
+      height: 27px;
+    }
   }
 
   &.plan {

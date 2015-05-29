@@ -10,7 +10,7 @@
       position: absolute;
       font-family: 'Open Sans Condensed', sans-serif;
       font-weight: bold;
-      font-size: rem_calc(18);
+      font-size: rem-calc(18);
       text-transform: uppercase;
       color: #fff;
       background-color: rgba(94, 148, 114, 0.8);
@@ -38,7 +38,7 @@
         display: inline-block;
         width: 40px;
         height: 40px;
-        background: image_url('icons/plan-icon42.png') center center no-repeat, rgba(134, 162, 142, 0.9);
+        background: image-url('icons/plan-icon42.png') center center no-repeat, rgba(134, 162, 142, 0.9);
         background-size: 20px 20px;
         left: -40px;
       }
@@ -48,21 +48,21 @@
   .main-info {
     font-family: 'Open Sans Condensed', sans-serif;
     background-color: $white;
-    min-height: rem_calc(460);
+    min-height: rem-calc(460);
 
     .columns:nth-child(2) {
       box-shadow: 0px -4px 4px #999;
     }
 
     header {
-      $height: rem_calc(50);
+      $height: rem-calc(50);
       height: $height;
-      margin-top: rem_calc(28);
+      margin-top: rem-calc(28);
 
       h1 {
         color: $white;
         display: inline-block;
-        font-size: rem_calc(36);
+        font-size: rem-calc(36);
         font-weight: bold;
         height: $height;
         width: 80%;
@@ -103,7 +103,7 @@
         height: 400px;
 
         @media #{$small-only} {
-          padding-left: rem_calc(27/1.5);
+          padding-left: rem-calc(27/1.5);
         }
 
         @media #{$medium-only} {
@@ -125,19 +125,19 @@
       padding: 50px 20px 20px 50px;
 
       li {
-        padding: rem_calc(10 10);
+        padding: rem-calc(10 10);
         list-style-type: none;
-        list-style-image: image_url('icons/bullet.png');
+        list-style-image: image-url('icons/bullet.png');
       }
 
       h4 {
         color: $black;
-        font-size: rem_calc(18);
+        font-size: rem-calc(18);
         margin: 0;
       }
 
       p {
-        font-size: rem_calc(14);
+        font-size: rem-calc(14);
         color: $grey;
         margin-bottom: 5px;
       }
@@ -154,7 +154,7 @@
     h1 {
       font-family: 'Open Sans Condensed', sans-serif;
       font-weight: bold;
-      font-size: rem_calc(28);
+      font-size: rem-calc(28);
       margin-top: 54px;
     }
 
@@ -166,7 +166,7 @@
         font-family: 'Open Sans', sans-serif;
         border: 1px solid $green;
         font-weight: bold;
-        font-size: rem_calc(27);
+        font-size: rem-calc(27);
         line-height: 40px;
         text-align: center;
         width: 44px;
@@ -182,14 +182,14 @@
       h5 {
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
-        font-size: rem_calc(15);
+        font-size: rem-calc(15);
         font-weight: bold;
         margin-top: 0;
         line-height: .8;
       }
 
       p {
-        font-size: rem_calc(14);
+        font-size: rem-calc(14);
         font-weight: 500;
       }
     }

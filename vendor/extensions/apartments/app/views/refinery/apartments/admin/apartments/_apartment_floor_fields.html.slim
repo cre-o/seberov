@@ -1,57 +1,76 @@
 .nested-fields
-  .field
-    = f.label :floor_number
-    = f.text_field :floor_number
-  .field
-    = f.label :vestibule_area
-    = f.text_field :vestibule_area
-  .field
-    = f.label :corridor_area
-    = f.text_field :corridor_area
-  .field
-    = f.label :wc_area
-    = f.text_field :wc_area
-  .field
-    = f.label :kitchen_area
-    = f.text_field :kitchen_area
-  .field
-    = f.label :chamber1_area
-    = f.text_field :chamber1_area
-  .field
-    = f.label :chamber2_area
-    = f.text_field :chamber2_area
-  .field
-    = f.label :chamber3_area
-    = f.text_field :chamber3_area
-  .field
-    = f.label :bathroom_area
-    = f.text_field :bathroom_area
-  .field
-    = f.label :staircase_area
-    = f.text_field :staircase_area
-  .field
-    = f.label :cloakroom1_area
-    = f.text_field :cloakroom1_area
-  .field
-    = f.label :cloakroom2_area
-    = f.text_field :cloakroom2_area
-  .field
-    = f.label :room1_area
-    = f.text_field :room1_area
-  .field
-    = f.label :room2_area
-    = f.text_field :room2_area
-  .field
-    = f.label :room3_area
-    = f.text_field :room3_area
-  .field
-    = f.label :room4_area
-    = f.text_field :room4_area
-  .field
-    = f.label :room5_area
-    = f.text_field :room5_area
-  .field
-    = f.label :gallery_area
-    = f.text_field :gallery_area
+  ul.small-block-grid-4
+    li
+      .field
+        = f.label :floor_number
+        = f.text_field :floor_number
+    li
+      .field
+        = f.label :vestibule_area
+        = f.text_field :vestibule_area
+    li
+      .field
+        = f.label :corridor_area
+        = f.text_field :corridor_area
+    li
+      .field
+        = f.label :wc_area
+        = f.text_field :wc_area
+    li
+      .field
+        = f.label :kitchen_area
+        = f.text_field :kitchen_area
+    li
+      .field
+        = f.label :chamber1_area
+        = f.text_field :chamber1_area
+    li
+      .field
+        = f.label :chamber2_area
+        = f.text_field :chamber2_area
+    li
+      .field
+        = f.label :chamber3_area
+        = f.text_field :chamber3_area
+    li
+      .field
+        = f.label :bathroom_area
+        = f.text_field :bathroom_area
+    li
+      .field
+        = f.label :staircase_area
+        = f.text_field :staircase_area
+    li
+      .field
+        = f.label :cloakroom1_area
+        = f.text_field :cloakroom1_area
+    li
+      .field
+        = f.label :cloakroom2_area
+        = f.text_field :cloakroom2_area
+    li
+      .field
+        = f.label :room1_area
+        = f.text_field :room1_area
+    li
+      .field
+        = f.label :room2_area
+        = f.text_field :room2_area
+    li
+      .field
+        = f.label :room3_area
+        = f.text_field :room3_area
+    li
+      .field
+        = f.label :room4_area
+        = f.text_field :room4_area
+    li
+      .field
+        = f.label :room5_area
+        = f.text_field :room5_area
+    li
+      .field
+        = f.label :gallery_area
+        = f.text_field :gallery_area
 
   = link_to_remove_association "remove floor data", f

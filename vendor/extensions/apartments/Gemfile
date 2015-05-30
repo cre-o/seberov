@@ -43,3 +43,4 @@ end
 gem 'cocoon' # easy nested forms
 gem 'simple_form' # easy forms
 gem 'draper'
+gem 'active_model_serializers'

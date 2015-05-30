@@ -2,11 +2,25 @@ angular.module('seberov').controller 'ApartmentsController', ($scope, $document)
 
   return $scope
 
-angular.module('seberov').controller 'ApartmentsMapController', ($scope, $document) ->
+angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, $document) ->
   map = @
+  map.buildings = ['a', 'b', 'c', 'd']
   map.building = 'a'
-  map.floor = null
+  map.floor = 1
+  map.apartments = []
 
-  map.renderClass = "building-#{map.building}" + if map.floor?? then "-floor-#{map.floor}" else ""
+  $http.get('/apartments.json').success (data) ->
+    map.apartments = data
 
-  return $scope
+  map.setBuilding = (building) ->
+    map.building = building
+
+  map.rerender = ->
+    map.renderClass = "building-#{map.building}-floor-#{map.floor}"
+
+  map.renderClass = ->
+    return map.renderClass
+
+  return map
+
+

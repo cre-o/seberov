@@ -21,7 +21,11 @@ form {
   }
 
   select {
-    height: rem_calc($input-height);
+    height: rem-calc(23);
+    font-size: rem-calc(14);
+    font-weight: bold;
+    padding: 0;
+    padding-left: 4px;
   }
 
   // Checkboxes

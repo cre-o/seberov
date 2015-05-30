@@ -13,6 +13,7 @@ en:
   apartments_page:
     by_planning: 'by planning'
     by_parameters: 'by parameters'
+    choose_apartment: 'Choose apartment'
 
   apartments_parameters_page:
     title: 'Apartments parameters page!'

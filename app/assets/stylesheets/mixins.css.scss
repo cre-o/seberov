@@ -54,6 +54,18 @@
   }
 }
 
+// Used on apartments page
+@mixin acitve-map($floor: false, $building: false) {
+
+  @if $floor != false && $building != false {
+    background-image: image-url('apartments/active-map/building-#{$building}.png'),
+                      image-url('apartments/active-map/floor-#{$floor}-#{$building}.png');
+    background-position: left top, left top;
+    background-repeat: no-repeat;
+  }
+
+}
+
 @mixin reset-all {
   animation : none;
   animation-delay : 0;

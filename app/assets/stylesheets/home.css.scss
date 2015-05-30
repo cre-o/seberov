@@ -138,6 +138,11 @@
 
       p {
         font-size: rem-calc(14);
+
+        @media #{$xlarge-only} {
+          font-size: rem-calc(16);
+        }
+
         color: $grey;
         margin-bottom: 5px;
       }

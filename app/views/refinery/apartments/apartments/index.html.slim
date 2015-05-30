@@ -15,9 +15,10 @@
               label.upcase for="building-select-label" = t('forms.building')+':'
             .small-1.columns
               select#building-select-label ng-model="map.building"
-                option value="1" 1
-                option value="2" 2
-                option value="3" 3
+                option value="a" a
+                option value="b" b
+                option value="c" c
+                option value="d" d
             .small-2.columns.text-right
               label.upcase for="floor-select-label" = t('forms.floor')+':'
             .small-1.columns
@@ -29,11 +30,27 @@
           .row.b-active-map
             .small-12.columns
               .compass
+              | {{count}}
 
               .interactive-map
-                = image_tag 'apartments/map'
-                div ng-class="{{map.renderClass}}"
-
+                = image_tag 'apartments/active-map/map.png'
+                = image_tag 'pixel.gif', 'data-building' => '{{map.building}}', 'data-floor' => '{{map.floor}}', \
+                  'usemap' => 'apratments-map', id: 'render'
+                map id="apratments-map" name="apratments-map"
+                  area#building-a-area shape="poly" alt="building a" title="building a" coords="0,213,242,118,243,55,250,10,-2,91,-1,210" href="#l-apartments" ng-click="map.setBuilding('a')" ng-mouseover="map.setBuilding('a')"
+                  area#building-b-area shape="poly" alt="wtf1" title="building b" coords="252,10,496,102,496,104,495,144,428,166,393,185,243,116,243,56,250,14,250,11" href="#l-apartments" ng-click="map.setBuilding('b')" ng-mouseover="map.setBuilding('b')"
+                  area#building-c-area shape="poly" alt="wtf3" title="building c" coords="498,144,426,167,158,317,211,356,208,393,242,418,246,416,246,455,271,474,289,458,365,480,495,495,496,492,496,273,494,145" href="#l-apartments" ng-click="map.setBuilding('c')" ng-mouseover="map.setBuilding('c')"
+                  area#building-d-area shape="poly" alt="wtf4" title="building d" coords="0,258,6,252,29,239,41,238,67,248,109,279,124,272,176,309,158,317,209,357,209,397,239,417,243,419,246,457,271,475,243,496,171,496,1,346,-2,310,-3,257" href="#l-apartments" ng-click="map.setBuilding('d')" ng-mouseover="map.setBuilding('d')"
 
         // Select from flats
-        .small-6.columns.b-flat-selector'
+        .small-6.columns.b-flat-selector
+          h1.upcase = t 'choose_apartment', scope: 'apartments_page'
+          .b-floor-map
+            div ng-if="map.building == 'a'"
+              = image_tag 'http://placehold.it/550x225'
+            div ng-if="map.building == 'b'"
+              = image_tag 'http://placehold.it/551x225'
+            div ng-if="map.building == 'c'"
+              = image_tag 'http://placehold.it/552x225'
+            div ng-if="map.building == 'd'"
+              = image_tag 'http://placehold.it/553x225'

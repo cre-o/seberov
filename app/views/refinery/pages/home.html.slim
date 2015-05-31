@@ -3,22 +3,16 @@
   .row.fluid.collapse.main-slider
     .small-12.columns
       ul#main-orbit data-orbit=""
-        li
-          img data-interchange="
-            [#{image_path('home/slider/1-small.jpg')}, (default)],
-            [#{image_path('home/slider/1-medium.jpg')}, (medium)],
-            [#{image_path('home/slider/1-large.jpg')}, (large)],
-            [#{image_path('home/slider/1-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption-middle
-            = raw @page.content_for(:slider_image)
-        li
-          img data-interchange="
-            [#{image_path('home/slider/2-small.jpg')}, (default)],
-            [#{image_path('home/slider/2-medium.jpg')}, (medium)],
-            [#{image_path('home/slider/2-large.jpg')}, (large)],
-            [#{image_path('home/slider/2-xlarge.jpg')}, (xlarge)]"
-          .orbit-caption-middle
-            = raw @page.content_for(:slider_image)
+        - 4.times do |n|
+          - img = n+1
+          li
+            img data-interchange="
+              [#{image_path("home/slider/#{img}-s.jpg")}, (default)],
+              [#{image_path("home/slider/#{img}-m.jpg")}, (medium)],
+              [#{image_path("home/slider/#{img}-l.jpg")}, (large)],
+              [#{image_path("home/slider/#{img}-xl.jpg")}, (xlarge)]"
+      .orbit-caption-middle
+        = raw @page.content_for(:slider_image)
 
   .row.fluid.main-info
     .small-4.columns

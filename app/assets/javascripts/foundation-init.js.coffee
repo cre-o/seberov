@@ -6,7 +6,6 @@
 #= require foundation/foundation.interchange
 #= require foundation/foundation.orbit
 #= require foundation/foundation.offcanvas
-#= require foundation/foundation.tooltip
 #= require foundation/foundation.reveal
 
 jQuery ->

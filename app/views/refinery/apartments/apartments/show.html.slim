@@ -94,7 +94,7 @@
               h5 = t 'sign_up_to_see', scope: 'apartment_page'
               .subheader = t 'sign_up_to_see_advice', scope: 'apartment_page'
             //@TODO RealForm
-            form.content
+            = form_tag '', class: 'content' do
               .row
                 .small-3.columns
                   input type="text" placeholder="your name"
@@ -103,7 +103,7 @@
                 .small-3.columns
                   input type="text" placeholder="email"
                 .small-3.columns
-                  input type="submit" placeholder="submit"
+                  input type="submit"
 
         .download-pdf
           //@TODO Real URL

@@ -66,6 +66,15 @@
 
 }
 
+// Used in apartments page
+@mixin apartment-floor-plans($building: 'a') {
+  @for $i from 1 through 3 {
+    &.floor-#{$i} {
+      background-image: image-url('apartments/plans/#{$i}-#{$building}.png');
+    }
+  }
+}
+
 @mixin reset-all {
   animation : none;
   animation-delay : 0;

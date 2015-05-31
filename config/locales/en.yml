@@ -1,5 +1,8 @@
 en:
 
+  defaults:
+    currency_sign: 'KČ'
+
   all_pages:
     language_menu:
       english: english
@@ -109,7 +112,11 @@ en:
     download_pdf: 'DOWNLOAD PDF'
 
   forms:
+    apartment_area: 'area'
+    area: 'area'
+    unit_id: 'unit id'
     building: 'building'
+    layout: 'layout'
     name: 'name'
     phone: 'phone'
     price: 'price'
@@ -117,6 +124,7 @@ en:
     to: 'to'
     floorspace: 'floorspace'
     floor: 'floor'
+    floors: 'podlaží'
     rooms: 'rooms'
     one: 'one'
     two: 'two'
@@ -164,6 +172,9 @@ en:
         - '11'
         - '12'
         - '13'
+
+  numbers:
+    square: 'm2'
 
   refinery:
     apartments:

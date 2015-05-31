@@ -30,27 +30,97 @@
           .row.b-active-map
             .small-12.columns
               .compass
-              | {{count}}
 
               .interactive-map
                 = image_tag 'apartments/active-map/map.png'
                 = image_tag 'pixel.gif', 'data-building' => '{{map.building}}', 'data-floor' => '{{map.floor}}', \
                   'usemap' => 'apratments-map', id: 'render'
                 map id="apratments-map" name="apratments-map"
-                  area#building-a-area shape="poly" alt="building a" title="building a" coords="0,213,242,118,243,55,250,10,-2,91,-1,210" href="#l-apartments" ng-click="map.setBuilding('a')" ng-mouseover="map.setBuilding('a')"
-                  area#building-b-area shape="poly" alt="wtf1" title="building b" coords="252,10,496,102,496,104,495,144,428,166,393,185,243,116,243,56,250,14,250,11" href="#l-apartments" ng-click="map.setBuilding('b')" ng-mouseover="map.setBuilding('b')"
-                  area#building-c-area shape="poly" alt="wtf3" title="building c" coords="498,144,426,167,158,317,211,356,208,393,242,418,246,416,246,455,271,474,289,458,365,480,495,495,496,492,496,273,494,145" href="#l-apartments" ng-click="map.setBuilding('c')" ng-mouseover="map.setBuilding('c')"
-                  area#building-d-area shape="poly" alt="wtf4" title="building d" coords="0,258,6,252,29,239,41,238,67,248,109,279,124,272,176,309,158,317,209,357,209,397,239,417,243,419,246,457,271,475,243,496,171,496,1,346,-2,310,-3,257" href="#l-apartments" ng-click="map.setBuilding('d')" ng-mouseover="map.setBuilding('d')"
+                  area#building-a-area shape="poly" title="building a" coords="0,213,242,118,243,55,250,10,-2,91,-1,210" ng-click="map.setBuilding('a')" stop-event=""
+                  area#building-b-area shape="poly" title="building b" coords="252,10,496,102,496,104,495,144,428,166,393,185,243,116,243,56,250,14,250,11" ng-click="map.setBuilding('b')" stop-event=""
+                  area#building-c-area shape="poly" title="building c" coords="498,144,426,167,158,317,211,356,208,393,242,418,246,416,246,455,271,474,289,458,365,480,495,495,496,492,496,273,494,145" ng-click="map.setBuilding('c')" stop-event=""
+                  area#building-d-area shape="poly" title="building d" coords="0,258,6,252,29,239,41,238,67,248,109,279,124,272,176,309,158,317,209,357,209,397,239,417,243,419,246,457,271,475,243,496,171,496,1,346,-2,310,-3,257" ng-click="map.setBuilding('d')" stop-event=""
 
         // Select from flats
-        .small-6.columns.b-flat-selector
+        .small-6.columns.b-apartment-selector
           h1.upcase = t 'choose_apartment', scope: 'apartments_page'
           .b-floor-map
             div ng-if="map.building == 'a'"
-              = image_tag 'http://placehold.it/550x225'
+              // Show flats on floors images
+              #apartments-render.a class="floor-{{map.floor}}"
+                a.apartment[
+                  ng-repeat="apartment in map.apartments | filter: {block: 'a', floors: map.floor}"
+                  ng-class="apartment.state"
+                  data-unit-id="{{apartment.unit_id}}"
+                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
+                  ng-mouseleave="map.hideTooltip();"
+                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
+
+                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
+
+
             div ng-if="map.building == 'b'"
-              = image_tag 'http://placehold.it/551x225'
+              #apartments-render.b class="floor-{{map.floor}}"
+                a.apartment[
+                  ng-repeat="apartment in map.apartments | filter: {block: 'b', floors: map.floor}"
+                  ng-class="apartment.state"
+                  data-unit-id="{{apartment.unit_id}}"
+                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
+                  ng-mouseleave="map.hideTooltip();"
+                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
+
+                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
+
+
             div ng-if="map.building == 'c'"
-              = image_tag 'http://placehold.it/552x225'
+              #apartments-render.c class="floor-{{map.floor}}"
+                a.apartment[
+                  ng-repeat="apartment in map.apartments | filter: {block: 'c', floors: map.floor}"
+                  ng-class="apartment.state"
+                  data-unit-id="{{apartment.unit_id}}"
+                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
+                  ng-mouseleave="map.hideTooltip();"
+                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
+
+                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
+
             div ng-if="map.building == 'd'"
-              = image_tag 'http://placehold.it/553x225'
+              #apartments-render.c class="floor-{{map.floor}}"
+                a.apartment[
+                  ng-repeat="apartment in map.apartments | filter: {block: 'd', floors: map.floor}"
+                  ng-class="apartment.state"
+                  data-unit-id="{{apartment.unit_id}}"
+                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
+                  ng-mouseleave="map.hideTooltip();"
+                  ng-show="map.onFloor(apartment)"
+                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
+
+                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
+
+            // This baseTooltip in use as template
+            #base-tooltip.tooltip style="display: none;"
+              ul
+                li
+                  = t('forms.floors')+':'
+                  span
+                    ' {{map.currentApartment.floors_decorated}}
+                li
+                  = t('forms.unit_id')+':'
+                  span
+                    ' {{map.currentApartment.unit_id}}
+                li
+                  = t('forms.layout')+':'
+                  span
+                    | {{map.currentApartment.layout}}
+
+                li
+                  = t('forms.apartment_area')+':'
+                  span
+                    ' {{map.currentApartment.apartment_area}}
+                    i = t('numbers.square')
+                li
+                  span.price
+                    | #{t('forms.price')+':'} {{map.currentApartment.price_formated}}
+                      #{t('defaults.currency_sign')}
+
+          = image_tag 'http://placehold.it/510x295'

@@ -1,0 +1,39 @@
+.tooltip {
+  background-image: image-url('components/tooltip.png');
+  color: $white;
+  padding: 20px 15px;
+  position: absolute;
+  width: 187px;
+  height: 143px;
+  z-index: 999;
+  bottom: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-family: $default-font;
+    font-size: rem-calc(13);
+
+    span {
+      float: right;
+      text-transform: uppercase;
+    }
+
+    i {
+      font-style: normal;
+      text-transform: lowercase;
+      padding-left: 2px;
+    }
+
+    span.price {
+      float: left;
+      font-family: $bold-font;
+      font-weight: bold;
+      font-size: rem-calc(20);
+      margin-top: 5px;
+    }
+  }
+}

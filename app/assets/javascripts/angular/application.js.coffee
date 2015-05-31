@@ -47,6 +47,17 @@ angular.module('seberov').controller 'ImageBroadcasterController', ->
   return @
 
 #
+# Stop Event directive
+#
+angular.module('seberov').directive 'stopEvent', ->
+  {
+    restrict: 'A',
+    link: (scope, element, attr) ->
+      element.bind 'click', (e) ->
+        e.stopPropagation()
+  }
+
+#
 # Background image directive
 #
 angular.module('seberov').directive 'backImg', ->

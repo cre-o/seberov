@@ -36,10 +36,7 @@
                 = image_tag 'pixel.gif', 'data-building' => '{{map.building}}', 'data-floor' => '{{map.floor}}', \
                   'usemap' => 'apratments-map', id: 'render'
                 map id="apratments-map" name="apratments-map"
-                  area#building-a-area shape="poly" title="building a" coords="0,213,242,118,243,55,250,10,-2,91,-1,210" ng-click="map.setBuilding('a')" stop-event=""
-                  area#building-b-area shape="poly" title="building b" coords="252,10,496,102,496,104,495,144,428,166,393,185,243,116,243,56,250,14,250,11" ng-click="map.setBuilding('b')" stop-event=""
-                  area#building-c-area shape="poly" title="building c" coords="498,144,426,167,158,317,211,356,208,393,242,418,246,416,246,455,271,474,289,458,365,480,495,495,496,492,496,273,494,145" ng-click="map.setBuilding('c')" stop-event=""
-                  area#building-d-area shape="poly" title="building d" coords="0,258,6,252,29,239,41,238,67,248,109,279,124,272,176,309,158,317,209,357,209,397,239,417,243,419,246,457,271,475,243,496,171,496,1,346,-2,310,-3,257" ng-click="map.setBuilding('d')" stop-event=""
+                  = render 'apartments_map_areas'
 
         // Select from flats
         .small-6.columns.b-apartment-selector

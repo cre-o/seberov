@@ -11,11 +11,29 @@ angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, 
   map.currentApartment = null
   map.tooltip = false
 
+  options = {
+    waitAfterMouseEnter: 2000 # milliseconds
+  }
+
+  tmp = {
+    clickedAt: null
+  }
+
+
   $http.get('/apartments.json').success (data) ->
     map.apartments = data
 
-  map.setBuilding = (building) ->
-    map.building = building
+  map.setBuilding = (object, event = 'hover') ->
+    if tmp.clickedAt != null && (Date.now() - tmp.clickedAt) < options.waitAfterMouseEnter
+      return false
+    else if event == 'click'
+      tmp.clickedAt = Date.now()
+
+      map.floor = object.floor
+      map.building = object.building
+    else
+      map.floor = object.floor
+      map.building = object.building
 
   map.setCurrentApartment = (apartment) ->
     map.currentApartment = apartment if apartment.state == 'active'

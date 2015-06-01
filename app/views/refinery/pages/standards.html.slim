@@ -30,6 +30,7 @@
   .row ng-controller="ImageBroadcasterController as broadcaster"
     .small-6.columns
       = raw @page.content_for(:section3)
+
       div ng-show="broadcaster.isSet(1)"
         = t('standards_page.horisontal_constructions')[0]
       div ng-show="broadcaster.isSet(2)"

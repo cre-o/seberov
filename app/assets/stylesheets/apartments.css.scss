@@ -167,12 +167,11 @@
         }
 
         .apartment {
-          float: left;
+          float: right;
           margin: 50px auto;
         }
 
         &.a {
-          padding-left: 10px;
           @include apartment-floor-plans($building: "a");
 
           .apartment {
@@ -180,8 +179,14 @@
             height: 112px;
           }
 
+          &.floor-1 {
+            padding-right: 193px;
+          }
+
           // Single apartment styles
           &.floor-2 {
+            padding-right: 10px;
+
             .apartment[data-unit-id*="4"] {
               width: 73px;
             }
@@ -206,6 +211,8 @@
           }
 
           &.floor-3 {
+            padding-right: 10px;
+
             .apartment {
               width: 75px;
               height: 110px;

@@ -1,10 +1,20 @@
 angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogleMapApi) ->
+
+  objectLatitude  = 50.0063763
+  objectLongitude = 14.514913
+
   map = {
     center:
-      latitude: 50.0063763
-      longitude: 14.514913
+      latitude: objectLatitude
+      longitude: objectLongitude
     options:
       scrollwheel: false
+    marker:
+      coords:
+        latitude: objectLatitude
+        longitude: objectLongitude
+      options:
+        labelContent: 'Statek Seberov'
     markers:
       medicine:
         id: 1
@@ -114,6 +124,7 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
 
   $scope.map =
     center: map.center
+    marker: map.marker
     markers: map.markers
     zoom: 14
 

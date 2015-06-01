@@ -1,10 +1,11 @@
 // Location page
 #l-location {
-  margin-top: rem_calc(139);
+  margin-top: rem_calc(30);
 
   fieldset {
     border: 2px solid #a9a4a4;
     padding: rem_calc(25) rem_calc(30);
+    padding-bottom: 0;
 
     legend {
       color: #5e9472;
@@ -20,15 +21,20 @@
 
       li {
         padding-bottom: rem_calc(20);
-      }
 
-      i.rectangle, em.rectangle {
-        border-top: 7px solid transparent;
-        border-left: 15px solid $green;
-        border-bottom: 7px solid transparent;
-        display: inline-block;
-        padding-right: rem_calc(15);
-        vertical-align: middle;
+        &:before {
+          content: "";
+          border-top: 7px solid transparent;
+          border-left: 15px solid $green;
+          border-bottom: 7px solid transparent;
+          display: inline-block;
+          padding-right: rem_calc(15);
+          vertical-align: middle;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }

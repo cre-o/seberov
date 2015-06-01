@@ -1,5 +1,6 @@
 #
 # Application controller
+#
 
 angular.module('seberov').controller 'ApplicationController', ($scope, $document, uiGmapGoogleMapApi, $interval, $timeout) ->
   # <== Fixed header
@@ -10,6 +11,10 @@ angular.module('seberov').controller 'ApplicationController', ($scope, $document
     $scope.fixedHeader = true
     return $scope.$apply()
   # <== Fixed header
+
+  @.setHeader = (position = 'fixed') ->
+    $scope.fixedHeader = if position == 'fixed' then true else false
+
 
   # <== Multi Slider
   @.screenNum = 1

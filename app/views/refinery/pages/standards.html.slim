@@ -180,29 +180,30 @@
       = raw @page.content_for(:section11)
 
     .small-6.columns.images
-      H1 НЕТ КАРТИНОК!
+      = link_to image_url('standards/11-1-full') do
+            = image_tag 'standards/11-1', width: 440, height: 440, lazy: true
 
   /! 12
   .row.last
     .small-6.columns.images
       ul.small-block-grid-3 data-clearing=""
         li
-          = link_to image_url('standards/11-1-full') do
-            = image_tag 'standards/11-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/12-1-full') do
+            = image_tag 'standards/12-1', width: 440, height: 440, lazy: true
         li
           = link_to image_url('standards/11-2-full') do
-            = image_tag 'standards/11-2', width: 440, height: 440, lazy: true
+            = image_tag 'standards/12-2', width: 440, height: 440, lazy: true
         li
           = link_to image_url('standards/11-3-full') do
-            = image_tag 'standards/11-3', width: 440, height: 440, lazy: true
+            = image_tag 'standards/12-3', width: 440, height: 440, lazy: true
 
     .small-5.columns
       = raw @page.content_for(:section12)
 
   .row.architect
     .small-2.columns
-      .alert-box.warning.round data-alert=""
-        | Нужна фотка архитектора
+      .circular
+        = raw @page.content_for(:architect_photo)
 
     .small-10.columns
       header

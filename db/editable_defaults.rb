@@ -1,4 +1,4 @@
-@home, @location, @standards, @footer, @contacts, @references = Hash.new
+@home, @location, @standards, @footer, @contacts, @references, @apartments = Hash.new
 
 @home[:benefits] = <<-'HERE'
 <ul class="benefits">
@@ -693,6 +693,10 @@ HERE
 </div>
 HERE
 
+@contacts[:photo] = <<-'HERE'
+  <img src="/assets/contacts/default.jpg" alt="Default">
+HERE
+
 @references[:body] = <<-'HERE'
 <div class="row">
   <div class="small-12 columns">
@@ -996,4 +1000,8 @@ HERE
     </section>
   </div>
 </div>
+HERE
+
+@apartments[:photo] = <<-'HERE'
+<img src="/assets/apartments/index/default.jpg" alt="Default">
 HERE

@@ -18,7 +18,6 @@
 #= require angular
 #= require angular-scroll
 #= require angular-google-maps
-#= require angular-ui-utils/mask
 #= require angular/application
 #= require utility
 #= require lazyload

@@ -1,7 +1,9 @@
 #l-contacts
   .row.main-info
     .small-2.small-offset-1.columns
-      = image_tag 'architect', class: 'circular'
+      .circular
+        = raw @page.content_for(:photo)
+
     .small-2.columns
       = raw @page.content_for(:main)
 

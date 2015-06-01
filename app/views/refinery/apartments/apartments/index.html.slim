@@ -123,4 +123,6 @@
                     | #{t('forms.price')+':'} {{map.currentApartment.price_formated}}
                       #{t('defaults.currency_sign')}
 
-          = image_tag 'http://placehold.it/510x295'
+          .row.collapse
+            .small-12.columns
+              = raw @page.content_for(:photo)

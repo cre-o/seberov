@@ -5,7 +5,7 @@
 #= require angular/controllers/apartments_controller
 
 # Initialisation
-angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'ui.mask'])
+angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
 
 # Configuration
 angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->

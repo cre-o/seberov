@@ -6,9 +6,10 @@ form {
   #{$all-text-inputs} {
     height: rem_calc($input-height);
     box-shadow: none;
+    border-color: $grey;
   }
 
-  input[type="submit"] {
+  input[type="submit"], button[type="submit"] {
     background-color: $green;
     border: none;
     color: $white;
@@ -18,6 +19,7 @@ form {
     padding-left: rem_calc(30);
     padding-right: rem_calc(30);
     height: rem_calc($input-height);
+    line-height: 3px;
   }
 
   select {
@@ -40,6 +42,17 @@ form {
     margin:-1px;
     padding:0;
     border:0;
+  }
+
+  input[type="text"]:focus, input[type="password"]:focus,
+  input[type="date"]:focus, input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus, input[type="month"]:focus,
+  input[type="week"]:focus, input[type="email"]:focus,
+  input[type="number"]:focus, input[type="search"]:focus,
+  input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus,
+  input[type="color"]:focus, textarea:focus {
+    border-color: inherit;
+    background: inherit;
   }
 
   input[type="checkbox"] + label {

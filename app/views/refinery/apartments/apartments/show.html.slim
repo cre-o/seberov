@@ -5,17 +5,17 @@
         legend = breadcrumbs(@apartment)
         .row.b-preview
           .small-5.columns.text-right
-            = image_tag 'http://placehold.it/390x310'
+            = image_tag 'apartments/show/default-model'
           .small-5.columns
-            = image_tag 'http://placehold.it/390x310'
+            = image_tag 'apartments/show/default-model'
 
         .row.b-parameters
           .small-6.columns.__maps
             .row
               .small-7.columns
                 #building-map
+                  div id=(@apartment.block)
                   = image_tag 'apartments/building-map.png'
-                  div id="#{@apartment.block}"
 
                   .text-center building #{@apartment.block}
 
@@ -68,25 +68,71 @@
                   br
                   a href="#" показать схему парковки
 
-            ul.small-block-grid-2
-              li
-                span balcony terace area:
-                strong = @apartment.balcony_terace_area
-              li
-                span front yard area:
-                strong = @apartment.front_yard_area
-              li
-                span floor:
-                strong = @apartment.floor
-              li
-                span total_floors:
-                strong = @apartment.total_floors
-              li
-                span layout:
-                strong = @apartment.layout
-              li
-                span apartment_area:
-                strong = @apartment.apartment_area
+            // Apartment floors data
+            - if @apartment.apartment_floors.any?
+              ul.small-block-grid-2
+                - @apartment.apartment_floors.each do |fl|
+                  li
+                    span = t 'vestibule_area' , scope: 'forms'
+                    strong = fl.vestibule_area
+                  li
+                    span = t 'corridor_area', scope: 'forms'
+                    strong = fl.corridor_area
+                  li
+                    span = t 'wc_area', scope: 'forms'
+                    strong = fl.wc_area
+                  li
+                    span = t 'kitchen_area', scope: 'forms'
+                    strong = fl.kitchen_area
+                  li
+                    span = t 'chamber1_area', scope: 'forms'
+                    strong = fl.chamber1_area
+                  li
+                    span = t 'bathroom_area', scope: 'forms'
+                    strong = fl.bathroom_area
+                  li
+                    span = t 'staircase_area', scope: 'forms'
+                    strong = fl.staircase_area
+
+                  - if fl.cloakroom1_area.present?
+                    li
+                      span = t 'cloakroom_area', scope: 'forms'
+                      strong = fl.cloakroom1_area
+
+                  - if fl.cloakroom2_area.present?
+                    li
+                      span = t 'cloakroom_area', scope: 'forms'
+                      strong = fl.cloakroom2_area
+
+                  - if fl.room1_area.present?
+                    li
+                      span = t 'room_area', scope: 'forms'
+                      strong = fl.room1_area
+
+                  - if fl.room2_area.present?
+                    li
+                      span = t 'room_area', scope: 'forms'
+                      strong = fl.room2_area
+
+                  - if fl.room3_area.present?
+                    li
+                      span = t 'room_area', scope: 'forms'
+                      strong = fl.room3_area
+
+                  - if fl.room4_area.present?
+                    li
+                      span = t 'room_area', scope: 'forms'
+                      strong = fl.room4_area
+
+                  - if fl.room5_area.present?
+                    li
+                      span = t 'room_area', scope: 'forms'
+                      strong = fl.room5_area
+
+                  - if fl.gallery_area.present?
+                    li
+                      span = t 'gallery_area', scope: 'forms'
+                      strong = fl.gallery_area
 
         .row.b-apartment-application
           .small-12.columns
@@ -94,16 +140,17 @@
               h5 = t 'sign_up_to_see', scope: 'apartment_page'
               .subheader = t 'sign_up_to_see_advice', scope: 'apartment_page'
             //@TODO RealForm
-            = form_tag '', class: 'content' do
+            = form_tag '', class: 'content' do |f|
               .row
                 .small-3.columns
-                  input type="text" placeholder="your name"
+                  input type="text" placeholder="#{t('forms.your_name')}" required="true" autofocus="false"
+                  //= text_field_tag 'xname', '', autofocus: 'false', placeholder: t('forms.your_name'), required: true
                 .small-3.columns
-                  input type="text" placeholder="phone number"
+                  = phone_field_tag 'phone', '', placeholder: t('forms.phone_number'), required: true
                 .small-3.columns
-                  input type="text" placeholder="email"
+                  = email_field_tag 'email', '', placeholder: t('forms.email'), required: true
                 .small-3.columns
-                  input type="submit"
+                  = button_tag t('forms.send'), type: 'submit'
 
         .download-pdf
           //@TODO Real URL
@@ -111,11 +158,11 @@
 
   .row.collapse.b-multi-slider
     .small-12.columns
-      = render partial: 'refinery/multi_slider', locals: { render_parts: [:nav, :screen], exclude_parts: [:webcam] }
+      = render partial: 'refinery/multi_slider', locals: { render_parts: [:nav, :screen] }
 
   .row.b-apartment-text
     .small-4.columns.text-right
-      = image_tag 'http://placehold.it/230x150'
+      = image_fu @apartment.photo, '230x150'
 
     .small-7.columns
       h1.upcase Lorem ipsum

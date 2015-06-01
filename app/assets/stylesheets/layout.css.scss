@@ -88,7 +88,7 @@ header.application {
           height: 57px;
           padding: 0 rem_calc(10) 0 rem_calc(10);
           text-align: center;
-          background-color: #5e9472;
+          background-color: $green;
           //@include linear-gradient(to top, #5e9472, #669966);
         }
       }

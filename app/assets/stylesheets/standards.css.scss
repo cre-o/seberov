@@ -13,6 +13,10 @@
   section {
     color: $dark_grey;
 
+    li {
+      list-style-type: disc;
+    }
+
     &.left-side {
       background: image_url('standards/ruler-left-s') -30px 20px no-repeat;
       padding-left: 13%;

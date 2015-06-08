@@ -50,8 +50,12 @@
     background-color: $white;
     min-height: rem-calc(460);
 
+    .columns:nth-child(1) {
+      padding-right: 0;
+    }
+
     .columns:nth-child(2) {
-      box-shadow: 0px -4px 4px #999;
+      box-shadow: 0 -30px 40px #888;
     }
 
     header {

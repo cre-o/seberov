@@ -20,12 +20,12 @@
         margin-bottom: auto;
         position: absolute;
         text-align: end;
-        top: 0;
-        left: rem_calc(10);
         bottom: 0;
-        right: 0;
+        right: 30%;
+        top: 0;
         z-index: 4;
         display: table;
+        width: 155px;
 
         span {
           display: table-cell;
@@ -124,7 +124,7 @@
 
     .option {
       margin-bottom: rem_calc(4);
-      background-color: #5e9472;
+      background-color: $green;
       cursor: pointer;
       padding: rem_calc(6);
 

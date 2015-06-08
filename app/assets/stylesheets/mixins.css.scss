@@ -55,7 +55,7 @@
 }
 
 // Used on apartments page
-@mixin acitve-map($floor: false, $building: false) {
+@mixin active-map($floor: false, $building: false) {
 
   @if $floor != false && $building != false {
     background-image: image-url('apartments/active-map/building-#{$building}.png'),

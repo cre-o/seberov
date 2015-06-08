@@ -1,0 +1,93 @@
+#header {
+  text-align: center;
+}
+
+#content.price-list {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+#content.price-list h1 {
+  font-family: Helvetica, sans-serif;
+  color:#acca59;
+  font-size: 136px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#content.price-list table {
+  width: 100%;
+  font-size: 26.99px;
+  color:#fff;
+  border-spacing: 0;
+  margin-bottom: 0.625rem;
+}
+#content.price-list table thead {
+  padding-top: 1.25rem;
+  padding-bottom: 0.9375rem;
+  background-color: #abc959;
+  border-style: none;
+  line-height: 3.75rem;
+}
+#content.price-list table thead th {
+  font-weight: normal;
+}
+#content.price-list table tbody {
+  color:#272425;
+  font-size: 1.5rem;
+  text-align: center;
+}
+#content.price-list table tbody td:first-child {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#content.price-list table tbody tr:nth-child(1n) {
+  height: 3.75rem;
+}
+#content.price-list table tbody tr:nth-child(2n) {
+  background-color:#ededed;
+  height: 2.6875rem;
+}
+#content.price-list table tbody tr:hover {
+  background-color: rgba(210, 226, 165, 0.5);
+  color:#7d8365;
+}
+#content.price-list table tbody td {
+  border-right: 2px dashed #a4a3a4;
+}
+#content.price-list table tbody td:last-child {
+  border: none;
+}
+#content.price-list .plan {
+  position: absolute;
+  top: 0;
+  right: 1.875rem;
+}
+#content.price-list#c {
+  margin-top: 1.875rem;
+}
+#content.price-list#c .plan {
+  top: -1.875rem;
+}
+#content.price-list#d .plan {
+  top: 1.5625rem;
+}
+
+#footer {
+  font-size: 19px;
+  height: 45px;
+  background-color: #f1f1f1;
+  color: #272425;
+}
+
+#footer span {
+  margin-top: 10px;
+}
+
+#footer .left {
+  float: left;
+  padding-left: 20px;
+}
+
+#footer .right {
+  float: right;
+  padding-right: 20px;
+}

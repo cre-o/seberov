@@ -1,100 +1,13 @@
-// building "A"
-area[
-  coords="-1,211,244,114,243,92,-3,188,-6,181"
-  shape="poly"
-  title="floor 1 | building a"
-  ng-click="map.setBuilding({building: 'a', floor: 1}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'a', floor: 1})"
-  stop-event=""
-]
-area[
-  coords="242,91,-4,189,-4,160,242,71,241,72"
-  shape="poly"
-  title="floor 2 | building a"
-  ng-click="map.setBuilding({building: 'a', floor: 2}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'a', floor: 2})"
-  stop-event=""
-]
-area[
-  coords="248,10,242,55,242,72,-2,159,-3,79,243,6,242,5"
-  shape="poly"
-  title="floor 3 | building a"
-  ng-click="map.setBuilding({building: 'a', floor: '3'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'a', floor: '3'})"
-  stop-event=""
-]
-// building "B"
-area[
-  coords="396,181,384,187,238,114,242,92,418,171,418,170"
-  shape="poly"
-  title="floor 1 | building b"
-  ng-click="map.setBuilding({building: 'b', floor: '1'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'b', floor: '1'})"
-  stop-event=""
-]
-area[
-  coords="242,97,242,75,444,165,419,168,415,172,241,95"
-  shape="poly"
-  title="floor 2 | building b"
-  ng-click="map.setBuilding({building: 'b', floor: '2'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'b', floor: '2'})"
-  stop-event=""
-]
-area[
-  coords="247,77,253,13,258,14,291,15,492,88,497,92,495,91,497,123,497,147,478,153,249,58,249,58"
-  shape="poly"
-  title="floor 3 | building b"
-  ng-click="map.setBuilding({building: 'b', floor: '3'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'b', floor: '3'})"
-  stop-event=""
-]
-// building "C"
-area[
-  coords="245,453,272,474,287,457,369,481,427,488,493,485,493,294,367,385,352,385,274,438,245,419"
-  shape="poly"
-  title="floor 1 | building c"
-  ng-click="map.setBuilding({building: 'c', floor: '1'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'c', floor: '1'})"
-  stop-event=""
-]
-area[
-  coords="498,272,365,367,353,348,267,406,270,403,210,356,208,394,245,418,246,440,267,436,345,390,360,391,493,294,489,290"
-  shape="poly"
-  title="floor 2 | building c"
-  ng-click="map.setBuilding({building: 'c', floor: 2}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'c', floor: 2})"
-  stop-event=""
-]
-area[
-  coords="159,318,183,301,433,163,476,154,493,148,493,272,365,363,353,347,272,402,162,322,156,317"
-  shape="poly"
-  title="floor 3 | building c"
-  ng-click="map.setBuilding({building: 'c', floor: 3}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'c', floor: 3})"
-  stop-event=""
-]
-// building "D"
-area[
-  coords="0,324,135,445,137,435,180,469,173,462,242,413,245,414,245,454,268,472,276,477,261,492,168,492,-6,340"
-  shape="poly"
-  title="floor 1 | building d"
-  ng-click="map.setBuilding({building: 'd', floor: '1'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'd', floor: '1'})"
-  stop-event=""
-]
-area[
-  coords="-1,300,0,317,133,436,175,467,246,416,243,412,237,414,205,390,207,370,132,416"
-  shape="poly"
-  title="floor 2 | building d"
-  ng-click="map.setBuilding({building: 'd', floor: '2'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'd', floor: '2'})"
-  stop-event=""
-]
-area[
-  coords="0,300,129,414,214,360,158,318,177,307,124,272,103,281,64,246,38,236,29,237,4,254,-4,269"
-  shape="poly"
-  title="floor 3 | building d"
-  ng-click="map.setBuilding({building: 'd', floor: '3'}, 'click')"
-  ng-mouseenter="map.setBuilding({building: 'd', floor: '3'})"
-  stop-event=""
-]
+// Mapping areas
+- map_areas.each do |area|
+  - building = area.first
+  - map_areas[building].each_with_index do |v, i|
+    - floor = i + 1
+    area[
+      coords=(v)
+      shape="poly"
+      title=(t('apartments_page.map_area_title', floor: floor, building: building))
+      ng-click="map.setBuilding({building: '#{building}', floor: #{floor}}, 'click')"
+      ng-mouseenter="map.setBuilding({building: '#{building}', floor: #{floor}})"
+      stop-event=""
+    ]

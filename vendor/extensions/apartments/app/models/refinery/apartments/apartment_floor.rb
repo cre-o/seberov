@@ -2,7 +2,7 @@ module Refinery
   module Apartments
     class ApartmentFloor < Refinery::Core::BaseModel
       self.table_name = 'refinery_apartment_floors'
-      belongs_to :apartment
+      has_one :apartment
 
       validates :floor_number, presence: true
 

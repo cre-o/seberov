@@ -1,16 +1,16 @@
 module Refinery
   module Apartments
     ApartmentsController.class_eval do
-      #before_action :abc
+      before_action :decorate_apartments, only: [:by_parameters]
 
       def application_form
-        raise 1
+
       end
 
       private
 
-        def abc
-          raise 1
+        def decorate_apartments
+          @apartments = ApartmentsDecorator.decorate(@apartments)
         end
     end
   end

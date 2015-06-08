@@ -1,0 +1,299 @@
+fieldset {
+  border: 2px solid #a9a4a4;
+  padding: 25px 90px;
+  margin-bottom: 20px;
+
+  legend {
+    color: #5e9472;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem_calc(15);
+    font-weight: 400;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: image-url('apartments/compass-for-center.jpg');
+    width: 78px;
+    height: 54px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .b-preview {
+    padding-bottom: 30px;
+  }
+
+  .b-parameters {
+    border-top: 1px solid #b0b0b0;
+    padding-left: 23px;
+  }
+}
+
+.__maps {
+  padding-top: 45px;
+}
+
+#building-map {
+  position: relative;
+  width: 193px;
+  height: auto;
+
+  #a, #b, #c, #d {
+    position: absolute;
+    background-color: $green;
+    opacity: 0.5;
+  }
+
+  #a {
+    width: 39px;
+    height: 186px;
+    left: 0;
+    top: 0;
+  }
+
+  #b {
+    width: 193px;
+    height: 45px;
+    top: 0;
+  }
+
+  #c {
+    width: 40px;
+    height: 126px;
+    top: 45px;
+    right: 10px;
+  }
+
+  #d {
+    width: 66px;
+    height: 30px;
+    top: 163px;
+    right: 29px;
+  }
+
+  .text-center {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25px;
+    font-size: rem_calc(16);
+    color: #4e4e4e;
+  }
+}
+
+#floors-map {
+  width: 140px;
+  height: auto;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 55px;
+
+  #f-1, #f-2, #f-3 {
+    position: absolute;
+    opacity: 0.5;
+  }
+
+  #f-1 {
+    height: 53px;
+    background-color: #5e9472;
+    position: absolute;
+    top: 83px;
+    width: 140px;
+
+    &:before {
+      border-bottom: 32px solid $green;
+      border-left: 29px solid transparent;
+      content: "";
+      height: 0;
+      left: -4px;
+      position: absolute;
+      top: -32px;
+      width: 0;
+    }
+  }
+
+  #f-2 {
+    overflow: hidden;
+    width: 80px;
+    height: 20px;
+  }
+
+  #f-3 {
+
+  }
+
+  .text-center {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25px;
+    font-size: rem_calc(16);
+    color: #4e4e4e;
+  }
+}
+
+.__numbers {
+  padding-top: 20px;
+
+  ul {
+    font-size: rem_calc(15);
+
+    span {
+      padding-right: 5px;
+    }
+
+    li {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.b-parameters {
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+.b-calculator {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 30px;
+  margin-top: 30px;
+
+  .wrap {
+    height: 73px;
+    border: 1px solid $green;
+  }
+
+  .header {
+    position: absolute;
+    width: 100%;
+    top: -13px;
+
+    h4 {
+      font-family: 'Open Sans', sans-serif;
+      color: $green;
+      font-weight: bold;
+      font-size: rem_calc(15);
+      display: inline-block;
+      background-color: #fff;
+      margin-left: 20px;
+      padding-right: 5px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        background-color: #fff;
+        @include triangle(12px 6px, $green, right);
+        margin-left: 5px;
+      }
+    }
+
+    .selectors {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      background-color: #fff;
+
+      a {
+        color: $grey;
+        font-weight: 700;
+        padding-right: 7px;
+        text-decoration: underline;
+
+        &.active {
+          color: $green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .content {
+    h1 {
+      font-size: rem_calc(18);
+      font-weight: normal;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 13px;
+
+      strong {
+        color: $green;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .footer {
+    span { color: $grey; }
+
+    span, a {
+      background-color: #fff;
+      font-size: 13px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    a {
+      font-style: italic;
+      color: $green;
+    }
+  }
+}
+
+.b-apartment-application {
+  @include custom-row-gutter(10, 10, 15, 20, true);
+
+  .header {
+    h5 {
+      font-size: rem_calc(16);
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .subheader {
+      font-size: rem_calc(16);
+      font-weight: 800;
+      color: $grey;
+      font-style: italic;
+    }
+  }
+}
+
+.b-multi-slider {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.b-apartment-text {
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: $green;
+    padding: 0;
+    text-decoration: underline;
+  }
+
+  p {
+    text-indent: 50px;
+    font-size: 14px;
+    color: $dark_grey;
+  }
+
+  .author {
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+.b-download-pdf {
+  background-color: #fff;
+  position: absolute;
+  right: 100px;
+  bottom: 10px;
+
+  @extend .b-download-pdf;
+}

@@ -2,10 +2,21 @@ module Refinery
   module Apartments
     class Apartment < Refinery::Core::BaseModel
       STATES = %w(active reserved sold)
+      BLOCKS = %w(a b c d)
 
       self.table_name = 'refinery_apartments'
       has_many :apartment_floors, dependent: :destroy
       belongs_to :photo, :class_name => '::Refinery::Image'
+
+
+      scope :active, -> { where(state: 'active') }
+      scope :by_expensiveness, -> { order(price: :desc) }
+      scope :by_position, -> { order(position: :asc) }
+
+      scope :block_a, -> { where(block: 'a') }
+      scope :block_b, -> { where(block: 'b') }
+      scope :block_c, -> { where(block: 'c') }
+      scope :block_d, -> { where(block: 'd') }
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 

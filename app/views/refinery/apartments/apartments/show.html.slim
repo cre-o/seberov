@@ -143,8 +143,7 @@
             = form_tag '', class: 'content' do |f|
               .row
                 .small-3.columns
-                  input type="text" placeholder="#{t('forms.your_name')}" required="true" autofocus="false"
-                  //= text_field_tag 'xname', '', autofocus: 'false', placeholder: t('forms.your_name'), required: true
+                  = text_field_tag 'xname', '', autofocus: 'false', placeholder: t('forms.your_name'), required: true
                 .small-3.columns
                   = phone_field_tag 'phone', '', placeholder: t('forms.phone_number'), required: true
                 .small-3.columns
@@ -152,9 +151,9 @@
                 .small-3.columns
                   = button_tag t('forms.send'), type: 'submit'
 
-        .download-pdf
+        .b-download-pdf
           //@TODO Real URL
-          a href="#" = t 'download_pdf', scope: 'apartment_page'
+          = link_to t('download_pdf', scope: 'apartment_page'), price_list_path, target: '_blank'
 
   .row.collapse.b-multi-slider
     .small-12.columns

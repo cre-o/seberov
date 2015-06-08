@@ -20,12 +20,8 @@ module ApplicationHelper
     I18n.locale == :cs
   end
 
-  def price_list_url
-    case I18n.locale
-    when :en then '/files/sh_press_EN.pdf'
-    when :cs then '/files/sh_press_CZ.pdf'
-    when :ru then '/files/sh_press_RU.pdf'
-    end
+  def price_list_path
+    refinery.price_list_apartments_apartments_path('pdf')
   end
 
   def change_lang_hack(name)

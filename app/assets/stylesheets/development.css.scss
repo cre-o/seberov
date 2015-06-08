@@ -1,9 +1,18 @@
 // With love & pation
+/* Pages:
+image-url('development/main-bg.png')
+image-url('development/apartments-page.png')
+image-url('development/apartment-page.png')
+image-url('development/contacts-page.png')
+image-url('development/location-page.png')
+image-url('development/standards-page.png')
+image-url('development/price-list-page.png')
+*/
 .development {
   &::after {
     content: "";
-    background: image_url('development/apartment-page.png') no-repeat !important;
-    opacity: 0.5;
+    background: image-url('development/price-list-page.png') no-repeat !important;
+    //opacity: 0.5;
     top: 0;
     left: 0;
     bottom: 0;

@@ -25,6 +25,10 @@ module ApartmentsHelper
         '-1,300,0,317,133,436,175,467,246,416,243,412,237,414,205,390,207,370,132,416',
         '0,300,129,414,214,360,158,318,177,307,124,272,103,281,64,246,38,236,29,237,4,254,-4,269'
       ]
-    }
+    }.with_indifferent_access
+  end
+
+  def blocks
+    Refinery::Apartments::Apartment::BLOCKS
   end
 end

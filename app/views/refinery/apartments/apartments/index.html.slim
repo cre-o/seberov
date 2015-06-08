@@ -1,7 +1,5 @@
 #l-apartments.__index-page
-  .row
-    .b-nav-tabs.small-3.small-offset-7.columns
-      = render 'nav'
+  = render 'nav'
 
   .row.collapse
     .small-11.small-centered.columns.wrap ng-controller="ApartmentsMapController as map"
@@ -15,10 +13,8 @@
               label.upcase for="building-select-label" = t('forms.building')+':'
             .small-1.columns
               select#building-select-label ng-model="map.building"
-                option value="a" a
-                option value="b" b
-                option value="c" c
-                option value="d" d
+                - blocks.each do |letter|
+                  option value="#{letter}" = letter
             .small-2.columns.text-right
               label.upcase for="floor-select-label" = t('forms.floor')+':'
             .small-1.columns
@@ -42,57 +38,20 @@
         .small-6.columns.b-apartment-selector
           h1.upcase = t 'choose_apartment', scope: 'apartments_page'
           .b-floor-map
-            div ng-if="map.building == 'a'"
-              // Show flats on floors images
-              #apartments-render.a class="floor-{{map.floor}}"
-                a.apartment[
-                  ng-repeat="apartment in map.apartments | filter: {block: 'a', floors: map.floor}"
-                  ng-class="apartment.state"
-                  data-unit-id="{{apartment.unit_id}}"
-                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
-                  ng-mouseleave="map.hideTooltip();"
-                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
+            - blocks.each do |letter|
+              div ng-if="map.building == '#{letter}'"
+                // Show flats on floors images
+                #apartments-render.a class="floor-{{map.floor}}"
+                  a.apartment[
+                    ng-repeat="apartment in map.apartments | filter: {block: '#{letter}', floors: map.floor}"
+                    ng-class="apartment.state"
+                    data-unit-id="{{apartment.unit_id}}"
+                    ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
+                    ng-mouseleave="map.hideTooltip();"
+                    ng-href="{{map.apartmentHref(apartment)}}"
+                    target="_blank"]
 
-                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
-
-
-            div ng-if="map.building == 'b'"
-              #apartments-render.b class="floor-{{map.floor}}"
-                a.apartment[
-                  ng-repeat="apartment in map.apartments | filter: {block: 'b', floors: map.floor}"
-                  ng-class="apartment.state"
-                  data-unit-id="{{apartment.unit_id}}"
-                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
-                  ng-mouseleave="map.hideTooltip();"
-                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
-
-                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
-
-
-            div ng-if="map.building == 'c'"
-              #apartments-render.c class="floor-{{map.floor}}"
-                a.apartment[
-                  ng-repeat="apartment in map.apartments | filter: {block: 'c', floors: map.floor}"
-                  ng-class="apartment.state"
-                  data-unit-id="{{apartment.unit_id}}"
-                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
-                  ng-mouseleave="map.hideTooltip();"
-                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
-
-                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
-
-            div ng-if="map.building == 'd'"
-              #apartments-render.c class="floor-{{map.floor}}"
-                a.apartment[
-                  ng-repeat="apartment in map.apartments | filter: {block: 'd', floors: map.floor}"
-                  ng-class="apartment.state"
-                  data-unit-id="{{apartment.unit_id}}"
-                  ng-mouseenter="map.setCurrentApartment(apartment) ? map.showTooltip() : ''"
-                  ng-mouseleave="map.hideTooltip();"
-                  ng-show="map.onFloor(apartment)"
-                  ng-href="#{refinery.apartments_apartments_path}/{{apartment.id}}"]
-
-                  .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
+                    .tooltip ng-bind-html="tooltipHtml" ng-if="map.currentApartment.id == apartment.id && map.tooltip"
 
             // This baseTooltip in use as template
             #base-tooltip.tooltip style="display: none;"
@@ -100,7 +59,7 @@
                 li
                   = t('forms.floors')+':'
                   span
-                    ' {{map.currentApartment.floors_decorated}}
+                    ' {{map.currentApartment.floors}}
                 li
                   = t('forms.unit_id')+':'
                   span
@@ -109,7 +68,6 @@
                   = t('forms.layout')+':'
                   span
                     | {{map.currentApartment.layout}}
-
                 li
                   = t('forms.apartment_area')+':'
                   span
@@ -117,8 +75,7 @@
                     i = t('numbers.square')
                 li
                   span.price
-                    | #{t('forms.price')+':'} {{map.currentApartment.price_formated}}
-                      #{t('defaults.currency_sign')}
+                    | #{t('forms.price')+':'} {{map.currentApartment.price}}
 
           .row.collapse
             .small-12.columns

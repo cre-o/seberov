@@ -3,8 +3,15 @@ Refinery::Core::Engine.routes.draw do
   # Frontend routes
   namespace :apartments, path: '' do
     resources :apartments, :only => [:index, :show] do
-      post 'apartments/application_form'
-      collection { get :by_parameters }
+
+      # Search
+      collection do
+        get 'by-parameters', to: :by_parameters
+        get 'by-price-list', to: :by_price_list
+        get 'price-list', to: :price_list
+        post :search
+        post :application
+      end
     end
   end
 

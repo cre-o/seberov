@@ -2,21 +2,21 @@ en:
 
   defaults:
     currency_sign: 'KČ'
+    square_sign: 'm2'
 
   all_pages:
     language_menu:
-      english: english
-      czech: czech
-      russian: russian
-    download_price_list: Download price list
+      english: 'english'
+      czech: 'czech'
+      russian: 'russian'
+    download_price_list: 'Download price list'
 
   home_page:
     procedure_of_purchasing: 'Procedure of purchasing'
 
   apartments_page:
-    by_planning: 'by planning'
-    by_parameters: 'by parameters'
     choose_apartment: 'Choose apartment'
+    map_area_title: "floor %{floor} | building %{building}"
 
   apartments_parameters_page:
     title: 'Apartments parameters page!'
@@ -28,6 +28,17 @@ en:
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
     select_floor: 'Выберите корпус и этаж:'
+
+  apartments_price_list_page:
+    download_pdf: 'download pdf'
+    table:
+      id: '#'
+      planing: 'Планировка'
+      floor: 'Этаж'
+      square: 'Площадь'
+      terrace:  'Терасса'
+      frontage: 'Палисадник'
+      price: 'Цена'
 
   location_page:
     legend: 'Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508'
@@ -192,3 +203,7 @@ en:
     apartments:
       by_planning: 'by planning'
       by_parameters: 'by parameters'
+      by_price_list: 'by price list'
+
+  price_list:
+    tel: 'tel: %{number}'

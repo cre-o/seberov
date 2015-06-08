@@ -28,6 +28,8 @@
   .apartment {
     float: right;
     margin: 50px auto;
+    width: 60px;
+    height: 110px;
   }
 
   &.a {
@@ -88,9 +90,6 @@
     @include apartment-floor-plans($building: "b");
 
     .apartment {
-      width: 60px;
-      height: 110px;
-
       &:last-child {
         width: 70px;
       }

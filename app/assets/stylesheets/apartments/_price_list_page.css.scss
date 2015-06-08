@@ -1,0 +1,103 @@
+&.__by-price-list-page {
+  margin: 0;
+
+  .b-download-pdf {
+    padding: {
+      top: rem-calc(54);
+      right: rem-calc(30);
+      bottom: rem-calc(70);
+    }
+
+    @extend .b-download-pdf;
+  }
+
+  section {
+    position: relative;
+  }
+
+  h1 {
+    font-family: Helvetica, sans-serif;
+    color: #acca59;
+    font-size: rem-calc(252);
+    line-height: 19.9rem;
+    height: 16.25rem;
+    padding-left: rem-calc(30);
+  }
+
+  table {
+    width: 100%;
+    font-size: rem-calc(24);
+    color: #fff;
+    border-spacing: 0;
+    position: relative;
+    padding-left: rem-calc(18);
+    padding-right: rem-calc(29);
+    margin-bottom: rem-calc(10);
+
+    thead {
+      padding-top: rem-calc(20);
+      padding-bottom: rem-calc(15);
+      @include linear-gradient(hsla(76, 51%, 82%, 0.7) 2%, hsla(76, 51%, 57%, 0.7) 30%, hsla(77, 51%, 57%, 0.7), hsla(76, 51%, 60%, 1));
+      border-style: none;
+      line-height: rem-calc(60);
+
+      th {
+        font-weight: normal;
+      }
+    }
+
+    tbody {
+      color: #272425;
+      font-size: rem-calc(24);
+      text-align: center;
+
+      td:first-child {
+        padding-left: rem-calc(7);
+        padding-right: rem-calc(7);
+      }
+
+      tr:nth-child(1n) {
+        height: rem-calc(60);
+      }
+
+      tr:nth-child(2n) {
+        background-color: #ededed;
+        height: rem-calc(43);
+      }
+
+      tr:hover {
+        background-color: rgba(210, 226, 165, 0.5);
+        color: #7d8365;
+        cursor: pointer;
+      }
+
+      td {
+        border-right: 2px dashed #a4a3a4;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .plan {
+    position: absolute;
+    top: 0;
+    right: rem-calc(30);
+  }
+
+  #c {
+    margin-top: rem-calc(30);
+
+    .plan {
+      top: rem-calc(-30);
+    }
+  }
+
+  #d {
+    .plan {
+      top: rem-calc(25);
+    }
+  }
+}

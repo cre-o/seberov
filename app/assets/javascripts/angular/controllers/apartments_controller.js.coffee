@@ -19,7 +19,6 @@ angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, 
     clickedAt: null
   }
 
-
   $http.get('/apartments.json').success (data) ->
     map.apartments = data
 
@@ -54,6 +53,10 @@ angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, 
   map.hideTooltip = ->
     $scope.tooltipHtml = ""
     map.tooltip = false
+
+  # Make href only for available apartments
+  map.apartmentHref = (apartment) ->
+    if apartment.state == 'active' then Routes.refinery_apartments_apartment_path(apartment.id) else '#'
 
   return $scope
 

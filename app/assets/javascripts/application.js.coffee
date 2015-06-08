@@ -14,6 +14,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require lodash
+#= require js-routes
 #= require foundation-init
 #= require angular
 #= require angular-scroll

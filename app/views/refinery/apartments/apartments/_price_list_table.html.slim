@@ -1,0 +1,22 @@
+table
+  thead
+    th = t('id', scope: 'apartments_price_list_page.table')
+    th = t('planing', scope: 'apartments_price_list_page.table')
+    th = t('floor', scope: 'apartments_price_list_page.table')
+    th = t('square', scope: 'apartments_price_list_page.table')
+    th = t('terrace', scope: 'apartments_price_list_page.table')
+    th = t('frontage', scope: 'apartments_price_list_page.table')
+    th = t('price', scope: 'apartments_price_list_page.table')
+  tbody
+    - if defined?(block) && blocks.include?(block)
+      - @apartments.send("block_#{block}").each do |o|
+        - o = Refinery::Apartments::ApartmentDecorator.decorate(o) # rebuild it normally
+        tr ng-click="gogo('#{refinery.apartments_apartment_path(o.id)}')"
+          td = o.unit_id
+          td = o.layout
+          td = o.floors
+          td = o.area
+          td = o.balcony_terace_area
+          td = o.front_yard_area
+          td = o.price
+

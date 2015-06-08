@@ -2,7 +2,7 @@
 # Application controller
 #
 
-angular.module('seberov').controller 'ApplicationController', ($scope, $document, uiGmapGoogleMapApi, $interval, $timeout) ->
+angular.module('seberov').controller 'ApplicationController', ($scope, $window, $document, uiGmapGoogleMapApi, $interval, $timeout, $location) ->
   # <== Fixed header
   $scope.fixedHeader = false
 
@@ -49,5 +49,11 @@ angular.module('seberov').controller 'ApplicationController', ($scope, $document
       $scope.screenHeight = angular.element('.js-multi-slider.active').height()
   , 400
   # <== Multi Slider
+
+  $scope.go = (path) ->
+    $window.location = path
+
+  $scope.gogo = (path) ->
+    $window.open(path,'_blank')
 
   return $scope

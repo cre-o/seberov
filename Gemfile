@@ -42,9 +42,15 @@ gem 'angularjs-rails'
 gem 'lodash-rails' # javascript features
 gem 'gon' # passing variables into JS
 # Images lazy loading
-gem "lazyload-rails"
+gem 'lazyload-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Rails routes inside JS
+gem 'js-routes'
+
+# PDF generator
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 # Multilanguage features
 gem 'globalize', '~> 5.0.0'
@@ -92,9 +98,10 @@ gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'mast
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 # Add support for Refinery's custom fork of the visual editor WYMeditor.
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+# Own engine
+gem 'refinerycms-apartments', path: 'vendor/extensions'
 # i18n support
 gem 'refinerycms-i18n'
-gem 'refinerycms-apartments', path: 'vendor/extensions'
 
 # Font icons
 gem 'font-awesome-rails'

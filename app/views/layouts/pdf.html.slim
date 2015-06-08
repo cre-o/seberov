@@ -1,0 +1,11 @@
+doctype html
+html lang="#{::I18n.locale}" ng-app="seberov"
+  head
+    meta charset="utf-8"
+    title Price list
+    = wicked_pdf_stylesheet_link_tag "pdf"
+
+  body ng-controller="ApplicationController as app" ng-init="app.development = true" ng-class="{ development: app.development == true }"
+    .inner-wrap id="#{canonical_id @page}"
+      section#page
+        = yield

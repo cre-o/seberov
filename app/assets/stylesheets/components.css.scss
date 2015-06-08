@@ -2,3 +2,21 @@
 @import "image_broadcaster";
 @import "multi_slider";
 @import "tooltip";
+
+.b-download-pdf {
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  a {
+    text-decoration: underline;
+  }
+
+  &:before {
+    content: "";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    @extend i.icon.pdf.green;
+  }
+}

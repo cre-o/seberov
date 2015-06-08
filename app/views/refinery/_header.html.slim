@@ -2,8 +2,8 @@
   .small-3.large-3.columns
     .logo
       = link_to refinery.root_path, title: 'На главную' do
-        = image_tag 'logo', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
-        = image_tag 'logo-fixed', width: 217, height: 57, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
+        = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
+        = image_tag 'logo-fixed.png', width: 217, height: 57, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
   .small-6.large-6.columns.upcase
     = render 'refinery/nav'
 
@@ -24,13 +24,14 @@
       ul.about-info
         li.phone
           i.fa.fa-phone.fa-lg
-          | 604-933-909
-          a href="tel:604-933-909"
+          = Settings.phones.default_short
+          = link_to "tel:#{Settings.phones.default_short_dashed}" do
             span.label viber
+
         li.skype.upcase.
           i.fa.fa-skype.fa-lg
           a href="skype:statekseverov?call" statekseverov
         li.pdf.upcase
           i.fa.fa-file-pdf-o.fa-lg
 
-          = link_to t('all_pages.download_price_list'), price_list_url, target: '_blank'
+          = link_to t('all_pages.download_price_list'), price_list_path, target: '_blank'

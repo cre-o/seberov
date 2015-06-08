@@ -1,14 +1,12 @@
 #l-apartments.__parameters-page
-  .row
-    .b-nav-tabs.small-3.small-offset-7.columns
-      = render 'nav'
+  = render 'nav'
 
   .row.collapse
     .small-12.columns.wrap
       .row.collapse.b-parameters
         .small-12.columns
           h1.upcase Parameters:
-          form.b-filters
+          = form_tag refinery.search_apartments_apartments_path, remote: true, class: 'b-filters' do |f|
             .row
               // Price
               .small-4.columns
@@ -20,11 +18,12 @@
                   .small-2.columns.text-left
                     label for="price-start-label" = t('forms.from')
                   .small-4.columns
-                    input#price-start-label value="0" type="text"
+                    = text_field_tag :price_start, '0', id: 'price-start-label'
                   .small-2.columns.text-center
                     label for="price-end-label" = t('forms.to')
                   .small-4.columns.left
-                    input#price-end-label value="7 000 000" type="text"
+                    = text_field_tag :price_end,  @apartments.most_expensive.price, id: 'price-end-label', \
+                      'ng-model'=> 'price'
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-12.columns
@@ -101,10 +100,9 @@
             .small-8.columns
               h1.upcase = t('forms.results')+':'
             .small-2.right.columns.total
-              = @apartments.size
           .row.collapse.items
             .small-12.columns
-              - @apartments.each do |apartment|
+              - @apartments.object.each do |apartment|
                 .row.item
                   .small-4.columns
                     .id

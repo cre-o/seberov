@@ -1,0 +1,34 @@
+#header
+  = wicked_pdf_image_tag "apartments/by-price-list/print-logo.jpg"
+#content.price-list
+  - blocks.each do |letter|
+    section id=(letter)
+      header
+        h1.left.upcase = letter
+
+      .content
+        table
+          thead
+            th = t('id', scope: 'apartments_price_list_page.table')
+            th = t('planing', scope: 'apartments_price_list_page.table')
+            th = t('floor', scope: 'apartments_price_list_page.table')
+            th = t('square', scope: 'apartments_price_list_page.table')
+            th = t('terrace', scope: 'apartments_price_list_page.table')
+            th = t('frontage', scope: 'apartments_price_list_page.table')
+            th = t('price', scope: 'apartments_price_list_page.table')
+          tbody
+            - blocks.each do |letter|
+              - @apartments.send("block_#{letter}").each do |o|
+                - o = Refinery::Apartments::ApartmentDecorator.decorate(o) # rebuild it normally
+                tr
+                  td = o.unit_id
+                  td = o.layout
+                  td = o.floors
+                  td = o.area
+                  td = o.balcony_terace_area
+                  td = o.front_yard_area
+                  td = o.price
+
+#footer
+  span.left = Settings.emails.default
+  span.right = t('price_list.tel', number: Settings.phones.default)

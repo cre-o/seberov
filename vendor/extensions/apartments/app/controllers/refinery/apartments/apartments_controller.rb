@@ -30,7 +30,7 @@ module Refinery
         @apartments = ApartmentsDecorator.decorate(Apartment.active.by_position)
 
         respond_to do |format|
-          format.html { render :by_price_list, layout: 'blank' }
+          format.html { render :by_price_list }
           format.pdf { render pdf: 'price-list-seberov',
                               show_as_html: params[:debug].present?,
                               zoom: 0.7,

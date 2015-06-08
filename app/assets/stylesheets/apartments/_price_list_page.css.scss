@@ -1,4 +1,5 @@
 &.__by-price-list-page {
+  padding: 0;
 
   .b-download-pdf {
     padding: {
@@ -20,7 +21,7 @@
     font-size: rem-calc(252);
     line-height: 19.9rem;
     height: 16.25rem;
-    padding-left: rem-calc(30);
+    padding-left: rem-calc(10);
   }
 
   table {
@@ -29,8 +30,6 @@
     color: #fff;
     border-spacing: 0;
     position: relative;
-    padding-left: rem-calc(18);
-    padding-right: rem-calc(29);
     margin-bottom: rem-calc(10);
 
     thead {
@@ -83,14 +82,22 @@
   .plan {
     position: absolute;
     top: 0;
-    right: rem-calc(30);
+    right: 0;
+  }
+
+  #a .plan {
+    top: rem-calc(-28);
+  }
+
+  #b .plan {
+    top: rem-calc(-10);
   }
 
   #c {
     margin-top: rem-calc(30);
 
     .plan {
-      top: rem-calc(-30);
+      top: rem-calc(10);
     }
   }
 

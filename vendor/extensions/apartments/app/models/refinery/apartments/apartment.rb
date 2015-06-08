@@ -13,10 +13,10 @@ module Refinery
       scope :by_expensiveness, -> { order(price: :desc) }
       scope :by_position, -> { order(position: :asc) }
 
-      scope :block_a, -> { where('LOWER(block) = :letter', letter: 'a') }
-      scope :block_b, -> { where('LOWER(block) = :letter', letter: 'b') }
-      scope :block_c, -> { where('LOWER(block) = :letter', letter: 'c') }
-      scope :block_d, -> { where('LOWER(block) = :letter', letter: 'd') }
+      scope :block_a, -> { where(block: 'a') }
+      scope :block_b, -> { where(block: 'b') }
+      scope :block_c, -> { where(block: 'c') }
+      scope :block_d, -> { where(block: 'd') }
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 

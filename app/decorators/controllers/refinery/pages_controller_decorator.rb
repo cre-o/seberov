@@ -15,7 +15,7 @@ Refinery::PagesController.class_eval do
             police: ActionController::Base.helpers.asset_path('location/markers/police-l.png'),
             library: ActionController::Base.helpers.asset_path('location/markers/library-l.png'),
             playground: ActionController::Base.helpers.asset_path('location/markers/playground-l.png'),
-            sport: ActionController::Base.helpers.asset_path('location/markers/playground-l.pgn')
+            sport: ActionController::Base.helpers.asset_path('location/markers/sport-l.png')
           },
           grey: {
             medicine: ActionController::Base.helpers.asset_path('location/markers/medicine-grey-s.png'),
@@ -26,7 +26,7 @@ Refinery::PagesController.class_eval do
             police: ActionController::Base.helpers.asset_path('location/markers/police-grey-s.png'),
             library: ActionController::Base.helpers.asset_path('location/markers/library-grey-s.png'),
             playground: ActionController::Base.helpers.asset_path('location/markers/playground-grey-s.png'),
-            sport: ActionController::Base.helpers.asset_path('location/markers/playground-grey-s.png')
+            sport: ActionController::Base.helpers.asset_path('location/markers/sport-grey-s.png')
           }
         }
       })

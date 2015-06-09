@@ -165,6 +165,7 @@ header.application {
       position: absolute;
       bottom: 0;
       right: rem_calc(10);
+      color: #0a944a;
 
       i.fa {
         padding-right: 4px;
@@ -222,7 +223,7 @@ footer {
 
   // Informational container
   .container {
-    background-color: #359571;
+    background-color: $green;
     color: $white;
     padding-top: rem_calc(30);
     font-size: rem_calc(14);
@@ -286,7 +287,7 @@ footer {
 
   .contacts {
     .phone {
-      background-color: #477455;
+      background-color: $dark_green2;
       padding: rem_calc(3);
       float: right;
       text-align: right;
@@ -316,7 +317,7 @@ footer {
   }
 
   .madeby {
-    background-color: #1f7452;
+    background-color: $dark_green2;
     color: $white;
     font-size: rem_calc(12);
     line-height: rem_calc(25);

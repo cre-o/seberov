@@ -13,7 +13,7 @@
       font-size: rem-calc(18);
       text-transform: uppercase;
       color: #fff;
-      background-color: rgba(94, 148, 114, 0.8);
+      background-color: rgba($green, 0.9);
       z-index: 50;
       right: -10px;
       bottom: -10px;
@@ -29,7 +29,7 @@
         height: 0;
         border-top: 20px solid transparent;
         border-bottom: 20px solid transparent;
-        border-left: 20px solid rgba(94, 148, 114, 0.8);
+        border-left: 20px solid rgba($green, 0.9);
         right: 10;
       }
 
@@ -38,7 +38,7 @@
         display: inline-block;
         width: 40px;
         height: 40px;
-        background: image-url('icons/plan-icon42.png') center center no-repeat, rgba(134, 162, 142, 0.9);
+        background: image-url('icons/plan-icon42.png') center center no-repeat, rgba(tint($green, 30%), 0.8);
         background-size: 20px 20px;
         left: -40px;
       }
@@ -55,7 +55,7 @@
     }
 
     .columns:nth-child(2) {
-      box-shadow: 0 -30px 40px #888;
+      box-shadow: 0 -30px 40px #959695;
     }
 
     header {
@@ -85,16 +85,16 @@
       }
 
       &.grey {
-        background: rgba(127, 127, 127, 0.5);
+        background: rgba($grey, 0.5);
         h1 {
           background-color: $grey;
         }
       }
 
       &.green {
-        background: rgba(94, 148, 114, 0.5);
+        background: tint($green, 50%);
         h1 {
-          background-color: #5e9472;
+          background-color: $green;
         }
       }
     }

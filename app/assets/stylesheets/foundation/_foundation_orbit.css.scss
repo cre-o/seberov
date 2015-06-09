@@ -2,18 +2,18 @@
   position: absolute;
   margin-top: auto;
   margin-bottom: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba($black, 0.8);
   width: 72%;
   height: 20%;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  color: #fff;
+  color: $white;
   padding: rem_calc(36 30 45 130);
 
   h1 {
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
     font-weight: bold;
     display: inline-block;
@@ -42,11 +42,11 @@
 
 .orbit-prev-bottom, .orbit-next-bottom {
   position: absolute;
-  color: #fff;
+  color: $white;
   z-index: 10;
 
   &:hover, &:focus {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -65,8 +65,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #7f7f7f;
-  color: #fff;
+  background-color: $grey;
+  color: $white;
   width: 30%;
   text-align: center;
   margin-left: auto;

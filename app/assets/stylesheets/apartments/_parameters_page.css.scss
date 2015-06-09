@@ -1,7 +1,7 @@
 h1 {
   @extend %padding;
 
-  color: #4e4e4e;
+  color: $darkness;
   font-family: 'Open Sans', sans-serif;
   font-size: rem_calc(25);
   font-weight: 900;
@@ -24,7 +24,7 @@ h1 {
   }
 
   h3 {
-    color: #5e9472;
+    color: $green;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: rem_calc(18);
@@ -37,7 +37,7 @@ h1 {
 
   .total {
     font-size: rem_calc(18);
-    color: #5e9472;
+    color: $green;
     line-height: rem_calc(55);
   }
 

@@ -4,6 +4,7 @@ module Refinery
       STATES = %w(active reserved sold)
       BLOCKS = %w(a b c d)
 
+      self.per_page = 100 # will_paginate
       self.table_name = 'refinery_apartments'
       has_many :apartment_floors, dependent: :destroy
       belongs_to :photo, :class_name => '::Refinery::Image'

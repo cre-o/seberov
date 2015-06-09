@@ -26,10 +26,9 @@
   }
 
   .apartment {
-    float: right;
-    margin: 50px auto;
+    position: absolute;
     width: 60px;
-    height: 110px;
+    height: 95px;
   }
 
   &.a {
@@ -41,62 +40,45 @@
     }
 
     &.floor-1 {
-      padding-right: 193px;
+      @include fill-with-apartments(
+        $container-width: 75px,
+        $start-from: 195px,
+        $top-position: 25%,
+        $apartments-size: 4)
     }
 
     // Single apartment styles
-    &.floor-2 {
-      padding-right: 10px;
-
-      .apartment[data-unit-id*="4"] {
-        width: 73px;
-      }
-
-      .apartment[data-unit-id*="3"] {
-        width: 63px;
-        margin-top: 70px;
-        height: 100px;
-      }
-
-      .apartment[data-unit-id*="2"] {
-        width: 60px;
-        margin-top: 70px;
-        height: 100px;
-      }
-
-      .apartment[data-unit-id*="1"] {
-        width: 60px;
-        margin-top: 52px;
-        height: 120px;
-      }
-    }
-
-    &.floor-3 {
-      padding-right: 10px;
-
-      .apartment {
-        width: 7px;
-        height: 110px;
-
-        &[data-unit-id*="3"], &[data-unit-id*="2"], &[data-unit-id*="1"] {
-          width: 62px;
-        }
-      }
+    &.floor-2, &.floor-3 {
+      @include fill-with-apartments(
+        $container-width: 75px,
+        $start-from: 12px,
+        $top-position: 25%,
+        $apartments-size: 7,
+        $apartment1-width: 60px,
+        $apartment2-width: 60px,
+        $apartment3-width: 60px)
     }
   }
 
   &.b {
-    padding-right: 10px;
     @include apartment-floor-plans($building: "b");
 
-    .apartment {
-      &:last-child {
-        width: 70px;
-      }
+    &.floor-1, &.floor-2 {
+      @include fill-with-apartments(
+        $container-width: 60px,
+        $start-from: 12px,
+        $top-position: 25%,
+        $apartments-size: 8,
+        $apartment8-width: 70px)
     }
 
     &.floor-3 {
-      padding-right: 16px;
+      @include fill-with-apartments(
+        $container-width: 59px,
+        $start-from: 17px,
+        $top-position: 25%,
+        $apartments-size: 8,
+        $apartment8-width: 70px)
     }
   }
 

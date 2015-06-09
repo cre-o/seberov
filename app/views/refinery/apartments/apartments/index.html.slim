@@ -41,7 +41,7 @@
             - blocks.each do |letter|
               div ng-if="map.building == '#{letter}'"
                 // Show flats on floors images
-                #apartments-render.a class="floor-{{map.floor}}"
+                #apartments-render class=(letter) class="floor-{{map.floor}}"
                   a.apartment[
                     ng-repeat="apartment in map.apartments | filter: {block: '#{letter}', floors: map.floor}"
                     ng-class="apartment.state"

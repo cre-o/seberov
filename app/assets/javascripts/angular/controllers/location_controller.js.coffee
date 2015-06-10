@@ -4,15 +4,19 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
   objectLongitude = 14.514913
 
   map = {
+    zoom: 14
     center:
       latitude: objectLatitude
       longitude: objectLongitude
     options:
       scrollwheel: false
+      streetViewControl: false
+      zoomControlOptions:
+        style: 3
     marker:
       coords:
-        latitude: objectLatitude
-        longitude: objectLongitude
+        latitude: 49.999243
+        longitude: 14.516158
       options:
         labelContent: 'Statek Seberov'
     markers:
@@ -122,10 +126,6 @@ angular.module('seberov').controller 'LocationController', ($scope, uiGmapGoogle
   $scope.isCurrent = (name) ->
     $scope.currentItem == name
 
-  $scope.map =
-    center: map.center
-    marker: map.marker
-    markers: map.markers
-    zoom: 14
+  $scope.map = map
 
   return $scope

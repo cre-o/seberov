@@ -118,7 +118,7 @@ $column-gutter: rem-calc(10);
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #549350;
+$primary-color: $green;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -258,7 +258,7 @@ $header-font-color: $green;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element

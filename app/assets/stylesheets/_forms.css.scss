@@ -4,9 +4,11 @@ form {
   // Setup all input elements
   // No shadows
   #{$all-text-inputs} {
-    height: rem_calc($input-height);
+    font-size: rem(16);
+    height: rem($input-height);
     box-shadow: none;
     border-color: $grey;
+    color: $grey-tint-2;
   }
 
   input[type="submit"], button[type="submit"] {
@@ -20,6 +22,7 @@ form {
     padding-right: rem_calc(30);
     height: rem_calc($input-height);
     line-height: 3px;
+    width: 100%;
   }
 
   select {

@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cocoon' # easy nested forms
 gem 'simple_form' # forms
 
+
 # Decoration logic
 gem 'draper'
 
@@ -43,6 +44,8 @@ gem 'lodash-rails' # javascript features
 gem 'gon' # passing variables into JS
 # Images lazy loading
 gem 'lazyload-rails'
+# Images zoomIn
+gem 'fancybox2-rails', '~> 0.2.8'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Rails routes inside JS

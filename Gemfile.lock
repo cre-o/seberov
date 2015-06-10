@@ -148,6 +148,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     ffi (1.9.8)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
@@ -366,6 +368,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.1.0)
   draper
+  fancybox2-rails (~> 0.2.8)
   font-awesome-rails
   foundation-rails
   globalize (~> 5.0.0)

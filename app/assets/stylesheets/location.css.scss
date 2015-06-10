@@ -3,16 +3,21 @@
   margin-top: 5rem;
 
   fieldset {
-    border: 2px solid #a9a4a4;
+    border: 2px solid $grey-borders;
     padding: rem_calc(25) rem_calc(30);
     padding-bottom: 0;
 
     legend {
-      color: #5e9472;
+      color: $green;
       font-family: 'Open Sans', sans-serif;
       font-size: rem_calc(15);
       font-weight: 400;
     }
+  }
+
+  .angular-google-map-container {
+    // <-- Media queries
+    height: 400px;
   }
 
   .b-map {
@@ -40,7 +45,7 @@
   }
 
   .b-map-controls {
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid $light_grey;
     margin-bottom: rem_calc(25);
     padding: rem_calc(25);
 

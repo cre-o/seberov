@@ -56,7 +56,8 @@
         $apartments-size: 7,
         $apartment1-width: 60px,
         $apartment2-width: 60px,
-        $apartment3-width: 60px)
+        $apartment3-width: 60px,
+        $apartment7-width: 80px)
     }
   }
 
@@ -78,15 +79,72 @@
         $start-from: 17px,
         $top-position: 25%,
         $apartments-size: 8,
-        $apartment8-width: 70px)
+        $apartment8-width: 65px)
     }
   }
 
   &.c {
     @include apartment-floor-plans($building: "c");
 
-    .apartment {
-      float: left;
+    &.floor-1 {
+      @include fill-with-apartments(
+        $container-width: 88px,
+        $container-height: 180px,
+        $start-from: 12px,
+        $top-position: 2%,
+        $apartments-size: 5,
+        $apartment1-width: 97px)
+    }
+
+    &.floor-2 {
+      @include fill-with-apartments(
+        $container-width: 88px,
+        $container-height: 90px,
+        $start-from: 12px,
+        $top-position: 2%,
+        $apartments-size: 5,
+        $apartment1-width: 99px);
+
+      // second row, manual styling
+      .apartment:nth-child(6) {
+        right: 12px;
+        top: 45%;
+        width: 99px;
+      }
+
+      .apartment:nth-child(7) {
+        right: 12px + 99px;
+        top: 45%;
+        width: 88px;
+      }
+
+      .apartment:nth-child(8) {
+        right: 12px + 99px + 88px;
+        top: 45%;
+        width: 88px;
+      }
+
+      .apartment:nth-child(9) {
+        right: 12px + 99px + 88px + 88px;
+        top: 45%;
+        width: 88px;
+      }
+
+      .apartment:nth-child(10) {
+        right: 12px + 99px + 88px + 88px + 88px;
+        top: 45%;
+        width: 88px;
+      }
+    }
+
+    &.floor-3 {
+      @include fill-with-apartments(
+        $container-width: 89px,
+        $container-height: 180px,
+        $start-from: 28px,
+        $top-position: 2%,
+        $apartments-size: 5,
+        $apartment1-width: 97px)
     }
   }
 

@@ -63,9 +63,7 @@
     @import "apartments/parameters_page";
   }
 
-  &.__item-page {
-    @import "apartments/item_page";
-  }
+  @import "apartments/show_page";
 
   @import "apartments/price_list_page";
 }

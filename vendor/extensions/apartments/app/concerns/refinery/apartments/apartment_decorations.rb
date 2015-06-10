@@ -23,13 +23,11 @@ module Refinery
         apartment_area
       end
 
-      private
-
-        def floors_array
-          array = []
-          total_floors.times { |n| array << floor + n }
-          array
-        end
+      def floors_array
+        array = []
+        total_floors.times { |n| array << floor + n }
+        array
+      end
     end
   end
 end

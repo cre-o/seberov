@@ -151,6 +151,7 @@ en:
     vestibule_area: 'vestibule area'
     corridor_area: 'corridor area'
     wc_area: 'wc area'
+    kitchen_area: 'kitchen area'
     chamber_area: 'chamber area'
     bathroom_area: 'bathroom area'
     staircase_area: 'staircase area'
@@ -200,6 +201,8 @@ en:
     square: 'm2'
 
   refinery:
+    admin:
+      apartment_floor_data: 'Floors'
     apartments:
       by_planning: 'by planning'
       by_parameters: 'by parameters'

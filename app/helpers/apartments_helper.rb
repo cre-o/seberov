@@ -31,4 +31,16 @@ module ApartmentsHelper
   def blocks
     Refinery::Apartments::Apartment::BLOCKS
   end
+
+  def floors_map_image(apartment)
+    if @apartment.block == 'c' && @apartment.floor == 1
+      image_tag 'apartments/show/1,05-f.jpg'
+    elsif @apartment.floor == 1
+      image_tag 'apartments/show/1,2-f.jpg'
+    elsif @apartment.floor == 2 && @apartment.total_floors == 2
+      image_tag 'apartments/show/2,3-f.jpg'
+    else
+       image_tag 'apartments/show/3-f.jpg'
+    end
+  end
 end

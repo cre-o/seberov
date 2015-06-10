@@ -1,0 +1,11 @@
+.b-preview
+  .row.collapse.b-models
+    - @apartment.apartment_floors.each do |fl|
+      .small-4.columns
+        = link_to asset_url("apartments/show/models/#{@apartment.unit_id.downcase}-#{fl.floor_number}fl.jpg"), class: 'fancybox plan' do
+          = image_tag "apartments/show/models/#{@apartment.unit_id.downcase}-#{fl.floor_number}fl-s.jpg"
+
+  .row.collapse.b-plans
+    .small-4.columns
+      = link_to asset_url("apartments/show/plans/#{@apartment.unit_id.downcase}.jpg"), class: 'fancybox plan' do
+        = image_tag "apartments/show/plans/#{@apartment.unit_id.downcase}-s.jpg"

@@ -77,6 +77,7 @@
 
 @mixin fill-with-apartments(
   $container-width: 75px,
+  $container-height: 110px,
   $start-from: 0px,
   $top-position: 25%,
   // apartment_ids on map
@@ -123,7 +124,7 @@
   }
 
   .apartment {
-    height: 110px;
+    height: $container-height;
     top: $top-position;
   }
 
@@ -131,6 +132,7 @@
     .apartment:nth-child(#{$i}) {
       right: $start-from;
       width: $container-width;
+
       @if $i == 1 {
         right: $start-from;
         width: $apartment1-width;
@@ -166,85 +168,6 @@
       }
     }
   }
-
-
-  // @if $apartment1 != false {
-  //   .apartment[data-unit-id*="#{$apartment1}"] {
-  //     right: $start-from;
-  //     width: $container-width;
-  //     @if $apartment1-width != false {
-  //       width: $apartment1-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment2 != false {
-  //   .apartment[data-unit-id*="#{$apartment2}"] {
-  //     right: $start-from + $container-width;
-  //     width: $container-width;
-  //     @if $apartment2-width != false {
-  //       right: $start-from + $apartment2-width;
-  //       width: $apartment2-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment3 != false {
-  //   .apartment[data-unit-id*="#{$apartment3}"] {
-  //     right: $start-from + ($container-width * 2);
-  //     width: $container-width;
-  //     @if $apartment3-width != false {
-  //       right: $start-from + ($apartment3-width * 2);
-  //       width: $apartment3-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment4 != false {
-  //   .apartment[data-unit-id*="#{$apartment4}"] {
-  //     right: $start-from + ($container-width * 3);
-  //     width: $container-width;
-  //     @if $apartment3-width != false {
-  //       right: $start-from + ($apartment3-width * 3);
-  //     }
-  //     @if $apartment4-width != false {
-  //       width: $apartment4-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment5 != false {
-  //   .apartment[data-unit-id*="#{$apartment5}"] {
-  //     right: $start-from + ($container-width * 4);
-  //     width: $container-width;
-  //     @if $apartment5-width != false {
-  //       right: $start-from + ($apartment5-width * 4);
-  //       width: $apartment5-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment6 != false {
-  //   .apartment[data-unit-id*="#{$apartment6}"] {
-  //     right: $start-from + ($container-width * 5);
-  //     width: $container-width;
-  //     @if $apartment6-width != false {
-  //       right: $start-from + ($apartment4-width * 5);
-  //       width: $apartment6-width;
-  //     }
-  //   }
-  // }
-
-  // @if $apartment7 != false {
-  //   .apartment[data-unit-id*="#{$apartment7}"] {
-  //     right: $start-from + ($container-width * 6);
-  //     width: $container-width;
-  //     @if $apartment7-width != false {
-  //       right: $start-from + ($apartment4-width * 6);
-  //       width: $apartment7-width;
-  //     }
-  //   }
-  // }
 }
 
 @mixin reset-all {

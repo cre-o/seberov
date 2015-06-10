@@ -1,13 +1,12 @@
-#l-apartments.__item-page
+#l-apartments.__show-page
   .row
     .small-12.columns
       fieldset
         legend = breadcrumbs(@apartment)
-        .row.b-preview
-          .small-5.columns.text-right
-            = image_tag 'apartments/show/default-model'
-          .small-5.columns
-            = image_tag 'apartments/show/default-model'
+        - if @apartment.total_floors == 1
+          = render partial: 'one_room_apartment'
+        - else
+          = render partial: 'two_and_more_rooms_apartment'
 
         .row.b-parameters
           .small-6.columns.__maps
@@ -21,13 +20,9 @@
 
               .small-4.columns.end
                 #floors-map
-                  = image_tag 'apartments/floors-map.png'
+                  = floors_map_image(@apartment)
 
-                  div#f-1 class=(@apartment.floor == 1 ? 'active' : nil)
-                  div#f-2 class=(@apartment.floor == 2 ? 'active' : nil)
-                  div#f-3 class=(@apartment.floor == 3 ? 'active' : nil)
-
-                  .text-center floor #{@apartment.floor}
+                  .text-center floor #{@apartment.floors_array.join('+')}
 
           .small-6.columns.__numbers
             ul.small-block-grid-2
@@ -61,38 +56,53 @@
 
                 .content
                   h1
-                    |Cena včetně DPH:
-                    strong #{@apartment.price} Kč
+                    | Cena včetně DPH:
+                    strong #{@apartment.price}
                 .footer.text-center
-                  span +парковочное место в подземном гараже: 260 000 Kč
-                  br
+                  span
+                    ' +парковочное место в подземном гараже:
+                    b 260 000 Kč
                   a href="#" показать схему парковки
 
             // Apartment floors data
             - if @apartment.apartment_floors.any?
               ul.small-block-grid-2
                 - @apartment.apartment_floors.each do |fl|
-                  li
-                    span = t 'vestibule_area' , scope: 'forms'
-                    strong = fl.vestibule_area
-                  li
-                    span = t 'corridor_area', scope: 'forms'
-                    strong = fl.corridor_area
-                  li
-                    span = t 'wc_area', scope: 'forms'
-                    strong = fl.wc_area
-                  li
-                    span = t 'kitchen_area', scope: 'forms'
-                    strong = fl.kitchen_area
-                  li
-                    span = t 'chamber1_area', scope: 'forms'
-                    strong = fl.chamber1_area
-                  li
-                    span = t 'bathroom_area', scope: 'forms'
-                    strong = fl.bathroom_area
-                  li
-                    span = t 'staircase_area', scope: 'forms'
-                    strong = fl.staircase_area
+
+                  - if fl.vestibule_area.present?
+                    li
+                      span = t 'vestibule_area' , scope: 'forms'
+                      strong = fl.vestibule_area
+
+                  - if fl.corridor_area.present?
+                    li
+                      span = t 'corridor_area', scope: 'forms'
+                      strong = fl.corridor_area
+
+                  - if fl.wc_area.present?
+                    li
+                      span = t 'wc_area', scope: 'forms'
+                      strong = fl.wc_area
+
+                  - if fl.kitchen_area.present?
+                    li
+                      span = t 'kitchen_area', scope: 'forms'
+                      strong = fl.kitchen_area
+
+                  - if fl.chamber1_area.present?
+                    li
+                      span = t 'chamber_area', scope: 'forms'
+                      strong = fl.chamber1_area
+
+                  - if fl.bathroom_area.present?
+                    li
+                      span = t 'bathroom_area', scope: 'forms'
+                      strong = fl.bathroom_area
+
+                  - if fl.staircase_area.present?
+                    li
+                      span = t 'staircase_area', scope: 'forms'
+                      strong = fl.staircase_area
 
                   - if fl.cloakroom1_area.present?
                     li
@@ -143,7 +153,7 @@
             = form_tag '', class: 'content' do |f|
               .row
                 .small-3.columns
-                  = text_field_tag 'xname', '', autofocus: 'false', placeholder: t('forms.your_name'), required: true
+                  = text_field_tag 'name', '', placeholder: t('forms.your_name'), required: true, focus: false
                 .small-3.columns
                   = phone_field_tag 'phone', '', placeholder: t('forms.phone_number'), required: true
                 .small-3.columns

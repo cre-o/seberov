@@ -33,7 +33,7 @@ footer
 
             .row
               .small-8.small-centered.columns
-                = form_tag refinery.callback_path do
+                = form_tag '/callback' do
                   .small-4.columns
                     = text_field_tag 'name', '', placeholder: t('forms.name'), required: true
                   .small-4.columns
@@ -41,7 +41,7 @@ footer
                   .small-4.columns
                     = submit_tag t('forms.send')
 
-              a.close-reveal-modal aria-label="Close"  ×
+              a.close-reveal-modal aria-label="Close"
 
         = raw refinery_get_page(id: 'footer').content_for(:contact_last)
 

@@ -1,6 +1,5 @@
 &.__show-page {
 
-
   fieldset {
     border: 2px solid $grey-borders;
     padding: rem-calc(25 90);
@@ -317,5 +316,30 @@
     @extend .b-download-pdf;
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+
+// Modal window
+@at-root #thankYouModal {
+  h2 {
+    font-size: rem(52);
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: rem(75);
+  }
+
+  h4 {
+    font-family: $bold-font;
+    color: #666666;
+    font-size: rem(25.13);
+    font-weight: bold;
+  }
+
+  h5 {
+    color: #989898;
+    font-family: $bold-font;
+    font-size: rem(25.13);
+    font-weight: bold;
+    margin-bottom: rem(40);
   }
 }

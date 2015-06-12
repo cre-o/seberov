@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+  body
+    p
+      ' User with name: #{@params[:name]}
+      br
+      ' With phone number: #{@params[:phone]}
+      br
+      ' And email address: #{@params[:email]}
+      br
+      ' Wants to view apartment with unit id: ~> #{@params[:unit_id]} <~

@@ -1,4 +1,4 @@
-#l-apartments.__show-page
+#l-apartments.__show-page ng-controller="ApartmentsController"
   .row
     .small-12.columns
       fieldset
@@ -27,41 +27,42 @@
           .small-6.columns.__numbers
             ul.small-block-grid-2
               li
-                span block:
+                span = t('block' , scope: 'forms')+':'
                 strong = @apartment.block
               li
-                span unit:
+                span = t('unit_id' , scope: 'forms')+':'
                 strong = @apartment.unit_id
               li
-                span floor:
+                span = t('floor' , scope: 'forms')+':'
                 strong = @apartment.floor
               li
-                span total floors:
+                span = t('total_floors' , scope: 'forms')+':'
                 strong = @apartment.total_floors
               li
-                span layout:
+                span = t('layout' , scope: 'forms')+':'
                 strong = @apartment.layout
               li
-                span apartment area:
+                span = t('apartment_area' , scope: 'forms')+':'
                 strong = @apartment.apartment_area
 
             .b-calculator
               .wrap
                 .header
-                  h4 count mortgage payment
+                  h4 = t('calculator.count_payment' , scope: 'apartment_page')+':'
                   .selectors.upcase
-                    a.active href="#" czk
-                    a href="#" eur
-                    a href="#" usd
+                    a ng-class="{ active: calculator.currency == 'czk' }" ng-click="calculator.setCurrency('czk')" czk
+                    a ng-class="{ active: calculator.currency == 'eur' }" ng-click="calculator.setCurrency('eur')" eur
+                    a ng-class="{ active: calculator.currency == 'usd' }" ng-click="calculator.setCurrency('usd')" usd
 
                 .content
                   h1
-                    | Cena včetně DPH:
-                    strong #{@apartment.price}
+                    = t('calculator.price_with_dph' , scope: 'apartment_page')+':'
+                    strong ng-init="calculator.basePrice = #{@apartment.object.price}; calculator.price = calculator.basePrice"  {{calculator.decoratedPrice()}}
+
                 .footer.text-center
                   span
-                    ' +парковочное место в подземном гараже:
-                    b 260 000 Kč
+                    ' #{t('calculator.parking_slot_price' , scope: 'apartment_page')+':'}
+                    b #{Settings.prices.parking_slot} Kč
                   a href="#" показать схему парковки
 
             // Apartment floors data
@@ -116,27 +117,27 @@
 
                   - if fl.room1_area.present?
                     li
-                      span = t 'room_area', scope: 'forms'
+                      span = t 'room_area', number: 1, scope: 'forms'
                       strong = fl.room1_area
 
                   - if fl.room2_area.present?
                     li
-                      span = t 'room_area', scope: 'forms'
+                      span = t 'room_area', number: 2, scope: 'forms'
                       strong = fl.room2_area
 
                   - if fl.room3_area.present?
                     li
-                      span = t 'room_area', scope: 'forms'
+                      span = t 'room_area', number: 3, scope: 'forms'
                       strong = fl.room3_area
 
                   - if fl.room4_area.present?
                     li
-                      span = t 'room_area', scope: 'forms'
+                      span = t 'room_area', number: 4, scope: 'forms'
                       strong = fl.room4_area
 
                   - if fl.room5_area.present?
                     li
-                      span = t 'room_area', scope: 'forms'
+                      span = t 'room_area', number: 5, scope: 'forms'
                       strong = fl.room5_area
 
                   - if fl.gallery_area.present?
@@ -150,8 +151,9 @@
               h5 = t 'sign_up_to_see', scope: 'apartment_page'
               .subheader = t 'sign_up_to_see_advice', scope: 'apartment_page'
             //@TODO RealForm
-            = form_tag '', class: 'content' do |f|
+            = form_tag refinery.application_apartments_apartments_path, remote: true, id: 'application-form' do
               .row
+                = hidden_field_tag 'unit_id', @apartment.unit_id
                 .small-3.columns
                   = text_field_tag 'name', '', placeholder: t('forms.your_name'), required: true, focus: false
                 .small-3.columns
@@ -160,6 +162,22 @@
                   = email_field_tag 'email', '', placeholder: t('forms.email'), required: true
                 .small-3.columns
                   = button_tag t('forms.send'), type: 'submit'
+
+              .alert-box.errors.alert.hide data-alert=""
+                a.close href="#" &times;
+
+
+            // Apartment aplication modal window
+            #thankYouModal.js-thankYouModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
+              .row
+                .small-12.text-center.columns
+                  header
+                    h2 = t('popups.thank_you')
+                  .content
+                    h4 = t('popups.request_accepted')
+                    h5 = t('popups.wait')
+
+                a.close-reveal-modal aria-label="Close"
 
         .b-download-pdf
           //@TODO Real URL

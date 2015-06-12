@@ -5,7 +5,7 @@
   fieldset {
     border: 2px solid $grey-borders;
     padding: rem_calc(25) rem_calc(30);
-    padding-bottom: 0;
+    padding-bottom: 25px;
 
     legend {
       color: $green;
@@ -17,7 +17,7 @@
 
   .angular-google-map-container {
     // <-- Media queries
-    height: 400px;
+
   }
 
   .b-map {

@@ -4,6 +4,11 @@ class ApplicationMailer < ActionMailer::Base
 
   def callback(params)
     @params = params
-    mail(to: Settings.emails.callback_to, subject: 'CallBack request from Seberov website')
+    mail to: Settings.emails.callback_to, subject: I18n::t('mailers.callback_subject')
+  end
+
+  def application(params)
+    @params = params
+    mail to: Settings.emails.callback_to, subject: I18n::t('mailers.application_subject')
   end
 end

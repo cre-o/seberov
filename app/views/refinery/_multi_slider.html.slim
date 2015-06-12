@@ -58,7 +58,7 @@
         - unless defined?(exclude_parts) && exclude_parts.include?(:webcam)
           div ng-if="app.isCurrentScreen(4)"
             .webcam.text-center.js-multi-slider
-              img src="http://151.249.106.49/images/logo.gif" ng-src="{{webcamSrc}}"
+              img ng-src="{{webcamSrc}}"
 
 
   /! Buttons

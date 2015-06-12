@@ -102,14 +102,14 @@
             .small-2.right.columns.total
           .row.collapse.items
             .small-12.columns
-              - @apartments.object.each do |apartment|
+              - @apartments.each do |apartment|
                 .row.item
-                  .small-4.columns
+                  .small-3.columns
                     .id
                       = apartment.unit_id
                     .clear
                     = image_fu apartment.photo, '220x220'
-                  .small-5.columns
+                  .small-6.columns
                     ul.attributes.small-block-grid-2
                       li
                         ' layout:

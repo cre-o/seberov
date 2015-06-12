@@ -21,4 +21,13 @@
     font-weight: bold;
     color: #979797;
   }
+
+  .close-reveal-modal {
+    content: "";
+    background-image: image-url('cross.png');
+    width: 54px;
+    height: 54px;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }

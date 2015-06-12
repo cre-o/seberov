@@ -1,5 +1,44 @@
-angular.module('seberov').controller 'ApartmentsController', ($scope, $document) ->
+angular.module('seberov').controller 'ApartmentsController', ($scope, $document, $http) ->
+  calculator = {}
+  calculator.defaultCurrency = 'czk'
+  calculator.currencies = ['czk', 'usd', 'eur']
+  calculator.priceSigns = {
+    eur: '€'
+    czk: 'KČ'
+    usd: '$'
+  }
+  calculator.currency = calculator.defaultCurrency
+  calculator.basePrice = 0
+  calculator.price = calculator.basePrice
+  calculator.exchangeUrl = "http://api.fixer.io/latest?base=CZK"
 
+  # Caching feature limits requests
+  cached = {}
+  cached['usdRates'] = null
+  cached['eurRates'] = null
+
+  calculator.decoratedPrice = ->
+    "#{calculator.price} #{calculator.priceSigns[calculator.currency]}"
+
+  calculator.setCurrency = (currency) ->
+    calculator.currency = currency
+    calculator.calculate()
+
+  calculator.calculate = ->
+    if calculator.currency == 'czk'
+      calculator.price = calculator.basePrice
+    else
+      if cached["#{calculator.currency}Rates"] != null
+        calculator.price = Math.round(calculator.basePrice * cached["#{calculator.currency}Rates"])
+      else
+        $http.get(calculator.exchangeUrl).success (data) ->
+          rates = data.rates[calculator.currency.toUpperCase()]
+          # Caching
+          cached["#{calculator.currency}Rates"] = rates
+
+          calculator.price = Math.round(calculator.basePrice * rates)
+
+  $scope.calculator = calculator
   return $scope
 
 angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, $document, $sce, $timeout) ->

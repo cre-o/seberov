@@ -3,6 +3,9 @@ en:
   defaults:
     currency_sign: 'KČ'
     square_sign: 'm2'
+    usd: 'usd'
+    eur: 'eur'
+    czk: 'czk'
 
   all_pages:
     language_menu:
@@ -121,12 +124,18 @@ en:
     sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
     sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
     download_pdf: 'DOWNLOAD PDF'
+    calculator:
+      count_payment: 'count mortgage payment'
+      price_with_dph: 'Cena včetně DPH'
+      parking_slot_price: '+парковочное место в подземном гараже'
+      show_parking_plan: 'показать схему парковки'
 
   forms:
     apartment_area: 'area'
     area: 'area'
     unit_id: 'unit id'
     building: 'building'
+    block: 'block'
     layout: 'layout'
     name: 'name'
     phone: 'phone'
@@ -144,6 +153,7 @@ en:
     penthouse: 'penthouse'
     grounds: 'grounds'
     results: 'results'
+    total_floors: 'total floors'
     send: 'отправить'
     your_name: 'your name'
     phone_number: 'phone number'
@@ -156,7 +166,7 @@ en:
     bathroom_area: 'bathroom area'
     staircase_area: 'staircase area'
     cloakroom_area: 'cloakroom area'
-    room_area: 'staircase area'
+    room_area: "room %{number} area"
     gallery_area: 'gallery area'
     callback:
       header: 'Оставьте свой номер телефона'
@@ -166,6 +176,7 @@ en:
   controller:
     callback_mail_send: 'Мы скоро с вами свяжемся!'
     callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
+    application_mail_send_error: 'Возникла ошибка при отправке письма просмотра апартаментов'
 
   multi_slider:
     exterior_button_text_html: 'Визуализация'
@@ -210,3 +221,12 @@ en:
 
   price_list:
     tel: 'tel: %{number}'
+
+  popups:
+    thank_you: 'Спасибо!'
+    request_accepted: 'ВАША ЗАЯВКА ПРИНЯТА.'
+    wait: 'НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШИЕ 24 ЧАСА.'
+
+  mailers:
+    callback_subject: 'CallBack request from statekseberov website'
+    application_subject: 'Apartment application request from statekseberov website'

@@ -1,7 +1,11 @@
+prices:
+  parking_slot: 260 000
 phones:
   default: &default_phone +420 603 933 909
   default_long: *default_phone
   default_short: '603 933 909'
   default_short_dashed: '603-933-909'
+jsonrates:
+  key: 'jr-504158a65a364913344b334d80012682'
 google_api:
   maps_key: 'AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs'

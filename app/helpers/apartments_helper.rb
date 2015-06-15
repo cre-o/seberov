@@ -55,7 +55,9 @@ module ApartmentsHelper
   end
 
   def get_plan_path(apartment, apartment_floor, size = 'full')
-    get_model_path(apartment, apartment_floor, size).gsub! 'models', 'plans'
+    floor = get_floor_number(apartment, apartment_floor)
+    size = size == 'full' ? '' : "-#{size}"
+    asset_url("apartments/show/plans/#{apartment.unit_id.downcase}-#{floor}fl#{size}.jpg")
   end
 
   def t_floor_number(number)

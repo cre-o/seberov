@@ -14,12 +14,11 @@
 #= require jquery
 #= require jquery_ujs
 #= require lodash
-#= require lazyloader
+#= require lazyload
 #= require jquery.nouislider.all.min
 #= require js-routes
 #= require foundation-init
 #= require angular
-#= require angular-translate
 #= require angular-scroll
 #= require angular-google-maps
 #= require angular/application
@@ -31,5 +30,7 @@
 jQuery ->
   # Founation init
   $(document).foundation()
+  # Lazy load images (not load before user can see it)
+  $('img').lazyload()
   # Fancybox init
   $('a.fancybox').fancybox()

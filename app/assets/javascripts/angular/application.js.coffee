@@ -1,12 +1,11 @@
 #= require_self
-#= require angular/vendor/angular-translate-loader-static-files
 #= require angular/controllers/application_controller
 #= require angular/controllers/home_controller
 #= require angular/controllers/location_controller
 #= require angular/controllers/apartments_controller
 
 # Initialisation
-angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'pascalprecht.translate'])
+angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
 
 # Configuration
 angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
@@ -14,13 +13,6 @@ angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
     key: gon.global.gmaps_key,
     v: '3.17',
     libraries: 'weather, geometry, visualization'
-
-# Angular I18n module
-# angular.module('seberov').config ($translateProvider) ->
-#   $translateProvider.useStaticFilesLoader
-#     prefix: '/translations/'
-#     suffix: '.json'
-#   $translateProvider.preferredLanguage 'en'
 
 #
 # Info block

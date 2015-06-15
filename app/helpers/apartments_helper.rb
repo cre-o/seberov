@@ -43,4 +43,22 @@ module ApartmentsHelper
        image_tag 'apartments/show/3-f.jpg'
     end
   end
+
+  def get_floor_number(apartment, apartment_floor)
+    (apartment.floor + apartment_floor.floor_number) - 1  # Because we have each floor number that starts from 1
+  end
+
+  def get_model_path(apartment, apartment_floor, size = 'full')
+    floor = get_floor_number(apartment, apartment_floor)
+    size = size == 'full' ? '' : "-#{size}"
+    asset_url("apartments/show/models/#{apartment.unit_id.downcase}-#{floor}fl#{size}.jpg")
+  end
+
+  def get_plan_path(apartment, apartment_floor, size = 'full')
+    get_model_path(apartment, apartment_floor, size).gsub! 'models', 'plans'
+  end
+
+  def t_floor_number(number)
+    t "floor_#{number}", scope: 'apartment_page'
+  end
 end

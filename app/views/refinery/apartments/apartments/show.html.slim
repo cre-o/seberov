@@ -14,15 +14,17 @@
               .small-7.columns
                 #building-map
                   div id=(@apartment.block)
+                    .location class=(@apartment.unit_id.downcase)
+
                   = image_tag 'apartments/building-map.png'
 
-                  .text-center building #{@apartment.block}
+                  .text-center #{t('forms.building')} #{@apartment.block}
 
               .small-4.columns.end
                 #floors-map
                   = floors_map_image(@apartment)
 
-                  .text-center floor #{@apartment.floors_array.join('+')}
+                  .text-center #{t('forms.floor')} #{@apartment.floors_array.join('+')}
 
           .small-6.columns.__numbers
             ul.small-block-grid-2
@@ -48,11 +50,14 @@
             .b-calculator
               .wrap
                 .header
-                  h4 = t('calculator.count_payment' , scope: 'apartment_page')+':'
+                  h4 href="#" data-reveal-id="mortgageCalculator" = t('calculator.count_payment' , scope: 'apartment_page')+':'
                   .selectors.upcase
-                    a ng-class="{ active: calculator.currency == 'czk' }" ng-click="calculator.setCurrency('czk')" czk
-                    a ng-class="{ active: calculator.currency == 'eur' }" ng-click="calculator.setCurrency('eur')" eur
-                    a ng-class="{ active: calculator.currency == 'usd' }" ng-click="calculator.setCurrency('usd')" usd
+                    a ng-class="{ active: calculator.currency == 'czk' }" ng-click="calculator.setCurrency('czk')"
+                      = t 'defaults.czk'
+                    a ng-class="{ active: calculator.currency == 'eur' }" ng-click="calculator.setCurrency('eur')"
+                      = t 'defaults.eur'
+                    a ng-class="{ active: calculator.currency == 'usd' }" ng-click="calculator.setCurrency('usd')"
+                      = t 'defaults.usd'
 
                 .content
                   h1
@@ -64,6 +69,9 @@
                     ' #{t('calculator.parking_slot_price' , scope: 'apartment_page')+':'}
                     b ng-init="parkingPrice = #{Settings.prices.parking_slot}" {{calculator.calculate(parkingPrice)}}
                   a href="#" показать схему парковки
+
+              // Mortgage calculator
+              = render 'mortgage_calculator'
 
             // Apartment floors data
             - if @apartment.apartment_floors.any?

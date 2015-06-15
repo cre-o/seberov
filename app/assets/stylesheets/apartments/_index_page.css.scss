@@ -1,91 +1,93 @@
-.b-building-selectors, .b-apartment-selector {
-  padding: rem_calc(18);
-}
-
-.b-building-selectors {
-
-  h2 {
-    color: $green;
-    font-family: $default_font;
-    font-size: rem_calc(16);
-    font-weight: 800;
+&.__index-page {
+  .b-building-selectors, .b-apartment-selector {
+    padding: rem_calc(18);
   }
 
-  form label {
-    font-size: rem_calc(15);
-    font-weight: bold;
-  }
+  .b-building-selectors {
 
-  .b-active-map {
-
-    .compass {
-      position: absolute;
-      left: -63px;
-      background-image: image-url('apartments/compass.png');
-      width: 80px;
-      height: 80px;
-      top: 50px;
-      z-index: 10;
+    h2 {
+      color: $green;
+      font-family: $default_font;
+      font-size: rem_calc(16);
+      font-weight: 800;
     }
 
-    .interactive-map {
-      position: relative;
+    form label {
+      font-size: rem_calc(15);
+      font-weight: bold;
+    }
 
-      #interactive-map:hover {
-        &:after {
-          content: "";
-          position: absolute;
-          z-index: 999;
-          width: 1000px;
-          height: 1000px;
-          background-color: #000;
-        }
+    .b-active-map {
+
+      .compass {
+        position: absolute;
+        left: -63px;
+        background-image: image-url('apartments/compass.png');
+        width: 80px;
+        height: 80px;
+        top: 50px;
+        z-index: 10;
       }
 
-      #render {
-        position: absolute;
-        display: block;
-        top: 0;
-        height: 499px;
-        width: 499px;
-        z-index: 8;
+      .interactive-map {
+        position: relative;
 
-        @for $i from 1 through 3 {
-          &[data-floor = "#{$i}"] {
-            &[data-building = "a"] {
-              @include active-map($building: "a");
-              @include active-map($floor: $i, $building: "a");
-            }
+        #interactive-map:hover {
+          &:after {
+            content: "";
+            position: absolute;
+            z-index: 999;
+            width: 1000px;
+            height: 1000px;
+            background-color: #000;
+          }
+        }
 
-            &[data-building = "b"] {
-              @include active-map($floor: $i, $building: "b");
-            }
+        #render {
+          position: absolute;
+          display: block;
+          top: 0;
+          height: 499px;
+          width: 499px;
+          z-index: 8;
 
-            &[data-building = "c"] {
-              @include active-map($floor: $i, $building: "c");
-            }
+          @for $i from 1 through 3 {
+            &[data-floor = "#{$i}"] {
+              &[data-building = "a"] {
+                @include active-map($building: "a");
+                @include active-map($floor: $i, $building: "a");
+              }
 
-            &[data-building = "d"] {
-              @include active-map($floor: $i, $building: "d");
+              &[data-building = "b"] {
+                @include active-map($floor: $i, $building: "b");
+              }
+
+              &[data-building = "c"] {
+                @include active-map($floor: $i, $building: "c");
+              }
+
+              &[data-building = "d"] {
+                @include active-map($floor: $i, $building: "d");
+              }
             }
           }
         }
       }
     }
   }
-}
 
-.b-apartment-selector {
-  border-left: 1px solid #a39e9e;
+  .b-apartment-selector {
+    border-left: 1px solid #a39e9e;
 
-  h1 {
-    font-size: rem_calc(20);
-    color: $green;
-    font-weight: 900;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 24px;
+    h1 {
+      font-size: rem_calc(20);
+      color: $green;
+      font-weight: 900;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+
+    @import "apartments/apartments_render";
   }
-
-  @import "apartments/apartments_render";
 }

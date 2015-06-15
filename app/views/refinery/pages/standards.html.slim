@@ -7,21 +7,21 @@
     .small-6.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/1-1-full') do
-            = image_tag 'standards/1-1', width: 440, height: 440
+          = link_to image_url('standards/1-1-full.jpg') do
+            = image_tag 'standards/1-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/1-2-full') do
-            = image_tag 'standards/1-2', width: 440, height: 440
+          = link_to image_url('standards/1-2-full.jpg') do
+            = image_tag 'standards/1-2.jpg', width: 440, height: 440
   /! 2
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/2-1-full') do
-              = image_tag 'standards/2-1', width: 440, height: 440
+          = link_to image_url('standards/2-1-full.jpg') do
+              = image_tag 'standards/2-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/2-2-full') do
-              = image_tag 'standards/2-2', width: 440, height: 440
+          = link_to image_url('standards/2-2-full.jpg') do
+              = image_tag 'standards/2-2.jpg', width: 440, height: 440
 
     .small-6.columns
       = raw @page.content_for(:section2)
@@ -48,35 +48,35 @@
 
     .small-6.columns
       .image-broadcaster
-        img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1')}'" ng-src="{{broadcaster.imageUrl}}"
+        img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1.jpg')}'" ng-src="{{broadcaster.imageUrl}}"
         .controls.small-7
           ol
             li ng-class="{ active: broadcaster.isSet(1) }"
-              a href="" ng-click="broadcaster.setImage(1, '#{image_url('standards/3-1')}')" 1
+              a href="" ng-click="broadcaster.setImage(1, '#{image_url('standards/3-1.jpg')}')" 1
               .title.ng-hide ng-show="broadcaster.isSet(1)"
                 = t('standards_page.image_broadcaster')[0]
             li ng-class="{ active: broadcaster.isSet(2) }"
-              a href="" ng-click="broadcaster.setImage(2, '#{image_url('standards/3-2')}')" 2
+              a href="" ng-click="broadcaster.setImage(2, '#{image_url('standards/3-2.jpg')}')" 2
               .title.ng-hidden ng-show="broadcaster.isSet(2)"
                 = t('standards_page.image_broadcaster')[1]
             li ng-class="{ active: broadcaster.isSet(3) }"
-              a href="" ng-click="broadcaster.setImage(3, '#{image_url('standards/3-3')}')" 3
+              a href="" ng-click="broadcaster.setImage(3, '#{image_url('standards/3-3.jpg')}')" 3
               .title.ng-hidden ng-show="broadcaster.isSet(3)"
                 = t('standards_page.image_broadcaster')[2]
             li ng-class="{ active: broadcaster.isSet(4) }"
-              a href="" ng-click="broadcaster.setImage(4, '#{image_url('standards/3-4')}')" 4
+              a href="" ng-click="broadcaster.setImage(4, '#{image_url('standards/3-4.jpg')}')" 4
               .title.ng-hidden ng-show="broadcaster.isSet(4)"
                 = t('standards_page.image_broadcaster')[3]
             li ng-class="{ active: broadcaster.isSet(5) }"
-              a href="" ng-click="broadcaster.setImage(5, '#{image_url('standards/3-5')}')" 5
+              a href="" ng-click="broadcaster.setImage(5, '#{image_url('standards/3-5.jpg')}')" 5
               .title.ng-hidden ng-show="broadcaster.isSet(5)"
                 = t('standards_page.image_broadcaster')[4]
             li ng-class="{ active: broadcaster.isSet(6) }"
-              a href="" ng-click="broadcaster.setImage(6, '#{image_url('standards/3-6')}')" 6
+              a href="" ng-click="broadcaster.setImage(6, '#{image_url('standards/3-6.jpg')}')" 6
               .title.ng-hidden ng-show="broadcaster.isSet(6)"
                 = t('standards_page.image_broadcaster')[5]
             li ng-class="{ active: broadcaster.isSet(7) }"
-              a href="" ng-click="broadcaster.setImage(7, '#{image_url('standards/3-7')}')" 7
+              a href="" ng-click="broadcaster.setImage(7, '#{image_url('standards/3-7.jpg')}')" 7
               .title.ng-hidden ng-show="broadcaster.isSet(7)"
                 = t('standards_page.image_broadcaster')[6]
   /! 4
@@ -84,11 +84,11 @@
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/4-1-full') do
-            = image_tag 'standards/4-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/4-1-full.jpg') do
+            = image_tag 'standards/4-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/4-2-full') do
-            = image_tag 'standards/4-2', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/4-2-full.jpg') do
+            = image_tag 'standards/4-2.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section4)
@@ -101,18 +101,18 @@
     .small-6.columns.images
       ul. data-clearing=""
         li
-          = link_to image_url('standards/5-1-full') do
-            = image_tag 'standards/5-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/5-1-full.jpg') do
+            = image_tag 'standards/5-1.jpg', width: 440, height: 440, lazy: true
   /! 6
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/6-1-full') do
-            = image_tag 'standards/6-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/6-1-full.jpg') do
+            = image_tag 'standards/6-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/6-2-full') do
-            = image_tag 'standards/6-2', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/6-2-full.jpg') do
+            = image_tag 'standards/6-2.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section6)
@@ -125,21 +125,21 @@
     .small-5.columns
       ul.small-block-grid-2 data-clearing=""
           li
-            = link_to image_url('standards/7-1-full') do
-              = image_tag 'standards/7-1', width: 440, height: 440, lazy: true
+            = link_to image_url('standards/7-1-full.jpg') do
+              = image_tag 'standards/7-1.jpg', width: 440, height: 440, lazy: true
           li
-            = link_to image_url('standards/7-2-full') do
-              = image_tag 'standards/7-2', width: 440, height: 440, lazy: true
+            = link_to image_url('standards/7-2-full.jpg') do
+              = image_tag 'standards/7-2.jpg', width: 440, height: 440, lazy: true
           li
-            = link_to image_url('standards/7-3-full') do
-              = image_tag 'standards/7-3', width: 440, height: 440, lazy: true
+            = link_to image_url('standards/7-3-full.jpg') do
+              = image_tag 'standards/7-3.jpg', width: 440, height: 440, lazy: true
   /! 8
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/8-1-full') do
-            = image_tag 'standards/8-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/8-1-full.jpg') do
+            = image_tag 'standards/8-1.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section8)
@@ -152,25 +152,25 @@
     .small-6.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/9-1-full') do
-            = image_tag 'standards/9-1', width: 440, height: 440
+          = link_to image_url('standards/9-1-full.jpg') do
+            = image_tag 'standards/9-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/9-2-full') do
-            = image_tag 'standards/9-2', width: 440, height: 440
+          = link_to image_url('standards/9-2-full.jpg') do
+            = image_tag 'standards/9-2.jpg', width: 440, height: 440
 
   /! 10
   .row
     .small-5.columns.images
       ul.small-block-grid-2 data-clearing=""
         li
-          = link_to image_url('standards/10-1-full') do
-            = image_tag 'standards/10-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/10-1-full.jpg') do
+            = image_tag 'standards/10-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/10-2-full') do
-            = image_tag 'standards/10-2', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/10-2-full.jpg') do
+            = image_tag 'standards/10-2.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/10-3-full') do
-            = image_tag 'standards/10-3', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/10-3-full.jpg') do
+            = image_tag 'standards/10-3.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section10)
@@ -181,22 +181,22 @@
       = raw @page.content_for(:section11)
 
     .small-6.columns.images
-      = link_to image_url('standards/11-1-full') do
-            = image_tag 'standards/11-1', width: 440, height: 440, lazy: true
+      = link_to image_url('standards/11-1-full.jpg') do
+            = image_tag 'standards/11-1.jpg', width: 440, height: 440, lazy: true
 
   /! 12
   .row.last
     .small-6.columns.images
       ul.small-block-grid-3 data-clearing=""
         li
-          = link_to image_url('standards/12-1-full') do
-            = image_tag 'standards/12-1', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/12-1-full.jpg') do
+            = image_tag 'standards/12-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/11-2-full') do
-            = image_tag 'standards/12-2', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/11-2-full.jpg') do
+            = image_tag 'standards/12-2.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/11-3-full') do
-            = image_tag 'standards/12-3', width: 440, height: 440, lazy: true
+          = link_to image_url('standards/11-3-full.jpg') do
+            = image_tag 'standards/12-3.jpg', width: 440, height: 440, lazy: true
 
     .small-5.columns
       = raw @page.content_for(:section12)

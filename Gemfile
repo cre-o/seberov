@@ -39,7 +39,7 @@ gem 'foundation-rails'
 # CSS Mixins
 gem 'bourbon'
 # Javascript features
-gem 'angularjs-rails'
+gem 'angularjs-rails', '~> 1.3.15'
 gem 'lodash-rails' # javascript features
 gem 'gon' # passing variables into JS
 # Images lazy loading
@@ -60,9 +60,6 @@ gem 'globalize', '~> 5.0.0'
 
 # Use Unicorn as the app server
 gem 'unicorn'
-
-# Translations
-gem 'angular-translate-rails', '~> 2.6.0'
 
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development

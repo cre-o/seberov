@@ -1,5 +1,3 @@
-#= require unveil
-
 (($) ->
   $.fn.lazyInterchange = ->
     selectors = @each(->

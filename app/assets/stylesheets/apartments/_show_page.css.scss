@@ -15,22 +15,48 @@
     &:before {
       content: '';
       position: absolute;
-      background: image-url('apartments/compass-for-center.jpg');
-      width: 78px;
-      height: 54px;
+      background: image-url('apartments/show/compass.png');
+      width: 80px;
+      height: 80px;
       left: 0;
-      top: 0;
+      top: -12px;
       right: 0;
       margin-left: auto;
       margin-right: auto;
     }
 
     .b-preview {
-      padding-bottom: 30px;
+      margin-top: rem(30);
+      padding-bottom: rem(30);
+
+      .floor-n {
+        text-align: center;
+        font-size: rem(15);
+        color: $grey;
+        text-transform: uppercase;
+        margin-bottom: rem(20);
+      }
+
+      .row {
+        margin-bottom: rem(30);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       .fancybox {
         display: inline-block;
         position: relative;
+
+        &:after {
+          background-image: image-url('apartments/show/zoom.png');
+          content: "";
+          position: absolute;
+          width: 54px;
+          height: 54px;
+          left: -80px;
+          top: 20px;
+        }
 
         &.plan {
           &:after { bottom: 0; }
@@ -39,19 +65,6 @@
         &.model {
           &:after { top: 0; }
         }
-
-        &:after {
-          background-image: image-url('apartments/show/zoom.png');
-          content: "";
-          position: absolute;
-          width: 54px;
-          height: 54px;
-          right: 10px;
-        }
-      }
-
-      .b-plans {
-        margin-top: 40px;
       }
     }
 
@@ -63,12 +76,12 @@
   }
 
   .__maps {
-    padding-top: 45px;
+    padding-top: rem(45);
   }
 
   #building-map {
     position: relative;
-    width: 193px;
+    width: rem(193);
     height: auto;
 
     #a, #b, #c, #d {
@@ -104,24 +117,28 @@
       right: 29px;
     }
 
+    .location {
+      background-color: #c9e1d8;
+    }
+
     .text-center {
       font-family: 'Open Sans', sans-serif;
-      margin-top: 25px;
+      margin-top: rem(25);
       font-size: rem_calc(16);
       color: #4e4e4e;
     }
   }
 
   #floors-map {
-    width: 140px;
+    width: rem(140);
     height: auto;
     position: relative;
-    margin-top: 5px;
+    margin-top: rem(5);
 
     .text-center {
       font-family: 'Open Sans', sans-serif;
-      margin-top: 25px;
-      font-size: rem_calc(16);
+      margin-top: rem(25);
+      font-size: rem(16);
       color: #4e4e4e;
     }
   }
@@ -175,6 +192,7 @@
       top: -13px;
 
       h4 {
+        cursor: pointer;
         font-family: 'Open Sans', sans-serif;
         color: $green;
         font-weight: bold;
@@ -263,6 +281,11 @@
 
   .b-apartment-application {
     @include custom-row-gutter(10, 10, 15, 20, true);
+    margin: 0;
+
+    div:first-child {
+      padding: 0;
+    }
 
     .header {
       h5 {
@@ -273,9 +296,18 @@
 
       .subheader {
         font-size: rem_calc(16);
-        font-weight: 800;
-        color: $grey;
+        font-weight: 600;
+        color: $dark-grey;
         font-style: italic;
+      }
+    }
+
+    form {
+      .row {
+        margin: 0;
+      }
+      .columns {
+        padding-left: 0 !important;
       }
     }
   }
@@ -343,3 +375,5 @@
     margin-bottom: rem(40);
   }
 }
+
+@import "apartments/mortgage_calculator";

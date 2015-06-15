@@ -102,7 +102,7 @@
             .small-2.right.columns.total
           .row.collapse.items ng-init="a.records = #{@apartments_json}"
             .small-12.columns
-              .row.item ng-repeat="apartment in a.records | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter |filter:groundsFliter"
+              .row.item ng-repeat="apartment in a.records | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter | filter:groundsFliter"
                 .small-3.columns
                   .id
                     | {{apartment.unit_id}}

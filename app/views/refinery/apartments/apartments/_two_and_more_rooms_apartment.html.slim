@@ -1,11 +1,12 @@
-.b-preview
-  .row.collapse.b-models
+.row.collapse.b-preview
+  .small-12.columns
     - @apartment.apartment_floors.each do |fl|
-      .small-4.columns
-        = link_to asset_url("apartments/show/models/#{@apartment.unit_id.downcase}-#{fl.floor_number}fl.jpg"), class: 'fancybox plan' do
-          = image_tag "apartments/show/models/#{@apartment.unit_id.downcase}-#{fl.floor_number}fl-s.jpg"
+      .row.collapse
+        .small-5.columns.small-offset-1.b-models
+          //.floor-n = t_floor_number get_floor_number(@apartment, fl)
+          = link_to get_model_path(@apartment, fl),class: 'fancybox model' do
+            = image_tag get_model_path(@apartment, fl, 's')
 
-  .row.collapse.b-plans
-    .small-4.columns
-      = link_to asset_url("apartments/show/plans/#{@apartment.unit_id.downcase}.jpg"), class: 'fancybox plan' do
-        = image_tag "apartments/show/plans/#{@apartment.unit_id.downcase}-s.jpg"
+        .small-4.columns.b-plans
+          = link_to get_plan_path(@apartment, fl),class: 'fancybox plan' do
+            = image_tag get_plan_path(@apartment, fl, 's')

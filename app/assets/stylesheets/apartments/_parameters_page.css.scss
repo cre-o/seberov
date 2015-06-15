@@ -1,117 +1,119 @@
-h1 {
-  @extend %padding;
+&.__parameters-page {
+  h1 {
+    @extend %padding;
 
-  color: $darkness;
-  font-family: 'Open Sans', sans-serif;
-  font-size: rem_calc(25);
-  font-weight: 900;
-  padding-top: rem_calc(10);
-}
-
-.b-parameters {
-  border-bottom: 1px solid $light_grey;
-}
-
-// Filters by different parameters
-.b-filters {
-  border-top: 1px solid $light_grey;
-  padding-top: 20px;
-
-  @include custom-row-gutter(10, 20, 30, 40);
-
-  .rooms {
-    padding-top: 20px;
-  }
-
-  h3 {
-    color: $green;
+    color: $darkness;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: rem_calc(18);
-    padding-bottom: rem_calc(26);
+    font-size: rem_calc(25);
+    font-weight: 900;
+    padding-top: rem_calc(10);
   }
 
-  .input {
-    position: relative;
+  .b-parameters {
+    border-bottom: 1px solid $light_grey;
+  }
 
-    &:after {
-      color: $grey-tint-2;
-      content: attr(data-content-after);
-      font-size: rem(16);
-      position: absolute;
-      top: 3px;
-      right: 10px;
+  // Filters by different parameters
+  .b-filters {
+    border-top: 1px solid $light_grey;
+    padding-top: 20px;
+
+    @include custom-row-gutter(10, 20, 30, 40);
+
+    .rooms {
+      padding-top: 20px;
+    }
+
+    h3 {
+      color: $green;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: rem_calc(18);
+      padding-bottom: rem_calc(26);
+    }
+
+    .input {
+      position: relative;
+
+      &:after {
+        color: $grey-tint-2;
+        content: attr(data-content-after);
+        font-size: rem(16);
+        position: absolute;
+        top: 3px;
+        right: 10px;
+      }
     }
   }
-}
 
-.b-results {
-  font-family: 'Open Sans', sans-serif;
+  .b-results {
+    font-family: 'Open Sans', sans-serif;
 
-  .total {
-    font-size: rem_calc(18);
-    color: $green;
-    line-height: rem_calc(55);
-  }
+    .total {
+      font-size: rem_calc(18);
+      color: $green;
+      line-height: rem_calc(55);
+    }
 
-  .items {
-    @extend %padding;
-    border-top: 1px solid $light_grey;
+    .items {
+      @extend %padding;
+      border-top: 1px solid $light_grey;
 
-    .item {
-      border-bottom: 1px solid $light_grey;
-      padding-top: 20px;
-      padding-bottom: 20px;
-
-      .id {
-        font-size: rem_calc(12);
-        color: $dark_grey;
-      }
-
-      .attributes {
-        font-size: rem_calc(15);
+      .item {
+        border-bottom: 1px solid $light_grey;
         padding-top: 20px;
-        color: $dark_grey;
+        padding-bottom: 20px;
 
-        // Padding for columns
-        li:nth-child(2n + 1) {
-          padding-right: 40px;
+        .id {
+          font-size: rem_calc(12);
+          color: $dark_grey;
         }
 
-        b {
-          float: right;
+        .attributes {
+          font-size: rem_calc(15);
+          padding-top: 20px;
+          color: $dark_grey;
+
+          // Padding for columns
+          li:nth-child(2n + 1) {
+            padding-right: 40px;
+          }
+
+          b {
+            float: right;
+          }
         }
-      }
 
-      .price {
-        font-size: rem_calc(15);
+        .price {
+          font-size: rem_calc(15);
 
-        span {
-          color: $green;
-          font-weight: bold;
+          span {
+            color: $green;
+            font-weight: bold;
+          }
         }
-      }
 
-      .go {
-        text-align: center;
-        white-space: nowrap;
+        .go {
+          text-align: center;
+          white-space: nowrap;
 
-        &:before {
-          content: '';
-          display: inline-block;
-          height: 100%;
-          vertical-align: middle;
-          margin-right: -0.25em;
+          &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em;
+          }
         }
-      }
 
-      .more {
-        a {
-          vertical-align: middle;
-          display: inline-block;
-          padding: 20px;
-          font-size: rem_calc(18);
-          border: 1px solid $green;
+        .more {
+          a {
+            vertical-align: middle;
+            display: inline-block;
+            padding: 20px;
+            font-size: rem_calc(18);
+            border: 1px solid $green;
+          }
         }
       }
     }

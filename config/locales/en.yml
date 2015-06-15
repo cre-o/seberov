@@ -17,6 +17,19 @@ en:
   home_page:
     procedure_of_purchasing: 'Procedure of purchasing'
 
+  apartment_page:
+    floor_1: "1ST FLOOR"
+    floor_2: "2ND FLOOR"
+    floor_3: "3RD FLOOR"
+    sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
+    sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
+    download_pdf: 'DOWNLOAD PDF'
+    calculator:
+      count_payment: 'count mortgage payment'
+      price_with_dph: 'Cena včetně DPH'
+      parking_slot_price: '+парковочное место в подземном гараже'
+      show_parking_plan: 'показать схему парковки'
+
   apartments_page:
     choose_apartment: 'Choose apartment'
     map_area_title: "floor %{floor} | building %{building}"
@@ -120,16 +133,6 @@ en:
         перила – металлические кованные
         перегородки между соседними балконами выполнены в виде оцинкованной железной конструкции с лёгким заполнителем
 
-  apartment_page:
-    sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
-    sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
-    download_pdf: 'DOWNLOAD PDF'
-    calculator:
-      count_payment: 'count mortgage payment'
-      price_with_dph: 'Cena včetně DPH'
-      parking_slot_price: '+парковочное место в подземном гараже'
-      show_parking_plan: 'показать схему парковки'
-
   forms:
     price_with_dph: 'Cena včetně DPH'
     apartment_area: 'area'
@@ -228,7 +231,24 @@ en:
     thank_you: 'Спасибо!'
     request_accepted: 'ВАША ЗАЯВКА ПРИНЯТА.'
     wait: 'НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШИЕ 24 ЧАСА.'
+    mortgage_calculator:
+      h1: 'Mortgage calculator'
+      repayment_length: 'repayment length'
+      interest_rate: 'repayment length'
+      extent_of_mortgage: 'extent of mortgage'
+      monthly_installment: 'monthly installment'
+      h2: 'How you can obtain a mortgage for a new unit in Prague 4'
+      list:
+        - We present your ideas and possibilities to the broker.
+        - Based on the information, the broker will prepare suitable financing models of the Šeberov Homestead project.
+        - He will arrange for you all the necessary documents, e.g. a copy of the entry in the Cadastre and other necessary documents.
+        - At the next meeting with the broker the documents will be handed over and your broker will submit the application to the bank.
+        - The broker will assist you with the signing of the documents with the bank.
+        - You obtain a mortgage loan.
+      get_loan: 'The broker will assist you with the signing of the documents with the bank.'
+      leave_creadentials: 'Leave your credentials and we’ll contact you as soon as possible.'
 
   mailers:
     callback_subject: 'CallBack request from statekseberov website'
     application_subject: 'Apartment application request from statekseberov website'
+

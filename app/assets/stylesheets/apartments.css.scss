@@ -1,4 +1,9 @@
 #l-apartments {
+  @import "apartments/index_page";
+  @import "apartments/parameters_page";
+  @import "apartments/show_page";
+  @import "apartments/price_list_page";
+
   margin-top: rem_calc(110);
   position: relative;
   margin-bottom: rem_calc(30);
@@ -52,18 +57,4 @@
   .wrap {
     border: 2px solid #a9a4a4;
   }
-
-  // Index page
-  &.__index-page {
-    @import "apartments/index_page";
-  }
-
-  // Parameters page
-  &.__parameters-page {
-    @import "apartments/parameters_page";
-  }
-
-  @import "apartments/show_page";
-
-  @import "apartments/price_list_page";
 }

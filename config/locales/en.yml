@@ -233,10 +233,11 @@ en:
     wait: 'НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШИЕ 24 ЧАСА.'
     mortgage_calculator:
       h1: 'Mortgage calculator'
-      repayment_length: 'repayment length'
-      interest_rate: 'repayment length'
-      extent_of_mortgage: 'extent of mortgage'
-      monthly_installment: 'monthly installment'
+      form:
+        repayment_length: 'repayment length'
+        interest_rate: 'interest rate'
+        extent_of_mortgage: 'extent of mortgage'
+        monthly_installment: 'monthly installment'
       h2: 'How you can obtain a mortgage for a new unit in Prague 4'
       list:
         - We present your ideas and possibilities to the broker.
@@ -245,7 +246,7 @@ en:
         - At the next meeting with the broker the documents will be handed over and your broker will submit the application to the bank.
         - The broker will assist you with the signing of the documents with the bank.
         - You obtain a mortgage loan.
-      get_loan: 'The broker will assist you with the signing of the documents with the bank.'
+      get_loan: 'Get motgage loan'
       leave_creadentials: 'Leave your credentials and we’ll contact you as soon as possible.'
 
   mailers:

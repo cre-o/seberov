@@ -1,10 +1,49 @@
-#mortgageCalculator.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
-  .row
+#mortgage-calculator.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
+  .row ng-controller="ApartmentMortgageCalculatorController"
     .small-12.columns
       header
-        h1 = t('popups.mortgage_calculator.h1')
+        h1 = t 'h1', scope: 'popups.mortgage_calculator'
       .content
-        h4 = t('popups.request_accepted')
-        h5 = t('popups.wait')
+        .b-calculate-form
+          form.grey.row.collapse
+            .small-2.columns.text-left
+              label for="repayment-length" #{t 'repayment_length', scope: 'popups.mortgage_calculator.form'}:
+            .small-2.columns.input ng-init="repaymentLength = 25"
+              = number_field_tag(:repayment_length, '25', id: 'repayment-length', placeholder: 25, 'ng-model'=>'repaymentLength')
+            .small-2.columns.text-center
+              label for="interest-rate" #{t 'interest_rate', scope: 'popups.mortgage_calculator.form'}:
+            .small-2.columns.left ng-init="interestRate = 2.99"
+              = number_field_tag(:interest_rate, '2.99', id: 'interest-rate', placeholder: '2.99', 'ng-model'=>'interestRate')
+            .small-2.columns.text-right
+              label for="extent-of-mortgage" #{t 'extent_of_mortgage', scope: 'popups.mortgage_calculator.form'}:
+            .small-2.columns.left ng-init="extentOfMortgage = 2500000"
+              = number_field_tag(:extent_of_mortgage, '2500000', id: 'extent-of-mortgage', placeholder: '2 500 000', 'ng-model'=>'extentOfMortgage')
+
+          .text-center.total-header #{t 'monthly_installment', scope: 'popups.mortgage_calculator.form'}:
+          .text-center.total-price
+            ' {{calculate()}}
+
+        .b-instruction
+          h2 #{t 'h2', scope: 'popups.mortgage_calculator'}:
+          ul
+            - t('list', scope: 'popups.mortgage_calculator').each do |i|
+              li
+                span = i
+
+        form.b-contact-form
+          .header
+            h5 #{t 'get_loan', scope: 'popups.mortgage_calculator'}:
+            .subheader #{t 'leave_creadentials', scope: 'popups.mortgage_calculator'}
+          .row
+            = hidden_field_tag 'unit_id', @apartment.unit_id
+            .small-3.columns
+              = text_field_tag 'name', '', placeholder: t('forms.your_name'), required: true, focus: false
+            .small-3.columns
+              = phone_field_tag 'phone', '', placeholder: t('forms.phone_number'), required: true
+            .small-3.columns
+              = email_field_tag 'email', '', placeholder: t('forms.email'), required: true
+            .small-3.columns
+              = submit_tag t('forms.send')
+
 
     a.close-reveal-modal aria-label="Close"

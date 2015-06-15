@@ -1,7 +1,133 @@
-#mortgageCalculator {
-  padding: rem(45);
+@at-root #mortgage-calculator {
+  padding: 3.23rem;
 
   h1 {
+    font-size: rem(28);
+    font-weight: bold;
     color: #666666;
+    margin-bottom: rem(40);
+    text-transform: uppercase;
+  }
+
+  .b-calculate-form {
+    position: relative;
+    padding-top: rem(30);
+    padding-bottom: rem(20);
+    margin-bottom: rem(30);
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: image-url('apartments/show/mortgage-calculator-lines.jpg') 0 0 no-repeat;
+      width: 100%;
+      height: 11px;
+      top: 0;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: image-url('apartments/show/mortgage-calculator-lines.jpg') 0 -11px no-repeat;
+      width: 100%;
+      height: 11px;
+      bottom: 0;
+    }
+
+    label {
+      color: $green;
+      font-weight: bold;
+      font-size: rem(14);
+      line-height: 1.8rem;
+    }
+
+    // It should be like in crapped non-modular design
+    .input {
+      margin-left: rem(-15);
+    }
+
+    .text-center {
+      margin-right: rem(-20);
+    }
+
+    .text-right {
+      margin-left: .8rem;
+    }
+
+    form .columns:last-child {
+      margin-left: rem(10);
+    }
+
+    .total-header {
+      color: $grey-tint-5;
+      font-family: $second-font;
+      font-weight: bold;
+      font-size: rem(25.13);
+      margin-top: rem(20);
+      text-transform: uppercase;
+    }
+
+    .total-price {
+      font-size: rem(52.93);
+      color: $green;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+
+  .b-instruction {
+    padding-bottom: rem(22);
+    margin-bottom: rem(22);
+    border-bottom: 1px solid $grey-tint-1;
+
+    h2 {
+      color: $grey-tint-2;
+      font-size: rem(25.13);
+      font-family: $second-font;
+      text-transform: uppercase;
+      margin-bottom: rem(40);
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      color: $green;
+      font-size: rem(14);
+      list-style-type: disc;
+      margin-bottom: .7rem;
+
+      span {
+        color: $dark-grey;
+      }
+
+      &:last-child {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .b-contact-form {
+    padding-bottom: rem(18);
+    border-bottom: 1px solid $grey-tint-1;
+
+    .header {
+      h5 {
+        font-size: rem_calc(16);
+        font-weight: bold;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+
+      .subheader {
+        font-family: $default-font;
+        font-size: rem_calc(16);
+        font-weight: 600;
+        color: $dark-grey;
+        font-style: italic;
+        margin-bottom: rem(12);
+      }
+    }
   }
 }

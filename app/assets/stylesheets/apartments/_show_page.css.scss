@@ -1,4 +1,6 @@
 &.__show-page {
+  // Modal window displays outside of block
+  @import "apartments/mortgage_calculator";
 
   fieldset {
     border: 2px solid $grey-borders;
@@ -298,6 +300,7 @@
         font-size: rem_calc(16);
         font-weight: 600;
         color: $dark-grey;
+        margin-bottom: rem(12);
         font-style: italic;
       }
     }
@@ -375,5 +378,3 @@
     margin-bottom: rem(40);
   }
 }
-
-@import "apartments/mortgage_calculator";

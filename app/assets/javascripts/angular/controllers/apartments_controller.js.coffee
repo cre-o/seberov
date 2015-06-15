@@ -1,7 +1,7 @@
 #
 # GET apartments/id
 #
-angular.module('seberov').controller 'ApartmentsController', ($scope, $http, multiSliderService) ->
+angular.module('seberov').controller 'ApartmentController', ($scope, $http, multiSliderService) ->
 
   calculator = {}
   calculator.currencies = ['czk', 'usd', 'eur']
@@ -41,6 +41,21 @@ angular.module('seberov').controller 'ApartmentsController', ($scope, $http, mul
 
   $scope.calculator = calculator
   $scope.slider = multiSliderService
+
+  return $scope
+
+# Mortgage calculator
+angular.module('seberov').controller 'ApartmentMortgageCalculatorController', ($scope) ->
+
+  $scope.calculate = ->
+    x     = $scope.interestRate / 12 / 100
+    value = ($scope.extentOfMortgage * (x / (1 - Math.pow((1/(1 + x)),($scope.repaymentLength * 12))))).toFixed(0)
+
+    $scope.decorate(value)
+
+  $scope.decorate = (value) ->
+    number = numeral(value).format('0,0')
+    "#{number} Kč"
 
   return $scope
 

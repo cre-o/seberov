@@ -1,4 +1,4 @@
-#l-apartments.__show-page ng-controller="ApartmentsController"
+#l-apartments.__show-page ng-controller="ApartmentController"
   .row
     .small-12.columns
       fieldset
@@ -29,28 +29,28 @@
           .small-6.columns.__numbers
             ul.small-block-grid-2
               li
-                span = t('block' , scope: 'forms')+':'
+                span #{t 'block' , scope: 'forms'}:
                 strong = @apartment.block
               li
-                span = t('unit_id' , scope: 'forms')+':'
+                span #{t 'unit_id' , scope: 'forms'}:
                 strong = @apartment.unit_id
               li
-                span = t('floor' , scope: 'forms')+':'
+                span #{t 'floor' , scope: 'forms'}:
                 strong = @apartment.floor
               li
-                span = t('total_floors' , scope: 'forms')+':'
+                span #{t 'total_floors' , scope: 'forms'}:
                 strong = @apartment.total_floors
               li
-                span = t('layout' , scope: 'forms')+':'
+                span #{t 'layout' , scope: 'forms'}:
                 strong = @apartment.layout
               li
-                span = t('apartment_area' , scope: 'forms')+':'
+                span #{t 'apartment_area' , scope: 'forms'}:
                 strong = @apartment.apartment_area
 
             .b-calculator
               .wrap
                 .header
-                  h4 href="#" data-reveal-id="mortgageCalculator" = t('calculator.count_payment' , scope: 'apartment_page')+':'
+                  h4 href="#" data-reveal-id="mortgage-calculator" = t('calculator.count_payment' , scope: 'apartment_page')+':'
                   .selectors.upcase
                     a ng-class="{ active: calculator.currency == 'czk' }" ng-click="calculator.setCurrency('czk')"
                       = t 'defaults.czk'
@@ -80,77 +80,77 @@
 
                   - if fl.vestibule_area.present?
                     li
-                      span = t 'vestibule_area' , scope: 'forms'
+                      span #{t 'vestibule_area' , scope: 'forms'}:
                       strong = fl.vestibule_area
 
                   - if fl.corridor_area.present?
                     li
-                      span = t 'corridor_area', scope: 'forms'
+                      span #{t 'corridor_area', scope: 'forms'}:
                       strong = fl.corridor_area
 
                   - if fl.wc_area.present?
                     li
-                      span = t 'wc_area', scope: 'forms'
+                      span #{t 'wc_area', scope: 'forms'}:
                       strong = fl.wc_area
 
                   - if fl.kitchen_area.present?
                     li
-                      span = t 'kitchen_area', scope: 'forms'
+                      span #{t 'kitchen_area', scope: 'forms'}:
                       strong = fl.kitchen_area
 
                   - if fl.chamber1_area.present?
                     li
-                      span = t 'chamber_area', scope: 'forms'
+                      span #{t 'chamber_area', scope: 'forms'}:
                       strong = fl.chamber1_area
 
                   - if fl.bathroom_area.present?
                     li
-                      span = t 'bathroom_area', scope: 'forms'
+                      span #{t 'bathroom_area', scope: 'forms'}:
                       strong = fl.bathroom_area
 
                   - if fl.staircase_area.present?
                     li
-                      span = t 'staircase_area', scope: 'forms'
+                      span #{t 'staircase_area', scope: 'forms'}:
                       strong = fl.staircase_area
 
                   - if fl.cloakroom1_area.present?
                     li
-                      span = t 'cloakroom_area', scope: 'forms'
+                      span #{t 'cloakroom_area', scope: 'forms'}:
                       strong = fl.cloakroom1_area
 
                   - if fl.cloakroom2_area.present?
                     li
-                      span = t 'cloakroom_area', scope: 'forms'
+                      span #{t 'cloakroom_area', scope: 'forms'}:
                       strong = fl.cloakroom2_area
 
                   - if fl.room1_area.present?
                     li
-                      span = t 'room_area', number: 1, scope: 'forms'
+                      span #{t 'room_area', number: 1, scope: 'forms'}:
                       strong = fl.room1_area
 
                   - if fl.room2_area.present?
                     li
-                      span = t 'room_area', number: 2, scope: 'forms'
+                      span #{t 'room_area', number: 2, scope: 'forms'}:
                       strong = fl.room2_area
 
                   - if fl.room3_area.present?
                     li
-                      span = t 'room_area', number: 3, scope: 'forms'
+                      span #{t 'room_area', number: 3, scope: 'forms'}:
                       strong = fl.room3_area
 
                   - if fl.room4_area.present?
                     li
-                      span = t 'room_area', number: 4, scope: 'forms'
+                      span #{t 'room_area', number: 4, scope: 'forms'}:
                       strong = fl.room4_area
 
                   - if fl.room5_area.present?
                     li
-                      span = t 'room_area', number: 5, scope: 'forms'
+                      span #{t 'room_area', number: 5, scope: 'forms'}:
                       strong = fl.room5_area
 
                   - if fl.gallery_area.present?
                     li
-                      span = t 'gallery_area', scope: 'forms'
+                      span #{t 'gallery_area', scope: 'forms'}:
                       strong = fl.gallery_area
 
         .row.b-apartment-application
@@ -169,7 +169,7 @@
                 .small-3.columns
                   = email_field_tag 'email', '', placeholder: t('forms.email'), required: true
                 .small-3.columns
-                  = button_tag t('forms.send'), type: 'submit'
+                  = submit_tag t('forms.send')
 
               .alert-box.errors.alert.hide data-alert=""
                 a.close href="#" &times;

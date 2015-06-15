@@ -109,12 +109,11 @@
                   .clear
                   div ng-bind-html="apartment.photo_tag | unsafe"
                 .small-6.columns
-                  ' {{apartment.rooms}}
                   ul.attributes.small-block-grid-2
                     li
-                      ' {{apartment.layout_t}}:
+                      ' {{apartment.floors_t}}:
                       b
-                       ' {{apartment.layout}}
+                       ' {{apartment.floors}}
                     li
                       ' {{apartment.floor_t}}:
                       b
@@ -128,9 +127,9 @@
                       b
                         ' {{apartment.total_floors}}
                     li
-                      ' {{apartment.balcony_terace_area_t}}:
+                      ' {{apartment.layout_t}}:
                       b
-                        ' {{apartment.balcony_terace_area_decorated}}
+                        ' {{apartment.layout}}
                     li
                       ' {{apartment.apartment_area_t}}:
                       b

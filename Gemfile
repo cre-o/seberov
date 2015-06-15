@@ -61,6 +61,9 @@ gem 'globalize', '~> 5.0.0'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+# Translations
+gem 'angular-translate-rails', '~> 2.6.0'
+
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
 

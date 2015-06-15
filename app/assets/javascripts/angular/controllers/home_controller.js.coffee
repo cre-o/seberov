@@ -1,7 +1,7 @@
 #
 # HomePage controller
 #
-angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapApi) ->
+angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapApi, multiSliderService) ->
   # Gmap setup
   objectLatitude = 49.999243
   objectLongitude = 14.516158
@@ -17,5 +17,7 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
     options:
       disableDefaultUI: true
     zoom: 13
+
+  $scope.slider = multiSliderService
 
   return $scope

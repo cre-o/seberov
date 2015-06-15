@@ -1,15 +1,16 @@
-angular.module('seberov').controller 'ApartmentsController', ($scope, $document, $http) ->
+#
+# GET apartments/id
+#
+angular.module('seberov').controller 'ApartmentsController', ($scope, $http, multiSliderService) ->
+
   calculator = {}
-  calculator.defaultCurrency = 'czk'
   calculator.currencies = ['czk', 'usd', 'eur']
   calculator.priceSigns = {
     eur: '€'
     czk: 'KČ'
     usd: '$'
   }
-  calculator.currency = calculator.defaultCurrency
-  calculator.basePrice = 0
-  calculator.price = calculator.basePrice
+  calculator.currency = 'czk'
   calculator.exchangeUrl = "http://api.fixer.io/latest?base=CZK"
 
   # Caching feature limits requests
@@ -17,30 +18,74 @@ angular.module('seberov').controller 'ApartmentsController', ($scope, $document,
   cached['usdRates'] = null
   cached['eurRates'] = null
 
-  calculator.decoratedPrice = ->
-    "#{calculator.price} #{calculator.priceSigns[calculator.currency]}"
+  calculator.decorate = (price) ->
+    "#{price} #{calculator.priceSigns[calculator.currency]}"
 
   calculator.setCurrency = (currency) ->
     calculator.currency = currency
-    calculator.calculate()
+    calculator.getRates()
 
-  calculator.calculate = ->
+  calculator.getRates = ->
+    unless cached["#{calculator.currency}Rates"] != null
+      $http.get(calculator.exchangeUrl).success (data) ->
+        rates = data.rates[calculator.currency.toUpperCase()]
+        # Caching
+        cached["#{calculator.currency}Rates"] = rates
+
+  calculator.calculate = (basePrice) ->
     if calculator.currency == 'czk'
-      calculator.price = calculator.basePrice
+      calculator.decorate(basePrice)
     else
-      if cached["#{calculator.currency}Rates"] != null
-        calculator.price = Math.round(calculator.basePrice * cached["#{calculator.currency}Rates"])
-      else
-        $http.get(calculator.exchangeUrl).success (data) ->
-          rates = data.rates[calculator.currency.toUpperCase()]
-          # Caching
-          cached["#{calculator.currency}Rates"] = rates
-
-          calculator.price = Math.round(calculator.basePrice * rates)
+      price = Math.round(basePrice * cached["#{calculator.currency}Rates"])
+      calculator.decorate(price)
 
   $scope.calculator = calculator
+  $scope.slider = multiSliderService
+
   return $scope
 
+#
+# GET apartments/by-parameters
+#
+angular.module('seberov').controller 'ApartmentsByParametersController', ($scope) ->
+  a = @
+  a.records = []
+
+  a.path = (apartment) ->
+    Routes.refinery_apartments_apartment_path(apartment.id)
+
+  $scope.priceFilter = (apartment) ->
+    return (parseInt(apartment.price) > parseInt(a.minPrice) && parseInt(apartment.price) < parseInt(a.maxPrice))
+
+  $scope.floorSpaceFilter = (apartment) ->
+    return (parseInt(apartment.apartment_area) > parseInt(a.minFloorSpace) && parseInt(apartment.apartment_area) < parseInt(a.maxFloorSpace))
+
+  $scope.floorFilter = (apartment) ->
+    return (parseInt(apartment.floor) >= parseInt(a.minFloor) && parseInt(apartment.floor) <= parseInt(a.maxFloor))
+
+  $scope.groundsFliter = (apartment) ->
+    if a.cbGrounds
+      return (parseInt(apartment.floor) == 1)
+    else
+      true
+
+  # Funny filter
+  $scope.roomsFilter = (apartment) ->
+    if a.cbOneRoom || a.cbTwoRooms || a.cbThreeRooms || a.cbFourRooms || a.cbPenthouse
+      return ((if a.cbOneRoom    then parseInt(apartment.rooms) == 1) ||
+              (if a.cbTwoRooms   then parseInt(apartment.rooms) == 2) ||
+              (if a.cbThreeRooms then parseInt(apartment.rooms) == 3) ||
+              (if a.cbFourRooms  then parseInt(apartment.rooms) == 4) ||
+              (if a.cbPenthouse  then parseInt(apartment.rooms) == 6))
+    else true
+
+  return $scope
+
+
+#
+# GET apartments/index
+# Apartments map
+#
 angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, $document, $sce, $timeout) ->
   map = @
   map.buildings = ['a', 'b', 'c', 'd']

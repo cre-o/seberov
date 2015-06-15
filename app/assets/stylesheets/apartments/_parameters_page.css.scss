@@ -30,6 +30,19 @@ h1 {
     font-size: rem_calc(18);
     padding-bottom: rem_calc(26);
   }
+
+  .input {
+    position: relative;
+
+    &:after {
+      color: $grey-tint-2;
+      content: attr(data-content-after);
+      font-size: rem(16);
+      position: absolute;
+      top: 3px;
+      right: 10px;
+    }
+  }
 }
 
 .b-results {

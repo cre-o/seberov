@@ -135,11 +135,20 @@
   &.d {
     @include apartment-floor-plans($building: "d");
 
-    &.floor-2, &.floor-3 {
+    &.floor-3 {
       @include fill-with-apartments(
         $container-width: 174px,
         $container-height: 140px,
         $start-position: 86px,
+        $top-position: 22%,
+        $last-apartment: 2)
+    }
+
+    &.floor-2 {
+      @include fill-with-apartments(
+        $container-width: 203px,
+        $container-height: 140px,
+        $start-position: 55px,
         $top-position: 22%,
         $last-apartment: 2)
     }

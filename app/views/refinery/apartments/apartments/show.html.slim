@@ -57,12 +57,12 @@
                 .content
                   h1
                     = t('calculator.price_with_dph' , scope: 'apartment_page')+':'
-                    strong ng-init="calculator.basePrice = #{@apartment.object.price}; calculator.price = calculator.basePrice"  {{calculator.decoratedPrice()}}
+                    strong ng-init="apartmentPrice = #{@apartment.object.price}" {{calculator.calculate(apartmentPrice)}}
 
                 .footer.text-center
                   span
                     ' #{t('calculator.parking_slot_price' , scope: 'apartment_page')+':'}
-                    b #{Settings.prices.parking_slot} Kč
+                    b ng-init="parkingPrice = #{Settings.prices.parking_slot}" {{calculator.calculate(parkingPrice)}}
                   a href="#" показать схему парковки
 
             // Apartment floors data

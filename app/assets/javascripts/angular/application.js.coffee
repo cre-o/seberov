@@ -1,11 +1,12 @@
 #= require_self
+#= require angular/vendor/angular-translate-loader-static-files
 #= require angular/controllers/application_controller
 #= require angular/controllers/home_controller
 #= require angular/controllers/location_controller
 #= require angular/controllers/apartments_controller
 
 # Initialisation
-angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
+angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps', 'pascalprecht.translate'])
 
 # Configuration
 angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
@@ -13,6 +14,13 @@ angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
     key: gon.global.gmaps_key,
     v: '3.17',
     libraries: 'weather, geometry, visualization'
+
+# Angular I18n module
+# angular.module('seberov').config ($translateProvider) ->
+#   $translateProvider.useStaticFilesLoader
+#     prefix: '/translations/'
+#     suffix: '.json'
+#   $translateProvider.preferredLanguage 'en'
 
 #
 # Info block
@@ -99,3 +107,56 @@ angular.module('seberov').filter 'trusted', ['$sce', ($sce) ->
     return (url) ->
       return $sce.trustAsResourceUrl(url)
 ]
+
+# Filter helps render html untrusted content
+angular.module('seberov').filter 'unsafe', ($sce) ->
+  $sce.trustAsHtml
+
+angular.module('seberov').filter 'rangeFilter', ->
+  (items, rangeInfo) ->
+    filtered = []
+    min = parseInt(rangeInfo.min)
+    max = parseInt(rangeInfo.max)
+    # If time is with the range
+    angular.forEach items, (item) ->
+      if item.time >= min && item.time <= max then filtered.push(item)
+
+    return filtered
+
+
+# MiltiSlider Service
+angular.module('seberov').factory 'multiSliderService', ($timeout, $interval) ->
+  slider = {}
+  slider.screenNum = 1
+
+  slider.setScreen = (number) ->
+    slider.screenNum = number
+
+  slider.isCurrentScreen = (number) ->
+    @.screenNum == number
+
+  slider.refreshOrbit = ->
+    $timeout ->
+      $(document).foundation('orbit', 'reflow')
+    , 100
+
+  slider.loadWebcam = ->
+    $interval ->
+      slider.webcamSrc = 'http://151.249.106.49/images/logo.gif' + '?' + new Date().getTime()
+    , 2000
+
+  # Orbit styling
+  slider.screenHeight = 400 # minimal height
+  if Foundation.utils.is_medium_only()
+    slider.screenHeight = 600 # minimal height
+  if Foundation.utils.is_large_up()
+    slider.screenHeight = 900 # minimal height
+
+  # Resizing
+  $interval ->
+    if angular.element('.js-multi-slider.active').height() > 0
+      slider.screenHeight = angular.element('.js-multi-slider.active').height()
+  , 400
+
+  return slider
+

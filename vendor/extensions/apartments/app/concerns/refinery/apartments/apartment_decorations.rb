@@ -11,10 +11,6 @@ module Refinery
         floors_array.map { |x| "#{x}#{abbr}" }.join ','
       end
 
-      def price
-        "#{price_formated} #{t('defaults.currency_sign')}"
-      end
-
       def price_formated
          number_with_delimiter(object.price, delimiter: " ")
       end

@@ -1,7 +1,7 @@
 module Refinery
   module Apartments
     class ApartmentsController < ::ApplicationController
-      before_action :find_all_apartments, except: [:by_price_list]
+      before_action :find_all_apartments, only: [:index]
       before_action :find_page
 
       def index
@@ -23,6 +23,8 @@ module Refinery
       end
 
       def by_parameters
+        @apartments_json = generate_json
+        @apartments_decorator = ApartmentsDecorator.decorate(Apartment.active.by_position)
         present(@page)
       end
 
@@ -46,6 +48,31 @@ module Refinery
       end
 
     protected
+
+      # Dirty hacking angular
+      def generate_json
+        array = []
+        apartments =  Apartment.active.by_position
+        apartments.each do |a|
+          json_decorator = ApartmentJsonDecorator.decorate(a)
+          array << a.as_json.merge!({
+            'photo_tag' => json_decorator.photo_tag,
+            'rooms' => json_decorator.rooms,
+            'price_decorated' => json_decorator.price_decorated,
+            'price_t' => json_decorator.price_t,
+            'layout_t' => json_decorator.layout_t,
+            'floor_t' => json_decorator.floor_t,
+            'total_floors_t' => json_decorator.total_floors_t,
+            'balcony_terace_area_decorated' => json_decorator.balcony_terace_area_decorated,
+            'balcony_terace_area_t' => json_decorator.balcony_terace_area_t,
+            'front_yard_area_decorated' => json_decorator.front_yard_area_decorated,
+            'front_yard_area_t' => json_decorator.front_yard_area_t,
+            'apartment_area_decorated' => json_decorator.apartment_area_decorated,
+            'apartment_area_t' => json_decorator.apartment_area_t
+          })
+        end
+        array.to_json
+      end
 
       def find_all_apartments
         @apartments = Apartment.order('position ASC')

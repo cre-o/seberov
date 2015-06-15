@@ -3,8 +3,13 @@ module Refinery
     class ApartmentDecorator < Draper::Decorator
       include ActionView::Helpers::TranslationHelper
       include ApartmentDecorations
+
       delegate_all
       decorates_association :apartment_floors
+
+      def price
+        "#{price_formated} #{t('defaults.currency_sign')}"
+      end
 
       # Dynamic dimensions assign
       Apartment.column_names.select { |v| v =~ /.\_area/  }.each do |method_name|

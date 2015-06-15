@@ -1,5 +1,5 @@
 prices:
-  parking_slot: 260 000
+  parking_slot: 260000
 phones:
   default: &default_phone +420 603 933 909
   default_long: *default_phone

@@ -1,4 +1,4 @@
-#l-apartments.__parameters-page
+#l-apartments.__parameters-page ng-controller="ApartmentsByParametersController as a"
   = render 'nav'
 
   .row.collapse
@@ -6,7 +6,7 @@
       .row.collapse.b-parameters
         .small-12.columns
           h1.upcase Parameters:
-          = form_tag refinery.search_apartments_apartments_path, remote: true, class: 'b-filters' do |f|
+          = form_tag refinery.search_apartments_apartments_path, class: 'b-filters' do |f|
             .row
               // Price
               .small-4.columns
@@ -16,18 +16,17 @@
                 // Inputs
                 .row.collapse
                   .small-2.columns.text-left
-                    label for="price-start-label" = t('forms.from')
-                  .small-4.columns
-                    = text_field_tag :price_start, '0', id: 'price-start-label'
+                    label for="price-min" = t('forms.from')
+                  .small-4.columns.input data-content-after=(t('defaults.currency_sign'))
+                    = text_field_tag :price_min, '0', id: 'price-min', 'ng-model' => 'a.minPrice', 'ng-init' => "a.minPrice = 0"
                   .small-2.columns.text-center
-                    label for="price-end-label" = t('forms.to')
-                  .small-4.columns.left
-                    = text_field_tag :price_end,  @apartments.most_expensive.price, id: 'price-end-label', \
-                      'ng-model'=> 'price'
+                    label for="price-max" = t('forms.to')
+                  .small-4.columns.left.input data-content-after=(t('defaults.currency_sign'))
+                    = number_field_tag :price_end, '', id: 'price-max', 'ng-model' => 'a.maxPrice', 'ng-init' => "a.maxPrice = #{@apartments_decorator.most_expensive_price}"
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-12.columns
-                    #appartments-price-slider data-min-value="10000" data-max-value="9999999"
+                    #appartments-price-slider data-min-value="0" data-max-value=(@apartments_decorator.most_expensive_price)
 
               // Floorspace
               .small-4.columns
@@ -37,17 +36,17 @@
                 // Inputs
                 .row.collapse
                   .small-2.columns.text-left
-                    label for="foorspace-start-label" = t('forms.from')
-                  .small-4.columns
-                    input#foorspace-start-label value="0" type="text"
+                    label for="foorspace-min" = t('forms.from')
+                  .small-4.columns.input data-content-after=(t('defaults.square_sign'))
+                    = number_field_tag :floorspace_min, '0', id: 'floorspace-min', 'ng-model' => 'a.minFloorSpace', 'ng-init' => "a.minFloorSpace = 0"
                   .small-2.columns.text-center
-                    label for="floorspace-end-label" = t('forms.to')
-                  .small-4.columns
-                    input#floorspace-end-label value="200" type="text"
+                    label for="floorspace-max" = t('forms.to')
+                  .small-4.columns.input data-content-after=(t('defaults.square_sign'))
+                    = number_field_tag :floorspace_max, '0', id: 'floorspace-max', 'ng-model' => 'a.maxFloorSpace', 'ng-init' => "a.maxFloorSpace = #{@apartments_decorator.max_floor_space}"
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-.columns
-                    #appartments-floorspace-slider data-min-value="40" data-max-value="100"
+                    #appartments-floorspace-slider data-min-value="0" data-max-value=(@apartments_decorator.max_floor_space)
 
               // Floor
               .small-4.columns
@@ -57,17 +56,17 @@
                 // Inputs
                 .row.collapse
                   .small-2.columns.text-left
-                    label for="floor-start-label" = t('forms.from')
+                    label for="floor-min" = t('forms.from')
                   .small-2.columns
-                    input#floor-start-label value="0" type="text"
+                    = number_field_tag :floor_min, '0', id: 'floor-min', 'ng-model' => 'a.minFloor', 'ng-init' => 'a.minFloor = 0'
                   .small-2.columns.text-center
-                    label for="floor-end-label" = t('forms.to')
+                    label for="floor-max" = t('forms.to')
                   .small-2.columns.left
-                    input#floor-end-label value="3" type="text"
+                    = number_field_tag :floor_max, '0', id: 'floor-max', 'ng-model' => 'a.maxFloor', 'ng-init' => "a.maxFloor = #{@apartments_decorator.max_floor}"
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-10.left.columns
-                    #appartments-floor-slider data-min-value="3" data-max-value="10"
+                    #appartments-floor-slider data-min-value="0" data-max-value=(@apartments_decorator.max_floor)
 
             .row.rooms
               .small-2.columns
@@ -76,23 +75,24 @@
               .small-10.left.columns
                 ul.small-block-grid-6
                   li
-                    input#one-room type="checkbox"
+                    = check_box_tag :one_room, '1', false, id: 'one-room', 'ng-model' => 'a.cbOneRoom'
                     label for="one-room" = t('forms.one')
                   li
-                    input#two-rooms type="checkbox"
+                    = check_box_tag :two_rooms, '2', false, id: 'two-rooms', 'ng-model' => 'a.cbTwoRooms'
                     label for="two-rooms" = t('forms.two')
                   li
-                    input#three-rooms type="checkbox"
+                    = check_box_tag :three_rooms, '3', false, id: 'three-rooms', 'ng-model' => 'a.cbThreeRooms'
                     label for="three-rooms" = t('forms.three')
                   li
-                    input#four-rooms type="checkbox"
+                    = check_box_tag :four_rooms, '4', false, id: 'four-rooms', 'ng-model' => 'a.cbFourRooms'
                     label for="four-rooms" = t('forms.four')
                   li
-                    input#penthouse type="checkbox"
+                    = check_box_tag :penthouse, 'penthouse', false, id: 'penthouse', 'ng-model' => 'a.cbPenthouse'
                     label for="penthouse" = t('forms.penthouse')
                   li
-                    input#grounds type="checkbox"
+                    = check_box_tag :grounds, 'grounds', false, id: 'grounds', 'ng-model' => 'a.cbGrounds'
                     label for="grounds" = t('forms.grounds')
+
       // Results
       .row.collapse.b-results
         .small-12.columns
@@ -100,41 +100,49 @@
             .small-8.columns
               h1.upcase = t('forms.results')+':'
             .small-2.right.columns.total
-          .row.collapse.items
+          .row.collapse.items ng-init="a.records = #{@apartments_json}"
             .small-12.columns
-              - @apartments.each do |apartment|
-                .row.item
-                  .small-3.columns
-                    .id
-                      = apartment.unit_id
-                    .clear
-                    = image_fu apartment.photo, '220x220'
-                  .small-6.columns
-                    ul.attributes.small-block-grid-2
-                      li
-                        ' layout:
-                        b = apartment.layout
-                      li
-                        ' floor:
-                        b = apartment.floor
-                      li
-                        ' balcony terace area:
-                        b = apartment.balcony_terace_area
-                      li
-                        ' Total floors:
-                        b = apartment.total_floors
-                      li
-                        ' velikost balkon / terasy:
-                        b = apartment.balcony_terace_area
-                      li
-                        ' velikost bytu:
-                        b = apartment.apartment_area
+              .row.item ng-repeat="apartment in a.records | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter |filter:groundsFliter"
+                .small-3.columns
+                  .id
+                    | {{apartment.unit_id}}
+                  .clear
+                  div ng-bind-html="apartment.photo_tag | unsafe"
+                .small-6.columns
+                  ' {{apartment.rooms}}
+                  ul.attributes.small-block-grid-2
+                    li
+                      ' {{apartment.layout_t}}:
+                      b
+                       ' {{apartment.layout}}
+                    li
+                      ' {{apartment.floor_t}}:
+                      b
+                        | {{apartment.floor}}
+                    li
+                      ' {{apartment.balcony_terace_area_t}}:
+                      b
+                        ' {{apartment.balcony_terace_area_decorated}}
+                    li
+                      ' {{apartment.total_floors_t}}:
+                      b
+                        ' {{apartment.total_floors}}
+                    li
+                      ' {{apartment.balcony_terace_area_t}}:
+                      b
+                        ' {{apartment.balcony_terace_area_decorated}}
+                    li
+                      ' {{apartment.apartment_area_t}}:
+                      b
+                        ' {{apartment.apartment_area_decorated}}
 
-                    .price
-                      ' сena včetně DPH:
-                      span.upcase = apartment.price
+                  .price
+                    ' {{apartment.price_t}}:
+                    span.upcase
+                      ' {{apartment.price_decorated}}
 
-                  .small-3.columns.go
-                    .more.upcase
-                      = link_to 'see more', refinery.apartments_apartment_path(apartment)
+                .small-3.columns.go
+                  .more.upcase
+                    a ng-href="{{a.path(apartment)}}" see more
+
 

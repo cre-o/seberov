@@ -8,6 +8,12 @@
       font-size: rem_calc(20);
       cursor: pointer;
       position: relative;
+      max-width: 320px;
+      max-height: 350px;
+
+      %sprite {
+        background-image: image-url('components/multi-slider/slider-buttons-sprite.jpg');
+      }
 
       &.active {
         font-size: rem_calc(20);
@@ -44,49 +50,29 @@
 
       &.exterior {
         .image {
-          background-image: image_url('home/preview-widget/exterior-btn.jpg');
-        }
-
-        &.active {
-          .image {
-            background-image: image_url('home/preview-widget/exterior-btn-active.jpg');
-          }
+          @extend %sprite;
+          background-position: 0 0;
         }
       }
 
       &.interior {
         .image {
-          background-image: image_url('home/preview-widget/interior-btn.jpg');
-        }
-
-        &.active {
-          .image {
-            background-image: image_url('home/preview-widget/interior-btn-active.jpg');
-          }
+          @extend %sprite;
+          background-position: 0 -350px;
         }
       }
 
       &.tour {
         .image {
-          background-image: image_url('home/preview-widget/tour-btn.jpg');
-        }
-
-        &.active {
-          .image {
-            background-image: image_url('home/preview-widget/tour-btn-active.jpg');
-          }
+          @extend %sprite;
+          background-position: 0 -700px;
         }
       }
 
       &.webcam {
         .image {
-          background-image: image_url('home/preview-widget/webcam-btn.jpg');
-        }
-
-        &.active {
-          .image {
-            background-image: image_url('home/preview-widget/webcam-btn-active.jpg');
-          }
+          @extend %sprite;
+          background-position: 0 -1050px;
         }
       }
     }

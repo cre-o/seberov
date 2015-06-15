@@ -131,6 +131,7 @@ en:
       show_parking_plan: 'показать схему парковки'
 
   forms:
+    price_with_dph: 'Cena včetně DPH'
     apartment_area: 'area'
     area: 'area'
     unit_id: 'unit id'
@@ -164,6 +165,7 @@ en:
     kitchen_area: 'kitchen area'
     chamber_area: 'chamber area'
     bathroom_area: 'bathroom area'
+    balcony_terace_area: 'balcony terace area'
     staircase_area: 'staircase area'
     cloakroom_area: 'cloakroom area'
     room_area: "room %{number} area"

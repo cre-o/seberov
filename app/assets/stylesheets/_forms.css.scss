@@ -1,14 +1,21 @@
 form {
   $input-height: 30px;
 
+  .form-font-color {
+    font-size: rem(16);
+    color: $grey-tint-2;
+  }
+
   // Setup all input elements
   // No shadows
   #{$all-text-inputs} {
-    font-size: rem(16);
     height: rem($input-height);
     box-shadow: none;
     border-color: $grey;
-    color: $grey-tint-2;
+    padding: 0;
+    padding-left: .5rem;
+
+    @extend .form-font-color;
   }
 
   input[type="submit"], button[type="submit"] {
@@ -56,6 +63,7 @@ form {
   input[type="color"]:focus, textarea:focus {
     border-color: inherit;
     background: inherit;
+    height: $input-height;
   }
 
   input[type="checkbox"] + label {
@@ -91,7 +99,7 @@ form {
 
   // Sliders
   .noUi-target {
-    background-color: #34916e;
+    background-color: $green;
     border-radius: 0;
     box-shadow: none;
     border: none;
@@ -99,6 +107,11 @@ form {
 
   .noUi-horizontal {
     height: 5px;
+  }
+
+  .noUi-background {
+    background-color: $green;
+    box-shadow: none;
   }
 
   .noUi-horizontal .noUi-handle {
@@ -118,5 +131,9 @@ form {
   .noUi-handle:before, .noUi-handle:after {
     display: inline;
     position: static;
+  }
+
+  .noUi-connect {
+    background-color: $green;
   }
 }

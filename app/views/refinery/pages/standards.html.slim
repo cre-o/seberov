@@ -5,23 +5,23 @@
       = raw @page.content_for(:section1)
 
     .small-6.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/1-1-full.jpg') do
+          = link_to image_url('standards/1-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/1-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/1-2-full.jpg') do
+          = link_to image_url('standards/1-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/1-2.jpg', width: 440, height: 440
   /! 2
   .row
     .small-5.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/2-1-full.jpg') do
-              = image_tag 'standards/2-1.jpg', width: 440, height: 440
+          = link_to image_url('standards/2-1-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/2-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/2-2-full.jpg') do
-              = image_tag 'standards/2-2.jpg', width: 440, height: 440
+          = link_to image_url('standards/2-2-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/2-2.jpg', width: 440, height: 440
 
     .small-6.columns
       = raw @page.content_for(:section2)
@@ -29,22 +29,25 @@
   /! 3
   .row ng-controller="ImageBroadcasterController as broadcaster"
     .small-6.columns
-      = raw @page.content_for(:section3)
+      section class="long left-side"
+        header class="text-right"
+          = raw @page.content_for(:section3)
 
-      div ng-show="broadcaster.isSet(1)"
-        = t('standards_page.horisontal_constructions')[0]
-      div ng-show="broadcaster.isSet(2)"
-        = t('standards_page.horisontal_constructions')[1]
-      div ng-show="broadcaster.isSet(3)"
-        = t('standards_page.horisontal_constructions')[2]
-      div ng-show="broadcaster.isSet(4)"
-        = t('standards_page.horisontal_constructions')[3]
-      div ng-show="broadcaster.isSet(5)"
-        = t('standards_page.horisontal_constructions')[4]
-      div ng-show="broadcaster.isSet(6)"
-        = t('standards_page.horisontal_constructions')[5]
-      div ng-show="broadcaster.isSet(7)"
-        = t('standards_page.horisontal_constructions')[6]
+        .content
+          div ng-show="broadcaster.isSet(1)"
+            = t('standards_page.horisontal_constructions')[0]
+          div ng-show="broadcaster.isSet(2)"
+            = t('standards_page.horisontal_constructions')[1]
+          div ng-show="broadcaster.isSet(3)"
+            = t('standards_page.horisontal_constructions')[2]
+          div ng-show="broadcaster.isSet(4)"
+            = t('standards_page.horisontal_constructions')[3]
+          div ng-show="broadcaster.isSet(5)"
+            = t('standards_page.horisontal_constructions')[4]
+          div ng-show="broadcaster.isSet(6)"
+            = t('standards_page.horisontal_constructions')[5]
+          div ng-show="broadcaster.isSet(7)"
+            = t('standards_page.horisontal_constructions')[6]
 
     .small-6.columns
       .image-broadcaster
@@ -82,12 +85,12 @@
   /! 4
   .row
     .small-5.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/4-1-full.jpg') do
+          = link_to image_url('standards/4-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/4-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/4-2-full.jpg') do
+          = link_to image_url('standards/4-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/4-2.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
@@ -99,19 +102,17 @@
       = raw @page.content_for(:section5)
 
     .small-6.columns.images
-      ul. data-clearing=""
-        li
-          = link_to image_url('standards/5-1-full.jpg') do
-            = image_tag 'standards/5-1.jpg', width: 440, height: 440, lazy: true
+      = link_to image_url('standards/5-1-full.jpg'), class: 'zoom-in' do
+        = image_tag 'standards/5-1.jpg', width: 440, height: 440, lazy: true
   /! 6
   .row
     .small-5.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/6-1-full.jpg') do
+          = link_to image_url('standards/6-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/6-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/6-2-full.jpg') do
+          = link_to image_url('standards/6-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/6-2.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
@@ -123,23 +124,29 @@
       = raw @page.content_for(:section7)
 
     .small-5.columns
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
           li
-            = link_to image_url('standards/7-1-full.jpg') do
+            = link_to image_url('standards/7-1-full.jpg'), class: 'zoom-in' do
               = image_tag 'standards/7-1.jpg', width: 440, height: 440, lazy: true
           li
-            = link_to image_url('standards/7-2-full.jpg') do
+            = link_to image_url('standards/7-2-full.jpg'), class: 'zoom-in' do
               = image_tag 'standards/7-2.jpg', width: 440, height: 440, lazy: true
           li
-            = link_to image_url('standards/7-3-full.jpg') do
+            = link_to image_url('standards/7-3-full.jpg'), class: 'zoom-in' do
               = image_tag 'standards/7-3.jpg', width: 440, height: 440, lazy: true
+          li
+            = link_to image_url('standards/7-4-full.jpg'), class: 'zoom-in' do
+              = image_tag 'standards/7-4.jpg', width: 440, height: 440, lazy: true
   /! 8
   .row
     .small-5.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/8-1-full.jpg') do
+          = link_to image_url('standards/8-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/8-1.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/8-2-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/8-2.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section8)
@@ -150,27 +157,33 @@
       = raw @page.content_for(:section9)
 
     .small-6.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/9-1-full.jpg') do
+          = link_to image_url('standards/9-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/9-1.jpg', width: 440, height: 440
         li
-          = link_to image_url('standards/9-2-full.jpg') do
+          = link_to image_url('standards/9-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/9-2.jpg', width: 440, height: 440
 
   /! 10
   .row
     .small-5.columns.images
-      ul.small-block-grid-2 data-clearing=""
+      ul.small-block-grid-2
         li
-          = link_to image_url('standards/10-1-full.jpg') do
+          = link_to image_url('standards/10-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/10-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/10-2-full.jpg') do
+          = link_to image_url('standards/10-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/10-2.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/10-3-full.jpg') do
+          = link_to image_url('standards/10-3-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/10-3.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/10-4-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/10-4.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/10-5-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/10-5.jpg', width: 440, height: 440, lazy: true
 
     .small-6.columns
       = raw @page.content_for(:section10)
@@ -181,22 +194,31 @@
       = raw @page.content_for(:section11)
 
     .small-6.columns.images
-      = link_to image_url('standards/11-1-full.jpg') do
-            = image_tag 'standards/11-1.jpg', width: 440, height: 440, lazy: true
+      = link_to image_url('standards/11-1-full.jpg'), class: 'zoom-in' do
+        = image_tag 'standards/11-1.jpg', width: 440, height: 440, lazy: true
 
   /! 12
   .row.last
     .small-6.columns.images
-      ul.small-block-grid-3 data-clearing=""
+      ul.small-block-grid-3
         li
-          = link_to image_url('standards/12-1-full.jpg') do
+          = link_to image_url('standards/12-1-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/12-1.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/11-2-full.jpg') do
+          = link_to image_url('standards/12-2-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/12-2.jpg', width: 440, height: 440, lazy: true
         li
-          = link_to image_url('standards/11-3-full.jpg') do
+          = link_to image_url('standards/12-3-full.jpg'), class: 'zoom-in' do
             = image_tag 'standards/12-3.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/12-4-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/12-4.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/12-5-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/12-5.jpg', width: 440, height: 440, lazy: true
+        li
+          = link_to image_url('standards/12-6-full.jpg'), class: 'zoom-in' do
+            = image_tag 'standards/12-6.jpg', width: 440, height: 440, lazy: true
 
     .small-5.columns
       = raw @page.content_for(:section12)

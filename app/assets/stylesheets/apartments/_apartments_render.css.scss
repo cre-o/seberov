@@ -52,7 +52,7 @@
     &.floor-2, &.floor-3 {
       @include fill-with-apartments(
         $container-width: 75px,
-        $container-height: 110px,
+        $container-height: 115px,
         $start-position: 12px,
         $top-position: 24%,
         $last-apartment: 7,

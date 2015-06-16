@@ -29,15 +29,13 @@ en:
       price_with_dph: 'Cena včetně DPH'
       parking_slot_price: '+парковочное место в подземном гараже'
       show_parking_plan: 'показать схему парковки'
+    add_on:
+      h1: 'Надстандарт'
+      p: 'По вашему заказу мы можем сделать ремонт любой сложности, заказать атипичную мебель, включая подготовку индивидуального дизайна интерьера.'
 
   apartments_page:
     choose_apartment: 'Choose apartment'
     map_area_title: "floor %{floor} | building %{building}"
-
-  apartments_parameters_page:
-    title: 'Apartments parameters page!'
-    description: 'Apartments parameters page!'
-    keywords: 'Apartments parameters page!'
 
   apartments_planning_page:
     title: 'Apartments planning page!'

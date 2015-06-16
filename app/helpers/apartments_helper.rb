@@ -1,4 +1,5 @@
 module ApartmentsHelper
+
   def breadcrumbs(apartment)
     "building #{apartment.block} > #{apartment.floor} > apt##{apartment.unit_id}"
   end
@@ -63,4 +64,5 @@ module ApartmentsHelper
   def t_floor_number(number)
     t "floor_#{number}", scope: 'apartment_page'
   end
+
 end

@@ -68,7 +68,7 @@
                   span
                     ' #{t('calculator.parking_slot_price' , scope: 'apartment_page')+':'}
                     b ng-init="parkingPrice = #{Settings.prices.parking_slot}" {{calculator.calculate(parkingPrice)}}
-                  a href="#" показать схему парковки
+                  a href="#" = t 'calculator.show_parking_plan', scope: 'apartment_page'
 
               // Mortgage calculator
               = render 'mortgage_calculator'

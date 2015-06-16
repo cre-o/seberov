@@ -2,8 +2,10 @@
   .b-nav-tabs.small-4.small-offset-6.columns
     ul.upcase
       li.small-4.columns
-        = active_link_to t('refinery.apartments.by_planning'), refinery.apartments_apartments_path, active: :exclusive
+        = active_link_to t('refinery.apartments.by_planning'), refinery.apartments_apartments_path, active: [[], ['index']]
       li.small-4.columns
-        = active_link_to t('refinery.apartments.by_parameters'), refinery.by_parameters_apartments_apartments_path, active: :exclusive
+        = active_link_to t('refinery.apartments.by_parameters'), refinery.by_parameters_apartments_apartments_path, \
+          active: [[], ['by_parameters']]
       li.small-4.columns
-        = active_link_to t('refinery.apartments.by_price_list'), refinery.by_price_list_apartments_apartments_path, active: :exclusive
+        = active_link_to t('refinery.apartments.by_price_list'), refinery.by_price_list_apartments_apartments_path, \
+          active: [[], ['by_price_list']]

@@ -1,5 +1,6 @@
 module Refinery
   module Apartments
+    # @TODO replace with https://github.com/apotonick/representable
     class ApartmentJsonDecorator < Draper::Decorator
       include ApartmentDecorations
       include ActionView::Helpers::AssetTagHelper
@@ -49,6 +50,10 @@ module Refinery
 
       def floor_t
         t('forms.floor')
+      end
+
+      def floors_t
+        t('forms.floors')
       end
 
       def layout_t

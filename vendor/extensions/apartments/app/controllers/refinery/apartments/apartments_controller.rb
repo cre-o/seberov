@@ -63,6 +63,8 @@ module Refinery
             'layout_t' => json_decorator.layout_t,
             'floor_t' => json_decorator.floor_t,
             'total_floors_t' => json_decorator.total_floors_t,
+            'floors_t' => json_decorator.floors_t,
+            'floors' => json_decorator.floors,
             'balcony_terace_area_decorated' => json_decorator.balcony_terace_area_decorated,
             'balcony_terace_area_t' => json_decorator.balcony_terace_area_t,
             'front_yard_area_decorated' => json_decorator.front_yard_area_decorated,

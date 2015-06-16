@@ -21,11 +21,11 @@
 
       .compass {
         position: absolute;
-        left: -63px;
+        left: rem-calc(-63);
         background-image: image-url('apartments/compass.png');
-        width: 80px;
-        height: 80px;
-        top: 50px;
+        width: rem-calc(80);
+        height: rem-calc(80);
+        top: rem-calc(50);
         z-index: 10;
       }
 
@@ -37,8 +37,8 @@
             content: "";
             position: absolute;
             z-index: 999;
-            width: 1000px;
-            height: 1000px;
+            width: rem-calc(1000);
+            height: rem-calc(1000);
             background-color: #000;
           }
         }
@@ -47,8 +47,8 @@
           position: absolute;
           display: block;
           top: 0;
-          height: 499px;
-          width: 499px;
+          height: rem-calc(499);
+          width: rem-calc(499);
           z-index: 8;
 
           @for $i from 1 through 3 {
@@ -78,14 +78,15 @@
 
   .b-apartment-selector {
     border-left: 1px solid #a39e9e;
+    min-height: rem(590);
 
     h1 {
-      font-size: rem_calc(20);
+      font-size: rem-calc(20);
       color: $green;
       font-weight: 900;
       padding: 0;
       margin: 0;
-      margin-bottom: 24px;
+      margin-bottom: rem-calc(24);
     }
 
     @import "apartments/apartments_render";

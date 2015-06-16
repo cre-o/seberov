@@ -26,6 +26,7 @@
 
       li {
         padding-bottom: rem_calc(20);
+        list-style-type: none;
 
         &:before {
           content: "";

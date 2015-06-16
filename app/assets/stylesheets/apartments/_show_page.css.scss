@@ -17,11 +17,11 @@
     &:before {
       content: '';
       position: absolute;
-      background: image-url('apartments/show/compass.png');
-      width: 80px;
-      height: 80px;
+      background: image-url('apartments/compass.png');
+      width: rem(80);
+      height: rem(80);
       left: 0;
-      top: -12px;
+      top: rem(-12);
       right: 0;
       margin-left: auto;
       margin-right: auto;
@@ -54,10 +54,10 @@
           background-image: image-url('apartments/show/zoom.png');
           content: "";
           position: absolute;
-          width: 54px;
-          height: 54px;
-          left: -80px;
-          top: 20px;
+          width: rem(54);
+          height: rem(54);
+          left: rem(-80);
+          top: rem(20);
         }
 
         &.plan {
@@ -93,30 +93,30 @@
     }
 
     #a {
-      width: 39px;
-      height: 186px;
+      width: rem(39);
+      height: rem(186);
       left: 0;
       top: 0;
     }
 
     #b {
-      width: 193px;
-      height: 45px;
+      width: rem(193);
+      height: rem(45);
       top: 0;
     }
 
     #c {
-      width: 40px;
-      height: 126px;
-      top: 45px;
-      right: 10px;
+      width: rem(40);
+      height: rem(126);
+      top: rem(45);
+      right: rem(10);
     }
 
     #d {
-      width: 66px;
-      height: 30px;
-      top: 163px;
-      right: 29px;
+      width: rem(66);
+      height: rem(30);
+      top: rem(163);
+      right: rem(29);
     }
 
     .location {
@@ -153,7 +153,7 @@
       color: $dark_grey;
 
       span {
-        padding-right: 5px;
+        padding-right: rem(5);
       }
 
       strong {
@@ -162,18 +162,18 @@
       }
 
       li:nth-child(2n + 1) {
-        padding-right: 52px;
+        padding-right: rem(52);
       }
 
       li {
-        padding-bottom: 3px;
+        padding-bottom: rem(3);
       }
     }
   }
 
   .b-parameters {
-    padding-bottom: 30px;
-    margin-bottom: 15px;
+    padding-bottom: rem(30);
+    margin-bottom: rem(15);
   }
 
   .b-calculator {
@@ -198,31 +198,32 @@
         font-family: 'Open Sans', sans-serif;
         color: $green;
         font-weight: bold;
-        font-size: rem_calc(15);
+        font-size: rem-calc(15);
         display: inline-block;
         background-color: #fff;
-        margin-left: 20px;
-        padding-right: 5px;
+        margin-left: rem(20);
+        padding-right: rem(5);
 
         &:before {
           content: "";
           display: inline-block;
           background-color: #fff;
           @include triangle(12px 6px, $green, right);
-          margin-left: 5px;
+          margin-left: rem(5);
+          padding-right: rem(5);
         }
       }
 
       .selectors {
         position: absolute;
-        right: 20px;
+        right: rem(20);
         top: 0;
         background-color: #fff;
 
         a {
           color: #7f7f7f;
           font-weight: 700;
-          padding-right: 15px;
+          padding-right: rem(15);
           text-decoration: underline;
 
           &.active {
@@ -231,11 +232,11 @@
           }
 
           &:first-child {
-            padding-left: 6px;
+            padding-left: rem(6);
           }
 
           &:last-child {
-            padding-right: 6px;
+            padding-right: rem(6);
           }
         }
       }
@@ -248,12 +249,12 @@
         font-weight: normal;
         text-transform: uppercase;
         text-align: center;
-        margin-top: 25px;
+        margin-top: rem(25);
         color: $dark_grey;
 
         strong {
           color: $green;
-          padding-left: 10px;
+          padding-left: rem(10);
         }
       }
     }
@@ -264,8 +265,8 @@
       span, a {
         background-color: #fff;
         font-size: rem(13);
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: rem(8);
+        padding-right: rem(8);
       }
 
       a {
@@ -276,7 +277,7 @@
       }
 
       br {
-        line-height:10px;
+        line-height: rem(10);
       }
     }
   }
@@ -322,16 +323,20 @@
 
   .b-apartment-text {
     h1 {
-      font-size: 16px;
+      font-size: rem(16);
       font-weight: bold;
       color: $green;
       padding: 0;
       text-decoration: underline;
     }
 
+    section {
+      margin-left: rem-calc(20);
+    }
+
     p {
-      text-indent: 50px;
-      font-size: 14px;
+      //text-indent: rem(50);
+      font-size: rem(14);
       color: $dark_grey;
     }
 
@@ -349,8 +354,8 @@
     bottom: 10px;
 
     @extend .b-download-pdf;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: rem(8);
+    padding-right: rem(8);
   }
 }
 

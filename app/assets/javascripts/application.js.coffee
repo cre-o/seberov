@@ -22,7 +22,7 @@
 #= require angular-scroll
 #= require angular-google-maps
 #= require angular/application
-#= require fancybox
+#= require magnific-popup
 #= require utility
 #= require apartments
 #= require location
@@ -32,5 +32,5 @@ jQuery ->
   $(document).foundation()
   # Lazy load images (not load before user can see it)
   $('img').lazyload()
-  # Fancybox init
-  $('a.fancybox').fancybox()
+  # MagnificPopup for enlarge images
+  $('.zoom-in').magnificPopup({type:'image'});

@@ -148,8 +148,6 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
-    fancybox2-rails (0.2.8)
-      railties (>= 3.1.0, < 5.0)
     ffi (1.9.8)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
@@ -210,6 +208,7 @@ GEM
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.9)
+    magnific-popup-rails (0.9.9.1)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
@@ -368,7 +367,6 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.1.0)
   draper
-  fancybox2-rails (~> 0.2.8)
   font-awesome-rails
   foundation-rails
   globalize (~> 5.0.0)
@@ -380,6 +378,7 @@ DEPENDENCIES
   js-routes
   lazyload-rails
   lodash-rails
+  magnific-popup-rails (~> 0.9)
   pry-rails
   quiet_assets
   rack-livereload

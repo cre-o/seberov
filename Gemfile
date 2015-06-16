@@ -45,7 +45,7 @@ gem 'gon' # passing variables into JS
 # Images lazy loading
 gem 'lazyload-rails'
 # Images zoomIn
-gem 'fancybox2-rails', '~> 0.2.8'
+gem 'magnific-popup-rails', '~> 0.9'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Rails routes inside JS

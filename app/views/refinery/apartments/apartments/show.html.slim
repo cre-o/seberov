@@ -196,13 +196,17 @@
       = render partial: 'refinery/multi_slider', locals: { render_parts: [:nav, :screen] }
 
   .row.b-apartment-text
-    .small-4.columns.text-right
-      = image_fu @apartment.photo, '230x150'
+    .small-2.columns
+      = image_tag 'apartments/show/add-on1.jpg'
+    .small-2.columns
+      = image_tag 'apartments/show/add-on2.jpg'
 
-    .small-7.columns
-      h1.upcase Lorem ipsum
-      p
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat voluptates consequuntur dolore iure enim quae ut, adipisci magni expedita eaque ex blanditiis ipsum similique repudiandae nulla aspernatur corporis ipsa!
+    .small-8.columns
+      section
+        header
+          h1.upcase = t 'h1', scope: 'apartment_page.add_on'
+        p
+          = t 'p', scope: 'apartment_page.add_on'
 
-      span.author.right wawawa!
+      //span.author.right Author Name
 

@@ -79,4 +79,6 @@
 
           .row.collapse
             .small-12.columns
-              = raw @page.content_for(:photo)
+              - blocks.each do |letter|
+                div ng-if="map.building == '#{letter}'"
+                  = image_tag "apartments/block-#{letter}.jpg", width: 501, height: 290

@@ -1,12 +1,12 @@
 .row.collapse.b-preview
   .small-12.columns
-    - @apartment.apartment_floors.each do |fl|
+    - @apartment.apartment_floors.object.order(floor_number: :desc).each do |fl|
       .row.collapse
         .small-5.columns.small-offset-1.b-models
           //.floor-n = t_floor_number get_floor_number(@apartment, fl)
-          = link_to get_model_path(@apartment, fl),class: 'fancybox model' do
+          = link_to get_model_path(@apartment, fl),class: 'zoom-in model' do
             = image_tag get_model_path(@apartment, fl, 's')
 
         .small-4.columns.b-plans
-          = link_to get_plan_path(@apartment, fl),class: 'fancybox plan' do
+          = link_to get_plan_path(@apartment, fl),class: 'zoom-in plan' do
             = image_tag get_plan_path(@apartment, fl, 's')

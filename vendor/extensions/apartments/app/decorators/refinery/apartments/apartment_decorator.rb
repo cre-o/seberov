@@ -17,7 +17,7 @@ module Refinery
           if object.send(method_name).present?
             "#{object.send(method_name)} #{t('defaults.square_sign')}"
           else
-            ''
+            "0.0 #{t('defaults.square_sign')}"
           end
         end
       end

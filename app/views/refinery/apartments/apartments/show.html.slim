@@ -14,7 +14,7 @@
               .small-7.columns
                 #building-map
                   div id=(@apartment.block)
-                    .location class=(@apartment.unit_id.downcase)
+                    .location class=[@apartment.block, @apartment.unit_id.downcase]
 
                   = image_tag 'apartments/building-map.png'
 

@@ -121,6 +121,73 @@
 
     .location {
       background-color: #c9e1d8;
+      position: absolute;
+
+      &.a {
+        height: rem-calc(20);
+        width: rem-calc(40);
+      }
+
+      &.a01 {
+        bottom: 0;
+      }
+      &.a03 {
+        bottom: 40px;
+      }
+      &.a04 {
+        bottom: 60px;
+      }
+      &.a05 {
+        bottom: 80px;
+      }
+      &.a06 {
+        bottom: 100px;
+      }
+      &.a07 {
+        bottom: 120px;
+      }
+
+      &.b {
+        height: rem-calc(47);
+        width: rem-calc(15);
+      }
+
+      &.b01, &.b09 {
+        right: 50px;
+      }
+
+      &.b04 {
+        right: 80px;
+      }
+
+      &.b05 {
+        right: 95px;
+      }
+
+      &.c {
+        width: rem-calc(40);
+        height: rem-calc(25);
+      }
+
+      &.c09, &.c08 {
+        bottom: 0;
+      }
+
+      &.c06, &.c07  {
+        bottom: 25px;
+      }
+
+      &.c05, &.c04 {
+        bottom: 50px;
+      }
+
+      &.c02, &.c10 {
+        bottom: 75px;
+      }
+
+      &.c01, &.c03 {
+        bottom: 100px;
+      }
     }
 
     .text-center {

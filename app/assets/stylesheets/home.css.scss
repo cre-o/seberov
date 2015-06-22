@@ -6,20 +6,29 @@
     position: relative;
     z-index: 2;
 
+    @media #{$small-only} {
+      font-size: .65em;
+    }
+
+    @media #{$medium-only} {
+      font-size: .75em;
+    }
+
     .choose-apartment {
+      font-size: em(18);
+
       position: absolute;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: $second-font;
       font-weight: bold;
-      font-size: rem-calc(18);
       text-transform: uppercase;
-      color: #fff;
+      color: $white;
       background-color: rgba($green, 0.9);
       z-index: 50;
-      right: -10px;
-      bottom: -10px;
-      height: 40px;
-      line-height: 40px;
-      padding-left: 5px;
+      right: em(-10);
+      bottom: em(-10);
+      height: em(40);
+      line-height: em-calc(40);
+      padding-left: em-calc(5);
 
       &:after {
         content: ' ';
@@ -27,20 +36,20 @@
         position: absolute;
         width: 0;
         height: 0;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid rgba($green, 0.9);
-        right: 10;
+        border-top: em(20) solid transparent;
+        border-bottom: em(20) solid transparent;
+        border-left: em(20) solid rgba($green, 0.9);
+        right: em(-19);
       }
 
       .map {
         position: absolute;
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: em(40);
+        height: em(40);
         background: image-url('icons/plan-icon42.png') center center no-repeat, rgba(tint($green, 30%), 0.8);
-        background-size: 20px 20px;
-        left: -40px;
+        background-size: em-calc(20 20);
+        left: em(-40);
       }
     }
   }
@@ -49,13 +58,20 @@
     font-family: 'Open Sans Condensed', sans-serif;
     background-color: $white;
     min-height: rem-calc(460);
+    display: table;
 
     .columns:nth-child(1) {
       padding-right: 0;
+      display: table-cell;
+      float: none;
+      vertical-align: top;
     }
 
     .columns:nth-child(2) {
-      box-shadow: 0 -30px 40px #959695;
+      box-shadow: 0 0 30px $grey;
+      display: table-cell;
+      float: none;
+      vertical-align: top;
     }
 
     header {
@@ -76,7 +92,7 @@
 
       i {
         color: $white;
-        margin-left: 15px;
+        margin-left: rem-calc(15);
       }
 
       &.map {
@@ -194,7 +210,6 @@
         font-size: rem-calc(15);
         font-weight: bold;
         margin-top: 0;
-        line-height: .8;
       }
 
       p {

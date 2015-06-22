@@ -120,6 +120,8 @@ angular.module('seberov').filter 'rangeFilter', ->
 angular.module('seberov').factory 'multiSliderService', ($timeout, $interval) ->
   slider = {}
   slider.screenNum = 1
+  slider.webcamUrl = 'http://151.249.106.49/images/logo.gif'
+  slider.webcamSrc = slider.webcamUrl
 
   slider.setScreen = (number) ->
     slider.screenNum = number
@@ -134,15 +136,15 @@ angular.module('seberov').factory 'multiSliderService', ($timeout, $interval) ->
 
   slider.loadWebcam = ->
     $interval ->
-      slider.webcamSrc = 'http://151.249.106.49/images/logo.gif' + '?' + new Date().getTime()
+      slider.webcamSrc = slider.webcamUrl + '?' + new Date().getTime()
     , 2000
 
   # Orbit styling
-  slider.screenHeight = 400 # minimal height
+  slider.screenHeight = 200 # minimal height
   if Foundation.utils.is_medium_only()
-    slider.screenHeight = 600 # minimal height
+    slider.screenHeight = 400 # minimal height
   if Foundation.utils.is_large_up()
-    slider.screenHeight = 900 # minimal height
+    slider.screenHeight = 700 # minimal height
 
   # Resizing
   $interval ->

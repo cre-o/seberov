@@ -37,6 +37,5 @@ jQuery ->
       bullets: false,
       circular: true,
       timer: false,
-      variable_height: false,
       swipe: true
     }

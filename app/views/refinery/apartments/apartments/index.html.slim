@@ -7,9 +7,9 @@
         // Select from image map
         .small-6.columns.b-building-selectors
           = form_tag 'selector', class: 'row' do
-            .small-5.columns
+            .small-4.columns
               h2.upcase = t('apartments_planning_page.select_floor')
-            .small-2.small-offset-1.columns.text-right
+            .small-3.small-offset-1.columns.text-right
               label.upcase for="building-select-label" = t('forms.building')+':'
             .small-1.columns
               select#building-select-label ng-model="map.building"
@@ -17,7 +17,7 @@
                   option value="#{letter}" = letter
             .small-2.columns.text-right
               label.upcase for="floor-select-label" = t('forms.floor')+':'
-            .small-1.columns
+            .small-1.columns.left
               select#floor-select-label ng-model="map.floor"
                 option value="1" 1
                 option value="2" 2

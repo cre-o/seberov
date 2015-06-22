@@ -1,20 +1,22 @@
 @import 'variables';
 
-body {
-  background-color: $white;
-  font-size: 100%;
-
+html {
   @media #{$small-only} {
-    font-size: 50%;
+    font-size: $rem-base - 3;
   }
 
   @media #{$medium-only} {
-    font-size: 75%;
+    font-size: $rem-base - 2;
   }
 }
 
+body {
+  background-color: $white;
+  font-size: 100%;
+}
+
 header.application {
-  $height: 50px; // Default block height
+  $height: rem-calc(50); // Default block height
   $index: 5;
 
   background-color: $white;
@@ -57,28 +59,29 @@ header.application {
     @extend %b-height;
 
     ul {
-      margin-left: rem_calc(5);
-      font-size: rem_calc(16);
+      margin: 0;
+      margin-left: rem-calc(5);
+      font-size: rem-calc(15);
     }
 
     li {
       display: inline-block;
 
       // <-- Media queries
-      padding-left: rem_calc(27);
+      padding-left: rem-calc(25);
 
       @media #{$small-only} {
-        padding-left: rem_calc(27/1.5);
+        padding-left: rem-calc(25/1.5);
       }
 
       @media #{$medium-only} {
-        padding-left: rem_calc(27/1.2);
+        padding-left: rem-calc(25/1.2);
       }
       // -->
 
       a {
         display: inline-block;
-        line-height: rem-calc($height);
+        line-height: $height;
         @extend %b-height;
 
         color: $purple;
@@ -88,7 +91,7 @@ header.application {
         a {
           color: $white;
           height: rem-calc(58);
-          padding: 0 rem_calc(10) 0 rem_calc(10);
+          padding: 0 rem-calc(10) 0 rem-calc(10);
           text-align: center;
           background-color: $green;
           //@include linear-gradient(to top, #5e9472, #669966);
@@ -100,7 +103,7 @@ header.application {
   // Languages selection
   ul.languages {
     font-family: 'Open Sans', sans-serif;
-    font-size: rem_calc(10);
+    font-size: rem-calc(10);
     position: absolute;
     margin: 0;
     z-index: $index;
@@ -115,9 +118,9 @@ header.application {
       a {
         display: block;
         color: $black;
-        font-size: 10px;
+        font-size: rem-calc(10);
         font-weight: 300;
-        line-height: 65px;
+        line-height: rem-calc(65);
         white-space: nowrap;
         @include transform(rotate(-90deg));
       }
@@ -131,28 +134,17 @@ header.application {
           color: $white;
         }
 
-        @include transition(all 300ms ease-out);
+        @include transition(all 220ms ease-out);
       }
 
       &.active {
         background-color: #4d7c5d;
-        height: 60px;
-        width: 30px;
+        height: rem-calc(60);
+        width: rem-calc(30);
 
         a {
           color: $white;
-
-          // <-- Media queries
-          font-size: rem_calc(12);
-
-          @media #{$small-only} {
-            font-size: rem_calc(12/1.5);
-          }
-
-          @media #{$medium-only} {
-            font-size: rem_calc(12/1.2);
-          }
-          // -->
+          font-size: rem-calc(12);
         }
       }
     }
@@ -162,11 +154,11 @@ header.application {
     @extend %b-height;
 
     .opener {
-      font-size: rem_calc(12);
-      margin-right: rem_calc(7);
+      font-size: rem-calc(12);
+      margin-right: rem-calc(7);
       position: absolute;
       bottom: 0;
-      right: rem_calc(10);
+      right: rem-calc(10);
       color: #0a944a;
 
       i.fa {
@@ -201,24 +193,24 @@ header.application {
       }
 
       li {
-        padding-bottom: 5px;
+        padding-bottom: rem-calc(5);
       }
 
       .phone {
-        font-size: rem_calc(17);
+        font-size: rem-calc(17);
 
         @media #{$medium-only} {
-          font-size: rem_calc(17/1.4);
+          font-size: rem-calc(17/1.4);
         }
 
         @media #{$small-only} {
-          font-size: rem_calc(17/1.5);
+          font-size: rem-calc(17/1.5);
         }
 
         .label {
           //background-color: rgba(0, 0, 0, 0.9);
 
-          font-size: rem_calc(16);
+          font-size: rem-calc(16);
           margin-left: rem-calc(5);
           padding: rem-calc(3);
           font-weight: 500;
@@ -229,7 +221,7 @@ header.application {
       }
 
       .skype, .pdf {
-        font-size: rem_calc(13);
+        font-size: rem-calc(13);
       }
     }
   }
@@ -246,23 +238,23 @@ footer {
   .container {
     background-color: $green;
     color: $white;
-    padding-top: rem_calc(30);
-    font-size: rem_calc(14);
+    padding-top: rem-calc(30);
+    font-size: rem-calc(14);
 
     a {
       color: $white;
-      font-size: rem_calc(14)
+      font-size: rem-calc(14)
     }
 
     h6 {
       color: $white;
-      font-size: rem_calc(14);
+      font-size: rem-calc(14);
       font-weight: bold;
     }
   }
 
   .small-logo {
-    height: 77px;
+    height: rem-calc(77);
 
     img {
       display: block;
@@ -271,9 +263,9 @@ footer {
   }
 
   .address {
-    padding: rem_calc(5 45);
+    padding: rem-calc(5 45);
     font-weight: 300;
-    line-height: rem_calc(18);
+    line-height: rem-calc(18);
 
     p {
       margin: 0;
@@ -282,42 +274,42 @@ footer {
 
   .footer-nav  {
     nav {
-      margin-left: 20px;
+      margin-left: rem-calc(20);
 
       a:hover {
-        font-size: rem_calc(16);
+        font-size: rem-calc(16);
       }
     }
 
     ul {
       border-right: 1px solid $white;
-      margin-right: 40px;
+      margin-right: rem-calc(40);
       font-weight: bold;
     }
   }
 
   p {
-    font-size: rem_calc(14);
-    margin-top: rem_calc(20);
+    font-size: rem-calc(14);
+    margin-top: rem-calc(20);
     font-weight: 300;
-    line-height: rem_calc(24);
+    line-height: rem-calc(24);
   }
 
   .investment {
-    margin-left: rem_calc(20);
+    margin-left: rem-calc(20);
 
     p {
-      width: rem_calc(140);
+      width: rem-calc(140);
     }
   }
 
   .contacts {
     .phone {
       background-color: $dark_green2;
-      padding: rem_calc(3);
-      float: right;
-      text-align: right;
-      line-height: rem_calc(16);
+      padding: rem-calc(3);
+      padding-right: rem-calc(5);
+      float: left;
+      line-height: rem-calc(16);
 
       &:after {
         content: "";
@@ -326,36 +318,39 @@ footer {
 
       span {
         font-weight: bold;
-        padding-right: rem_calc(10);
+        padding-right: rem-calc(10);
+        display: inline-block;
+        float: left;
       }
 
       a {
         text-decoration: underline;
-        font-size: rem_calc(12);
+        font-size: rem-calc(12);
+        display: inline-block;
+        float: left;
       }
     }
 
     p {
-      float: right;
-      padding-right: rem_calc(80);
-      margin-top: rem_calc(10);
+      float: left;
+      margin-top: rem-calc(10);
     }
   }
 
   .madeby {
     background-color: $dark_green2;
     color: $white;
-    font-size: rem_calc(12);
-    line-height: rem_calc(25);
-    padding-bottom: rem_calc(3);
+    font-size: rem-calc(12);
+    line-height: rem-calc(25);
+    padding-bottom: rem-calc(3);
 
     span, a {
-      opacity: 0.8;
+      opacity: .8;
     }
 
     a {
       color: $white;
-      padding-left: rem_calc(5);
+      padding-left: rem-calc(5);
       font-weight: 300;
       text-decoration: underline;
     }

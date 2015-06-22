@@ -189,7 +189,7 @@
 
         .b-download-pdf
           //@TODO Real URL
-          = link_to t('download_pdf', scope: 'apartment_page'), price_list_path, target: '_blank'
+          = link_to t('download_pdf', scope: 'apartment_page'), url_for("/pdf/#{@apartment.unit_id}.pdf"), target: '_blank'
 
   .row.collapse.b-multi-slider
     .small-12.columns

@@ -1,24 +1,42 @@
 .multi-slider {
+  background-color: $white;
+
+  @media #{$small-only} {
+    font-size: .65em;
+  }
+
+  @media #{$medium-only} {
+    font-size: .75em;
+  }
+
+  @media #{$large-up} {
+    font-size: 1em;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
   .action.buttons {
     color: $white;
     text-transform: uppercase;
 
     .btn {
-      height: rem_calc(100);
-      font-size: rem_calc(20);
+      height: rem-calc(100);
+      font-size: em-calc(20);
       cursor: pointer;
       position: relative;
-      max-width: 320px;
-      max-height: 350px;
+      max-width: rem-calc(320);
+      max-height: rem-calc(350);
 
       %sprite {
         background-image: image-url('components/multi-slider/slider-buttons-sprite.jpg');
       }
 
       &.active {
-        font-size: rem_calc(20);
+        font-size: em-calc(20);
         font-weight: bold;
-        height: rem_calc(150);
+        height: rem-calc(150);
       }
 
       .text {
@@ -51,28 +69,28 @@
       &.exterior {
         .image {
           @extend %sprite;
-          background-position: 0 0;
+          background-position: 0 -50px;
         }
       }
 
       &.interior {
         .image {
           @extend %sprite;
-          background-position: 0 -350px;
+          background-position: 0 -450px;
         }
       }
 
       &.tour {
         .image {
           @extend %sprite;
-          background-position: 0 -700px;
+          background-position: 0 -800px;
         }
       }
 
       &.webcam {
         .image {
           @extend %sprite;
-          background-position: 0 -1050px;
+          background-position: 0 -1150px;
         }
       }
     }
@@ -82,8 +100,8 @@
     position: relative;
 
     padding: {
-      left: rem_calc(4) !important;
-      right: rem_calc(3) !important;
+      left: rem-calc(4) !important;
+      right: rem-calc(3) !important;
     }
 
     .orbit {
@@ -95,38 +113,38 @@
     }
 
     .webcam {
-      margin-top: 27%;
+      margin-top: 15%;
     }
   }
 
   .options {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: rem_calc(25);
+    color: $white;
+    font-family: $default-font;
+    font-size: em-calc(18);
     font-weight: bold;
     text-transform: uppercase;
 
-    color: $white;
-
     .option {
-      margin-bottom: rem_calc(4);
+      margin-bottom: rem-calc(4);
       background-color: $green;
       cursor: pointer;
-      padding: rem_calc(6);
+      padding: rem-calc(6);
 
       .wrap {
         border: 1px solid $white;
-        padding-top: rem_calc(10);
+        padding-top: rem-calc(10);
         height: 100%;
         width: 100%;
         display: inline-block;
         text-align: center;
-        line-height: rem_calc(30);
         color: $white;
       }
 
       .icon {
-        display: block;
-        margin: 15% auto;
+        background-size: em-calc(27);
+        width: em-calc(27);
+        height: em-calc(27);
+        margin: em(15) auto;
         display: inherit;
       }
     }

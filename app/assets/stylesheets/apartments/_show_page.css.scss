@@ -15,13 +15,14 @@
     }
 
     &:before {
+      background: image-url('apartments/compass.png') no-repeat;
+      background-size: rem-calc(70);
       content: '';
       position: absolute;
-      background: image-url('apartments/compass.png');
       width: rem(80);
       height: rem(80);
       left: 0;
-      top: rem(-12);
+      top: rem(-8);
       right: 0;
       margin-left: auto;
       margin-right: auto;
@@ -51,12 +52,13 @@
         position: relative;
 
         &:after {
-          background-image: image-url('apartments/show/zoom.png');
+          background: image-url('apartments/show/zoom.png') no-repeat;
+          background-size: rem-calc(50);
           content: "";
           position: absolute;
           width: rem(54);
           height: rem(54);
-          left: rem(-80);
+          left: rem(-55);
           top: rem(20);
         }
 

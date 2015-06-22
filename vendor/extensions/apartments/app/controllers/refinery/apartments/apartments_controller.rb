@@ -29,7 +29,7 @@ module Refinery
       end
 
       def by_price_list
-        @apartments = ApartmentsDecorator.decorate(Apartment.active.by_position)
+        @apartments = ApartmentsDecorator.decorate(Apartment.active.without_d.by_position)
 
         respond_to do |format|
           format.html { render :by_price_list }

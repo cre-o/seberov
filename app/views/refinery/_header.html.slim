@@ -3,11 +3,11 @@
     .logo
       = link_to refinery.root_path, title: 'На главную' do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
-        = image_tag 'logo-fixed.png', width: 217, height: 57, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
+        = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
   .small-6.large-6.columns.upcase
     = render 'refinery/nav'
 
-  .small-1.large-1.columns
+  .small-2.large-1.columns
     ul.languages
       li class=(en_locale?? 'active' : nil)
         a href="#{change_lang_hack('en')}" = t('all_pages.language_menu.english')

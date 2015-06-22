@@ -1,7 +1,8 @@
 #apartments-render {
+  background-repeat: no-repeat;
   position: relative;
-  width: 512px;
-  height: 209px;
+  height: em(209);
+  background-size: 100%;
 
   a {
     position: relative;
@@ -27,23 +28,23 @@
 
   .apartment {
     position: absolute;
-    width: 60px;
-    height: 95px;
+    width: em(60);
+    height: em(95);
   }
 
   &.a {
     @include apartment-floor-plans($building: "a");
 
     .apartment {
-      width: 76px;
-      height: 112px;
+      width: em(76);
+      height: em(112);
     }
 
     &.floor-1 {
       @include fill-with-apartments(
-        $container-width: 75px,
-        $container-height: 110px,
-        $start-position: 195px,
+        $container-width: em(75),
+        $container-height: em(110),
+        $start-position: em(195),
         $top-position: 24%,
         $last-apartment: 4)
     }
@@ -51,15 +52,15 @@
     // Single apartment styles
     &.floor-2, &.floor-3 {
       @include fill-with-apartments(
-        $container-width: 75px,
-        $container-height: 115px,
-        $start-position: 12px,
+        $container-width: em(75),
+        $container-height: em(115),
+        $start-position: em(12),
         $top-position: 24%,
         $last-apartment: 7,
-        $apartment1-width: 60px,
-        $apartment2-width: 60px,
-        $apartment3-width: 60px,
-        $apartment7-width: 80px)
+        $apartment1-width: em(60),
+        $apartment2-width: em(60),
+        $apartment3-width: em(60),
+        $apartment7-width: em(80))
     }
   }
 

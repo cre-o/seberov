@@ -22,7 +22,8 @@
       .compass {
         position: absolute;
         left: rem-calc(-63);
-        background-image: image-url('apartments/compass.png');
+        background: image-url('apartments/compass.png') no-repeat;
+        background-size: rem(80);
         width: rem-calc(80);
         height: rem-calc(80);
         top: rem-calc(50);
@@ -44,6 +45,7 @@
         }
 
         #render {
+          background-size: 100%;
           position: absolute;
           display: block;
           top: 0;
@@ -79,6 +81,15 @@
   .b-apartment-selector {
     border-left: 1px solid #a39e9e;
     min-height: rem(590);
+
+    // <-- Media queries
+    @media #{$small-only} {
+      font-size: .25;
+    }
+    @media #{$medium-only} {
+      font-size: .75;
+    }
+    // -->
 
     h1 {
       font-size: rem-calc(20);

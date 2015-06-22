@@ -2,7 +2,7 @@ module Refinery
   module Apartments
     class Apartment < Refinery::Core::BaseModel
       STATES = %w(active reserved sold)
-      BLOCKS = %w(a b c d)
+      BLOCKS = %w(a b c) # block "D" was sold out
 
       self.per_page = 100 # will_paginate
       self.table_name = 'refinery_apartments'
@@ -18,6 +18,7 @@ module Refinery
       scope :block_b, -> { where(block: 'b') }
       scope :block_c, -> { where(block: 'c') }
       scope :block_d, -> { where(block: 'd') }
+      scope :without_d, -> { where.not(block: 'd')}
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 

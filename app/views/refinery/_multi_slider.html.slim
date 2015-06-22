@@ -28,7 +28,7 @@
         - unless defined?(exclude_parts) && exclude_parts.include?(:webcam)
           .btn.webcam[
             ng-class="{ active: slider.isCurrentScreen(4) }"
-            ng-click="slider.setScreen(4); loadWebcam()"
+            ng-click="slider.setScreen(4); slider.loadWebcam()"
             ng-style="slider.isCurrentScreen(4) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5}"]
             .text
               span = t 'webcam_button_text_html', scope: 'multi_slider'

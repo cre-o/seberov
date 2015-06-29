@@ -63,14 +63,14 @@
 
   /! Buttons
   - if defined?(render_parts) && render_parts.include?(:buttons)
-    .small-2.columns.options.end
-      .v-middle ng-style="{'margin-top': slider.screenHeight/4}"
-        .option ng-style="{'height': slider.screenHeight/4-2}"
+    .medium-2.columns.options.end
+      .v-middle ng-style="Foundation.utils.is_medium_up() ? { 'margin-top': slider.screenHeight/4 } : ''"
+        .small-12.option ng-style="{'height': slider.screenHeight/4-2}"
             = link_to price_list_path, class: 'wrap', target: '_blank' do
               .text = t 'all_pages.download_price_list'
               i.icon.pdf
 
-        .option ng-style="{'height': slider.screenHeight/4-2}"
+        .small-12.option ng-style="{'height': slider.screenHeight/4-2 }"
             = link_to refinery.apartments_apartments_path, class: 'wrap', target: '_blank' do
               .text = t 'choose_an_apartment_button_text', scope: 'multi_slider'
               i.icon.plan

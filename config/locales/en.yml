@@ -18,9 +18,10 @@ en:
     procedure_of_purchasing: 'Procedure of purchasing'
 
   apartment_page:
-    floor_1: "1ST FLOOR"
-    floor_2: "2ND FLOOR"
-    floor_3: "3RD FLOOR"
+    galerie: 'galerie'
+    floor_1: "1 NP"
+    floor_2: "2 NP"
+    floor_3: "3 NP"
     sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
     sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
     download_pdf: 'DOWNLOAD PDF'

@@ -15,8 +15,8 @@
         = raw @page.content_for(:slider_image)
 
   .row.fluid.main-info
-    .small-4.columns
-      header.small-12.large-8.upcase.grey.map
+    .small-12.medium-4.columns
+      header.small-8.medium-8.upcase.grey.map
         h1 Map
         i.fa.fa-2x.fa-chevron-right
       // Google map!
@@ -24,7 +24,7 @@
         ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options"
           ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
 
-    .small-8.columns
+    .small-12.medium-8.columns
       header.small-8.large-4.upcase.green
         h1 Benefits
         i.fa.fa-2x.fa-chevron-right

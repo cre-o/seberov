@@ -1,12 +1,23 @@
 .row.collapse.b-preview
   .small-12.columns
     - @apartment.apartment_floors.object.order(floor_number: :desc).each do |fl|
+      - if fl.gallery_area.present?
+        .row.collapse
+          .small-5.columns.b-models
+            = link_to asset_url("apartments/show/models/#{@apartment.unit_id.downcase}-galerie.jpg"), class: 'zoom-in model' do
+              = image_tag "apartments/show/models/#{@apartment.unit_id.downcase}-galerie-s.jpg"
+
+          .small-2.columns.left
+            .floor-n = t 'galerie', scope: 'apartment_page'
+
       .row.collapse
-        .small-5.columns.small-offset-1.b-models
-          //.floor-n = t_floor_number get_floor_number(@apartment, fl)
-          = link_to get_model_path(@apartment, fl),class: 'zoom-in model' do
+        .small-5.columns.b-models
+          = link_to get_model_path(@apartment, fl), class: 'zoom-in model' do
             = image_tag get_model_path(@apartment, fl, 's')
 
+        .small-2.columns
+          .floor-n = t_floor_number get_floor_number(@apartment, fl)
+
         .small-4.columns.b-plans
-          = link_to get_plan_path(@apartment, fl),class: 'zoom-in plan' do
+          = link_to get_plan_path(@apartment, fl), class: 'zoom-in plan' do
             = image_tag get_plan_path(@apartment, fl, 's')

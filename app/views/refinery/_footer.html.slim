@@ -1,24 +1,24 @@
 footer
   .row.collapse.fluid.container
-    .small-3.columns
+    .small-3.medium-3.columns
       .small-logo
         = image_tag 'small-logo.png'
       .address
         = raw refinery_get_page(id: 'footer').content_for(:address)
 
-    .small-2.columns
+    .small-4.medium-2.columns
       .footer-nav
         = render partial: 'refinery/nav'
 
-    .small-2.columns
+    .small-2.medium-2.columns
       .credit
         = raw refinery_get_page(id: 'footer').content_for(:credit)
 
-    .small-2.columns
+    .small-2.medium-2.columns
       .investment
         = raw refinery_get_page(id: 'footer').content_for(:investment)
 
-    .small-2.columns
+    .small-2.medium-2.columns
       .contacts
         .phone
           = raw refinery_get_page(id: 'footer').content_for(:phone)
@@ -26,19 +26,19 @@ footer
           // Callback modal window
           #callbackModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
             .row
-              .small-8.small-centered.columns
+              .small-8.medium-8.small-centered.columns
                 header
                   h2.upcase = t('forms.callback.header')
                   .subheader.upcase = t('forms.callback.subheader')
 
             .row
-              .small-8.small-centered.columns
+              .small-8.medium-8.small-centered.columns
                 = form_tag '/callback' do
-                  .small-4.columns
+                  .small-4.medium-4.columns
                     = text_field_tag 'name', '', placeholder: t('forms.name'), required: true
-                  .small-4.columns
+                  .small-4.medium-4.columns
                     = phone_field_tag 'phone', '', placeholder: t('forms.phone'), required: true
-                  .small-4.columns
+                  .small-4.small-4.columns
                     = submit_tag t('forms.send')
 
               a.close-reveal-modal aria-label="Close"

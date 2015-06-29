@@ -60,18 +60,20 @@
     min-height: rem-calc(460);
     display: table;
 
-    .columns:nth-child(1) {
-      padding-right: 0;
-      display: table-cell;
-      float: none;
-      vertical-align: top;
-    }
+    @media #{medium-up} {
+      .columns:nth-child(1) {
+        padding-right: 0;
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+      }
 
-    .columns:nth-child(2) {
-      box-shadow: 0 0 30px $grey;
-      display: table-cell;
-      float: none;
-      vertical-align: top;
+      .columns:nth-child(2) {
+        box-shadow: 0 0 30px $grey;
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+      }
     }
 
     header {

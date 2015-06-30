@@ -3,7 +3,7 @@
   @import "apartments/mortgage_calculator";
 
   fieldset {
-    border: 2px solid $grey-borders;
+    border: 2px solid $super-light-grey;
     padding: rem-calc(25 90);
     margin-bottom: rem(20);
 
@@ -206,7 +206,7 @@
 
     .text-center {
       font-family: 'Open Sans', sans-serif;
-      margin-top: rem(25);
+      margin-top: .625rem;
       font-size: rem_calc(16);
       color: #4e4e4e;
     }

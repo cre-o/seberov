@@ -33,11 +33,14 @@
       padding-bottom: rem(30);
 
       .floor-n {
+        display: table-cell;
+        vertical-align: middle;
         text-align: center;
         font-size: rem(15);
         color: $grey;
         text-transform: uppercase;
         margin-bottom: rem(20);
+        height: rem(230);
       }
 
       .row {

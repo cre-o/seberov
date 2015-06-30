@@ -19,6 +19,10 @@
       list-style-type: disc;
     }
 
+    .section3 {
+      text-align: left;
+    }
+
     &.left-side {
       background: image_url('standards/ruler-left-s') -30px 20px no-repeat;
       padding-left: 13%;
@@ -34,7 +38,7 @@
       padding-right: 15%;
 
       &.long {
-        background: image_url('standards/ruler-right-l') 100% 20px no-repeat;
+        background: image_url('standards/ruler-right-l') 110% 20px no-repeat;
         padding: 0;
       }
 

@@ -33,11 +33,11 @@ module Refinery
       end
 
       def apartment_area_decorated
-        "#{apartment_area} #{t('defaults.square_sign')}" if apartment_area.present?
+        "#{apartment_area || 0.0} #{t('defaults.square_sign')}"
       end
 
       def balcony_terace_area_decorated
-        "#{balcony_terace_area} #{t('defaults.square_sign')}" if balcony_terace_area.present?
+        "#{balcony_terace_area || 0.0} #{t('defaults.square_sign')}"
       end
 
       def front_yard_area_decorated

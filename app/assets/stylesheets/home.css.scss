@@ -5,6 +5,7 @@
     min-height: 1px;
     position: relative;
     z-index: 2;
+    list-style-type: none;
 
     @media #{$small-only} {
       font-size: .65em;

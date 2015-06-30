@@ -19,7 +19,8 @@ angular.module('seberov').controller 'ApartmentController', ($scope, $http, mult
   cached['eurRates'] = null
 
   calculator.decorate = (price) ->
-    "#{price} #{calculator.priceSigns[calculator.currency]}"
+    priceFormated = numeral(price).format('0,0').replace(/,/g, ' ')
+    "#{priceFormated} #{calculator.priceSigns[calculator.currency]}"
 
   calculator.setCurrency = (currency) ->
     calculator.currency = currency
@@ -54,7 +55,7 @@ angular.module('seberov').controller 'ApartmentMortgageCalculatorController', ($
     $scope.decorate(value)
 
   $scope.decorate = (value) ->
-    number = numeral(value).format('0,0')
+    number = numeral(value).format('0,0').replace(/,/g, ' ')
     "#{number} Kč"
 
   return $scope

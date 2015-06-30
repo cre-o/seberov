@@ -258,12 +258,12 @@ footer {
 
     img {
       display: block;
-      margin: 0 auto;
+      margin-left: rem(45);
     }
   }
 
   .address {
-    padding: rem-calc(5 45);
+    margin: rem-calc(5 45);
     font-weight: 300;
     line-height: rem-calc(18);
 

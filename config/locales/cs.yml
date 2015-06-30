@@ -10,67 +10,67 @@ cs:
   all_pages:
     language_menu:
       english: 'english'
-      czech: 'czech'
+      czech: 'český'
       russian: 'russian'
-    download_price_list: 'Download price list'
+    download_price_list: 'Stáhnout ceník'
 
   home_page:
-    procedure_of_purchasing: 'Procedure of purchasing'
+    procedure_of_purchasing: 'Postup nákupu'
 
   apartment_page:
-    floor_1: "1ST FLOOR"
-    floor_2: "2ND FLOOR"
-    floor_3: "3RD FLOOR"
-    sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
-    sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
-    download_pdf: 'DOWNLOAD PDF'
+    floor_1: "1 patro"
+    floor_2: "2 patro"
+    floor_3: "3 patro"
+    sign_up_to_see: 'Přihlaste se prohlídku bytu:'
+    sign_up_to_see_advice: 'Nechte své kontakty a my vás co nejdříve budeme kontaktovat'
+    download_pdf: 'Stáhnout katalogový list'
     calculator:
-      count_payment: 'count mortgage payment'
+      count_payment: 'Spočítat hypotéku'
       price_with_dph: 'Cena včetně DPH'
-      parking_slot_price: '+парковочное место в подземном гараже'
-      show_parking_plan: 'показать схему парковки'
+      parking_slot_price: '+parkovací stání'
+      show_parking_plan: 'zobrazitparkovací schému'
     add_on:
-      h1: 'Надстандарт'
-      p: 'По вашему заказу мы можем сделать ремонт любой сложности, заказать атипичную мебель, включая подготовку индивидуального дизайна интерьера.'
+      h1: 'Nad standardu'
+      p: 'Na vaši žádost jsme schopni provést opravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'
 
   apartments_page:
-    choose_apartment: 'Choose apartment'
-    map_area_title: "floor %{floor} | building %{building}"
+    choose_apartment: 'Vyberte si byt'
+    map_area_title: "podlaha %{floor} | budova %{building}"
 
   apartments_planning_page:
     title: 'Apartments planning page!'
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
-    select_floor: 'Выберите корпус и этаж:'
+    select_floor: 'Vyberte budovu a podlahu:'
 
   apartments_price_list_page:
-    download_pdf: 'download pdf'
+    download_pdf: 'Stáhnout pdf'
     table:
       id: '#'
-      planing: 'Планировка'
-      floor: 'Этаж'
-      square: 'Площадь'
-      terrace:  'Терасса'
-      frontage: 'Палисадник'
-      price: 'Цена'
+      planing: 'Dispozice'
+      floor: 'Podlaha'
+      square: 'Plocha'
+      terrace:  'Terasa'
+      frontage: 'Zahrádka'
+      price: 'Cena'
 
   location_page:
-    legend: 'Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508'
+    legend: 'Statek Šeberov, Praha 4, K Šeberovu 508 '
     old_photo_title: 'Kolorovaná fotografie statu z 18. století'
     new_photo_title: 'Aktuální fotografie'
     icons_text:
-      medicine: 'Районная больница и аптека'
-      autobus: 'Автобусная остановка прямо у дома'
-      relax: 'Центр досуга и свободного времени'
-      school: 'Начальная и средняя школы'
-      administration: 'Городское управление'
-      police: 'Полицейский участок'
-      library: 'Библиотека'
-      playground: 'Детская площадка'
-      sport: 'Спортивный ареал'
+      medicine: 'Okresní nemocnice a lékárna'
+      autobus: 'Autobusová zastávka přímo u domu'
+      relax: 'Centrum rekreace a volného času'
+      school: 'Základní a střední školy'
+      administration: 'Městská administrace'
+      police: 'Policie'
+      library: 'Knihovna'
+      playground: 'Dětské hřiště'
+      sport: 'Sportovní areál'
     slider:
       descriptions:
-        - First image
+        - 1
         - 2
         - 3
         - 4
@@ -84,120 +84,83 @@ cs:
 
   standards_page:
     header:
-      architect: СЛОВО АРХИТЕКТОРА
+      architect: Slovo architekta
     image_broadcaster:
-      - конструкция пола первого этажа
-      - конструкция междуэтажных перекрытий
-      - перемычки над проемами
-      - железобетонный венец
-      - конструкция внутренних галерей мансардных квартир
-      - конструкция галереи, служащей для доступа к квартирам на третьем этаже
-      - конструкция балконов
-    horisontal_constructions:
-      - |
-        керамические панели, усиленные железобетонными балками
-        акустическая изоляция – твержёный пенопласт типа EPS 150 S толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
-        разделительная пленка
-        цементная стяжка
-        гидроизоляция ванных комнат
-        покрытие пола
-      - |
-        гипсокартонные подвесные потолки или гипсовая штукатурка
-        перекрытия – керамические панели, усиленные железобетонными балками
-        акустическая изоляция – твержёный пенопласт типа EPS 150 S толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
-        разделительная пленка
-        цементная стяжка
-        гидроизоляция ванных комнат
-        покрытие пола
-      - |
-        перемычки над проемами в несущих стенах проведены из железобетонных конструкций, или с помощью системных перемычек
-        перемычки над проемами в не несущих стенах и перегородках – из системных перемычек
-      - |
-        бетон
-        арматура
-        тепловая изоляция с внешней стороны венца, являющаяся составной частью тепловой изоляции фасада
-      - |
-        несущая конструкция галерей проведена из деревянных профилей
-        снизу галерея оборудована подвесным гипсокартонным потолком с минеральной ватой 120 мм
-        покрытие пола – многослойная древесина с финальным покрытием дуб
-      - |
-        несущая часть - железобетонные консоли
-        пол деревянный из твердых пород древесины на акустической основе
-        перила – металлические кованные
-        галерея закрыта крышей с покрытием из керамической черепицы Tondach
-      - |
-        несущая часть - железобетонные консоли
-        пол деревянный из твердых пород древесины на акустической основе
-        перила – металлические кованные
-        перегородки между соседними балконами выполнены в виде оцинкованной железной конструкции с лёгким заполнителем
+      - složení a provedení podlahové konstrukce přízemí
+      - složení a provedení stropní konstrukce
+      - překlady nad otvory
+      - železobetonový ztužující pozední věnec
+      - konstrukce vnitřní galerie podkrovních bytů
+      - konstrukce domovní pavlače podkrovních bytů
+      - konstrukce balkonů
 
   forms:
     price_with_dph: 'Cena včetně DPH'
-    apartment_area: 'area'
-    area: 'area'
-    unit_id: 'unit id'
-    building: 'building'
+    apartment_area: 'plocha'
+    area: 'plocha'
+    unit_id: 'jednotka id'
+    building: 'budova'
     block: 'block'
-    layout: 'layout'
-    name: 'name'
-    phone: 'phone'
-    price: 'price'
-    from: 'from'
-    to: 'to'
-    floorspace: 'floorspace'
-    floor: 'floor'
+    layout: 'dispozice'
+    name: 'název'
+    phone: 'telefon'
+    price: 'cena'
+    from: 'od'
+    to: 'do'
+    floorspace: 'podlahová plocha'
+    floor: 'podlaha'
     floors: 'podlaží'
-    rooms: 'rooms'
-    one: 'one'
-    two: 'two'
-    three: 'three'
-    four: 'four'
-    penthouse: 'penthouse'
-    grounds: 'grounds'
-    results: 'results'
-    total_floors: 'total floors'
-    send: 'отправить'
-    your_name: 'your name'
-    phone_number: 'phone number'
+    rooms: 'pokoje'
+    one: 'jeden'
+    two: 'dvě'
+    three: 'tři'
+    four: 'čtyři'
+    penthouse: 'přístřešek'
+    grounds: 'zahrada'
+    results: 'výsledky'
+    total_floors: 'podlaží celkem'
+    send: 'odeslat'
+    your_name: 'Vaše jméno'
+    phone_number: 'telefonní číslo'
     email: 'email'
-    vestibule_area: 'vestibule area'
-    corridor_area: 'corridor area'
-    wc_area: 'wc area'
-    kitchen_area: 'kitchen area'
-    chamber_area: 'chamber area'
-    bathroom_area: 'bathroom area'
-    balcony_terace_area: 'balcony terace area'
-    staircase_area: 'staircase area'
-    cloakroom_area: 'cloakroom area'
-    room_area: "room %{number} area"
-    gallery_area: 'gallery area'
+    vestibule_area: 'předsíň'
+    corridor_area: 'chodba'
+    wc_area: 'wc'
+    kitchen_area: 'kuchyně'
+    chamber_area: 'komora'
+    bathroom_area: 'koupelna'
+    balcony_terace_area: 'balkón/terasa'
+    staircase_area: 'schodiště'
+    cloakroom_area: 'šatna'
+    room_area: "pokoj %{number} "
+    gallery_area: 'galerie'
     callback:
-      header: 'Оставьте свой номер телефона'
-      subheader: 'и наш менеджер перезвонит вам в ближайшее время'
+      header: 'Nechte své telefonní číslo'
+      subheader: 'a náš manažer vám zavolá zpět krátce'
   footer:
-    order_callback: 'order callback'
+    order_callback: 'objednat zpětné volání'
   controller:
-    callback_mail_send: 'Мы скоро с вами свяжемся!'
-    callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
-    application_mail_send_error: 'Возникла ошибка при отправке письма просмотра апартаментов'
+    callback_mail_send: 'Budeme vás brzy kontaktovat!'
+    callback_mail_send_error: 'Při odesílání zpětné volání došlo k chybě'
+    application_mail_send_error: 'Při odesílání objednavky bytů došlo k chybě'
 
   multi_slider:
-    exterior_button_text_html: 'Визуализация'
-    interior_button_text_html: 'Фотографии'
-    tour_button_text_html: 'Виртуальный <br /> Тур'
-    webcam_button_text_html: 'Онлайн камера'
-    download_button_text_html: 'Download <br /> Price list'
-    choose_an_apartment_button_text: 'Choose An apartment'
+    exterior_button_text_html: 'Vizualizace'
+    interior_button_text_html: 'Fotografie'
+    tour_button_text_html: 'Virtuální <br /> prohlídka'
+    webcam_button_text_html: 'on-line kamera'
+    download_button_text_html: 'Stáhnout <br /> ceník'
+    choose_an_apartment_button_text: 'Vyberte si byt'
 
     exterior:
       descriptions:
-        - 'first description'
+        - '1'
         - '2'
         - '3'
         - '4'
     interior:
       descriptions:
-        - 'first description'
+        - '1'
         - '2'
         - '3'
         - '4'
@@ -216,36 +179,36 @@ cs:
 
   refinery:
     admin:
-      apartment_floor_data: 'Floors'
+      apartment_floor_data: 'Podlahy'
     apartments:
-      by_planning: 'by planning'
-      by_parameters: 'by parameters'
-      by_price_list: 'by price list'
+      by_planning: 'Na modelu domu'
+      by_parameters: 'podle parametrů'
+      by_price_list: 'podle ceníku'
 
   price_list:
     tel: 'tel: %{number}'
 
   popups:
-    thank_you: 'Спасибо!'
-    request_accepted: 'ВАША ЗАЯВКА ПРИНЯТА.'
-    wait: 'НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШИЕ 24 ЧАСА.'
+    thank_you: 'Děkujeme'
+    request_accepted: 'Vaše žádost byla přijata.'
+    wait: 'Náš manažer vás bude kontaktovat do 24 hodin.'
     mortgage_calculator:
-      h1: 'Mortgage calculator'
+      h1: 'Hypoteční kalkulačka'
       form:
-        repayment_length: 'repayment length'
-        interest_rate: 'interest rate'
-        extent_of_mortgage: 'extent of mortgage'
-        monthly_installment: 'monthly installment'
-      h2: 'How you can obtain a mortgage for a new unit in Prague 4'
+        repayment_length: 'délka splácení:'
+        interest_rate: 'úroková sazba:'
+        extent_of_mortgage: 'výše hypotéky:'
+        monthly_installment: 'měsíční splátka:'
+      h2: 'Jak tedy na sjednání hypotéky u novostavby v Praze 4'
       list:
-        - We present your ideas and possibilities to the broker.
-        - Based on the information, the broker will prepare suitable financing models of the Šeberov Homestead project.
-        - He will arrange for you all the necessary documents, e.g. a copy of the entry in the Cadastre and other necessary documents.
-        - At the next meeting with the broker the documents will be handed over and your broker will submit the application to the bank.
-        - The broker will assist you with the signing of the documents with the bank.
-        - You obtain a mortgage loan.
-      get_loan: 'Get motgage loan'
-      leave_creadentials: 'Leave your credentials and we’ll contact you as soon as possible.'
+        - Představíte makléřovi vaše představy a možnosti
+        - Na základě těchto informací navrhne vhodné modely financování Novostavby v Praze 4 – projektu Statek Šeberov
+        - Vyřídídí za vás všechny potřebné doklady jako je např. výpis z katastru nemovitostí a dalších potřebných listin
+        - Při dalším setkání s makléřem proběhne předání dokumentů a podání žádosti vaším makléřem do banky.
+        - Za asistence makléře proběhne v bance podpis dokumentů
+        - Získáváte hypoteční úvěr
+      get_loan: 'Získat hypoteční úvěr'
+      leave_creadentials: 'Nechte prosim své kontakty a my Vás co nejdříve budeme kontaktovat.'
 
   mailers:
     callback_subject: 'CallBack request from statekseberov website'

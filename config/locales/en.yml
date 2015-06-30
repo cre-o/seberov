@@ -18,21 +18,20 @@ en:
     procedure_of_purchasing: 'Procedure of purchasing'
 
   apartment_page:
-    galerie: 'galerie'
-    floor_1: "1 NP"
-    floor_2: "2 NP"
-    floor_3: "3 NP"
+    floor_1: "1ST FLOOR"
+    floor_2: "2ND FLOOR"
+    floor_3: "3RD FLOOR"
     sign_up_to_see: 'SIGN UP TO SEE THE APARTMENT:'
-    sign_up_to_see_advice: 'Leave your credentials and we’ll contact you as soon as possible'
+    sign_up_to_see_advice: "Leave your credentials and we'll contact you as soon as possible"
     download_pdf: 'DOWNLOAD PDF'
     calculator:
       count_payment: 'count mortgage payment'
-      price_with_dph: 'Cena včetně DPH'
-      parking_slot_price: '+парковочное место в подземном гараже'
-      show_parking_plan: 'показать схему парковки'
+      price_with_dph: 'Price includes VAT'
+      parking_slot_price: '+parking place'
+      show_parking_plan: 'show parking scheme'
     add_on:
-      h1: 'Надстандарт'
-      p: 'По вашему заказу мы можем сделать ремонт любой сложности, заказать атипичную мебель, включая подготовку индивидуального дизайна интерьера.'
+      h1: 'Above Standard'
+      p: 'At your request we can make the repair of any complexity, order an atypical furniture, including the preparation of individual interior design.'
 
   apartments_page:
     choose_apartment: 'Choose apartment'
@@ -42,36 +41,36 @@ en:
     title: 'Apartments planning page!'
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
-    select_floor: 'Выберите корпус и этаж:'
+    select_floor: 'Select the building and floor:'
 
   apartments_price_list_page:
     download_pdf: 'download pdf'
     table:
       id: '#'
-      planing: 'Планировка'
-      floor: 'Этаж'
-      square: 'Площадь'
-      terrace:  'Терасса'
-      frontage: 'Палисадник'
-      price: 'Цена'
+      planing: 'Layout'
+      floor: 'Floor'
+      square: 'Area'
+      terrace:  'Terrace'
+      frontage: 'Front garden'
+      price: 'Price'
 
   location_page:
-    legend: 'Усадьба Шеберов, Прага 4,  ул. К Шеберову, 508'
-    old_photo_title: 'Kolorovaná fotografie statu z 18. století'
-    new_photo_title: 'Aktuální fotografie'
+    legend: 'Šeberov Homestead, Prague 4,  K Šeberovu 508'
+    old_photo_title: 'Colored photo of the Homestead of the 18th century'
+    new_photo_title: 'Current photo'
     icons_text:
-      medicine: 'Районная больница и аптека'
-      autobus: 'Автобусная остановка прямо у дома'
-      relax: 'Центр досуга и свободного времени'
-      school: 'Начальная и средняя школы'
-      administration: 'Городское управление'
-      police: 'Полицейский участок'
-      library: 'Библиотека'
-      playground: 'Детская площадка'
-      sport: 'Спортивный ареал'
+      medicine: 'District hospital and pharmacy'
+      autobus: 'Bus stops right at home'
+      relax: 'Recreation and leisure time center'
+      school: 'Primary and secondary schools'
+      administration: 'City administration'
+      police: 'Police station'
+      library: 'Library'
+      playground: 'Playground'
+      sport: 'Sports area'
     slider:
       descriptions:
-        - First image
+        - 1
         - 2
         - 3
         - 4
@@ -85,55 +84,18 @@ en:
 
   standards_page:
     header:
-      architect: СЛОВО АРХИТЕКТОРА
+      architect: "Architect's word"
     image_broadcaster:
-      - конструкция пола первого этажа
-      - конструкция междуэтажных перекрытий
-      - перемычки над проемами
-      - железобетонный венец
-      - конструкция внутренних галерей мансардных квартир
-      - конструкция галереи, служащей для доступа к квартирам на третьем этаже
-      - конструкция балконов
-    horisontal_constructions:
-      - |
-        керамические панели, усиленные железобетонными балками
-        акустическая изоляция – твержёный пенопласт типа EPS 150 S толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
-        разделительная пленка
-        цементная стяжка
-        гидроизоляция ванных комнат
-        покрытие пола
-      - |
-        гипсокартонные подвесные потолки или гипсовая штукатурка
-        перекрытия – керамические панели, усиленные железобетонными балками
-        акустическая изоляция – твержёный пенопласт типа EPS 150 S толщиной 3 см, изоляционная подкладка peMAX толщиной 2 мм
-        разделительная пленка
-        цементная стяжка
-        гидроизоляция ванных комнат
-        покрытие пола
-      - |
-        перемычки над проемами в несущих стенах проведены из железобетонных конструкций, или с помощью системных перемычек
-        перемычки над проемами в не несущих стенах и перегородках – из системных перемычек
-      - |
-        бетон
-        арматура
-        тепловая изоляция с внешней стороны венца, являющаяся составной частью тепловой изоляции фасада
-      - |
-        несущая конструкция галерей проведена из деревянных профилей
-        снизу галерея оборудована подвесным гипсокартонным потолком с минеральной ватой 120 мм
-        покрытие пола – многослойная древесина с финальным покрытием дуб
-      - |
-        несущая часть - железобетонные консоли
-        пол деревянный из твердых пород древесины на акустической основе
-        перила – металлические кованные
-        галерея закрыта крышей с покрытием из керамической черепицы Tondach
-      - |
-        несущая часть - железобетонные консоли
-        пол деревянный из твердых пород древесины на акустической основе
-        перила – металлические кованные
-        перегородки между соседними балконами выполнены в виде оцинкованной железной конструкции с лёгким заполнителем
+      - Design and composition of the floor structure on the ground floor
+      - Design and composition of the ceiling structure
+      - Lintels over doors and windows
+      - Reinforced concrete ring beam
+      - Construction of the inner gallery of loft apartments
+      - Construction of the loft apartment gallery
+      - Balcony construction
 
   forms:
-    price_with_dph: 'Cena včetně DPH'
+    price_with_dph: 'Price includes VAT'
     apartment_area: 'area'
     area: 'area'
     unit_id: 'unit id'
@@ -147,7 +109,7 @@ en:
     to: 'to'
     floorspace: 'floorspace'
     floor: 'floor'
-    floors: 'podlaží'
+    floors: 'floors'
     rooms: 'rooms'
     one: 'one'
     two: 'two'
@@ -157,7 +119,7 @@ en:
     grounds: 'grounds'
     results: 'results'
     total_floors: 'total floors'
-    send: 'отправить'
+    send: 'send'
     your_name: 'your name'
     phone_number: 'phone number'
     email: 'email'
@@ -167,39 +129,38 @@ en:
     kitchen_area: 'kitchen area'
     chamber_area: 'chamber area'
     bathroom_area: 'bathroom area'
-    balcony_terace_area: 'balcony terace area'
+    balcony_terace_area: 'balcony terrace area'
     staircase_area: 'staircase area'
     cloakroom_area: 'cloakroom area'
     room_area: "room %{number} area"
     gallery_area: 'gallery area'
-    front_yard_area: 'front yard area'
     callback:
-      header: 'Оставьте свой номер телефона'
-      subheader: 'и наш менеджер перезвонит вам в ближайшее время'
+      header: 'Leave your phone number'
+      subheader: 'and our manager will call you shortly'
   footer:
     order_callback: 'order callback'
   controller:
-    callback_mail_send: 'Мы скоро с вами свяжемся!'
-    callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
-    application_mail_send_error: 'Возникла ошибка при отправке письма просмотра апартаментов'
+    callback_mail_send: 'Thank you, We will call you shortly !'
+    callback_mail_send_error: 'An error occurred when order call back'
+    application_mail_send_error: 'An error occurred when application mail send'
 
   multi_slider:
-    exterior_button_text_html: 'Визуализация'
-    interior_button_text_html: 'Фотографии'
-    tour_button_text_html: 'Виртуальный <br /> Тур'
-    webcam_button_text_html: 'Онлайн камера'
+    exterior_button_text_html: 'Visualization'
+    interior_button_text_html: 'Photo'
+    tour_button_text_html: 'Virtual <br /> Tour'
+    webcam_button_text_html: 'Online camera'
     download_button_text_html: 'Download <br /> Price list'
     choose_an_apartment_button_text: 'Choose An apartment'
 
     exterior:
       descriptions:
-        - 'first description'
+        - '1'
         - '2'
         - '3'
         - '4'
     interior:
       descriptions:
-        - 'first description'
+        - '1'
         - '2'
         - '3'
         - '4'
@@ -228,9 +189,9 @@ en:
     tel: 'tel: %{number}'
 
   popups:
-    thank_you: 'Спасибо!'
-    request_accepted: 'ВАША ЗАЯВКА ПРИНЯТА.'
-    wait: 'НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШИЕ 24 ЧАСА.'
+    thank_you: 'Thank you!'
+    request_accepted: 'Your application is accepted.'
+    wait: 'Our manager will contact you within 24 hours.'
     mortgage_calculator:
       h1: 'Mortgage calculator'
       form:
@@ -247,7 +208,7 @@ en:
         - The broker will assist you with the signing of the documents with the bank.
         - You obtain a mortgage loan.
       get_loan: 'Get motgage loan'
-      leave_creadentials: 'Leave your credentials and we’ll contact you as soon as possible.'
+      leave_creadentials: "Leave your credentials and we'll contact you as soon as possible."
 
   mailers:
     callback_subject: 'CallBack request from statekseberov website'

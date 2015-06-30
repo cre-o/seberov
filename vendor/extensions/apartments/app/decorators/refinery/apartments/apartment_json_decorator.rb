@@ -41,7 +41,7 @@ module Refinery
       end
 
       def front_yard_area_decorated
-        "#{front_yard_area} #{t('defaults.square_sign')}" if front_yard_area.present?
+        "#{front_yard_area || 0.0} #{t('defaults.square_sign')}"
       end
 
       def price_t
@@ -62,6 +62,10 @@ module Refinery
 
       def total_floors_t
         t('forms.total_floors')
+      end
+
+      def front_yard_area_t
+        t('forms.front_yard_area')
       end
 
       def apartment_area_t

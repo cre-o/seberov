@@ -33,6 +33,7 @@
       padding-bottom: rem(30);
 
       .floor-n {
+        padding-left: rem(60);
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -66,7 +67,15 @@
         }
 
         &.plan {
-          &:after { bottom: 0; }
+
+          img {
+            transform: rotate(90deg);
+          }
+
+          &:after {
+            left: rem(-110);
+            bottom: 0;
+          }
         }
 
         &.model {
@@ -352,6 +361,29 @@
         line-height: rem(10);
       }
     }
+  }
+
+  .b-apartment-parameters {
+
+    &.i-0 {
+      padding-right: rem(52);
+    }
+
+    .item {
+      padding-top: rem(5);
+
+      span {
+        padding-right: rem(5);
+      }
+
+      strong {
+        float: right;
+      }
+    }
+
+    &:first-child {
+        padding-right: rem(52);
+      }
   }
 
   .b-apartment-application {

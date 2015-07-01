@@ -22,7 +22,18 @@ class ApplicationController < ActionController::Base
   end
 
   def check_locale
-    I18n.locale = I18nData.country_code(request.location.country) if request.location.country
+    if request.location.country
+      begin
+        country_code = I18nData.country_code(request.location.country)
+        I18n.locale  = country_code
+      rescue
+        I18n.locale =
+          case country_code
+          when 'CZ' then 'cs'
+          else 'en'
+          end
+      end
+    end
   end
 
   protected

@@ -6,8 +6,8 @@
       .row.collapse.fluid
         .small-12.columns
           .right
-            .b-download-pdf
-              = link_to t('download_pdf', scope: 'apartment_page'), price_list_path, target: '_blank'
+            .b-download-pdf.upcase
+              = link_to t('download_pdf', scope: 'apartments_price_list_page'), price_list_path, target: '_blank'
 
       - blocks.each do |letter|
         .row.collapse.fluid

@@ -68,7 +68,7 @@ angular.module('seberov').controller 'ApartmentsByParametersController', ($scope
   a.records = []
 
   a.path = (apartment) ->
-    Routes.refinery_apartments_apartment_path(apartment.id)
+    "/#{$scope.locale}" + Routes.refinery_apartments_apartment_path(apartment.id)
 
   $scope.priceFilter = (apartment) ->
     return (parseInt(apartment.price) > parseInt(a.minPrice) && parseInt(apartment.price) < parseInt(a.maxPrice))
@@ -156,7 +156,9 @@ angular.module('seberov').controller 'ApartmentsMapController', ($scope, $http, 
 
   # Make href only for available apartments
   map.apartmentHref = (apartment) ->
-    if apartment.state == 'active' then Routes.refinery_apartments_apartment_path(apartment.id) else '#'
+    if apartment.state == 'active'
+      "/#{$scope.locale}" + Routes.refinery_apartments_apartment_path(apartment.id)
+    else '#'
 
   return $scope
 

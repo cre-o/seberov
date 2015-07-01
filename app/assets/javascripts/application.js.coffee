@@ -28,7 +28,6 @@
 #= require location
 
 jQuery ->
-  # Founation init
   $(document).foundation()
   # Lazy load images (not load before user can see it)
   $('img').lazyload()

@@ -117,9 +117,9 @@ angular.module('seberov').filter 'rangeFilter', ->
 
 
 # MiltiSlider Service
-angular.module('seberov').factory 'multiSliderService', ($timeout, $interval) ->
+angular.module('seberov').factory 'multiSliderService', ($timeout, $window, $interval) ->
   slider = {}
-  slider.screenNum = 1
+  slider.screenNum = 2
   slider.webcamUrl = 'http://151.249.106.49/images/logo.gif'
   slider.webcamSrc = slider.webcamUrl
 
@@ -146,11 +146,12 @@ angular.module('seberov').factory 'multiSliderService', ($timeout, $interval) ->
   if Foundation.utils.is_large_up()
     slider.screenHeight = 700 # minimal height
 
-  # Resizing
+
   $interval ->
-    if angular.element('.js-multi-slider.active').height() > 0
+    angular.element('.js-multi-slider.active').resize()
+    if angular.element('.js-multi-slider.active').height() > 10
       slider.screenHeight = angular.element('.js-multi-slider.active').height()
-  , 400
+  , 300
 
   return slider
 

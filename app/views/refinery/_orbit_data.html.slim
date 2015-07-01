@@ -8,11 +8,7 @@
   - size.times do |t|
     - p = t.next
     li
-      img data-interchange="
-        [#{image_path("#{img_path}/#{p}-s.jpg")}, (default)],
-        [#{image_path("#{img_path}/#{p}-m.jpg")}, (medium)],
-        [#{image_path("#{img_path}/#{p}-l.jpg")}, (large)],
-        [#{image_path("#{img_path}/#{p}-xl.jpg")}, (xlarge)]"
+      = image_tag "#{img_path}/#{p}-xl.jpg", height: '100%', lazy: true
       .orbit-caption-bottom
         = t(translation_path)[t]
         a href="#" class="orbit-prev-bottom"
@@ -21,11 +17,7 @@
           .fa.fa-1.z5x.fa-chevron-right
 - else
   li
-    img data-interchange="
-      [#{image_path("#{img_path}-s.jpg")}, (default)],
-      [#{image_path("#{img_path}-m.jpg")}, (medium)],
-      [#{image_path("#{img_path}-l.jpg")}, (large)],
-      [#{image_path("#{img_path}-xl.jpg")}, (xlarge)]"
+    = image_tag "/#{image_path("#{img_path}-xl.jpg")}", height: '100%', lazy: true
     .orbit-caption-bottom
       = description
       a href="#" class="orbit-prev-bottom"

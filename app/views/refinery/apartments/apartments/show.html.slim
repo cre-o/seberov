@@ -38,8 +38,8 @@
                 span #{t 'floor' , scope: 'forms'}:
                 strong = @apartment.floor
               li
-                span #{t 'total_floors' , scope: 'forms'}:
-                strong = @apartment.total_floors
+                span #{t 'front_yard_area' , scope: 'forms'}:
+                strong = @apartment.front_yard_area
               li
                 span #{t 'layout' , scope: 'forms'}:
                 strong = @apartment.layout
@@ -77,8 +77,14 @@
 
             // Apartment floors data
             - if @apartment.apartment_floors.any?
+
               - @apartment.apartment_floors.each_with_index do |fl, i|
                 .small-6.columns.b-apartment-parameters class="i-#{i}"
+                  .floor-number.text-center
+                    - if fl.gallery_area.present?
+                      = t "apartment_page.floor_2_3"
+                    - else
+                      = t "apartment_page.floor_#{get_floor_number(@apartment, fl)}"
 
                   - if fl.vestibule_area.present?
                     .item

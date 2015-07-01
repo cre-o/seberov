@@ -7,28 +7,24 @@
           - img = n+1
           li
             img data-interchange="
-              [#{image_path("home/slider/#{img}-s.jpg")}, (default)],
-              [#{image_path("home/slider/#{img}-m.jpg")}, (medium)],
-              [#{image_path("home/slider/#{img}-l.jpg")}, (large)],
-              [#{image_path("home/slider/#{img}-xl.jpg")}, (xlarge)]"
+              [#{image_path("home/slider/#{img}-m.jpg")}, (default)],
+              [#{image_path("home/slider/#{img}-xl.jpg")}, (large)]"
       .orbit-caption-middle
         = raw @page.content_for(:slider_image)
 
   .row.fluid.main-info
     .small-12.medium-4.columns
       header.small-8.medium-8.upcase.grey.map
-        // @TODO translate!
-        h1 Map
+        h1 = t 'home_page.map'
         i.fa.fa-2x.fa-chevron-right
       // Google map!
-      .gmap
+      .gmap ng-if="isDocumentLoad"
         ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options"
           ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
 
     .small-12.medium-8.columns
-      header.small-8.large-4.upcase.green
-        // @TODO translate!
-        h1 Benefits
+      header.small-8.large-5.upcase.green
+        h1 = t 'home_page.benefits'
         i.fa.fa-2x.fa-chevron-right
 
       = raw @page.content_for(:benefits)

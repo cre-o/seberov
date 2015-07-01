@@ -23,6 +23,8 @@ class ApplicationController < ActionController::Base
   protected
     def set_locale
       I18n.locale = params[:locale] || I18n.default_locale
+      # Passing to client side
+      gon.push :locale => I18n.locale
     end
 
     def default_url_options(options = {})

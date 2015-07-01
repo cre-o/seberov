@@ -2,6 +2,9 @@
 # Application controller
 #
 angular.module('seberov').controller 'ApplicationController', ($scope, $window, $document, uiGmapGoogleMapApi) ->
+  # Locale setting
+  $scope.locale = gon.locale
+
   # <== Fixed header
   $scope.fixedHeader = false
 

@@ -33,7 +33,7 @@
       padding-bottom: rem(30);
 
       .floor-n {
-        padding-left: rem(60);
+        padding-left: rem(45);
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -206,7 +206,7 @@
 
     .text-center {
       font-family: 'Open Sans', sans-serif;
-      margin-top: .625rem;
+      margin-top: 1.5625rem;
       font-size: rem_calc(16);
       color: #4e4e4e;
     }
@@ -364,6 +364,11 @@
   }
 
   .b-apartment-parameters {
+
+    .floor-number {
+      clear: both;
+      font-size: rem(16);
+    }
 
     &.i-0 {
       padding-right: rem(52);

@@ -19,8 +19,7 @@
   .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
     a.opener.upcase href="#{js_void}" ng-click="toggle()"
       i.fa.fa-angle-down
-      // @TODO translate
-      | push to call
+      = t 'all_pages.push_to_call'
     .dropdown.small-2.large-2.columns.ng-hide ng-show="shown"
       ul.about-info
         li.phone

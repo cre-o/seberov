@@ -157,6 +157,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    geocoder (1.2.9)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     globalize (5.0.1)
@@ -183,6 +184,7 @@ GEM
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    i18n_data (0.7.0)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -369,10 +371,12 @@ DEPENDENCIES
   draper
   font-awesome-rails
   foundation-rails
+  geocoder
   globalize (~> 5.0.0)
   gon
   guard (>= 2.2.2)
   guard-livereload
+  i18n_data
   jbuilder (~> 2.0)
   jquery-rails
   js-routes

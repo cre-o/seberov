@@ -67,6 +67,8 @@ gem 'unicorn'
 # Misc
 gem 'active_link_to'
 gem 'rails_config'
+gem 'i18n_data'
+gem 'geocoder'
 
 group :development do
   gem 'guard', '>= 2.2.2', require: false

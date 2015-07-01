@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery
 
+  before_action :check_locale
   before_action :set_locale
 
   # POST /callback
@@ -18,6 +19,10 @@ class ApplicationController < ActionController::Base
     else
       redirect_to root_url, status: 301, alert: callback_form.errors.full_messages
     end
+  end
+
+  def check_locale
+    I18n.locale =  I18nData.country_code(request.location.country)
   end
 
   protected

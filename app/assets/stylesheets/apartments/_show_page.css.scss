@@ -69,10 +69,6 @@
 
         &.plan {
 
-          img {
-            transform: rotate(90deg);
-          }
-
           &:after {
             left: rem(-110);
             bottom: 0;

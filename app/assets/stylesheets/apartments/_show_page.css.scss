@@ -54,6 +54,7 @@
       .zoom-in {
         display: inline-block;
         position: relative;
+        outline: none;
 
         &:after {
           background: image-url('apartments/show/zoom.png') no-repeat;

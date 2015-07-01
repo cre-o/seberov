@@ -15,6 +15,23 @@
       font-size: .75em;
     }
 
+    #main-orbit {
+      list-style: none;
+
+
+      @media #{$small-only} {
+        min-height: rem(200);
+      }
+
+      @media #{$medium-only} {
+        min-height: rem(480);
+      }
+
+      @media #{$large-up} {
+        min-height: rem(640);
+      }
+    }
+
     .choose-apartment {
       font-size: em(18);
 

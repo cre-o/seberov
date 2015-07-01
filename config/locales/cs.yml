@@ -24,16 +24,16 @@ cs:
     floor_1: "1 patro"
     floor_2: "2 patro"
     floor_3: "3 patro"
-    floor_2_3: "2+3 FLOOR"
+    floor_2_3: "2+3 patro"
     galerie: 'galerie'
-    sign_up_to_see: 'Přihlaste se prohlídku bytu:'
+    sign_up_to_see: 'Přihlaste se na prohlídku bytu:'
     sign_up_to_see_advice: 'Nechte své kontakty a my vás co nejdříve budeme kontaktovat'
     download_pdf: 'Stáhnout katalogový list'
     calculator:
       count_payment: 'Spočítat hypotéku'
       price_with_dph: 'Cena včetně DPH'
       parking_slot_price: '+parkovací stání'
-      show_parking_plan: 'zobrazitparkovací schému'
+      show_parking_plan: 'zobrazit parkovací schému'
     add_on:
       h1: 'Nad standardu'
       p: 'Na vaši žádost jsme schopni provést opravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'
@@ -49,7 +49,7 @@ cs:
     select_floor: 'Vyberte budovu a podlahu:'
 
   apartments_price_list_page:
-    download_pdf: 'Stáhnout katalogový list pdf'
+    download_pdf: 'Stáhnout pdf'
     table:
       id: '#'
       planing: 'Dispozice'
@@ -139,7 +139,6 @@ cs:
     cloakroom_area: 'šatna'
     room_area: "pokoj %{number} "
     gallery_area: 'galerie'
-    front_yard_area: 'zahrádka'
     callback:
       header: 'Nechte své telefonní číslo'
       subheader: 'a náš manažer vám zavolá zpět krátce'
@@ -166,15 +165,18 @@ cs:
         - '4'
     interior:
       descriptions:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
+        - 'Vzorový byt'
 
   numbers:
     square: 'm2'
@@ -183,9 +185,9 @@ cs:
     admin:
       apartment_floor_data: 'Podlahy'
     apartments:
-      by_planning: 'Na modelu domu'
-      by_parameters: 'podle parametrů'
-      by_price_list: 'podle ceníku'
+      by_planning: 'na modelů'
+      by_parameters: 'dle parametrů'
+      by_price_list: 'dle ceníku'
 
   price_list:
     tel: 'tel: %{number}'
@@ -197,10 +199,10 @@ cs:
     mortgage_calculator:
       h1: 'Hypoteční kalkulačka'
       form:
-        repayment_length: 'délka splácení:'
-        interest_rate: 'úroková sazba:'
-        extent_of_mortgage: 'výše hypotéky:'
-        monthly_installment: 'měsíční splátka:'
+        repayment_length: 'délka splácení'
+        interest_rate: 'úroková sazba'
+        extent_of_mortgage: 'výše hypotéky'
+        monthly_installment: 'měsíční splátka'
       h2: 'Jak tedy na sjednání hypotéky u novostavby v Praze 4'
       list:
         - Představíte makléřovi vaše představy a možnosti

@@ -88,16 +88,19 @@
     top: rem-calc(-28);
   }
 
-  #b .plan {
-    margin-top: rem(30);
-    top: rem-calc(-20);
+  #b {
+    margin-top: rem(50);
+
+    .plan {
+      top: rem-calc(-40);
+    }
   }
 
   #c {
-    margin-top: rem-calc(30);
+    margin-top: rem-calc(40);
 
     .plan {
-      top: rem-calc(10);
+      top: rem-calc(-30);
     }
   }
 

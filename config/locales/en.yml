@@ -49,7 +49,7 @@ en:
     select_floor: 'Select the building and floor:'
 
   apartments_price_list_page:
-    download_pdf: 'DOWNLOAD PDF'
+    download_pdf: 'download pdf'
     table:
       id: '#'
       planing: 'Layout'
@@ -139,7 +139,6 @@ en:
     cloakroom_area: 'cloakroom area'
     room_area: "room %{number} area"
     gallery_area: 'gallery area'
-    front_yard_area: 'front yard area'
     callback:
       header: 'Leave your phone number'
       subheader: 'and our manager will call you shortly'
@@ -166,15 +165,14 @@ en:
         - '4'
     interior:
       descriptions:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
+        - 'showflat'
 
   numbers:
     square: 'm2'
@@ -204,8 +202,8 @@ en:
       h2: 'How you can obtain a mortgage for a new unit in Prague 4'
       list:
         - We present your ideas and possibilities to the broker.
-        - Based on the information, the broker will prepare suitable financing models of the Šeberov Homestead project.
-        - He will arrange for you all the necessary documents, e.g. a copy of the entry in the Cadastre and other necessary documents.
+        - 'Based on the information, the broker will prepare suitable financing models of the Šeberov Homestead project.'
+        - 'He will arrange for you all the necessary documents, e.g. a copy of the entry in the Cadastre and other necessary documents.'
         - At the next meeting with the broker the documents will be handed over and your broker will submit the application to the bank.
         - The broker will assist you with the signing of the documents with the bank.
         - You obtain a mortgage loan.

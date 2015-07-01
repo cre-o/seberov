@@ -119,7 +119,7 @@ angular.module('seberov').filter 'rangeFilter', ->
 # MiltiSlider Service
 angular.module('seberov').factory 'multiSliderService', ($timeout, $window, $interval) ->
   slider = {}
-  slider.screenNum = 2
+  slider.screenNum = 1
   slider.webcamUrl = 'http://151.249.106.49/images/logo.gif'
   slider.webcamSrc = slider.webcamUrl
 

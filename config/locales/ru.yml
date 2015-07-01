@@ -39,7 +39,7 @@ ru:
       p: 'По вашему заказу мы можем сделать ремонт любой сложности, заказать атипичную мебель, включая подготовку индивидуального дизайна интерьера.'
 
   apartments_page:
-    choose_apartment: 'Выберите квартиру'
+    choose_apartment: 'Выберете квартиру'
     map_area_title: "этаж %{floor} | корпус %{building}"
 
   apartments_planning_page:
@@ -49,7 +49,7 @@ ru:
     select_floor: 'Выберите корпус и этаж:'
 
   apartments_price_list_page:
-    download_pdf: 'Скачать каталоговый лист PDF'
+    download_pdf: 'скачать в pdf'
     table:
       id: '#'
       planing: 'Планировка'
@@ -101,12 +101,12 @@ ru:
 
   forms:
     price_with_dph: 'Цена с НДС'
-    apartment_area: 'Площадь квартиры'
+    apartment_area: 'Площадь'
     area: 'Площадь'
     unit_id: 'Номер квартиры'
     building: 'Корпус'
     block: 'Блок'
-    layout: 'Расположение'
+    layout: 'Планировка'
     name: 'Имя'
     phone: 'Телефон'
     price: 'Цена'
@@ -128,25 +128,24 @@ ru:
     your_name: 'Ваше имя'
     phone_number: 'Номер телефона'
     email: 'email'
-    vestibule_area: 'Площадь прихожей'
-    corridor_area: 'Площадь коридора'
-    wc_area: 'Площадь туалета'
-    kitchen_area: 'Площадь кухни'
-    chamber_area: 'Площадь кладовки'
-    bathroom_area: 'Площадь ванной'
-    balcony_terace_area: 'Площадь балкона'
-    staircase_area: 'Площадь лестницы'
-    cloakroom_area: 'Площадь гардеробной'
-    room_area: "Площадь %{number} комнаты"
-    gallery_area: 'Площадь галереи'
-    front_yard_area: 'Площадь полисадника'
+    vestibule_area: 'Прихожая'
+    corridor_area: 'Коридор'
+    wc_area: 'Туалет'
+    kitchen_area: 'Кухня'
+    chamber_area: 'Кладовка'
+    bathroom_area: 'Ванная'
+    balcony_terace_area: 'Балкон'
+    staircase_area: 'Лестница'
+    cloakroom_area: 'Гардеробная'
+    room_area: "Комната %{number}"
+    gallery_area: 'Галерея'
     callback:
       header: 'Оставьте свой номер телефона'
       subheader: 'и наш менеджер перезвонит вам в ближайшее время'
   footer:
     order_callback: 'Заказать обратный звонок'
   controller:
-    callback_mail_send: 'Спасибо, Мы скоро с вами свяжемся!'
+    callback_mail_send: "Спасибо, Мы скоро с вами свяжемся!"
     callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'
     application_mail_send_error: 'Возникла ошибка при отправке письма просмотра апартаментов'
 
@@ -166,15 +165,14 @@ ru:
         - '4'
     interior:
       descriptions:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
+        - 'Демонстрационная квартира'
 
   numbers:
     square: 'm2'

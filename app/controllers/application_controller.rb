@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_locale
-    if request.location
+    if !params[:locale] && request.location
       begin
         country_code = I18nData.country_code(request.location.country)
         I18n.locale  = country_code

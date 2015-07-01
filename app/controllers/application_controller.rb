@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery
 
-  before_action :check_locale
   before_action :set_locale
+  before_action :check_locale
 
   # POST /callback
   def callback

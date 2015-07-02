@@ -15,9 +15,13 @@
     }
   }
 
+  #location-orbit {
+    min-height: rem(400);
+    list-style-type: none;
+  }
+
   .angular-google-map-container {
     // <-- Media queries
-
   }
 
   .b-map {

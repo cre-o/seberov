@@ -19,15 +19,12 @@
 
     .b-active-map {
 
-      .compass {
+      .building-compass {
         position: absolute;
         left: rem-calc(-63);
-        background: image-url('apartments/compass.png') no-repeat;
-        background-size: rem(80);
-        width: rem-calc(80);
-        height: rem-calc(80);
         top: rem-calc(50);
         z-index: 10;
+        transform: rotate(-15deg);
       }
 
       .interactive-map {

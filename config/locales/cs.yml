@@ -182,6 +182,13 @@ cs:
   numbers:
     square: 'm2'
 
+  compass:
+    abbr:
+      north: s
+      south: j
+      west: z
+      east: s
+
   refinery:
     admin:
       apartment_floor_data: 'Podlahy'

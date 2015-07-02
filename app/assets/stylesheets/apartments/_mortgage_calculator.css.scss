@@ -40,23 +40,6 @@
       line-height: 1.8rem;
     }
 
-    // It should be like in crapped non-modular design
-    .input {
-      margin-left: rem(-15);
-    }
-
-    .text-center {
-      margin-right: rem(-20);
-    }
-
-    .text-right {
-      margin-left: .8rem;
-    }
-
-    form .columns:last-child {
-      margin-left: rem(10);
-    }
-
     .total-header {
       color: $grey-tint-5;
       font-family: $second-font;

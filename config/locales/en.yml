@@ -178,6 +178,14 @@ en:
   numbers:
     square: 'm2'
 
+  compass:
+    abbr:
+      north: n
+      south: s
+      west: w
+      east: e
+
+
   refinery:
     admin:
       apartment_floor_data: 'Floors'

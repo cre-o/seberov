@@ -14,19 +14,30 @@
       font-weight: 400;
     }
 
-    &:before {
-      background: image-url('apartments/compass.png') no-repeat;
-      background-size: rem-calc(70);
-      content: '';
+    .apartment-compass {
       position: absolute;
-      width: rem(80);
-      height: rem(80);
+      margin-left: auto;
+      margin-right: auto;
       left: 0;
       top: rem(-8);
       right: 0;
-      margin-left: auto;
-      margin-right: auto;
+      width: 80px;
+      height: 80px;
     }
+
+    // &:before {
+    //   background: image-url('apartments/compass.png') no-repeat;
+    //   background-size: rem-calc(70);
+    //   content: '';
+    //   position: absolute;
+    //   width: rem(80);
+    //   height: rem(80);
+    //   left: 0;
+    //   top: rem(-8);
+    //   right: 0;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
 
     .b-preview {
       margin-top: rem(30);
@@ -78,6 +89,16 @@
         &.model {
           &:after { top: 0; }
         }
+      }
+    }
+
+   .one-room .zoom-in {
+      &:after {
+        left: rem(-35);
+      }
+
+      &.plan {
+        &:after { left: rem(-70); }
       }
     }
 

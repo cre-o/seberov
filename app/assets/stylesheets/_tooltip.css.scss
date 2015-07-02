@@ -3,7 +3,7 @@
   color: $white;
   padding: 20px 15px;
   position: absolute;
-  width: 187px;
+  width: 237px;
   height: 143px;
   z-index: 999;
   bottom: 0;
@@ -30,7 +30,7 @@
     }
 
     span.price {
-      float: left;
+      float: none;
       font-family: $bold-font;
       font-weight: bold;
       font-size: rem-calc(20);

@@ -3,6 +3,9 @@
     .small-12.columns
       fieldset
         legend = breadcrumbs(@apartment)
+        .apartment-compass class=(@apartment.block)
+          = render 'refinery/active_compass'
+
         - if @apartment.total_floors == 1
           = render partial: 'one_room_apartment'
         - else

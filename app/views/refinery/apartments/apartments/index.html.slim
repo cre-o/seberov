@@ -25,7 +25,8 @@
 
           .row.b-active-map
             .small-12.columns
-              .compass
+              .building-compass
+                = render 'refinery/active_compass', opposite: true
 
               .interactive-map
                 = image_tag 'apartments/active-map/map.png'
@@ -73,8 +74,8 @@
                   span
                     ' {{map.currentApartment.apartment_area}}
                     i = t('numbers.square')
-                li
-                  span.price
+                li.text-center
+                  span.price.text-center
                     | #{t('forms.price')+':'} {{map.currentApartment.price_decorated}}
 
           .row.collapse

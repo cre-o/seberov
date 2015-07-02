@@ -20,3 +20,52 @@
     @extend i.icon.pdf.green;
   }
 }
+
+.b-active-compass {
+  width: rem(80);
+  height: rem(80);
+  color: $green;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  font-size: rem(12);
+
+  .bg {
+    background: image-url('apartments/compass-blank.png') no-repeat;
+    top: 0;
+    bottom: 0;
+    width: rem(80);
+    height: rem(80);
+  }
+
+  div {
+    position: absolute;
+  }
+
+  &.opposite {
+    .n { top: 60px; }
+    .s { bottom: 60px; }
+    .e { right: 67px; }
+    .w { left: 64px; }
+  }
+
+  .n {
+    top: 2px;
+    left: 45%;
+  }
+
+  .s {
+    bottom: 2px;
+    left: 47%;
+  }
+
+  .e {
+    right: 7px;
+    top: 40%;
+  }
+
+  .w {
+    left: 7px;
+    top: 40%;
+  }
+}

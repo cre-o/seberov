@@ -178,6 +178,13 @@ ru:
   numbers:
     square: 'm2'
 
+  compass:
+    abbr:
+      north: с
+      south: ю
+      west: з
+      east: в
+
   refinery:
     admin:
       apartment_floor_data: 'Этажи'

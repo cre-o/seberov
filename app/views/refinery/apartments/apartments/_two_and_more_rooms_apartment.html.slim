@@ -7,8 +7,13 @@
             = link_to asset_url("apartments/show/models/#{@apartment.unit_id.downcase}-galerie.jpg"), class: 'zoom-in model' do
               = image_tag "apartments/show/models/#{@apartment.unit_id.downcase}-galerie-s.jpg"
 
+
           .small-2.columns.left
             .floor-n = t 'galerie', scope: 'apartment_page'
+
+          .small-4.columns.b-plans
+            = link_to asset_url("apartments/show/plans/#{@apartment.unit_id.downcase}-galerie.jpg"), class: 'zoom-in model' do
+              = image_tag "apartments/show/plans/#{@apartment.unit_id.downcase}-galerie-s.jpg"
 
       .row.collapse
         .small-5.columns.b-models

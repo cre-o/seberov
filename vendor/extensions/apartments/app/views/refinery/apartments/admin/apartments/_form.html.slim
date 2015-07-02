@@ -47,6 +47,10 @@
         = f.text_field :price
     li
       .field
+        = f.label :parking_price
+        = f.text_field :parking_price
+    li
+      .field
         = f.label :state
         = f.select :state, Refinery::Apartments::Apartment::STATES.collect { |p| [ p, p ] }
 

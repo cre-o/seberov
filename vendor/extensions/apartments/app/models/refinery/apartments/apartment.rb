@@ -18,7 +18,7 @@ module Refinery
       scope :block_b, -> { where(block: 'b') }
       scope :block_c, -> { where(block: 'c') }
       scope :block_d, -> { where(block: 'd') }
-      scope :without_d, -> { where.not(block: 'd')}
+      scope :without_d, -> { where.not(block: 'd') }
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 
@@ -26,6 +26,7 @@ module Refinery
       validates :block, presence: true, inclusion: { in: BLOCKS, case_insensitive: true, message: "Not in #{BLOCKS} list" }
       validates :floor, presence: true, numericality: true
       validates :total_floors, presence: true, numericality: true
+      validates :parking_price, numericality: true
       validates :state, inclusion: { in: Refinery::Apartments::Apartment::STATES }
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:

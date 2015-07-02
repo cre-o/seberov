@@ -70,7 +70,7 @@
                 .footer.text-center
                   span
                     ' #{t('calculator.parking_slot_price' , scope: 'apartment_page')+':'}
-                    b ng-init="parkingPrice = #{Settings.prices.parking_slot}" {{calculator.calculate(parkingPrice)}}
+                    b ng-init="parkingPrice = #{@apartment.parking_price || Settings.prices.parking_slot}" {{calculator.calculate(parkingPrice)}}
 
                   = link_to url_for("/parking/#{@apartment.unit_id}.pdf"), target: :blank do
                     = t 'calculator.show_parking_plan', scope: 'apartment_page'

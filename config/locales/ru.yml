@@ -139,6 +139,7 @@ ru:
     cloakroom_area: 'Гардеробная'
     room_area: "Комната %{number}"
     gallery_area: 'Галерея'
+    front_yard_area: 'Площадь полисадника'
     callback:
       header: 'Оставьте свой номер телефона'
       subheader: 'и наш менеджер перезвонит вам в ближайшее время'

@@ -139,6 +139,7 @@ cs:
     cloakroom_area: 'šatna'
     room_area: "pokoj %{number} "
     gallery_area: 'galerie'
+    front_yard_area: 'zahrádka'
     callback:
       header: 'Nechte své telefonní číslo'
       subheader: 'a náš manažer vám zavolá zpět krátce'

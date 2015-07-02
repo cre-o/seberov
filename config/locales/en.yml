@@ -139,6 +139,7 @@ en:
     cloakroom_area: 'cloakroom area'
     room_area: "room %{number} area"
     gallery_area: 'gallery area'
+    front_yard_area: 'front yard area'
     callback:
       header: 'Leave your phone number'
       subheader: 'and our manager will call you shortly'

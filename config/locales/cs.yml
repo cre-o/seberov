@@ -187,7 +187,7 @@ cs:
       north: s
       south: j
       west: z
-      east: s
+      east: v
 
   refinery:
     admin:

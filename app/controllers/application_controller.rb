@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_action :set_locale
-  before_action :check_locale
+  #before_action :check_locale
 
   # POST /callback
   def callback

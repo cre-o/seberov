@@ -69,6 +69,20 @@ gem 'active_link_to'
 gem 'rails_config'
 gem 'i18n_data'
 
+# Admin interface
+gem 'refinerycms', git: 'https://github.com/cre-o/refinerycms', branch: '3.0'
+# Add support for searching inside Refinery's admin interface.
+gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
+# Add support for Refinery's custom fork of the visual editor WYMeditor.
+gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+# Own engine
+gem 'refinerycms-apartments', path: 'vendor/extensions'
+# i18n support
+gem 'refinerycms-i18n'
+
+# Font icons
+gem 'font-awesome-rails'
+
 group :development do
   gem 'guard', '>= 2.2.2', require: false
   gem 'guard-livereload',  require: false
@@ -95,17 +109,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-# Admin interface
-gem 'refinerycms', git: 'https://github.com/cre-o/refinerycms', branch: '3.0'
-# Add support for searching inside Refinery's admin interface.
-gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
-# Add support for Refinery's custom fork of the visual editor WYMeditor.
-gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
-# Own engine
-gem 'refinerycms-apartments', path: 'vendor/extensions'
-# i18n support
-gem 'refinerycms-i18n'
-
-# Font icons
-gem 'font-awesome-rails'

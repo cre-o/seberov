@@ -9,7 +9,7 @@
             img data-interchange="
               [#{image_path("home/slider/#{img}-m.jpg")}, (default)],
               [#{image_path("home/slider/#{img}-xl.jpg")}, (large)]"
-      .orbit-caption-middle
+      .orbit-caption-middle ng-init="total_apartments = #{total_apartments}"
         = raw @page.content_for(:slider_image)
 
   .row.fluid.main-info

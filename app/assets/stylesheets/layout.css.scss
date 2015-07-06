@@ -295,6 +295,12 @@ footer {
     line-height: rem-calc(24);
   }
 
+  .investment-fix {
+    @media #{$xlarge-only} {
+      width: 200px;
+    }
+  }
+
   .investment {
     margin-left: rem-calc(20);
 

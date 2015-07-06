@@ -1,7 +1,7 @@
 ru:
 
   defaults:
-    currency_sign: 'KČ'
+    currency_sign: 'Kč'
     square_sign: 'm2'
     usd: 'usd'
     eur: 'eur'
@@ -47,6 +47,10 @@ ru:
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
     select_floor: 'Выберите корпус и этаж:'
+
+  apartment_by_parameters_page:
+    parameters: ‘Параметры'
+    see_more: ‘ПОКАЗАТЬ'
 
   apartments_price_list_page:
     download_pdf: 'скачать в pdf'
@@ -100,12 +104,14 @@ ru:
       - конструкция балконов
 
   forms:
+    state: 'state' # new
+    parking_price: 'parking price' # new
     price_with_dph: 'Цена с НДС'
     apartment_area: 'Площадь'
     area: 'Площадь'
     unit_id: 'Номер квартиры'
-    building: 'Корпус'
-    block: 'Блок'
+    building: 'Крыло'
+    block: ‘Крыло'
     layout: 'Планировка'
     name: 'Имя'
     phone: 'Телефон'
@@ -120,18 +126,19 @@ ru:
     two: 'Две'
     three: 'Три'
     four: 'Четыре'
+    five: ‘Пять'
     penthouse: 'Пентхауз'
     grounds: 'Палисадник'
     results: 'Результаты'
     total_floors: 'Всего этажей'
-    send: 'отправить'
+    send: ‘Отправить'
     your_name: 'Ваше имя'
     phone_number: 'Номер телефона'
     email: 'email'
     vestibule_area: 'Прихожая'
     corridor_area: 'Коридор'
     wc_area: 'Туалет'
-    kitchen_area: 'Кухня'
+    kitchen_area: ‘Гостинная+кк'
     chamber_area: 'Кладовка'
     bathroom_area: 'Ванная'
     balcony_terace_area: 'Балкон'
@@ -139,7 +146,7 @@ ru:
     cloakroom_area: 'Гардеробная'
     room_area: "Комната %{number}"
     gallery_area: 'Галерея'
-    front_yard_area: 'Площадь полисадника'
+    front_yard_area: 'Палисадник'
     callback:
       header: 'Оставьте свой номер телефона'
       subheader: 'и наш менеджер перезвонит вам в ближайшее время'

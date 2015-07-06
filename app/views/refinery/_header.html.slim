@@ -9,10 +9,10 @@
 
   .small-2.large-1.columns
     ul.languages
-      li class=(en_locale?? 'active' : nil)
-        a href="#{change_lang_hack('en')}" = t('all_pages.language_menu.english')
       li class=(cs_locale?? 'active' : nil)
         a href="#{change_lang_hack('cs')}" = t('all_pages.language_menu.czech')
+      li class=(en_locale?? 'active' : nil)
+        a href="#{change_lang_hack('en')}" = t('all_pages.language_menu.english')
       li class=(ru_locale?? 'active' : nil)
         a href="#{change_lang_hack('ru')}" = t('all_pages.language_menu.russian')
 

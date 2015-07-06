@@ -19,6 +19,7 @@ module Refinery
       scope :block_c, -> { where(block: 'c') }
       scope :block_d, -> { where(block: 'd') }
       scope :without_d, -> { where.not(block: 'd') }
+      scope :total, -> { all.active.size }
 
       accepts_nested_attributes_for :apartment_floors, :reject_if => :all_blank, :allow_destroy => true
 

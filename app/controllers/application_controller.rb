@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_action :set_locale
-  #before_action :check_locale
+  before_action :check_locale
 
   # POST /callback
   def callback
@@ -22,17 +22,11 @@ class ApplicationController < ActionController::Base
   end
 
   def check_locale
-    if !params[:locale] && request.location
-      begin
-        country_code = I18nData.country_code(request.location.country)
-        I18n.locale  = country_code
-      rescue
-        I18n.locale =
-          case country_code
-          when 'CZ' then 'cs'
-          else 'en'
-          end
-      end
+    match = /^(ru|en|cs)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
+
+    if match && !params[:locale] #|| match && /^\/(ru|en|cs)/.match(request.env["REQUEST_PATH"]) == nil
+      redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}"
+      return false
     end
   end
 

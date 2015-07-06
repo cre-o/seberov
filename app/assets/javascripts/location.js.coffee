@@ -15,6 +15,13 @@ jQuery ->
         bullets: false,
         circular: true,
         timer: false,
-        variable_height: false,
+        variable_height: true,
         swipe: true
       }
+
+    # Refresh orbit after loading
+    setTimeout ->
+        $('#location-orbit').resize()
+    , 2000
+
+

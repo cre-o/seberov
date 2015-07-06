@@ -10,15 +10,11 @@ footer
       .footer-nav
         = render partial: 'refinery/nav'
 
-    .small-2.medium-2.columns
+    .small-2.medium-2.text-center.columns
       .credit
         = raw refinery_get_page(id: 'footer').content_for(:credit)
 
-    .small-2.medium-2.columns
-      .investment
-        = raw refinery_get_page(id: 'footer').content_for(:investment)
-
-    .small-2.medium-2.columns
+    .small-2.right.medium-2.columns
       .contacts
         .phone
           = raw refinery_get_page(id: 'footer').content_for(:phone)
@@ -44,6 +40,11 @@ footer
               a.close-reveal-modal aria-label="Close"
 
         = raw refinery_get_page(id: 'footer').content_for(:contact_last)
+
+
+    .small-2.right.medium-2.columns.investment-fix
+      .investment
+        = raw refinery_get_page(id: 'footer').content_for(:investment)
 
   .row.fluid.text-center.madeby
     .small-12.columns

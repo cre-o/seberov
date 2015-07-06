@@ -3,10 +3,10 @@
     :object => @apartment,
     :include_object_name => true
   .field
-    = f.label :unit_id
+    label = t 'forms.unit_id'
     = f.text_field :unit_id, :class => 'larger widest'
   .field
-    = f.label :block
+    = t 'forms.block'
     = f.text_field :block
   .field
     = f.label :photo
@@ -19,39 +19,39 @@
   ul.small-block-grid-3
     li
       .field
-        = f.label :floor
+        label = t 'forms.floor'
         = f.number_field :floor
     li
       .field
-        = f.label :total_floors
+        label = t 'forms.total_floors'
         = f.text_field :total_floors
     li
       .field
-        = f.label :layout
+        label = t 'forms.layout'
         = f.text_field :layout
     li
       .field
-        = f.label :apartment_area
+        label = t 'forms.apartment_area'
         = f.text_field :apartment_area
     li
       .field
-        = f.label :balcony_terace_area
+        label = t 'forms.balcony_terace_area'
         = f.text_field :balcony_terace_area
     li
       .field
-        = f.label :front_yard_area
+        label = t 'forms.front_yard_area'
         = f.text_field :front_yard_area
     li
       .field
-        = f.label :price
+        label = t 'forms.price'
         = f.text_field :price
     li
       .field
-        = f.label :parking_price
+        label = t 'forms.parking_price'
         = f.text_field :parking_price
     li
       .field
-        = f.label :state
+        label = t 'forms.state'
         = f.select :state, Refinery::Apartments::Apartment::STATES.collect { |p| [ p, p ] }
 
   .nested-fields

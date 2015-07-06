@@ -5,7 +5,7 @@
     .small-12.columns.wrap
       .row.collapse.b-parameters
         .small-12.columns
-          h1.upcase Parameters:
+          h1.upcase = t 'apartment_by_parameters_page.parameters'
           = form_tag refinery.search_apartments_apartments_path, class: 'b-filters' do |f|
             .row
               // Price
@@ -75,9 +75,6 @@
               .small-10.left.columns
                 ul.small-block-grid-6
                   li
-                    = check_box_tag :one_room, '1', false, id: 'one-room', 'ng-model' => 'a.cbOneRoom'
-                    label for="one-room" = t('forms.one')
-                  li
                     = check_box_tag :two_rooms, '2', false, id: 'two-rooms', 'ng-model' => 'a.cbTwoRooms'
                     label for="two-rooms" = t('forms.two')
                   li
@@ -88,7 +85,7 @@
                     label for="four-rooms" = t('forms.four')
                   li
                     = check_box_tag :penthouse, 'penthouse', false, id: 'penthouse', 'ng-model' => 'a.cbPenthouse'
-                    label for="penthouse" = t('forms.penthouse')
+                    label for="penthouse" = t('forms.five')
                   li
                     = check_box_tag :grounds, 'grounds', false, id: 'grounds', 'ng-model' => 'a.cbGrounds'
                     label for="grounds" = t('forms.grounds')
@@ -137,11 +134,11 @@
 
                   .price
                     ' {{apartment.price_t}}:
-                    span.upcase
+                    span
                       ' {{apartment.price_decorated}}
 
                 .small-3.columns.go
-                  .more.upcase
-                    a ng-href="{{a.path(apartment)}}" see more
+                  .more
+                    a ng-href="{{a.path(apartment)}}" {{apartment.see_more}}
 
 

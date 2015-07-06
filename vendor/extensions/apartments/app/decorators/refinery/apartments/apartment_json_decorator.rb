@@ -13,7 +13,7 @@ module Refinery
       end
 
       def rooms
-        total = 0
+        total = 1 # kitchen presents everywere
         object.apartment_floors.each do |floor|
           total += 1 if floor.room1_area.present?
           total += 1 if floor.room2_area.present?
@@ -26,6 +26,10 @@ module Refinery
 
       def price_decorated
         price
+      end
+
+      def see_more
+        t 'apartment_by_parameters_page.see_more'
       end
 
       def price_decorated

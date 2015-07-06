@@ -33,7 +33,7 @@
             ul.small-block-grid-2
               li
                 span #{t 'block' , scope: 'forms'}:
-                strong = @apartment.block
+                strong.upcase = @apartment.block
               li
                 span #{t 'unit_id' , scope: 'forms'}:
                 strong = @apartment.unit_id
@@ -84,10 +84,7 @@
               - @apartment.apartment_floors.each_with_index do |fl, i|
                 .small-6.columns.b-apartment-parameters class="i-#{i}"
                   .floor-number.text-center
-                    - if fl.gallery_area.present?
-                      = t "apartment_page.floor_2_3"
-                    - else
-                      = t "apartment_page.floor_#{get_floor_number(@apartment, fl)}"
+                    = t "apartment_page.floor_#{get_floor_number(@apartment, fl)}"
 
                   - if fl.vestibule_area.present?
                     .item

@@ -7,7 +7,7 @@ angular.module('seberov').controller 'ApartmentController', ($scope, $http, mult
   calculator.currencies = ['czk', 'usd', 'eur']
   calculator.priceSigns = {
     eur: '€'
-    czk: 'KČ'
+    czk: 'Kč'
     usd: '$'
   }
   calculator.currency = 'czk'
@@ -88,11 +88,10 @@ angular.module('seberov').controller 'ApartmentsByParametersController', ($scope
   # Funny filter
   $scope.roomsFilter = (apartment) ->
     if a.cbOneRoom || a.cbTwoRooms || a.cbThreeRooms || a.cbFourRooms || a.cbPenthouse
-      return ((if a.cbOneRoom    then parseInt(apartment.rooms) == 1) ||
-              (if a.cbTwoRooms   then parseInt(apartment.rooms) == 2) ||
+      return ((if a.cbTwoRooms   then parseInt(apartment.rooms) == 2) ||
               (if a.cbThreeRooms then parseInt(apartment.rooms) == 3) ||
               (if a.cbFourRooms  then parseInt(apartment.rooms) == 4) ||
-              (if a.cbPenthouse  then parseInt(apartment.rooms) == 6))
+              (if a.cbPenthouse  then parseInt(apartment.rooms) == 5))
     else true
 
   return $scope

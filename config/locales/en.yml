@@ -1,7 +1,7 @@
 en:
 
   defaults:
-    currency_sign: 'KČ'
+    currency_sign: 'Kč'
     square_sign: 'm2'
     usd: 'usd'
     eur: 'eur'
@@ -47,6 +47,10 @@ en:
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
     select_floor: 'Select the building and floor:'
+
+  apartment_by_parameters_page:
+    parameters: 'parameters'
+    see_more: 'SEE MORE'
 
   apartments_price_list_page:
     download_pdf: 'download pdf'
@@ -100,12 +104,14 @@ en:
       - Balcony construction
 
   forms:
+    state: 'state' # new
+    parking_price: 'parking price' # new
     price_with_dph: 'Price includes VAT'
     apartment_area: 'area'
     area: 'area'
     unit_id: 'unit id'
-    building: 'building'
-    block: 'block'
+    building: 'wing'
+    block: 'wing'
     layout: 'layout'
     name: 'name'
     phone: 'phone'
@@ -120,6 +126,7 @@ en:
     two: 'two'
     three: 'three'
     four: 'four'
+    five: 'five'
     penthouse: 'penthouse'
     grounds: 'grounds'
     results: 'results'
@@ -128,17 +135,17 @@ en:
     your_name: 'your name'
     phone_number: 'phone number'
     email: 'email'
-    vestibule_area: 'vestibule area'
-    corridor_area: 'corridor area'
-    wc_area: 'wc area'
-    kitchen_area: 'kitchen area'
-    chamber_area: 'chamber area'
-    bathroom_area: 'bathroom area'
-    balcony_terace_area: 'balcony terrace area'
-    staircase_area: 'staircase area'
-    cloakroom_area: 'cloakroom area'
-    room_area: "room %{number} area"
-    gallery_area: 'gallery area'
+    vestibule_area: 'vestibule'
+    corridor_area: 'corridor'
+    wc_area: 'wc'
+    kitchen_area: 'living room + kk'
+    chamber_area: 'chamber'
+    bathroom_area: 'bathroom'
+    balcony_terace_area: 'balcony/terrace'
+    staircase_area: 'staircase'
+    cloakroom_area: 'cloakroom'
+    room_area: "room %{number}"
+    gallery_area: 'gallery'
     front_yard_area: 'front yard area'
     callback:
       header: 'Leave your phone number'

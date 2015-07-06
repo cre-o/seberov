@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/refinery/refinerycms
-  revision: 29ab03669a0bdba34c789442df1402f6df06e929
-  branch: master
+  remote: https://github.com/cre-o/refinerycms
+  revision: e4b2e7ebc570eec21fa512daf7424c64c58ff6b9
+  branch: 3.0
   specs:
     refinerycms (3.0.0)
       refinerycms-authentication (= 3.0.0)
@@ -111,8 +111,6 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
-    celluloid (0.16.0)
-      timers (~> 4.0.0)
     cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.1.0)
@@ -148,7 +146,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
-    ffi (1.9.8)
+    ffi (1.9.10)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
@@ -157,7 +155,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
-    geocoder (1.2.9)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     globalize (5.0.1)
@@ -168,9 +165,9 @@ GEM
       json
       multi_json
       request_store (>= 1.0.5)
-    guard (2.12.6)
+    guard (2.12.8)
       formatador (>= 0.2.4)
-      listen (~> 2.7)
+      listen (>= 2.7, <= 4.0)
       lumberjack (~> 1.0)
       nenv (~> 0.1)
       notiffany (~> 0.0)
@@ -181,14 +178,13 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.8)
       multi_json (~> 1.8)
-    hitimes (1.2.2)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     i18n_data (0.7.0)
-    jbuilder (2.2.16)
+    jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-rails (4.0.3)
+    jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -201,8 +197,7 @@ GEM
     kgio (2.9.3)
     lazyload-rails (0.3.1)
       nokogiri (~> 1.5)
-    listen (2.10.0)
-      celluloid (~> 0.16.0)
+    listen (3.0.1)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lodash-rails (3.9.3)
@@ -217,7 +212,7 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
-    multi_json (1.11.1)
+    multi_json (1.11.2)
     nenv (0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -233,8 +228,8 @@ GEM
       pry (>= 0.9.10)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (1.6.1)
-    rack-livereload (0.3.15)
+    rack (1.6.4)
+    rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -269,7 +264,7 @@ GEM
       activesupport (= 4.2.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.13.0)
+    raindrops (0.14.0)
     rake (10.4.2)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
@@ -292,7 +287,7 @@ GEM
     routing-filter (0.5.0)
       actionpack (~> 4.2)
       activesupport (~> 4.2)
-    sass (3.4.14)
+    sass (3.4.15)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -321,7 +316,7 @@ GEM
     spring (1.3.6)
     sprockets (3.2.0)
       rack (~> 1.0)
-    sprockets-rails (2.3.1)
+    sprockets-rails (2.3.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -330,8 +325,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.0.1)
-      hitimes
     truncate_html (0.9.3)
     turbolinks (2.5.3)
       coffee-rails
@@ -346,7 +339,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
-    web-console (2.1.2)
+    web-console (2.1.3)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
@@ -371,7 +364,6 @@ DEPENDENCIES
   draper
   font-awesome-rails
   foundation-rails
-  geocoder
   globalize (~> 5.0.0)
   gon
   guard (>= 2.2.2)

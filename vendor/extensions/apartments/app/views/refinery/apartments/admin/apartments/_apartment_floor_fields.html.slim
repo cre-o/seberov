@@ -2,75 +2,75 @@
   ul.small-block-grid-4
     li
       .field
-        = f.label :floor_number
+        label = t 'forms.floor'
         = f.text_field :floor_number
     li
       .field
-        = f.label :vestibule_area
+        label = t 'forms.vestibule_area'
         = f.text_field :vestibule_area
     li
       .field
-        = f.label :corridor_area
+        label = t 'forms.corridor_area'
         = f.text_field :corridor_area
     li
       .field
-        = f.label :wc_area
+        label = t 'forms.wc_area'
         = f.text_field :wc_area
     li
       .field
-        = f.label :kitchen_area
+        label = t 'forms.kitchen_area'
         = f.text_field :kitchen_area
     li
       .field
-        = f.label :chamber1_area
+        label = "#{t 'forms.chamber_area'} 1"
         = f.text_field :chamber1_area
     li
       .field
-        = f.label :chamber2_area
+        label = "#{t 'forms.chamber_area'} 2"
         = f.text_field :chamber2_area
     li
       .field
-        = f.label :chamber3_area
+        label = "#{t 'forms.chamber_area'} 3"
         = f.text_field :chamber3_area
     li
       .field
-        = f.label :bathroom_area
+        label = t 'forms.bathroom_area'
         = f.text_field :bathroom_area
     li
       .field
-        = f.label :staircase_area
+        label = t 'forms.staircase_area'
         = f.text_field :staircase_area
     li
       .field
-        = f.label :cloakroom1_area
+        label = "#{t 'forms.cloakroom_area' } 1"
         = f.text_field :cloakroom1_area
     li
       .field
-        = f.label :cloakroom2_area
+        label = "#{t 'forms.cloakroom_area' } 2"
         = f.text_field :cloakroom2_area
     li
       .field
-        = f.label :room1_area
+        label = "#{t 'forms.room_area' , number: 1} "
         = f.text_field :room1_area
     li
       .field
-        = f.label :room2_area
+        label = "#{t 'forms.room_area' , number: 2} "
         = f.text_field :room2_area
     li
       .field
-        = f.label :room3_area
+        label = "#{t 'forms.room_area' , number: 3} "
         = f.text_field :room3_area
     li
       .field
-        = f.label :room4_area
+        label = "#{t 'forms.room_area' , number: 4} "
         = f.text_field :room4_area
     li
       .field
-        = f.label :room5_area
+        label = "#{t 'forms.room_area' , number: 5} "
         = f.text_field :room5_area
     li
       .field
-        = f.label :gallery_area
+        label = t 'forms.gallery_area'
         = f.text_field :gallery_area
 
   = link_to_remove_association "remove floor data", f

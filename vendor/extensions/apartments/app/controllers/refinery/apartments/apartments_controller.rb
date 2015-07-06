@@ -43,10 +43,6 @@ module Refinery
 
       alias_method :price_list, :by_price_list
 
-      def search
-        raise 1
-      end
-
     protected
 
       # Dirty hacking angular
@@ -70,7 +66,8 @@ module Refinery
             'front_yard_area_decorated' => json_decorator.front_yard_area_decorated,
             'front_yard_area_t' => json_decorator.front_yard_area_t,
             'apartment_area_decorated' => json_decorator.apartment_area_decorated,
-            'apartment_area_t' => json_decorator.apartment_area_t
+            'apartment_area_t' => json_decorator.apartment_area_t,
+            'see_more' => json_decorator.see_more
           })
         end
         array.to_json

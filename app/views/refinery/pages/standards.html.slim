@@ -29,7 +29,7 @@
   /! 3
   .row ng-controller="ImageBroadcasterController as broadcaster"
     .small-6.columns
-      section class="long left-side"
+      section class="superlong left-side"
         header class="text-right"
           = raw @page.content_for(:section3)
 
@@ -121,19 +121,6 @@
           li
             = link_to image_url('standards/7-4-full.jpg'), class: 'zoom-in' do
               = image_tag 'standards/7-4.jpg', width: 440, height: 440, lazy: true
-  /! 8
-  .row
-    .small-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/8-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/8-1.jpg', width: 440, height: 440, lazy: true
-        li
-          = link_to image_url('standards/8-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/8-2.jpg', width: 440, height: 440, lazy: true
-
-    .small-6.columns
-      = raw @page.content_for(:section8)
 
   /! 9
   .row

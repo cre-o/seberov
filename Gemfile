@@ -68,7 +68,6 @@ gem 'unicorn'
 gem 'active_link_to'
 gem 'rails_config'
 gem 'i18n_data'
-gem 'geocoder'
 
 group :development do
   gem 'guard', '>= 2.2.2', require: false
@@ -98,7 +97,7 @@ group :development, :test do
 end
 
 # Admin interface
-gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+gem 'refinerycms', git: 'https://github.com/cre-o/refinerycms', branch: '3.0'
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 # Add support for Refinery's custom fork of the visual editor WYMeditor.

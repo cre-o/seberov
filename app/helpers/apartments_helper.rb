@@ -66,4 +66,8 @@ module ApartmentsHelper
     t "floor_#{number}", scope: 'apartment_page'
   end
 
+  def total_apartments
+    Refinery::Apartments::Apartment.total
+  end
+
 end

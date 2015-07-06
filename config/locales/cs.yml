@@ -1,7 +1,7 @@
 cs:
 
   defaults:
-    currency_sign: 'KČ'
+    currency_sign: 'Kč'
     square_sign: 'm2'
     usd: 'usd'
     eur: 'eur'
@@ -35,12 +35,12 @@ cs:
       parking_slot_price: '+parkovací stání'
       show_parking_plan: 'zobrazit parkovací schému'
     add_on:
-      h1: 'Nad standardu'
+      h1: 'Nadstandardu'
       p: 'Na vaši žádost jsme schopni provést opravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'
 
   apartments_page:
     choose_apartment: 'Vyberte si byt'
-    map_area_title: "podlaha %{floor} | budova %{building}"
+    map_area_title: "patro %{floor} | budova %{building}"
 
   apartments_planning_page:
     title: 'Apartments planning page!'
@@ -48,15 +48,19 @@ cs:
     keywords: 'Apartments planning page!'
     select_floor: 'Vyberte budovu a podlahu:'
 
+  apartment_by_parameters_page:
+    parameters: 'parametry'
+    see_more: ‘VÍCE'
+
   apartments_price_list_page:
     download_pdf: 'Stáhnout pdf'
     table:
       id: '#'
       planing: 'Dispozice'
-      floor: 'Podlaha'
+      floor: 'Patro'
       square: 'Plocha'
       terrace:  'Terasa'
-      frontage: 'Zahrádka'
+      frontage: ‘Předzahrádka'
       price: 'Cena'
 
   location_page:
@@ -100,12 +104,14 @@ cs:
       - konstrukce balkonů
 
   forms:
+    state: 'state' # new
+    parking_price: 'parking price' # new
     price_with_dph: 'Cena včetně DPH'
     apartment_area: 'plocha'
     area: 'plocha'
-    unit_id: 'jednotka id'
-    building: 'budova'
-    block: 'block'
+    unit_id: 'jednotka'
+    building: 'Křídlo'
+    block: 'Křídlo'
     layout: 'dispozice'
     name: 'název'
     phone: 'telefon'
@@ -113,15 +119,16 @@ cs:
     from: 'od'
     to: 'do'
     floorspace: 'podlahová plocha'
-    floor: 'podlaha'
+    floor: 'patro'
     floors: 'podlaží'
     rooms: 'pokoje'
     one: 'jeden'
-    two: 'dvě'
+    two: 'dva'
     three: 'tři'
     four: 'čtyři'
+    five: 'pět'
     penthouse: 'přístřešek'
-    grounds: 'zahrada'
+    grounds: ‘předzahrádka'
     results: 'výsledky'
     total_floors: 'podlaží celkem'
     send: 'odeslat'
@@ -131,7 +138,7 @@ cs:
     vestibule_area: 'předsíň'
     corridor_area: 'chodba'
     wc_area: 'wc'
-    kitchen_area: 'kuchyně'
+    kitchen_area: 'obývák + kk'
     chamber_area: 'komora'
     bathroom_area: 'koupelna'
     balcony_terace_area: 'balkón/terasa'
@@ -139,14 +146,14 @@ cs:
     cloakroom_area: 'šatna'
     room_area: "pokoj %{number} "
     gallery_area: 'galerie'
-    front_yard_area: 'zahrádka'
+    front_yard_area: 'předzahrádka'
     callback:
       header: 'Nechte své telefonní číslo'
-      subheader: 'a náš manažer vám zavolá zpět krátce'
+      subheader: 'Co nejdříve zavoláme vám zpět'
   footer:
     order_callback: 'objednat zpětné volání'
   controller:
-    callback_mail_send: 'Budeme vás brzy kontaktovat!'
+    callback_mail_send: 'Co nejdříve zavoláme vám zpět!'
     callback_mail_send_error: 'Při odesílání zpětné volání došlo k chybě'
     application_mail_send_error: 'Při odesílání objednavky bytů došlo k chybě'
 
@@ -191,7 +198,7 @@ cs:
 
   refinery:
     admin:
-      apartment_floor_data: 'Podlahy'
+      apartment_floor_data: 'Patro'
     apartments:
       by_planning: 'na modelů'
       by_parameters: 'dle parametrů'

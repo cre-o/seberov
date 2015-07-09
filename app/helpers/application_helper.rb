@@ -27,4 +27,8 @@ module ApplicationHelper
   def change_lang_hack(name)
     "/#{name.to_s}" + request.env['PATH_INFO'].gsub(/\/en|\/cs\/ru/, '.')
   end
+
+  def home_path_h
+    cs_locale?? '/cs/' : refinery.root_path
+  end
 end

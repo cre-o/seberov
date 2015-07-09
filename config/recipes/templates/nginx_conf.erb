@@ -1,11 +1,11 @@
 upstream app {
-    server "unix:/home/astronz/www/seberov/tmp/sockets/unicorn.sock fail_timeout=0"
+    server unix:/home/astronz/www/seberov/tmp/sockets/unicorn.sock fail_timeout=0;
 }
 
 server {
-    server_name 62.76.185.133
-    listen 3000;
-    root /home/astronz/www/seberov/public
+    server_name 78.46.41.66;
+    listen 3333;
+    root /home/astronz/www/seberov/public;
 
     location ^~ /assets/ {
         gzip_static on;
@@ -15,13 +15,13 @@ server {
 
     keepalive_timeout 10;
     client_max_body_size 4G;
-    try_files $uri/index.html $uri.html $uri app
+    try_files $uri/index.html $uri.html $uri app;
 
     location app {
         proxy_set_header Host $http_host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto http;
         proxy_redirect off;
-        proxy_pass http://app
+        proxy_pass http://app;
     }
 }

@@ -63,9 +63,8 @@ angular.module('seberov').controller 'ApartmentMortgageCalculatorController', ($
 #
 # GET apartments/by-parameters
 #
-angular.module('seberov').controller 'ApartmentsByParametersController', ($scope) ->
+angular.module('seberov').controller 'ApartmentsByParametersController', ($scope, $timeout) ->
   a = @
-  a.records = []
 
   a.path = (apartment) ->
     "/#{$scope.locale}" + Routes.refinery_apartments_apartment_path(apartment.id)

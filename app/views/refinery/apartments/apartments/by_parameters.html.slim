@@ -91,15 +91,15 @@
                     label for="grounds" = t('forms.grounds')
 
       // Results
-      .row.collapse.b-results
+      .row.collapse.b-results ng-cloak=""
         .small-12.columns
           .row
             .small-8.columns
               h1.upcase = t('forms.results')+':'
             .small-2.right.columns.total
-          .row.collapse.items ng-init="a.records = #{@apartments_json}"
+          .row.collapse.items ng-init="apartments = #{@apartments_json}"
             .small-12.columns
-              .row.item ng-repeat="apartment in a.records | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter | filter:groundsFliter"
+              .row.item ng-repeat="apartment in apartments | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter | filter:groundsFliter"
                 .small-3.columns
                   .id
                     | {{apartment.unit_id}}

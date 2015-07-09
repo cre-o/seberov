@@ -24,8 +24,8 @@ class ApplicationController < ActionController::Base
   def check_locale
     match = /^(ru|en|cs)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
 
-    if match && !params[:locale] #|| match && /^\/(ru|en|cs)/.match(request.env["REQUEST_PATH"]) == nil
-      redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}"
+    if match && !params[:locale]
+      redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}".gsub('//', '/')
       return false
     end
   end

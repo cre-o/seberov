@@ -39,7 +39,7 @@ ru:
       p: 'По вашему заказу мы можем сделать ремонт любой сложности, заказать атипичную мебель, включая подготовку индивидуального дизайна интерьера.'
 
   apartments_page:
-    choose_apartment: 'Выберете квартиру'
+    choose_apartment: 'Выберите квартиру'
     map_area_title: "этаж %{floor} | корпус %{building}"
 
   apartments_planning_page:
@@ -49,8 +49,8 @@ ru:
     select_floor: 'Выберите корпус и этаж:'
 
   apartment_by_parameters_page:
-    parameters: ‘Параметры'
-    see_more: ‘ПОКАЗАТЬ'
+    parameters: Параметры
+    see_more: ПОКАЗАТЬ
 
   apartments_price_list_page:
     download_pdf: 'скачать в pdf'
@@ -111,7 +111,7 @@ ru:
     area: 'Площадь'
     unit_id: 'Номер квартиры'
     building: 'Крыло'
-    block: ‘Крыло'
+    block: Крыло
     layout: 'Планировка'
     name: 'Имя'
     phone: 'Телефон'
@@ -126,7 +126,7 @@ ru:
     two: 'Две'
     three: 'Три'
     four: 'Четыре'
-    five: ‘Пять'
+    five: Пять
     penthouse: 'Пентхауз'
     grounds: 'Палисадник'
     results: 'Результаты'

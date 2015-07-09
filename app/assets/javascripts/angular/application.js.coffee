@@ -116,6 +116,13 @@ angular.module('seberov').filter 'rangeFilter', ->
     return filtered
 
 
+angular.module('seberov').directive 'preloadResource', ->
+  {
+    link: (scope, element, attrs) ->
+      scope.preloadResource = JSON.parse(attrs.preloadResource)
+      element.remove()
+  }
+
 # MiltiSlider Service
 angular.module('seberov').factory 'multiSliderService', ($timeout, $window, $interval) ->
   slider = {}

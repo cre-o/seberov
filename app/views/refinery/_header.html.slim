@@ -1,13 +1,14 @@
 .row
-  .small-3.large-3.columns
+  .small-3.medium-3.columns
     .logo
       = link_to home_path_h, title: 'На главную' do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
         = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
-  .small-6.large-6.columns.upcase
+
+  .small-6.large-6.columns.upcase.show-for-medium-up
     = render 'refinery/nav'
 
-  .small-2.large-1.columns
+  .small-4.small-centered.medium-1.medium-uncentered.large-1.columns
     ul.languages
       li class=(cs_locale?? 'active' : nil)
         a href="#{change_lang_hack('cs')}" = t('all_pages.language_menu.czech')
@@ -16,7 +17,7 @@
       li class=(ru_locale?? 'active' : nil)
         a href="#{change_lang_hack('ru')}" = t('all_pages.language_menu.russian')
 
-  .info-block.small-2.large-2.columns ng-controller="InfoBlockController as infoBlock"
+  .info-block.small-2.large-2.columns.show-for-medium-up ng-controller="InfoBlockController as infoBlock"
     a.opener.upcase href="#{js_void}" ng-click="toggle()"
       i.fa.fa-angle-down
       = t 'all_pages.push_to_call'
@@ -35,3 +36,11 @@
           i.fa.fa-file-pdf-o.fa-lg
 
           = link_to t('all_pages.download_price_list'), price_list_path, target: '_blank'
+
+  /! Mobile menu
+  .small-2.columns.right.show-for-small-only
+    .view-ui.item.js-sidebar-toggle.right
+      i.fa.fa-bars
+
+  .ui.js-sidebar.right.vertical.labeled.icon.sidebar.menu.show-for-small-only
+    = Refinery::Pages::SidebarPresenter.new(refinery_menu_pages, self).to_html

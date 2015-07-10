@@ -6,7 +6,7 @@ html lang="#{::I18n.locale}" ng-app="seberov"
     // Passing server data into JS
     = Gon::Base.render_data({camel_case: true})
   body ng-controller="ApplicationController as app" ng-init="app.development = false" ng-class="{ development: app.development == true }"
-    .inner-wrap id="#{canonical_id @page}"
+    .inner-wrap.pusher id="#{canonical_id @page}"
       header.application ng-class="{ fixed: fixedHeader == true }"
         = render 'refinery/header'
       section#flash

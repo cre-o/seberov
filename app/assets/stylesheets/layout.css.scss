@@ -108,12 +108,19 @@ header.application {
     margin: 0;
     z-index: $index;
 
+    @media #{$small-only} {
+      background-color: rgba(0, 0, 0, .6);
+    }
+
     li {
       display: inline-block;
       float: left;
-      width: rem-calc(20);
       overflow: hidden;
       cursor: pointer;
+
+      @media #{$medium-up} {
+        width: rem-calc(20);
+      }
 
       a {
         display: block;
@@ -122,13 +129,25 @@ header.application {
         font-weight: 300;
         line-height: rem-calc(65);
         white-space: nowrap;
-        @include transform(rotate(-90deg));
+
+        @media #{$medium-up} {
+          @include transform(rotate(-90deg));
+        }
+
+        @media #{$small-only} {
+          color: $white;
+          font-size: 11px;
+          padding: 5px;
+        }
       }
 
       &:hover {
         background-color: #4d7c5d;
-        height: rem-calc(60);
-        width: rem-calc(30);
+
+        @media #{$medium-up} {
+          width: rem-calc(30);
+          height: rem-calc(60);
+        }
 
         a {
           color: $white;
@@ -139,8 +158,11 @@ header.application {
 
       &.active {
         background-color: #4d7c5d;
-        height: rem-calc(60);
-        width: rem-calc(30);
+
+        @media #{$medium-up} {
+          width: rem-calc(30);
+          height: rem-calc(60);
+        }
 
         a {
           color: $white;
@@ -208,8 +230,6 @@ header.application {
         }
 
         .label {
-          //background-color: rgba(0, 0, 0, 0.9);
-
           font-size: rem-calc(16);
           margin-left: rem-calc(5);
           padding: rem-calc(3);

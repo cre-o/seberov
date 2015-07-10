@@ -55,11 +55,10 @@ gem 'js-routes'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
-# Multilanguage features
-gem 'globalize', '~> 5.0.0'
-
 # Use Unicorn as the app server
 gem 'unicorn'
+
+gem 'semantic-ui-sass'
 
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development

@@ -25,6 +25,8 @@
 #= require magnific-popup
 #= require utility
 #= require apartments
+#= require semantic-ui
+#= require semantic-ui/transition
 #= require location
 
 jQuery ->
@@ -32,4 +34,6 @@ jQuery ->
   # Lazy load images (not load before user can see it)
   $('img').lazyload()
   # MagnificPopup for enlarge images
-  $('.zoom-in').magnificPopup({type:'image'});
+  $('.zoom-in').magnificPopup({type:'image'})
+
+  $('.js-sidebar').sidebar('attach events', '.js-sidebar-toggle')

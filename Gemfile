@@ -39,7 +39,7 @@ gem 'foundation-rails'
 # CSS Mixins
 gem 'bourbon'
 # Javascript features
-gem 'angularjs-rails', '~> 1.3.5'
+gem 'angularjs-rails', '~> 1.3.15'
 gem 'lodash-rails' # javascript features
 gem 'gon' # passing variables into JS
 # Images lazy loading

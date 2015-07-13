@@ -1,12 +1,12 @@
 #
 # Application controller
 #
-angular.module('seberov').controller 'ApplicationController', ($scope, $window, $document, uiGmapGoogleMapApi) ->
+angular.module('seberov').controller 'ApplicationController', ($scope, $window, $document) ->
   # Locale setting
   $scope.locale = gon.locale
 
   # <== Fixed header
-  $scope.fixedHeader = false
+  $scope.fixedHeader = Foundation.utils.is_small_only()
 
   # Main page scroll feature
   $document.on 'scroll', ->

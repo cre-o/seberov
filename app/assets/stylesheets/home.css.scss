@@ -44,9 +44,16 @@
       z-index: 50;
       right: em(-10);
       bottom: em(-10);
-      height: em(40);
       line-height: em-calc(40);
       padding-left: em-calc(5);
+
+      height: em(40);
+
+      @media #{$small-only} {
+        height: em(30);
+        font-size: em(14);
+        line-height: em-calc(30);
+      }
 
       &:after {
         content: ' ';
@@ -54,21 +61,35 @@
         position: absolute;
         width: 0;
         height: 0;
+        right: em(-19);
+        top: 0;
+
         border-top: em(20) solid transparent;
         border-bottom: em(20) solid transparent;
         border-left: em(20) solid rgba($green, 0.9);
-        right: em(-19);
-        top: 0;
+
+        @media #{$small-only} {
+          border-top: em(16) solid transparent;
+          border-bottom: em(16) solid transparent;
+          border-left: em(16) solid rgba($green, 0.9);
+
+          right: em(-15);
+        }
       }
 
       .map {
         position: absolute;
         display: inline-block;
         width: em(40);
-        height: em(40);
         background: image-url('icons/plan-icon42.png') center center no-repeat, rgba(tint($green, 30%), 0.8);
         background-size: em-calc(20 20);
         left: em(-40);
+
+        height: em(40);
+
+        @media #{$small-only} {
+          height: em(30);
+        }
       }
     }
   }

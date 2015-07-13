@@ -1,5 +1,5 @@
 .row
-  .small-3.medium-3.columns
+  .small-4.medium-3.columns
     .logo
       = link_to home_path_h, title: 'На главную' do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
@@ -8,8 +8,8 @@
   .small-6.large-6.columns.upcase.show-for-medium-up
     = render 'refinery/nav'
 
-  .small-4.small-centered.medium-1.medium-uncentered.large-1.columns
-    ul.languages
+  .medium-1.large-1.columns.hide-for-small-only
+    ul.languages.text-center
       li class=(cs_locale?? 'active' : nil)
         a href="#{change_lang_hack('cs')}" = t('all_pages.language_menu.czech')
       li class=(en_locale?? 'active' : nil)
@@ -44,3 +44,12 @@
 
   .ui.js-sidebar.right.vertical.labeled.icon.sidebar.menu.show-for-small-only
     = Refinery::Pages::SidebarPresenter.new(refinery_menu_pages, self).to_html
+    / Languages
+    .langs
+      a.item.lang href="#{change_lang_hack('cs')}"
+        = image_tag 'components/languages/cs.png'
+      a.item.lang href="#{change_lang_hack('en')}"
+        = image_tag 'components/languages/en.png'
+      a.item.lang href="#{change_lang_hack('ru')}"
+        = image_tag 'components/languages/ru.png'
+

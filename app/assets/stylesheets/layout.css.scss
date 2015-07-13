@@ -108,10 +108,6 @@ header.application {
     margin: 0;
     z-index: $index;
 
-    @media #{$small-only} {
-      background-color: rgba(0, 0, 0, .6);
-    }
-
     li {
       display: inline-block;
       float: left;
@@ -120,6 +116,12 @@ header.application {
 
       @media #{$medium-up} {
         width: rem-calc(20);
+      }
+
+      @media #{$small-only} {
+        width: 53px;
+        height: 53px;
+        background-color: rgba(0, 0, 0, .6);
       }
 
       a {
@@ -149,6 +151,10 @@ header.application {
           height: rem-calc(60);
         }
 
+        @media #{$small-only} {
+          border-right: 2px solid #000;
+        }
+
         a {
           color: $white;
         }
@@ -166,7 +172,15 @@ header.application {
 
         a {
           color: $white;
-          font-size: rem-calc(11);
+
+          @media #{$medium-up} {
+            font-size: rem-calc(11);
+          }
+
+          @media #{$small-only} {
+            font-size: rem-calc(16);
+          }
+
         }
       }
     }
@@ -243,6 +257,14 @@ header.application {
       .skype, .pdf {
         font-size: rem-calc(13);
       }
+    }
+  }
+}
+
+.ui.vertical.menu {
+  .item.lang {
+    &:before {
+      background: none;
     }
   }
 }

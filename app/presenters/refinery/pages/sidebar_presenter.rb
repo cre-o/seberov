@@ -41,17 +41,13 @@ module Refinery
 
       private
       def render_menu(items)
-        content_tag(menu_tag, :id => dom_id, :class => css) do
-          render_menu_items(items)
-        end
+        render_menu_items(items)
       end
 
       def render_menu_items(menu_items)
         if menu_items.present?
-          content_tag(list_tag, :class => list_tag_css) do
-            menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
-              buffer << render_menu_item(item, index)
-            end
+          menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
+            buffer << render_menu_item(item, index)
           end
         end
       end

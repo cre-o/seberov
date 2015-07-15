@@ -23,4 +23,7 @@ angular.module('seberov').controller 'ApplicationController', ($scope, $window, 
   $scope.gogo = (path) ->
     $window.open(path,'_blank')
 
+  $scope.isMediumUp = ->
+    Foundation.utils.is_medium_up()
+
   return $scope

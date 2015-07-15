@@ -1,4 +1,4 @@
 # config/initializers/lazyload.rb
 Lazyload::Rails.configure do |config|
-  config.placeholder = "/images/pixel.gif"
+  config.placeholder = "/images/loading.gif"
 end

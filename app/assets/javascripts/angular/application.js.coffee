@@ -5,19 +5,24 @@
 #= require angular/controllers/apartments_controller
 
 # Initialisation
-angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
+app = angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
 
 # Configuration
-angular.module('seberov').config (uiGmapGoogleMapApiProvider) ->
+app.config (uiGmapGoogleMapApiProvider) ->
   uiGmapGoogleMapApiProvider.configure
     key: gon.global.gmaps_key,
     v: '3.17',
     libraries: 'weather, geometry, visualization'
 
+# Initializing foundation
+app.run ($rootScope) ->
+  $rootScope.$on '$viewContentLoaded', ->
+    $(document).foundation()
+
 #
 # Info block
 #
-angular.module('seberov').controller 'InfoBlockController', ($scope, $document) ->
+app.controller 'InfoBlockController', ($scope, $document) ->
   $scope.shown = true
 
   $document.on 'scroll', ->
@@ -32,7 +37,7 @@ angular.module('seberov').controller 'InfoBlockController', ($scope, $document) 
 #
 # Image broadcaster
 #
-angular.module('seberov').controller 'ImageBroadcasterController', ->
+app.controller 'ImageBroadcasterController', ->
   @.imageNumber = 1
   @.imageUrl = ""
 
@@ -49,7 +54,7 @@ angular.module('seberov').controller 'ImageBroadcasterController', ->
 #
 # Stop Event directive
 #
-angular.module('seberov').directive 'stopEvent', ->
+app.directive 'stopEvent', ->
   {
     restrict: 'A',
     link: (scope, element, attr) ->
@@ -60,7 +65,7 @@ angular.module('seberov').directive 'stopEvent', ->
 #
 # Background image directive
 #
-angular.module('seberov').directive 'backImg', ->
+app.directive 'backImg', ->
   (scope, element, attrs) ->
     attrs.$observe 'backImg', (value) ->
       element.css
@@ -70,7 +75,7 @@ angular.module('seberov').directive 'backImg', ->
 #
 # Resize directive
 #
-angular.module('seberov').directive 'resize', ($window) ->
+app.directive 'resize', ($window) ->
   (scope, element, attr) ->
     w = angular.element($window)
     scope.$watch (->
@@ -95,16 +100,16 @@ angular.module('seberov').directive 'resize', ($window) ->
 # Filter for url trusting
 # Example
 # ng-src="{ object.url | trusted }"
-angular.module('seberov').filter 'trusted', ['$sce', ($sce) ->
+app.filter 'trusted', ['$sce', ($sce) ->
     return (url) ->
       return $sce.trustAsResourceUrl(url)
 ]
 
 # Filter helps render html untrusted content
-angular.module('seberov').filter 'unsafe', ($sce) ->
+app.filter 'unsafe', ($sce) ->
   $sce.trustAsHtml
 
-angular.module('seberov').filter 'rangeFilter', ->
+app.filter 'rangeFilter', ->
   (items, rangeInfo) ->
     filtered = []
     min = parseInt(rangeInfo.min)
@@ -116,7 +121,7 @@ angular.module('seberov').filter 'rangeFilter', ->
     return filtered
 
 
-angular.module('seberov').directive 'preloadResource', ->
+app.directive 'preloadResource', ->
   {
     link: (scope, element, attrs) ->
       scope.preloadResource = JSON.parse(attrs.preloadResource)
@@ -124,7 +129,7 @@ angular.module('seberov').directive 'preloadResource', ->
   }
 
 # MiltiSlider Service
-angular.module('seberov').factory 'multiSliderService', ($timeout, $window, $interval) ->
+app.factory 'multiSliderService', ($timeout, $window, $interval) ->
   slider = {}
   slider.screenNum = 1
   slider.webcamUrl = 'http://151.249.106.49/images/logo.gif'
@@ -152,7 +157,6 @@ angular.module('seberov').factory 'multiSliderService', ($timeout, $window, $int
     slider.screenHeight = 400 # minimal height
   if Foundation.utils.is_large_up()
     slider.screenHeight = 700 # minimal height
-
 
   $interval ->
     angular.element('.js-multi-slider.active').resize()

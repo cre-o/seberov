@@ -12,9 +12,9 @@
       .orbit-caption-middle ng-cloak="" ng-init="totalApartments = #{total_apartments}"
         = raw @page.content_for(:slider_image)
 
-  .row.fluid.main-info
+  .row.fluid.collapse.main-info
     .small-12.medium-4.columns
-      header.small-6.medium-8.upcase.grey.map
+      header.small-8.medium-8.upcase.grey.map
         h1 = t 'home_page.map'
         i.fa.fa-2x.fa-chevron-right
       // Google map!
@@ -23,7 +23,7 @@
           ui-gmap-marker*{'idKey'=>'1', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
 
     .small-12.medium-8.columns
-      header.small-6.medium-8.large-5.upcase.green
+      header.small-8.medium-8.large-5.upcase.green
         h1 = t 'home_page.benefits'
         i.fa.fa-2x.fa-chevron-right
 
@@ -36,7 +36,7 @@
 
   section.main-steps-info
     .row.fuild
-      .small-6.small-offset-2.small-offset-2
+      .small-6.small-offset-1
         h1.upcase = t 'home_page.procedure_of_purchasing'
 
     / Steps

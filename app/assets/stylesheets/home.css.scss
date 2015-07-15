@@ -165,7 +165,8 @@
         height: 400px;
 
         @media #{$small-only} {
-          padding-left: rem-calc(27/1.5);
+          padding: 0;
+          height: rem-calc(230);
         }
 
         @media #{$medium-only} {

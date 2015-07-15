@@ -11,8 +11,16 @@
   color: $white;
   padding: rem_calc(36 30 45 130);
 
-  height: 20%;
   // <-- Media queries
+  @media #{$small-only} {
+    height: 22%;
+    width: 65%;
+  }
+
+  @media #{$medium-up} {
+    height: 22%;
+  }
+
   @media #{$xlarge-up} {
     height: 15%;
   }
@@ -28,10 +36,12 @@
     top: rem_calc(20);
 
     // <-- Media queries
-    font-size: rem_calc(24);
+    font-size: rem-calc(24);
 
     @media #{$small-only} {
-      font-size: rem-calc(24/1.8);
+      left: rem-calc(10);
+      top: rem-calc(5);
+      font-size: rem-calc(12);
     }
 
     @media #{$medium-only} {
@@ -73,7 +83,7 @@
   right: 0;
   background-color: $grey;
   color: $white;
-  width: 30%;
+  width: 40%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;

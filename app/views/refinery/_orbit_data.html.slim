@@ -8,7 +8,7 @@
   - size.times do |t|
     - p = t.next
     li
-      = image_tag "#{img_path}/#{p}-xl.jpg", height: '100%', lazy: true
+      = image_tag "#{img_path}/#{p}-xl.jpg", lazy: true, class: 'lazy'
       .orbit-caption-bottom
         = t(translation_path)[t]
         a href="#" class="orbit-prev-bottom"
@@ -17,7 +17,7 @@
           .fa.fa-1.z5x.fa-chevron-right
 - else
   li
-    = image_tag "/#{image_path("#{img_path}-xl.jpg")}", height: '100%', lazy: true
+    = image_tag "/#{image_path("#{img_path}-xl.jpg")}", lazy: true, class: 'lazy'
     .orbit-caption-bottom
       = description
       a href="#" class="orbit-prev-bottom"

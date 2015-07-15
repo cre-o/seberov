@@ -1,47 +1,48 @@
 .row.collapse.multi-slider ng-init="slider.screenNum = #{default_section}"
   / Selector
   - if defined?(render_parts) && render_parts.include?(:nav)
-    .small-2.columns
+    .small-12.medium-2.columns
       .buttons.action
-        .btn.exterior[
+        .btn.small-3.medium-12.exterior[
           ng-class="{ active: slider.isCurrentScreen(1) }"
           ng-click="slider.setScreen(1); slider.refreshOrbit()"
-          ng-style="slider.isCurrentScreen(1) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5}"]
+          ng-style="isMediumUp() && (slider.isCurrentScreen(1) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5})"]
           .text
             span = t 'exterior_button_text_html', scope: 'multi_slider'
           .image
-        .btn.interior[
+        .btn.small-3.medium-12.interior[
           ng-class="{ active: slider.isCurrentScreen(2) }"
           ng-click="slider.setScreen(2); slider.refreshOrbit()"
-          ng-style="slider.isCurrentScreen(2) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5}"]
+          ng-style="isMediumUp() && (slider.isCurrentScreen(2) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5})"]
           .text
             span = t 'interior_button_text_html', scope: 'multi_slider'
           .image
-        .btn.tour[
+        .btn.small-3.medium-12.tour[
           ng-class="{ active: slider.isCurrentScreen(3) }"
           ng-click="slider.setScreen(3)"
-          ng-style="slider.isCurrentScreen(3) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5}"]
+          ng-style="isMediumUp() && (slider.isCurrentScreen(3) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5})"]
           .text
             span = t 'tour_button_text_html', scope: 'multi_slider'
           .image
 
         - unless defined?(exclude_parts) && exclude_parts.include?(:webcam)
-          .btn.webcam[
+          .btn.small-3.medium-12.webcam[
             ng-class="{ active: slider.isCurrentScreen(4) }"
             ng-click="slider.setScreen(4); slider.loadWebcam()"
-            ng-style="slider.isCurrentScreen(4) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5}"]
+            ng-style="isMediumUp() && (slider.isCurrentScreen(4) && {'height': slider.screenHeight/3} || {'height': slider.screenHeight/4.5})"]
             .text
               span = t 'webcam_button_text_html', scope: 'multi_slider'
             .image
 
   /! Using manual initialisation with custom buttons
   - if defined?(render_parts) && render_parts.include?(:screen)
-    .columns.screen class=(render_parts.include?(:buttons) ? 'small-8' : 'small-10')
+    .columns.screen class=(render_parts.include?(:buttons) ? 'small-12 medium-8' : 'small-10')
 
         // Exterior
         ul#exterior-orbit.js-multi-slider.orbit[
            data-orbit=""
            ng-class="{active: slider.isCurrentScreen(1)}"]
+
           = render partial: 'refinery/orbit_data',
               locals: { img_path: 'components/multi-slider/exterior', size: 4, translation_path: 'multi_slider.exterior.descriptions' }
 
@@ -49,8 +50,11 @@
         ul#interior-orbit.js-multi-slider.orbit[
           data-orbit=""
           ng-class="{active: slider.isCurrentScreen(2)}"]
+
           = render partial: 'refinery/orbit_data',
-            locals: { img_path: 'components/multi-slider/interior', size: 13, translation_path: 'multi_slider.interior.descriptions' }
+            locals: { img_path: 'components/multi-slider/interior', size: 11, translation_path: 'multi_slider.interior.descriptions' }
+
+        // Tour
         div ng-if="slider.isCurrentScreen(3)"
           .flex-video.widescreen.js-multi-slider
             iframe#virtual-tour ng-src="/virtual_tour/index.html" width="100%" height="{{slider.screenHeight}}" frameborder="0"
@@ -64,13 +68,13 @@
   /! Buttons
   - if defined?(render_parts) && render_parts.include?(:buttons)
     .medium-2.columns.options.end
-      .v-middle ng-style="{ 'margin-top': slider.screenHeight/4 }"
-        .small-12.option ng-style="{'height': slider.screenHeight/4-2}"
-            = link_to price_list_path, class: 'wrap', target: '_blank' do
-              .text = t 'all_pages.download_price_list'
-              i.icon.pdf
+      .v-middle ng-style="{ 'margin-top': isMediumUp() ? slider.screenHeight/4 : 0 }"
+        .small-12.option ng-style="{ height: isMediumUp() ? slider.screenHeight/4 : 'auto' }"
+          = link_to price_list_path, class: 'wrap', target: '_blank' do
+            .text = t 'all_pages.download_price_list'
+            i.icon.pdf
 
-        .small-12.option ng-style="{'height': slider.screenHeight/4-2 }"
-            = link_to refinery.apartments_apartments_path, class: 'wrap', target: '_blank' do
-              .text = t 'choose_an_apartment_button_text', scope: 'multi_slider'
-              i.icon.plan
+        .small-12.option ng-style="{ height: isMediumUp() ? slider.screenHeight/4-2 : 'auto' }"
+          = link_to refinery.apartments_apartments_path, class: 'wrap', target: '_blank' do
+            .text = t 'choose_an_apartment_button_text', scope: 'multi_slider'
+            i.icon.plan

@@ -32,7 +32,7 @@
 jQuery ->
   $(document).foundation()
   # Lazy load images (not load before user can see it)
-  $('img').lazyload()
+  $('img.lazy').lazyload()
   # MagnificPopup for enlarge images
   $('.zoom-in').magnificPopup({type:'image'})
 

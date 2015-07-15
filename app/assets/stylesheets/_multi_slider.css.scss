@@ -2,7 +2,7 @@
   background-color: $white;
 
   @media #{$small-only} {
-    font-size: .65em;
+    font-size: .60em;
   }
 
   @media #{$medium-only} {
@@ -28,6 +28,11 @@
       position: relative;
       max-width: rem-calc(320);
       max-height: rem-calc(350);
+
+      @media #{$small-only} {
+        float: left;
+        height: rem-calc(150);
+      }
 
       %sprite {
         background-image: image-url('components/multi-slider/slider-buttons-sprite.jpg');
@@ -99,9 +104,11 @@
   .screen {
     position: relative;
 
-    padding: {
-      left: rem-calc(4) !important;
-      right: rem-calc(3) !important;
+    @media #{$medium-up} {
+      padding: {
+        left: rem-calc(4) !important;
+        right: rem-calc(3) !important;
+      }
     }
 
     .orbit {

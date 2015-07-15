@@ -2,11 +2,11 @@
 
 html {
   @media #{$small-only} {
-    font-size: $rem-base - 3;
+    font-size: $rem-base - 4;
   }
 
   @media #{$medium-only} {
-    font-size: $rem-base - 2;
+    font-size: $rem-base - 3;
   }
 }
 
@@ -61,7 +61,12 @@ header.application {
     ul {
       margin: 0;
       margin-left: rem-calc(5);
-      font-size: rem-calc(15);
+
+      font-size: rem-calc(13);
+
+      @media #{$large-up} {
+        font-size: rem-calc(15);
+      }
     }
 
     li {
@@ -305,7 +310,14 @@ footer {
   }
 
   .address {
-    margin: rem-calc(5 45);
+    @media #{$medium-up} {
+      margin: rem-calc(5 45);
+    }
+
+    @media #{$small-only} {
+      margin-left: rem-calc(20);
+    }
+
     font-weight: 300;
     line-height: rem-calc(18);
 
@@ -341,13 +353,20 @@ footer {
     @media #{$xlarge-only} {
       width: 200px;
     }
+
+    @media #{$small-only} {
+      clear: left;
+      margin-top: rem-calc(40);
+    }
   }
 
   .investment {
     margin-left: rem-calc(20);
 
-    p {
-      width: rem-calc(140);
+    @media #{$large-up} {
+      p {
+        width: rem-calc(140);
+      }
     }
   }
 
@@ -383,6 +402,20 @@ footer {
       float: left;
       margin-top: rem-calc(10);
     }
+  }
+
+  .small-contacts {
+    div {
+      margin-top: rem-calc(15);
+    }
+
+    i {
+      padding-right: rem(10);
+    }
+  }
+
+  .small-address {
+    margin-top: rem-calc(60);
   }
 
   .madeby {

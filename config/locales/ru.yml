@@ -138,7 +138,7 @@ ru:
     vestibule_area: 'Прихожая'
     corridor_area: 'Коридор'
     wc_area: 'Туалет'
-    kitchen_area: ‘Гостинная+кк'
+    kitchen_area: Гостинная+кк
     chamber_area: 'Кладовка'
     bathroom_area: 'Ванная'
     balcony_terace_area: 'Балкон'

@@ -27,7 +27,7 @@ jQuery ->
   # Multi slider
   if $('.js-multi-slider').length > 0
     $('.js-multi-slider.orbit').foundation
-      orbit: {
+      orbit:
         animation: 'slide',
         next_on_click: true,
         animation_speed: 500,
@@ -40,4 +40,5 @@ jQuery ->
         circular: true,
         timer: false,
         swipe: true
-      }
+
+

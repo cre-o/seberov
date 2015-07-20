@@ -36,7 +36,7 @@
 
   /! Using manual initialisation with custom buttons
   - if defined?(render_parts) && render_parts.include?(:screen)
-    .columns.screen class=(render_parts.include?(:buttons) ? 'small-12 medium-8' : 'small-10')
+    .columns.screen class=(render_parts.include?(:buttons) ? 'small-12 medium-8' : 'small-12 medium-10')
 
         // Exterior
         ul#exterior-orbit.js-multi-slider.orbit[
@@ -52,7 +52,7 @@
           ng-class="{active: slider.isCurrentScreen(2)}"]
 
           = render partial: 'refinery/orbit_data',
-            locals: { img_path: 'components/multi-slider/interior', size: 11, translation_path: 'multi_slider.interior.descriptions' }
+            locals: { img_path: 'components/multi-slider/interior', size: 9, translation_path: 'multi_slider.interior.descriptions' }
 
         // Tour
         div ng-if="slider.isCurrentScreen(3)"

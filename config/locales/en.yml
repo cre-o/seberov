@@ -14,6 +14,7 @@ en:
       russian: 'russian'
     push_to_call: 'Push to call'
     download_price_list: 'Download price list'
+    skype_login: 'prodej_nemovitosti'
 
   home_page:
     map: 'map'
@@ -173,6 +174,7 @@ en:
         - '4'
     interior:
       descriptions:
+        - 'showflat'
         - 'showflat'
         - 'showflat'
         - 'showflat'

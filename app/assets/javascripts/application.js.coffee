@@ -31,9 +31,21 @@
 
 jQuery ->
   $(document).foundation()
+
   # Lazy load images (not load before user can see it)
   $('img.lazy').lazyload()
+
   # MagnificPopup for enlarge images
   $('.zoom-in').magnificPopup({type:'image'})
 
+  $('.gallery').each ->
+    # the containers for all your galleries
+    $(@).magnificPopup
+      delegate: 'a'
+      type: 'image'
+      gallery: enabled: true
+
+
+
+  # Sidebar feature
   $('.js-sidebar').sidebar('attach events', '.js-sidebar-toggle')

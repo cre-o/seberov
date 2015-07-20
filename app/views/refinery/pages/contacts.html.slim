@@ -1,16 +1,16 @@
 #l-contacts
   .row.main-info
-    .small-2.small-offset-1.columns
+    .small-6.medium-2.medium-offset-1.columns
       .circular
         = raw @page.content_for(:photo)
 
-    .small-2.columns
+    .small-6.medium-2.columns.__contact-info
       = raw @page.content_for(:main)
 
-    .small-7.columns.text-center
+    .small-12.medium-7.columns.text-center
       .gmap
         .show-for-small-only
-          iframe frameborder="0" width="300" height="150" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
+          iframe frameborder="0" width="100%" height="200" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
         .show-for-medium-only
           iframe frameborder="0" width="400" height="200" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNLWjn5799hEu-qIfL5nHU1lskw3Wnxqs&q=statek seberov praha" style="border:0"
         .show-for-large-up

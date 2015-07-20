@@ -54,12 +54,17 @@ footer
           = raw refinery_get_page(id: 'footer').content_for(:contact_last)
 
 
-    .small-6.medium-2.columns.investment-fix
+    .medium-2.right.columns.investment-fix.show-for-medium-up
       .investment
         = raw refinery_get_page(id: 'footer').content_for(:investment)
 
-    .small-6.columns.small-address.show-for-small-only
+    .row.show-for-small-only.mobile-bottom
+      .small-6.columns.small-address
         = raw refinery_get_page(id: 'footer').content_for(:contact_last)
+
+      .small-6.columns.investment-fix
+        .investment
+          = raw refinery_get_page(id: 'footer').content_for(:investment)
 
   .row.fluid.text-center.madeby
     .small-12.columns

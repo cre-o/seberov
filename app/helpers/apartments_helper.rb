@@ -50,16 +50,40 @@ module ApartmentsHelper
     (apartment.floor + apartment_floor.floor_number) - 1  # Because we have each floor number that starts from 1
   end
 
-  def get_model_path(apartment, apartment_floor, size = 'full')
+  def get_apartment_image_path(kind, apartment, apartment_floor, size)
     floor = get_floor_number(apartment, apartment_floor)
     size = size == 'full' ? '' : "-#{size}"
-    asset_url("apartments/show/models/#{apartment.unit_id.downcase}-#{floor}fl#{size}.jpg")
+    asset_url "apartments/show/#{kind}/#{apartment.unit_id}-#{floor}#{size}.jpg"
+  end
+
+  def get_model_path(apartment, apartment_floor, size = 'full')
+    get_apartment_image_path('models', apartment, apartment_floor, size)
   end
 
   def get_plan_path(apartment, apartment_floor, size = 'full')
+    get_apartment_image_path('plans', apartment, apartment_floor, size)
+  end
+
+  # Creates multiple anchor tags
+  def get_gallery_for(kind, apartment, apartment_floor)
+    angles = %w(-40 -130 50 140)
+    items = []
     floor = get_floor_number(apartment, apartment_floor)
-    size = size == 'full' ? '' : "-#{size}"
-    asset_url("apartments/show/plans/#{apartment.unit_id.downcase}-#{floor}fl#{size}.jpg")
+
+    base_image_path = {
+      :models_dir => 'apartments/show/models/',
+      :angle => '',
+      :apartment_id => "/#{apartment.unit_id}",
+      :image => kind == 'gallery_models' ? '-g.jpg' : "-#{floor}.jpg"
+    }
+
+    angles.each do |angle|
+      base_image_path[:angle] = angle
+
+      items.push link_to('', asset_url(base_image_path.values.join))
+    end
+
+    raw items.join
   end
 
   def t_floor_number(number)

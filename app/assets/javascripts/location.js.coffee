@@ -1,6 +1,6 @@
 jQuery ->
 
-  - if $('#location-orbit').length > 0
+  if $('#location-orbit').length > 0
 
     $('#location-orbit').foundation
       orbit: {

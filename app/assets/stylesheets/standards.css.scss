@@ -4,6 +4,13 @@
   .row {
     margin-bottom: 15px;
 
+    .column, .columns {
+      @media #{$small-only} {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
     &.last {
       padding-bottom: 20px;
       border-bottom: 1px solid $light_grey;
@@ -15,6 +22,14 @@
   section {
     color: $dark_grey;
 
+    @media #{$small-only} {
+      padding-left: rem(20);
+
+      .text-right {
+        text-align: left !important;
+      }
+    }
+
     li {
       list-style-type: disc;
     }
@@ -23,32 +38,35 @@
       text-align: left;
     }
 
-    &.left-side {
-      background: image_url('standards/ruler-left-s') -30px 20px no-repeat;
-      padding-left: 13%;
+    @media #{$medium-up} {
 
-      &.long {
-        background: image_url('standards/ruler-left-l') -90px 20px no-repeat;
-        padding: 0;
+      &.left-side {
+        background: image_url('standards/ruler-left-s') -30px 20px no-repeat;
+        padding-left: 13%;
+
+        &.long {
+          background: image_url('standards/ruler-left-l') -90px 20px no-repeat;
+          padding: 0;
+        }
+
+        &.superlong {
+          background: image_url('standards/ruler-left-l') -150px 20px no-repeat;
+          padding: 0;
+        }
       }
 
-      &.superlong {
-        background: image_url('standards/ruler-left-l') -150px 20px no-repeat;
-        padding: 0;
-      }
-    }
+      &.right-side {
+        background: image_url('standards/ruler-right-s') 100% 20px no-repeat;
+        padding-right: 15%;
 
-    &.right-side {
-      background: image_url('standards/ruler-right-s') 100% 20px no-repeat;
-      padding-right: 15%;
+        &.long {
+          background: image_url('standards/ruler-right-l') 110% 20px no-repeat;
+          padding: 0;
+        }
 
-      &.long {
-        background: image_url('standards/ruler-right-l') 110% 20px no-repeat;
-        padding: 0;
-      }
-
-      h1 {
-        padding-right: 20px;
+        h1 {
+          padding-right: 20px;
+        }
       }
     }
 

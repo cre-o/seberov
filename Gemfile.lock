@@ -369,6 +369,7 @@ DEPENDENCIES
   draper
   font-awesome-rails
   foundation-rails
+  globalize (~> 5.0.0)
   gon
   guard (>= 2.2.2)
   guard-livereload

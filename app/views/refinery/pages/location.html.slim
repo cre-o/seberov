@@ -1,7 +1,7 @@
 #l-location ng-init="app.setHeader('fixed')" ng-controller="LocationController as location"
   .row.b-map
     .small-12.columns
-      fieldset
+      fieldset.show-for-medium-up
         legend = t 'location_page.legend'
         .row
           .small-5.columns.active-map
@@ -19,6 +19,19 @@
 
           .small-7.columns
             = raw @page.content_for(:body)
+
+      .show-for-small-only
+        ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options"
+          ui-gmap-marker*{'idKey'=>'99', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
+          ui-gmap-marker*{'idKey'=>'map.markers.medicine.id', 'coords'=>'map.markers.medicine.coords', 'icon'=>'map.markers.medicine.icon'}
+          ui-gmap-marker*{'ng-repeat'=>'autobus in map.markers.autobus.items', 'idKey'=>'autobus.id', 'coords'=>'autobus.coords', 'icon'=>'map.markers.autobus.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.relax.id', 'coords'=>'map.markers.relax.coords', 'icon'=>'map.markers.relax.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.school.id', 'coords'=>'map.markers.school.coords', 'icon'=>'map.markers.school.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.administration.id', 'coords'=>'map.markers.administration.coords', 'icon'=>'map.markers.administration.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.police.id', 'coords'=>'map.markers.police.coords', 'icon'=>'map.markers.police.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.library.id', 'coords'=>'map.markers.library.coords', 'icon'=>'map.markers.library.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.playground.id', 'coords'=>'map.markers.playground.coords', 'icon'=>'map.markers.playground.icon'}
+          ui-gmap-marker*{'idKey'=>'map.markers.sport.id', 'coords'=>'map.markers.sport.coords', 'icon'=>'map.markers.sport.icon'}
 
 
   .row
@@ -61,8 +74,11 @@
             i.sport
             = t 'sport', scope: 'location_page.icons_text'
 
+    .show-for-small-only
+      = raw @page.content_for(:body)
+
   .row
-    .small-8.small-centered.medium-centered.large-8.large-centered.columns
+    .small-12.medium-centered.medium-8.columns
       ul#location-orbit data-orbit=""
         = render partial: 'refinery/orbit_data', \
           locals: { img_path: 'location/slider', size: 11, translation_path: 'location_page.slider.descriptions' }

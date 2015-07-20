@@ -12,19 +12,19 @@ class ApplicationController < ActionController::Base
 
     if callback_form.valid?
       if ApplicationMailer.callback(callback_form.params).deliver_now
-        redirect_to root_url, status: 301, notice: t('controller.callback_mail_send')
+        redirect_to root_url(locale: params[:locale]), status: 301, notice: t('controller.callback_mail_send')
       else
-        redirect_to root_url, status: 301, error: t('controller.callback_mail_send_error')
+        redirect_to root_url(locale: params[:locale]), status: 301, error: t('controller.callback_mail_send_error')
       end
     else
-      redirect_to root_url, status: 301, alert: callback_form.errors.full_messages
+      redirect_to root_url(locale: params[:locale]), status: 301, alert: callback_form.errors.full_messages
     end
   end
 
   def check_locale
     match = /^(ru|en|cs)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
 
-    if match && !params[:locale]
+    if request.env['REQUEST_METHOD'] == 'GET' && match && !params[:locale]
       redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}".gsub('//', '/')
       return false
     end

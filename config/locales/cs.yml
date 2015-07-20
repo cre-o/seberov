@@ -14,6 +14,7 @@ cs:
       russian: 'russian'
     push_to_call: 'Zatlačte pro volání'
     download_price_list: 'Stáhnout ceník'
+    skype_login: 'prodej_nemovitosti'
 
   home_page:
     map: 'Mapa'
@@ -50,7 +51,7 @@ cs:
 
   apartment_by_parameters_page:
     parameters: 'parametry'
-    see_more: ‘VÍCE'
+    see_more: VÍCE
 
   apartments_price_list_page:
     download_pdf: 'Stáhnout pdf'
@@ -60,7 +61,7 @@ cs:
       floor: 'Patro'
       square: 'Plocha'
       terrace:  'Terasa'
-      frontage: ‘Předzahrádka'
+      frontage: Předzahrádka
       price: 'Cena'
 
   location_page:
@@ -128,7 +129,7 @@ cs:
     four: 'čtyři'
     five: 'pět'
     penthouse: 'přístřešek'
-    grounds: ‘předzahrádka'
+    grounds: 'předzahrádka'
     results: 'výsledky'
     total_floors: 'podlaží celkem'
     send: 'odeslat'
@@ -173,9 +174,6 @@ cs:
         - '4'
     interior:
       descriptions:
-        - 'Vzorový byt'
-        - 'Vzorový byt'
-        - 'Vzorový byt'
         - 'Vzorový byt'
         - 'Vzorový byt'
         - 'Vzorový byt'

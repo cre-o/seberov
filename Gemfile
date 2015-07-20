@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cocoon' # easy nested forms
 gem 'simple_form' # forms
 
+# Translations
+gem 'globalize', '~> 5.0.0'
+
 
 # Decoration logic
 gem 'draper'

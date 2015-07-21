@@ -183,17 +183,7 @@
                 a.close href="#" &times;
 
 
-            // Apartment aplication modal window
-            #thankYouModal.js-thankYouModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
-              .row
-                .small-12.text-center.columns
-                  header
-                    h2 = t('popups.thank_you')
-                  .content
-                    h4 = t('popups.request_accepted')
-                    h5 = t('popups.wait')
-
-                a.close-reveal-modal aria-label="Close"
+            = render partial: '/refinery/thank_you_modal'
 
         .b-download-pdf
           //@TODO Real URL

@@ -47,3 +47,9 @@
     .row
       .small-10.small-offset-2
         = raw @page.content_for(:our_projects)
+
+
+// Modals
+- if flash[:callback_sent].present?
+  .home-page-modal
+    = render partial: '/refinery/thank_you_modal'

@@ -1,3 +1,8 @@
 @import "foundation/components/grid";
 @import "foundation/components/block-grid";
 @import "foundation/components/forms";
+
+// Little hack, i'm sorry, but time is so quick...
+#apartment_block {
+  text-transform: uppercase;
+}

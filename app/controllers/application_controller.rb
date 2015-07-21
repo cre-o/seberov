@@ -12,12 +12,14 @@ class ApplicationController < ActionController::Base
 
     if callback_form.valid?
       if ApplicationMailer.callback(callback_form.params).deliver_now
-        redirect_to root_url(locale: params[:locale]), status: 301, notice: t('controller.callback_mail_send')
+        redirect_to root_url(locale: I18n.locale), status: 301
+        # Sets up modal window
+        flash[:callback_sent] = true
       else
-        redirect_to root_url(locale: params[:locale]), status: 301, error: t('controller.callback_mail_send_error')
+        redirect_to root_url(locale: I18n.locale), status: 301, error: t('controller.callback_mail_send_error')
       end
     else
-      redirect_to root_url(locale: params[:locale]), status: 301, alert: callback_form.errors.full_messages
+      redirect_to root_url(locale: I18n.locale), status: 301, alert: callback_form.errors.full_messages
     end
   end
 
@@ -31,6 +33,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
     def set_locale
       I18n.locale = params[:locale] || I18n.default_locale
       # Passing to client side
@@ -42,6 +45,7 @@ class ApplicationController < ActionController::Base
     end
 
   private
+
     def callback_params
       params.permit(:name, :phone)
     end

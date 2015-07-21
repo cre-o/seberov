@@ -1,7 +1,7 @@
 module ApartmentsHelper
 
   def breadcrumbs(apartment)
-    "building #{apartment.block} > #{apartment.floor} > apt##{apartment.unit_id}"
+    "#{t('forms.building')} #{apartment.block.upcase} > #{apartment.floor} > ##{apartment.unit_id}"
   end
 
   def map_areas

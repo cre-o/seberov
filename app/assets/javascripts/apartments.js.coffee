@@ -55,7 +55,8 @@ jQuery ->
   # Apartments page application form callbacks responder
   #
   if $('#l-apartments.__show-page').size() > 0
-    $("#application-form").on("ajax:success", (e, data, status, xhr) ->
+    $("#application-form, #mortgage-form").on("ajax:success", (e, data, status, xhr) ->
+      $('#mortgage-calculator').foundation('reveal', 'close')
       $('.js-thankYouModal').foundation('reveal', 'open')
     ).on "ajax:error", (e, data, xhr, status, error) ->
       $("#application-form .errors").removeClass('hide')

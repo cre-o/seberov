@@ -30,7 +30,7 @@
               li
                 span = i
 
-        form.b-contact-form
+        = form_tag refinery.application_apartments_apartments_path, remote: true, id: 'mortgage-form', class: 'b-contact-form' do
           .header
             h5 #{t 'get_loan', scope: 'popups.mortgage_calculator'}:
             .subheader #{t 'leave_creadentials', scope: 'popups.mortgage_calculator'}

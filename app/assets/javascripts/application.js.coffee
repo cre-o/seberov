@@ -24,6 +24,7 @@
 #= require angular/application
 #= require magnific-popup
 #= require utility
+#= require home
 #= require apartments
 #= require semantic-ui
 #= require semantic-ui/transition

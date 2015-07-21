@@ -1,4 +1,4 @@
-- if flash.present?
+/ - if flash.present?
   .alert-box.info data-alert="" style="z-index: 9999;"
     - flash.each do |name, msg|
       = content_tag :div, msg, class: name

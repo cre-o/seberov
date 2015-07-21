@@ -29,7 +29,7 @@ footer
 
             .row
               .small-12.medium-8.medium-centered.columns
-                = form_tag '/callback' do
+                = form_tag "/#{I18n.locale}/callback" do
                   .small-4.medium-4.columns
                     = text_field_tag 'name', '', placeholder: t('forms.name'), required: true
                   .small-4.medium-4.columns

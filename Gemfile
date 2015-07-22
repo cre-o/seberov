@@ -94,7 +94,7 @@ group :development do
   gem 'rename' # Renaming project
   gem 'better_errors'       # Better errors for debugging
   gem 'quiet_assets'
-  gem 'rails-footnotes', '>= 4', '<5' # Footnotes with dev information
+  #gem 'rails-footnotes', '>= 4', '<5' # Footnotes with dev information
   gem 'pry-rails'           # Interactive debuging shell
   #gem 'capistrano', '>= 2', '< 3', require: false # "Deploying standard for ruby"
   #gem 'capistrano-deploy'   # Additional libraries

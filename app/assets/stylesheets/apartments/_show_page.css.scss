@@ -99,7 +99,7 @@
         }
       }
 
-      .zoom-in {
+      .zoom-in, .gallery {
         display: inline-block;
         position: relative;
         outline: none;
@@ -118,7 +118,7 @@
         &.plan {
 
           &:after {
-            left: rem(-110);
+            left: rem(-60);
             bottom: 0;
           }
         }

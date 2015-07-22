@@ -24,9 +24,9 @@ class ApplicationController < ActionController::Base
   end
 
   def check_locale
-    match = /^(ru|en|cs)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
+    match = /^(ru|en)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
 
-    if request.env['REQUEST_METHOD'] == 'GET' && match && !params[:locale] && cookies[:active_lang] != 'en'
+    if request.env['REQUEST_METHOD'] == 'GET' && match && !params[:locale]
       redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}".gsub('//', '/')
       return false
     end
@@ -35,9 +35,8 @@ class ApplicationController < ActionController::Base
   protected
 
     def set_locale
-      I18n.locale = params[:locale] || I18n.default_locale
-      # Set up cookies
-      cookies[:active_lang] = I18n.locale
+      I18n.locale = params[:locale] || Refinery::I18n.current_locale
+
       # Passing to client side
       gon.push :locale => I18n.locale
     end

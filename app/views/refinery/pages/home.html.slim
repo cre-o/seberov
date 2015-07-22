@@ -8,6 +8,8 @@
           li
             img data-interchange="
               [#{image_path("home/slider/#{img}-m.jpg")}, (default)],
+              [#{image_path("home/slider/#{img}-s.jpg")}, (small)],
+              [#{image_path("home/slider/#{img}-m.jpg")}, (medium)],
               [#{image_path("home/slider/#{img}-xl.jpg")}, (large)]"
       .orbit-caption-middle ng-cloak="" ng-init="totalApartments = #{total_apartments}"
         = raw @page.content_for(:slider_image)

@@ -7,7 +7,7 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
   objectLongitude = 14.516158
 
   $scope.map =
-    center: { latitude: objectLatitude, longitude: objectLongitude }
+    center: { latitude: objectLatitude - 0.001, longitude: objectLongitude }
     marker:
       coords:
         latitude: objectLatitude

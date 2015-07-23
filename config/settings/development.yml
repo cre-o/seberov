@@ -1,5 +1,5 @@
 emails:
-  default: 'prague.reactor@gmail.com'
+  default: 'prodej@statekseberov.cz'
   default_from: 'ownroad.show@gmail.com'
-  default_to: 'extralinedesign@gmail.com' # !DESTROY_AFTER
-  callback_to: 'extralinedesign@gmail.com' # !DESTROY_AFTER
+  default_to: 'prague.reactor@gmail.com' # !DESTROY_AFTER
+  callback_to: 'prague.reactor@gmail.com' # !DESTROY_AFTER

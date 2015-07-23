@@ -53,7 +53,7 @@
             .b-calculator
               .wrap
                 .header
-                  h4 href="#" data-reveal-id="mortgage-calculator" = t('calculator.count_payment' , scope: 'apartment_page')+':'
+                  h4 href="#" data-reveal-id="mortgage-calculator" = t('calculator.count_payment' , scope: 'apartment_page')
                   .selectors.upcase
                     a ng-class="{ active: calculator.currency == 'czk' }" ng-click="calculator.setCurrency('czk')"
                       = t 'defaults.czk'

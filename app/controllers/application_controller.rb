@@ -26,11 +26,11 @@ class ApplicationController < ActionController::Base
   def check_locale
     match = /^(ru|en)/.match(request.env['HTTP_ACCEPT_LANGUAGE'])
 
-    unless flash[:cs_locale].present?
-      flash[:cs_locale] = /^\/cs/.match(request.env["REQUEST_PATH"]).present?? true : false
+    unless session[:cs_locale].present?
+      session[:cs_locale] = /^\/cs/.match(request.env["REQUEST_PATH"]).present?? true : false
     end
 
-    if request.env['REQUEST_METHOD'] == 'GET' && match && !params[:locale] && !flash[:cs_locale]
+    if request.env['REQUEST_METHOD'] == 'GET' && match && !params[:locale] && !session[:cs_locale]
       redirect_to "/#{match[0]}/#{request.env["REQUEST_PATH"]}".gsub('//', '/')
       return false
     end

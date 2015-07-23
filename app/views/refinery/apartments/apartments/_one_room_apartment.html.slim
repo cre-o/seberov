@@ -1,7 +1,28 @@
+/! Gallery for gallery :)
+- if @apartment.apartment_floors.any? && @apartment.apartment_floors.first.gallery_area.present?
+  .row.collapse.b-preview
+    .small-5.columns.b-models
+      .gallery
+        = link_to asset_url("apartments/show/models/#{@apartment.unit_id}-g.jpg"), class: 'model' do
+          = image_tag "apartments/show/models/#{@apartment.unit_id}-g-s.jpg"
+
+        = get_gallery_for 'gallery_models', @apartment, @apartment.apartment_floors.first
+
+    .small-2.columns.left
+      .floor-n = t 'galerie', scope: 'apartment_page'
+
+    .small-4.columns.b-plans
+      = link_to asset_url("apartments/show/plans/#{@apartment.unit_id}-g.jpg"), class: 'zoom-in model' do
+        = image_tag "apartments/show/plans/#{@apartment.unit_id}-g-s.jpg"
+
 .row.collapse.b-preview.one-room
-  .small-6.columns
-    = link_to asset_url("apartments/show/plans/#{@apartment.unit_id.downcase}.jpg"), class: 'zoom-in plan' do
-      = image_tag "apartments/show/plans/#{@apartment.unit_id.downcase}-s.jpg"
-  .small-offset-1.small-5.columns
-    = link_to asset_url("apartments/show/models/#{@apartment.unit_id.downcase}.jpg"), class: 'zoom-in model' do
-      = image_tag "apartments/show/models/#{@apartment.unit_id.downcase}-s.jpg"
+  .small-5.columns
+    = link_to asset_url("apartments/show/models/#{@apartment.unit_id}.jpg"), class: 'zoom-in model' do
+      = image_tag "apartments/show/models/#{@apartment.unit_id}-s.jpg"
+
+  .small-2.columns
+    .floor-n = t_floor_number @apartment.floor
+
+  .small-4.columns
+    = link_to asset_url("apartments/show/plans/#{@apartment.unit_id}.jpg"), class: 'zoom-in plan' do
+      = image_tag "apartments/show/plans/#{@apartment.unit_id}-s.jpg"

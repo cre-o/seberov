@@ -2,7 +2,7 @@ cs:
 
   defaults:
     currency_sign: 'Kč'
-    square_sign: 'm2'
+    square_sign: 'm²'
     usd: 'usd'
     eur: 'eur'
     czk: 'czk'

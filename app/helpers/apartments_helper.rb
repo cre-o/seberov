@@ -66,7 +66,7 @@ module ApartmentsHelper
 
   # Creates multiple anchor tags
   def get_gallery_for(kind, apartment, apartment_floor)
-    angles = %w(-40 -130 50 140)
+    angles = %w(-40 50 140)
     items = []
     floor = get_floor_number(apartment, apartment_floor)
 

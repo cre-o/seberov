@@ -118,7 +118,7 @@
         &.plan {
 
           &:after {
-            left: rem(-60);
+            left: rem(-55);
             bottom: 0;
           }
         }
@@ -131,11 +131,11 @@
 
    .one-room .zoom-in {
       &:after {
-        left: rem(-35);
+        left: rem(-55);
       }
 
       &.plan {
-        &:after { left: rem(-70); }
+        &:after { left: rem(-55); }
       }
     }
 

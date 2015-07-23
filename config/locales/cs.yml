@@ -184,9 +184,6 @@ cs:
         - 'Vzorový byt'
         - 'Vzorový byt'
 
-  numbers:
-    square: 'm2'
-
   compass:
     abbr:
       north: s

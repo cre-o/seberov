@@ -184,8 +184,6 @@ en:
         - 'showflat'
         - 'showflat'
 
-  numbers:
-    square: 'm2'
 
   compass:
     abbr:

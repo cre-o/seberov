@@ -111,7 +111,7 @@ header.application {
     font-size: rem-calc(10);
     position: absolute;
     margin: 0;
-    z-index: $index;
+    z-index: $index + 1;
 
     li {
       display: inline-block;
@@ -441,5 +441,21 @@ footer {
       font-weight: 300;
       text-decoration: underline;
     }
+  }
+}
+
+// Media queries
+@media only screen and (min-width: 641px) and (max-width: 770px) {
+  .languages {
+    width: 100px;
+    margin-left: 30px !important;
+  }
+
+  nav {
+    width: 400px;
+  }
+
+  .info-block .dropdown {
+    padding: 0 !important;
   }
 }

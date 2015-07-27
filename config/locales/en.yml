@@ -229,4 +229,5 @@ en:
   mailers:
     callback_subject: 'CallBack request from statekseberov website'
     application_subject: 'Apartment application request from statekseberov website'
+    mortgage_subject: 'Mortgage request from statekseberov website'
 

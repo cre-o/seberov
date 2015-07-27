@@ -4,6 +4,10 @@ module ApartmentsHelper
     "#{t('forms.building')} #{apartment.block.upcase} > #{apartment.floor} > ##{apartment.unit_id}"
   end
 
+  def apartments_index_page?
+    controller.controller_name == 'apartments' && controller.action_name == 'index'
+  end
+
   def map_areas
     {
       a: [

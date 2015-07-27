@@ -9,7 +9,7 @@
           = form_tag refinery.search_apartments_apartments_path, class: 'b-filters' do |f|
             .row
               // Price
-              .small-4.columns
+              .small-12.medium-4.columns
                 .row.collapse
                   .small-12.columns
                     h3.upcase = t('forms.price')+':'
@@ -29,7 +29,7 @@
                     #appartments-price-slider data-min-value="0" data-max-value=(@apartments_decorator.most_expensive_price)
 
               // Floorspace
-              .small-4.columns
+              .small-12.medium-4.columns
                 .row.collapse
                   .small-12.columns
                     h3.upcase = t('forms.floorspace')+':'
@@ -49,7 +49,7 @@
                     #appartments-floorspace-slider data-min-value="0" data-max-value=(@apartments_decorator.max_floor_space)
 
               // Floor
-              .small-4.columns
+              .small-12.medium-4.columns
                 .row.collapse
                   .small-12.columns
                     h3.upcase = t('forms.floor')+':'
@@ -72,7 +72,7 @@
               .small-2.columns
                 h3.upcase = t('forms.rooms')+':'
 
-              .small-10.left.columns
+              .small-12.medium-10.left.columns
                 ul.small-block-grid-6
                   li
                     = check_box_tag :two_rooms, '2', false, id: 'two-rooms', 'ng-model' => 'a.cbTwoRooms'
@@ -100,13 +100,13 @@
           .row.collapse.items ng-init="apartments = #{@apartments_json}"
             .small-12.columns
               .row.item ng-repeat="apartment in apartments | filter:priceFilter | filter:floorSpaceFilter | filter:floorFilter | filter:roomsFilter | filter:groundsFliter"
-                .small-3.columns
+                .small-6.medium-3.columns
                   .id
                     | {{apartment.unit_id}}
                   .clear
                   div ng-bind-html="apartment.photo_tag | unsafe"
-                .small-6.columns
-                  ul.attributes.small-block-grid-2
+                .small-6.medium-6.columns
+                  ul.attributes.small-block-grid-1.medium-block-grid-2
                     li
                       ' {{apartment.floors_t}}:
                       b
@@ -137,7 +137,7 @@
                     span
                       ' {{apartment.price_decorated}}
 
-                .small-3.columns.go
+                .small-9.medium-3.columns.go
                   .more
                     a ng-href="{{a.path(apartment)}}" {{apartment.see_more}}
 

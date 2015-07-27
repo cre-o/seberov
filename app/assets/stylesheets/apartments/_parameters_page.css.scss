@@ -24,6 +24,12 @@
       padding-top: 20px;
     }
 
+    @media #{$small-only} {
+      .small-12.columns {
+        margin-bottom: rem(20);
+      }
+    }
+
     h3 {
       color: $green;
       font-family: 'Open Sans', sans-serif;
@@ -74,9 +80,11 @@
           padding-top: 20px;
           color: $dark_grey;
 
-          // Padding for columns
-          li:nth-child(2n + 1) {
-            padding-right: 40px;
+          @media #{$medium-up} {
+            // Padding for columns
+            li:nth-child(2n + 1) {
+              padding-right: 40px;
+            }
           }
 
           b {

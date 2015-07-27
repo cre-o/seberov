@@ -5,22 +5,22 @@
       /! Gallery for gallery :)
       - if fl.gallery_area.present?
         .row.collapse
-          .small-5.columns.b-models
+          .small-10.medium-5.columns.b-models
             .gallery
               = link_to asset_url("apartments/show/models/#{@apartment.unit_id}-g.jpg"), class: 'model' do
                 = image_tag "apartments/show/models/#{@apartment.unit_id}-g-s.jpg"
 
               = get_gallery_for 'gallery_models', @apartment, fl
 
-          .small-2.columns.left
+          .small-2.medium-2.columns.left
             .floor-n = t 'galerie', scope: 'apartment_page'
 
-          .small-4.columns.b-plans
+          .small-12.medium-4.columns.b-plans
             = link_to asset_url("apartments/show/plans/#{@apartment.unit_id}-g.jpg"), class: 'zoom-in model' do
               = image_tag "apartments/show/plans/#{@apartment.unit_id}-g-s.jpg"
 
       .row.collapse
-        .small-5.columns.b-models
+        .small-10.medium-5.columns.b-models
           .gallery
             = link_to get_model_path(@apartment, fl), class: 'model' do
               = image_tag get_model_path(@apartment, fl, 's')
@@ -29,10 +29,10 @@
             = get_gallery_for 'floor_models', @apartment, fl
 
 
-        .small-2.columns
+        .small-2.medium-2.columns
           .floor-n = t_floor_number get_floor_number(@apartment, fl)
 
-        .small-4.columns.b-plans
+        .small-12.medium-4.columns.b-plans
           = link_to get_plan_path(@apartment, fl), class: 'zoom-in plan' do
             = image_tag get_plan_path(@apartment, fl, 's')
 

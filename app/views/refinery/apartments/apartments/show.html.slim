@@ -12,7 +12,7 @@
           = render partial: 'two_and_more_rooms_apartment'
 
         .row.b-parameters
-          .small-6.columns.__maps
+          .small-12.medium-6.columns.__maps
             .row
               .small-7.columns
                 #building-map
@@ -29,7 +29,7 @@
 
                   .text-center #{t('forms.floor')} #{@apartment.floors_array.join('+')}
 
-          .small-6.columns.__numbers
+          .small-12.medium-6.columns.__numbers
             ul.small-block-grid-2
               li
                 span #{t 'block' , scope: 'forms'}:

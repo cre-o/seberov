@@ -11,4 +11,9 @@ class ApplicationMailer < ActionMailer::Base
     @params = params
     mail to: Settings.emails.callback_to, subject: I18n::t('mailers.application_subject')
   end
+
+  def mortgage(params)
+    @params = params
+    mail to: Settings.emails.callback_to, subject: I18n::t('mailers.mortgage_subject')
+  end
 end

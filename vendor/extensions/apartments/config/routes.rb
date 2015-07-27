@@ -11,6 +11,7 @@ Refinery::Core::Engine.routes.draw do
         get 'price-list', to: :price_list
         post :search
         post :application
+        post :mortgage
       end
     end
   end

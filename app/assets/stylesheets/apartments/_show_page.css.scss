@@ -136,7 +136,10 @@
     .b-parameters {
       border-top: 1px solid $grey-tint-1;
       border-bottom: 1px solid $grey-tint-1;
-      padding-left: rem(23);
+
+      @media #{$medium-up} {
+        padding-left: rem(23);
+      }
     }
   }
 

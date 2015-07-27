@@ -73,7 +73,7 @@
                 h3.upcase = t('forms.rooms')+':'
 
               .small-12.medium-10.left.columns
-                ul.small-block-grid-6
+                ul.small-block-grid-3.medium-block-grid-6
                   li
                     = check_box_tag :two_rooms, '2', false, id: 'two-rooms', 'ng-model' => 'a.cbTwoRooms'
                     label for="two-rooms" = t('forms.two')
@@ -137,7 +137,7 @@
                     span
                       ' {{apartment.price_decorated}}
 
-                .small-9.medium-3.columns.go
+                .small-6.medium-3.columns.go
                   .more
                     a ng-href="{{a.path(apartment)}}" {{apartment.see_more}}
 

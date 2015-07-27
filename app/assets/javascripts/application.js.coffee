@@ -31,6 +31,7 @@
 #= require location
 
 jQuery ->
+
   $(document).foundation()
 
   # Lazy load images (not load before user can see it)
@@ -39,6 +40,7 @@ jQuery ->
   # MagnificPopup for enlarge images
   $('.zoom-in').magnificPopup({type:'image'})
 
+  # Galleries
   $('.gallery').each ->
     # the containers for all your galleries
     $(@).magnificPopup
@@ -46,7 +48,10 @@ jQuery ->
       type: 'image'
       gallery: enabled: true
 
-
-
   # Sidebar feature
   $('.js-sidebar').sidebar('attach events', '.js-sidebar-toggle')
+
+  # Menu fix for mobile devises
+  if Foundation.utils.is_small_only()
+    $('.sidebar a[href="/apartments"], .sidebar a[href="/ru/apartments"], .sidebar a[href="/en/apartments"]').each ->
+      $(@).prop('href', $(@).prop('href').replace('apartments', 'apartments/by-parameters'))

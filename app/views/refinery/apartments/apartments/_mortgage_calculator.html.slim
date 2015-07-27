@@ -6,17 +6,17 @@
       .content
         .b-calculate-form
           form.grey.row.collapse
-            .small-5.medium-2.columns.text-left
+            .small-6.medium-2.columns.text-left
               label for="repayment-length" #{t 'repayment_length', scope: 'popups.mortgage_calculator.form'}:
-            .small-5.medium-2.columns.input ng-init="repaymentLength = 25"
+            .small-6.medium-2.columns.input ng-init="repaymentLength = 25"
               = number_field_tag(:repayment_length, '25', id: 'repayment-length', placeholder: 25, 'ng-model'=>'repaymentLength')
-            .small-5.medium-2.columns.medium-text-center
+            .small-6.medium-2.columns.medium-text-center
               label for="interest-rate" #{t 'interest_rate', scope: 'popups.mortgage_calculator.form'}:
-            .small-5.medium-2.columns.left ng-init="interestRate = 2.99"
+            .small-6.medium-2.columns.left ng-init="interestRate = 2.99"
               = number_field_tag(:interest_rate, '2.99', id: 'interest-rate', placeholder: '2.99', 'ng-model'=>'interestRate')
-            .small-5.medium-2.columns.medium-text-right
+            .small-6.medium-2.columns.medium-text-right
               label for="extent-of-mortgage" #{t 'extent_of_mortgage', scope: 'popups.mortgage_calculator.form'}:
-            .small-5.medium-2.columns.left ng-init="extentOfMortgage = 2500000"
+            .small-6.medium-2.columns.left ng-init="extentOfMortgage = 2500000"
               = number_field_tag(:extent_of_mortgage, '2500000', id: 'extent-of-mortgage', placeholder: '2 500 000', 'ng-model'=>'extentOfMortgage')
 
           .text-center.total-header #{t 'monthly_installment', scope: 'popups.mortgage_calculator.form'}:

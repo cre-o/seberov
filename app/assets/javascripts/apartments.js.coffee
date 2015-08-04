@@ -49,7 +49,6 @@ jQuery ->
         $('#floor-min').trigger('input')
         $('#floor-max').trigger('input')
 
-
   #
   # GET apartments/id
   # Apartments page application form callbacks responder

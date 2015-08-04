@@ -153,6 +153,7 @@ ru:
       subheader: 'и наш менеджер перезвонит вам в ближайшее время'
   footer:
     order_callback: 'Заказать обратный звонок'
+    call_on_viber: Звонить на вайбер
   controller:
     callback_mail_send: "Спасибо, Мы скоро с вами свяжемся!"
     callback_mail_send_error: 'Возникла ошибка при отправке письма обратного звонка'

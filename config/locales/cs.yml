@@ -12,7 +12,7 @@ cs:
       english: 'english'
       czech: 'český'
       russian: 'russian'
-    push_to_call: 'Zatlačte pro volání'
+    push_to_call: Klikněte pro zavolání
     download_price_list: 'Stáhnout ceník'
     skype_login: 'prodej_nemovitosti'
 
@@ -36,8 +36,8 @@ cs:
       parking_slot_price: '+parkovací stání'
       show_parking_plan: 'zobrazit parkovací schému'
     add_on:
-      h1: 'Nadstandardu'
-      p: 'Na vaši žádost jsme schopni provést opravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'
+      h1: Nadstandardy
+      p: 'Na vaši žádost jsme schopni provést úpravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'
 
   apartments_page:
     choose_apartment: 'Vyberte si byt'
@@ -47,7 +47,7 @@ cs:
     title: 'Apartments planning page!'
     description: 'Apartments planning page!'
     keywords: 'Apartments planning page!'
-    select_floor: 'Vyberte budovu a podlahu:'
+    select_floor: 'Vyberte křídlo a podlaží:'
 
   apartment_by_parameters_page:
     parameters: 'parametry'
@@ -59,10 +59,10 @@ cs:
       id: '#'
       planing: 'Dispozice'
       floor: 'Patro'
-      square: 'Plocha'
-      terrace:  'Terasa'
+      square: Součet celkové plochy
+      terrace:  'Balkón'
       frontage: Předzahrádka
-      price: 'Cena'
+      price: 'Cena vč. DPH bez vybavení'
 
   location_page:
     legend: 'Statek Šeberov, Praha 4, K Šeberovu 508 '
@@ -153,6 +153,7 @@ cs:
       subheader: 'Co nejdříve zavoláme vám zpět'
   footer:
     order_callback: 'objednat zpětné volání'
+    call_on_viber: Vyzývá Viber
   controller:
     callback_mail_send: 'Co nejdříve zavoláme vám zpět!'
     callback_mail_send_error: 'Při odesílání zpětné volání došlo k chybě'
@@ -195,7 +196,7 @@ cs:
     admin:
       apartment_floor_data: 'Patro'
     apartments:
-      by_planning: 'na modelů'
+      by_planning: 'na modelu'
       by_parameters: 'dle parametrů'
       by_price_list: 'dle ceníku'
 

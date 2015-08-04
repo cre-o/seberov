@@ -59,6 +59,10 @@
     .logo-small {
       margin-top: rem_calc(30);
     }
+
+    .architect {
+      margin-bottom: rem-calc(30);
+    }
   }
 
   @include custom-row-gutter(10, 20);

@@ -26,8 +26,8 @@
         li.phone
           i.fa.fa-phone.fa-lg
           = Settings.phones.default_short
-          = link_to "tel:#{Settings.phones.default_short_dashed}" do
-            span.label viber
+          = link_to "tel:#{Settings.phones.default_short_dashed}", class: 'viber small-4 columns right' do
+            = image_tag 'icons/viber-logo.png', width: 60, height: 28
 
         li.skype.upcase.
           i.fa.fa-skype.fa-lg
@@ -40,7 +40,7 @@
   /! Mobile menu
   .small-2.columns.right.show-for-small-only
     .view-ui.item.js-sidebar-toggle.right
-      i.fa.fa-bars
+      i.fa.fa-2x.fa-bars
 
   .ui.js-sidebar.right.vertical.labeled.icon.sidebar.menu.show-for-small-only
     = Refinery::Pages::SidebarPresenter.new(refinery_menu_pages, self).to_html

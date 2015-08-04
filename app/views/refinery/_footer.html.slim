@@ -44,11 +44,11 @@ footer
           .small-12.columns
             = link_to "tel:#{Settings.phones.default_short_dashed}" do
               i.fa.fa-phone.fa-lg
-              ' Звонить на вибер
+              = t 'footer.call_on_viber'
 
           .small-12.columns
             i.fa.fa-skype.fa-lg
-            a href="skype:statekseverov?call" statekseverov
+            a href="skype:#{t('all_pages.skype_login')}?call" = t 'all_pages.skype_login'
 
         .show-for-medium-up
           = raw refinery_get_page(id: 'footer').content_for(:contact_last)

@@ -33,7 +33,7 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
         return "#{total} квартиры"
       else if _.includes([5..20], $scope.totalApartments)
         return "#{total} квартир"
-    else if word == 'apartmán'
-      if _.includes([1,21,31], $scope.totalApartments) then "#{total} apartmán" else "#{total} apartmány"
+    else if word == 'byt'
+      if _.includes([1,21,31], $scope.totalApartments) then "#{total} byt" else "#{total} bytů"
 
   return $scope

@@ -2,7 +2,7 @@
 
 html {
   @media #{$small-only} {
-    font-size: $rem-base - 4;
+    font-size: $rem-base - 2;
   }
 
   @media #{$medium-only} {
@@ -256,6 +256,10 @@ header.application {
           width: 24%;
           display: inline-block;
           text-align: center;
+        }
+
+        .viber {
+          margin-right: rem(10);
         }
       }
 

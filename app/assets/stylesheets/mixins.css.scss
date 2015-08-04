@@ -76,6 +76,7 @@
 }
 
 @mixin fill-with-apartments(
+  $direction: 'right',
   $container-width: 75px,
   $container-height: 110px,
   $start-position: 0,
@@ -132,41 +133,41 @@
   @while $start-from <= $last-apartment {
     .apartment:nth-child(#{$start-from}) {
       //@error $start-from;
-      right: $start-position;
+      #{$direction}: $start-position;
       top: $top-position;
       width: $container-width;
 
       @if $i == 1 {
-        right: $start-position;
+        #{$direction}: $start-position;
         width: $apartment1-width;
       }
       @if $i == 2 {
-        right: $start-position + $apartment1-width;
+        #{$direction}: $start-position + $apartment1-width;
         width: $apartment2-width;
       }
       @if $i == 3 {
-        right: $start-position + $apartment1-width + $apartment2-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width;
         width: $apartment3-width;
       }
       @if $i == 4 {
-        right: $start-position + $apartment1-width + $apartment2-width + $apartment3-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width + $apartment3-width;
         width: $apartment4-width;
       }
       @if $i == 5 {
-        right: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width;
         width: $apartment5-width;
       }
       @if $i == 6 {
-        right: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width;
         width: $apartment6-width;
       }
       @if $i == 7 {
-        right: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width + $apartment6-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width + $apartment6-width;
         width: $apartment7-width;
       }
 
       @if $i == 8 {
-        right: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width + $apartment6-width + $apartment7-width;
+        #{$direction}: $start-position + $apartment1-width + $apartment2-width + $apartment3-width + $apartment4-width + $apartment5-width + $apartment6-width + $apartment7-width;
         width: $apartment8-width;
       }
     }

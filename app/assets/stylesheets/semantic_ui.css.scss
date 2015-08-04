@@ -48,14 +48,15 @@
 // @import 'semantic-ui/modules/video';
 
 .view-ui.item {
+  font-size: rem-calc(18);
   color: #fff;
   background-color: $green;
   position: absolute;
   cursor: pointer;
   right: 0;
   display: inline-block;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   padding: 20px;
   vertical-align: middle;
   line-height: 1;

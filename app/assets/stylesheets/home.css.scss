@@ -8,7 +8,7 @@
     list-style-type: none;
 
     @media #{$small-only} {
-      font-size: .65em;
+      font-size: .85em;
     }
 
     @media #{$medium-only} {
@@ -20,7 +20,7 @@
 
 
       @media #{$small-only} {
-        min-height: rem(200);
+        min-height: rem(300);
       }
 
       @media #{$medium-only} {

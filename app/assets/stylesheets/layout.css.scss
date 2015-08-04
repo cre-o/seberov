@@ -2,11 +2,11 @@
 
 html {
   @media #{$small-only} {
-    font-size: $rem-base - 2;
+    font-size: $rem-base - 1;
   }
 
   @media #{$medium-only} {
-    font-size: $rem-base - 3;
+    font-size: $rem-base - 2;
   }
 }
 

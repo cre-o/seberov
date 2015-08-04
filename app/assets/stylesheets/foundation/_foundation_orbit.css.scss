@@ -13,7 +13,7 @@
 
   // <-- Media queries
   @media #{$small-only} {
-    height: 20%;
+    height: 25%;
     width: 70%;
   }
 
@@ -41,7 +41,7 @@
     @media #{$small-only} {
       left: rem-calc(10);
       top: rem-calc(5);
-      font-size: rem-calc(13);
+      font-size: rem-calc(16);
     }
 
     @media #{$medium-only} {

@@ -18,7 +18,7 @@ footer
       .contacts
         .phone
           = raw refinery_get_page(id: 'footer').content_for(:phone)
-          a href="#" data-reveal-id="callbackModal" = t('footer.order_callback')
+          a href="#{js_void}" data-reveal-id="callbackModal" = t('footer.order_callback')
           // Callback modal window
           #callbackModal.reveal-modal aria-hidden="true" data-reveal="" role="dialog"
             .row
@@ -42,7 +42,7 @@ footer
         .show-for-small-only.small-contacts
 
           .small-12.columns
-            = link_to "viber://#{Settings.phones.default_short_dashed}" do
+          = link_to "viber://#{Settings.phones.default_short_dashed}" do
               i.fa.fa-phone.fa-lg
               = t 'footer.call_on_viber'
 

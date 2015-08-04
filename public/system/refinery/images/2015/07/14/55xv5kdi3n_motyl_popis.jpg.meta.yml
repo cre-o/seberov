@@ -1,0 +1,4 @@
+---
+name: motyl_popis.jpg
+model_class: Refinery::Image
+model_attachment: image

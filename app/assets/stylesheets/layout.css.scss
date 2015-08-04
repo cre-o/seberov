@@ -270,7 +270,13 @@ header.application {
   }
 }
 
+
+// Mobile menu
 .ui.vertical.menu {
+  .item {
+    font-size: rem-calc(18);
+  }
+
   .item.lang {
     &:before {
       background: none;

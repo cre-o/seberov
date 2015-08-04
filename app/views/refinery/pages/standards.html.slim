@@ -5,26 +5,15 @@
       = raw @page.content_for(:section1)
 
     .small-12.medium-6.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/1-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/1-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/1-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/1-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section1_images)
+
   /! 2
   .row
     .small-12.medium-6.columns.show-for-small-only
       = raw @page.content_for(:section2)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/2-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/2-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/2-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/2-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section2_images)
 
     .medium-6.columns.show-for-medium-up
       = raw @page.content_for(:section2)
@@ -75,13 +64,7 @@
       = raw @page.content_for(:section4)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/4-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/4-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/4-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/4-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section4_images)
 
     .medium-6.columns.show-for-medium-up
       = raw @page.content_for(:section4)
@@ -101,13 +84,7 @@
       = raw @page.content_for(:section6)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/6-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/6-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/6-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/6-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section6_images)
 
     .small-6.columns.show-for-medium-up
       = raw @page.content_for(:section6)
@@ -118,19 +95,7 @@
       = raw @page.content_for(:section7)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-          li
-            = link_to image_url('standards/7-1-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-1.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-2-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-2.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-3-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-3.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-4-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-4.jpg', width: 440, height: 440
+      = raw @page.content_for(:section7_images)
 
   /! 9
   .row
@@ -138,13 +103,7 @@
       = raw @page.content_for(:section9)
 
     .small-12.medium-6.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/9-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/9-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/9-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/9-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section9_images)
 
   /! 10
   .row
@@ -152,19 +111,7 @@
       = raw @page.content_for(:section10)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/10-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-2.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-3-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-3.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-4-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-4.jpg', width: 440, height: 440
+      = raw @page.content_for(:section10_images)
 
     .medium-6.columns.show-for-medium-up
       = raw @page.content_for(:section10)
@@ -175,8 +122,7 @@
       = raw @page.content_for(:section11)
 
     .small-12.medium-6.columns.images
-      = link_to image_url('standards/11-1-full.jpg'), class: 'zoom-in' do
-        = image_tag 'standards/11-1.jpg', width: 440, height: 440
+      = raw @page.content_for(:section11_images)
 
   /! 12
   .row.last
@@ -184,25 +130,7 @@
       = raw @page.content_for(:section12)
 
     .small-12.medium-6.columns.images
-      ul.small-block-grid-3
-        li
-          = link_to image_url('standards/12-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-2.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-3-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-3.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-4-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-4.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-5-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-5.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-6-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-6.jpg', width: 440, height: 440
+      = raw @page.content_for(:section12_images)
 
     .medium-5.columns.show-for-medium-up
       = raw @page.content_for(:section12)

@@ -5,6 +5,8 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
   # Gmap setup
   objectLatitude = 49.999243
   objectLongitude = 14.516158
+  # Not draggable for mobile devises until clicked
+  $scope.mapDraggable = !Foundation.utils.is_small_only()
 
   $scope.map =
     center: { latitude: objectLatitude - 0.001, longitude: objectLongitude }
@@ -16,7 +18,11 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
         labelContent: 'Statek Seberov'
     options:
       disableDefaultUI: true
+      draggable: $scope.mapDraggable
     zoom: 13
+
+  $scope.activateMap = ->
+    $scope.map = _.extend($scope.map, options: draggable: true)
 
   $scope.slider = multiSliderService
 

@@ -26,51 +26,15 @@
           = raw @page.content_for(:section3)
 
     .small-12.medium-6.columns
-      .image-broadcaster
-        img ng-init="broadcaster.imageUrl = '#{image_url('standards/3-1.jpg')}'" ng-src="{{broadcaster.imageUrl}}"
-        .controls.small-7
-          ol
-            li ng-class="{ active: broadcaster.isSet(1) }"
-              a href="" ng-click="broadcaster.setImage(1, '#{image_url('standards/3-1.jpg')}')" 1
-              .title.ng-hide ng-show="broadcaster.isSet(1)"
-                = t('standards_page.image_broadcaster')[0]
-            li ng-class="{ active: broadcaster.isSet(2) }"
-              a href="" ng-click="broadcaster.setImage(2, '#{image_url('standards/3-2.jpg')}')" 2
-              .title.ng-hidden ng-show="broadcaster.isSet(2)"
-                = t('standards_page.image_broadcaster')[1]
-            li ng-class="{ active: broadcaster.isSet(3) }"
-              a href="" ng-click="broadcaster.setImage(3, '#{image_url('standards/3-3.jpg')}')" 3
-              .title.ng-hidden ng-show="broadcaster.isSet(3)"
-                = t('standards_page.image_broadcaster')[2]
-            li ng-class="{ active: broadcaster.isSet(4) }"
-              a href="" ng-click="broadcaster.setImage(4, '#{image_url('standards/3-4.jpg')}')" 4
-              .title.ng-hidden ng-show="broadcaster.isSet(4)"
-                = t('standards_page.image_broadcaster')[3]
-            li ng-class="{ active: broadcaster.isSet(5) }"
-              a href="" ng-click="broadcaster.setImage(5, '#{image_url('standards/3-5.jpg')}')" 5
-              .title.ng-hidden ng-show="broadcaster.isSet(5)"
-                = t('standards_page.image_broadcaster')[4]
-            li ng-class="{ active: broadcaster.isSet(6) }"
-              a href="" ng-click="broadcaster.setImage(6, '#{image_url('standards/3-6.jpg')}')" 6
-              .title.ng-hidden ng-show="broadcaster.isSet(6)"
-                = t('standards_page.image_broadcaster')[5]
-            li ng-class="{ active: broadcaster.isSet(7) }"
-              a href="" ng-click="broadcaster.setImage(7, '#{image_url('standards/3-7.jpg')}')" 7
-              .title.ng-hidden ng-show="broadcaster.isSet(7)"
-                = t('standards_page.image_broadcaster')[6]
+      = raw @page.content_for(:section3_images)
+
   /! 4
   .row
     .small-12.columns.show-for-small-only
       = raw @page.content_for(:section4)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/4-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/4-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/4-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/4-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section4_images)
 
     .medium-6.columns.show-for-medium-up
       = raw @page.content_for(:section4)
@@ -81,8 +45,7 @@
       = raw @page.content_for(:section5)
 
     .small-12.medium-6.columns.images
-      = link_to image_url('standards/5-1-full.jpg'), class: 'zoom-in' do
-        = image_tag 'standards/5-1.jpg', width: 440, height: 440
+      = raw @page.content_for(:section5_images)
 
   /! 6
   .row
@@ -90,13 +53,7 @@
       = raw @page.content_for(:section6)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/6-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/6-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/6-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/6-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section6_images)
 
     .small-6.columns.show-for-medium-up
       = raw @page.content_for(:section6)
@@ -107,19 +64,7 @@
       = raw @page.content_for(:section7)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-          li
-            = link_to image_url('standards/7-1-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-1.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-2-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-2.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-3-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-3.jpg', width: 440, height: 440
-          li
-            = link_to image_url('standards/7-4-full.jpg'), class: 'zoom-in' do
-              = image_tag 'standards/7-4.jpg', width: 440, height: 440
+      = raw @page.content_for(:section7_images)
 
   /! 9
   .row
@@ -127,13 +72,7 @@
       = raw @page.content_for(:section9)
 
     .small-12.medium-6.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/9-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/9-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/9-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/9-2.jpg', width: 440, height: 440
+      = raw @page.content_for(:section9_images)
 
   /! 10
   .row
@@ -141,19 +80,7 @@
       = raw @page.content_for(:section10)
 
     .small-12.medium-5.columns.images
-      ul.small-block-grid-2
-        li
-          = link_to image_url('standards/10-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-2.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-3-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-3.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/10-4-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/10-4.jpg', width: 440, height: 440
+      = raw @page.content_for(:section10_images)
 
     .medium-6.columns.show-for-medium-up
       = raw @page.content_for(:section10)
@@ -164,8 +91,7 @@
       = raw @page.content_for(:section11)
 
     .small-12.medium-6.columns.images
-      = link_to image_url('standards/11-1-full.jpg'), class: 'zoom-in' do
-        = image_tag 'standards/11-1.jpg', width: 440, height: 440
+      = raw @page.content_for(:section11_images)
 
   /! 12
   .row.last
@@ -173,25 +99,7 @@
       = raw @page.content_for(:section12)
 
     .small-12.medium-6.columns.images
-      ul.small-block-grid-3
-        li
-          = link_to image_url('standards/12-1-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-1.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-2-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-2.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-3-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-3.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-4-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-4.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-5-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-5.jpg', width: 440, height: 440
-        li
-          = link_to image_url('standards/12-6-full.jpg'), class: 'zoom-in' do
-            = image_tag 'standards/12-6.jpg', width: 440, height: 440
+      = raw @page.content_for(:section12_images)
 
     .medium-5.columns.show-for-medium-up
       = raw @page.content_for(:section12)

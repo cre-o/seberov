@@ -4,6 +4,13 @@
   border-radius: 0;
   box-shadow: 0px 2px 0 #888;
 
+  &.open {
+    @media #{$small-only} {
+      position: fixed;
+      top: 0 !important;
+    }
+  }
+
   h2 {
     font-family: $second_font;
     font-size: rem_calc(30);

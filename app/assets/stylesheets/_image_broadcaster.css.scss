@@ -17,6 +17,11 @@
       height: rem(30);
       margin-bottom: rem(4);
 
+      @media #{$small-only} {
+        line-height: rem_calc(22);
+        height: rem(22);
+      }
+
       &.active > a {
         background-color: #5e9472;
       }
@@ -33,6 +38,10 @@
           family: 'Open Sans Condensed', sans-serif;
           size: rem_calc(25);
           weight: bold;
+        }
+
+        @media #{$small-only} {
+          font-size: rem(20)
         }
       }
 

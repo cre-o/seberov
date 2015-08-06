@@ -4,6 +4,10 @@ module ApplicationHelper
     Refinery::Page.find_by_path_or_id(path, id) rescue Refinery::Page.new
   end
 
+  def scale(float)
+    content_for(:scale) { "width=device-width, initial-scale=#{float}" }
+  end
+
   def js_void
     'javascript:void(0)'
   end

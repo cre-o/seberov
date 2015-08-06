@@ -36,13 +36,13 @@
             .subheader #{t 'leave_creadentials', scope: 'popups.mortgage_calculator'}
           .row
             = hidden_field_tag 'unit_id', @apartment.unit_id
-            .small-3.columns
+            .small-12.medium-3.columns
               = text_field_tag 'name', '', placeholder: t('forms.your_name'), required: true, focus: false
-            .small-3.columns
+            .small-12.medium-3.columns
               = phone_field_tag 'phone', '', placeholder: t('forms.phone_number'), required: true
-            .small-3.columns
+            .small-12.medium-3.columns
               = email_field_tag 'email', '', placeholder: t('forms.email'), required: true
-            .small-3.columns
+            .small-12.medium-3.columns
               = submit_tag t('forms.send')
 
 

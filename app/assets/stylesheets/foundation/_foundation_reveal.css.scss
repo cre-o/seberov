@@ -8,6 +8,8 @@
     @media #{$small-only} {
       position: fixed;
       top: 0 !important;
+      overflow-y: scroll;
+      height: 100%;
     }
   }
 

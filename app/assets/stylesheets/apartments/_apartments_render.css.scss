@@ -64,13 +64,27 @@
     }
 
     // Single apartment styles
-    &.floor-2, &.floor-3 {
+    &.floor-2 {
       @include fill-with-apartments(
         $direction: 'left',
         $container-width: em(77),
         $container-height: em(123),
         $start-position: em(1),
         $top-position: 17%,
+        $last-apartment: 7,
+        $apartment1-width: em(67),
+        $apartment2-width: em(63),
+        $apartment3-width: em(64),
+        $apartment7-width: em(80))
+    }
+
+    &.floor-3 {
+      @include fill-with-apartments(
+        $direction: 'left',
+        $container-width: em(77),
+        $container-height: em(120),
+        $start-position: em(1),
+        $top-position: 20%,
         $last-apartment: 7,
         $apartment1-width: em(67),
         $apartment2-width: em(63),
@@ -142,9 +156,9 @@
     &.floor-3 {
       @include fill-with-apartments(
         $container-width: 89px,
-        $container-height: 180px,
+        $container-height: 170px,
         $start-position: 28px,
-        $top-position: 2%,
+        $top-position: 9%,
         $last-apartment: 5,
         $apartment1-width: 97px)
     }

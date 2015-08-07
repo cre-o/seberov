@@ -107,6 +107,10 @@
           height: rem(54);
           left: rem(-55);
           top: rem(20);
+
+          @media #{$small-only} {
+            background: none;
+          }
         }
 
         &.plan {

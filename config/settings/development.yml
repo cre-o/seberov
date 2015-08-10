@@ -1,4 +1,4 @@
 emails:
   default: 'prodej@statekseberov.cz'
   default_from: 'prodej@statekseberov.cz'
-  default_to: 'prague.reactor@gmail.com'
+  default_to: 'prodej@statekseberov.cz'

@@ -41,6 +41,8 @@ module ApartmentsHelper
   def floors_map_image(apartment)
     if @apartment.block == 'c' && @apartment.floor == 1
       image_tag 'apartments/show/1,05-f.jpg'
+    elsif @apartment.block == 'c' && @apartment.floor == 2
+      image_tag 'apartments/show/2.5,3-f.jpg'
     elsif @apartment.floor == 1
       image_tag 'apartments/show/1,2-f.jpg'
     elsif @apartment.floor == 2 && @apartment.total_floors == 2

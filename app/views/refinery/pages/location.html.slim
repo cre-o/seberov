@@ -5,7 +5,7 @@
         legend = t 'location_page.legend'
         .row
           .small-5.columns.active-map
-            ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options"
+            ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options" events="map.events"
               ui-gmap-marker*{'idKey'=>'99', 'coords'=>'map.marker.coords', 'options'=> 'map.marker.options'}
               ui-gmap-marker*{'idKey'=>'map.markers.medicine.id', 'coords'=>'map.markers.medicine.coords', 'icon'=>'map.markers.medicine.icon'}
               ui-gmap-marker*{'ng-repeat'=>'autobus in map.markers.autobus.items', 'idKey'=>'autobus.id', 'coords'=>'autobus.coords', 'icon'=>'map.markers.autobus.icon'}

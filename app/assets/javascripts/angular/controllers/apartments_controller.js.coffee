@@ -70,10 +70,10 @@ angular.module('seberov').controller 'ApartmentsByParametersController', ($scope
     "/#{$scope.locale}" + Routes.refinery_apartments_apartment_path(apartment.id)
 
   $scope.priceFilter = (apartment) ->
-    return (parseInt(apartment.price) > parseInt(a.minPrice) && parseInt(apartment.price) < parseInt(a.maxPrice))
+    return (parseInt(apartment.price) >= parseInt(a.minPrice) && parseInt(apartment.price) <= parseInt(a.maxPrice))
 
   $scope.floorSpaceFilter = (apartment) ->
-    return (parseInt(apartment.apartment_area) > parseInt(a.minFloorSpace) && parseInt(apartment.apartment_area) < parseInt(a.maxFloorSpace))
+    return (parseInt(apartment.apartment_area) >= parseInt(a.minFloorSpace) && parseInt(apartment.apartment_area) <= parseInt(a.maxFloorSpace))
 
   $scope.floorFilter = (apartment) ->
     return (parseInt(apartment.floor) >= parseInt(a.minFloor) && parseInt(apartment.floor) <= parseInt(a.maxFloor))

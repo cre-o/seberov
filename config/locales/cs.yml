@@ -34,7 +34,7 @@ cs:
       count_payment: 'Spočítat hypotéku'
       price_with_dph: 'Cena včetně DPH'
       parking_slot_price: '+parkovací stání'
-      show_parking_plan: 'zobrazit parkovací schému'
+      show_parking_plan: 'zobrazit parkovací schéma'
     add_on:
       h1: Nadstandardy
       p: 'Na vaši žádost jsme schopni provést úpravu libovolné složitosti, objednat atypický nábytek, včetně přípravy individuálního designu interiéru.'

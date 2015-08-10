@@ -31,7 +31,7 @@
               .interactive-map
                 = image_tag 'apartments/active-map/map.png'
                 = image_tag 'pixel.gif', 'data-building' => '{{map.building}}', 'data-floor' => '{{map.floor}}', \
-                  'usemap' => 'apratments-map', id: 'render'
+                  'usemap' => '#apratments-map', id: 'render', width: 499, height: 499
                 map id="apratments-map" name="apratments-map"
                   = render 'apartments_map_areas'
 

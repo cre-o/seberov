@@ -29,6 +29,8 @@
 }
 #content.price-list table thead th {
   font-weight: normal;
+  padding: 10px;
+  font-size: 20px;
 }
 #content.price-list table tbody {
   color:#272425;

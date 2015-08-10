@@ -98,6 +98,10 @@
           span {
             color: $green;
             font-weight: bold;
+
+            @media #{$small-only} {
+              display: block;
+            }
           }
         }
 

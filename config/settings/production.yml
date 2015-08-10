@@ -1,3 +1,4 @@
 emails:
   default: 'prodej@statekseberov.cz'
   callback: 'prodej@statekseberov.cz'
+  default_from: 'prodej@statekseberov.cz'

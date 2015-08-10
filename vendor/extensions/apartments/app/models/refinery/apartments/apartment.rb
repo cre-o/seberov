@@ -13,6 +13,7 @@ module Refinery
       scope :active, -> { where(state: 'active') }
       scope :by_expensiveness, -> { order(price: :desc) }
       scope :by_position, -> { order(position: :asc) }
+      scope :by_unit_id, -> { order(unit_id: :asc) }
 
       scope :block_a, -> { where(block: 'a') }
       scope :block_b, -> { where(block: 'b') }

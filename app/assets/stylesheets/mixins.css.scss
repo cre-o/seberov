@@ -5,29 +5,27 @@
   $xlarge-size: false,
   $no-sides: false) {
 
-  $gutter-size: 0;
-
-  @media #{$small-up} {
-    @if $small-size != false {
-      $gutter-size: $small-size;
-    }
-  }
-
-  @media #{$medium-up} {
-    @if $medium-size != false {
-      $gutter-size: $medium-size;
-    }
-  }
-
-  @media #{$large-up} {
-    @if $large-size != false {
-      $gutter-size: $large-size;
-    }
-  }
-
   %padding {
-    padding-left: rem_calc($gutter-size);
-    padding-right: rem_calc($gutter-size);
+    @media #{$small-up} {
+      @if $small-size != false {
+        padding-left: rem_calc($small-size);
+        padding-right: rem_calc($small-size);
+      }
+    }
+
+    @media #{$medium-up} {
+      @if $medium-size != false {
+        padding-left: rem_calc($medium-size);
+        padding-right: rem_calc($medium-size);
+      }
+    }
+
+    @media #{$large-up} {
+      @if $large-size != false {
+        padding-left: rem_calc($large-size);
+        padding-right: rem_calc($large-size);
+      }
+    }
   }
 
   .row {

@@ -28,10 +28,10 @@
       color: $grey;
 
       @media #{$small-only} {
-        font-size: rem(16);
+        font-size: rem(14);
 
         a {
-          padding-top: rem(24);
+          line-height: rem(40);
         }
       }
     }
@@ -77,5 +77,6 @@
     }
   }
 
-  @include custom-row-gutter(10, 20);
+
+  @include custom-row-gutter(5, 20);
 }

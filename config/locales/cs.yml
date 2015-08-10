@@ -114,7 +114,7 @@ cs:
     building: 'Křídlo'
     block: 'Křídlo'
     layout: 'dispozice'
-    name: 'název'
+    name: 'jméno'
     phone: 'telefon'
     price: 'cena'
     from: 'od'

@@ -115,7 +115,7 @@
         $start-position: 17px,
         $top-position: 25%,
         $last-apartment: 8,
-        $apartment1-width: 65px)
+        $apartment1-width: 66px)
     }
   }
 
@@ -124,43 +124,47 @@
 
     &.floor-1 {
       @include fill-with-apartments(
+        $direction: 'left',
         $container-width: 88px,
         $container-height: 180px,
-        $start-position: 12px,
+        $start-position: 47px,
         $top-position: 2%,
         $last-apartment: 5,
-        $apartment1-width: 97px)
+        $apartment5-width: 102px)
     }
 
     &.floor-2 {
       // row 1
       @include fill-with-apartments(
-        $container-width: 88px,
+        $direction: 'left',
+        $container-width: 89px,
         $container-height: 90px,
-        $start-position: 12px,
+        $start-position: 46px,
         $top-position: 2%,
         $start-from: 1,
         $last-apartment: 5,
-        $apartment1-width: 99px);
+        $apartment5-width: 101px);
       // row 2
       @include fill-with-apartments(
-        $container-width: 88px,
+        $direction: 'left',
+        $container-width: 89px,
         $container-height: 90px,
-        $start-position: 12px,
+        $start-position: 46px,
         $top-position: 45%,
         $start-from: 6,
         $last-apartment: 10,
-        $apartment1-width: 99px);
+        $apartment5-width: 101px);
     }
 
     &.floor-3 {
       @include fill-with-apartments(
+        $direction: 'left',
         $container-width: 89px,
         $container-height: 170px,
         $start-position: 28px,
         $top-position: 9%,
         $last-apartment: 5,
-        $apartment1-width: 97px)
+        $apartment5-width: 97px)
     }
   }
 

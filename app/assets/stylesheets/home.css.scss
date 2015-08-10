@@ -50,9 +50,9 @@
       height: em(40);
 
       @media #{$small-only} {
-        height: em(30);
+        height: em(51);
         font-size: em(14);
-        line-height: em-calc(30);
+        line-height: em-calc(51);
       }
 
       &:after {
@@ -69,11 +69,11 @@
         border-left: em(20) solid rgba($green, 0.9);
 
         @media #{$small-only} {
-          border-top: em(16) solid transparent;
-          border-bottom: em(16) solid transparent;
-          border-left: em(16) solid rgba($green, 0.9);
+          border-top: em(26) solid transparent;
+          border-bottom: em(26) solid transparent;
+          border-left: em(26) solid rgba($green, 0.9);
 
-          right: em(-15);
+          right: em(-25);
         }
       }
 
@@ -88,7 +88,7 @@
         height: em(40);
 
         @media #{$small-only} {
-          height: em(30);
+          height: em(51);
         }
       }
     }

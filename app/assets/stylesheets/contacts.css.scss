@@ -26,6 +26,14 @@
       font-family: 'Open Sans', sans-serif;
       font-size: rem_calc(14);
       color: $grey;
+
+      @media #{$small-only} {
+        font-size: rem(16);
+
+        a {
+          padding-top: rem(24);
+        }
+      }
     }
 
     .__contact-info {
@@ -35,6 +43,10 @@
 
   .authors {
     margin-bottom: rem_calc(50);
+
+    [class*="block-grid-"] > li {
+      padding: 0 1.625rem 1.25rem;
+    }
 
     a {
       font-family: 'Open Sans', sans-serif;

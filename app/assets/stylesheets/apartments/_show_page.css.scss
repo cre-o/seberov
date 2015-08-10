@@ -66,6 +66,32 @@
       }
 
       &.c {
+
+        .w {
+          top: 2px;
+          right: 45%;
+          left: initial;
+        }
+
+        .n {
+          left: initial;
+          right: 5px;
+          top: 41%;
+        }
+
+        .e {
+          right: 7px;
+          bottom: 2px;
+          left: 48%;
+          top: initial;
+        }
+
+        .s {
+          bottom: 41%;
+          left: 8px;
+        }
+
+
         transform: rotate(-10deg);
       }
     }
@@ -229,7 +255,7 @@
       }
 
       &.b01, &.b09 {
-        right: 50px;
+        left: 0;
       }
 
       &.b04 {
@@ -257,11 +283,11 @@
         bottom: 50px;
       }
 
-      &.c02, &.c10 {
+      &.c02, &.c03 {
         bottom: 75px;
       }
 
-      &.c01, &.c03 {
+      &.c01, &.c10 {
         bottom: 100px;
       }
     }

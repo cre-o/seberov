@@ -17,8 +17,12 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
       options:
         labelContent: 'Statek Seberov'
     options:
-      disableDefaultUI: true
+      #disableDefaultUI: true
+      scrollwheel: false
+      streetViewControl: false
       draggable: $scope.mapDraggable
+      zoomControlOptions:
+        style: 3
     zoom: 13
 
   $scope.activateMap = ->

@@ -105,3 +105,6 @@ capybara-*html
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
 
+# Application hosting specific
+vendor/external-gems
+

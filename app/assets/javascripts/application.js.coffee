@@ -21,7 +21,6 @@
 #= require angular
 #= require angular-scroll
 #= require angular-google-maps
-#= require angular/application
 #= require magnific-popup
 #= require utility
 #= require home

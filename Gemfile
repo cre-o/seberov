@@ -59,7 +59,9 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
 # Use Unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
+# Use Puma as the app server
+gem 'puma'
 
 gem 'semantic-ui-sass'
 

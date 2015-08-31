@@ -66,14 +66,14 @@ cs:
 
   location_page:
     legend: 'Statek Šeberov, Praha 4, K Šeberovu 508 '
-    old_photo_title: 'Kolorovaná fotografie statu z 18. století'
+    old_photo_title: 'Kolorovaná fotografie statku z 18. století'
     new_photo_title: 'Aktuální fotografie'
     icons_text:
       medicine: 'Okresní nemocnice a lékárna'
       autobus: 'Autobusová zastávka přímo u domu'
       relax: 'Centrum rekreace a volného času'
       school: 'Základní a střední školy'
-      administration: 'Městská administrace'
+      administration: 'Městský úřad'
       police: 'Policie'
       library: 'Knihovna'
       playground: 'Dětské hřiště'

@@ -1,7 +1,7 @@
 .row
   .small-6.medium-3.columns
     .logo
-      = link_to home_path_h, title: 'На главную' do
+      = link_to home_path_h do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
         = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
 

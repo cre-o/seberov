@@ -17,10 +17,11 @@
           .small-12.columns
             section id=(letter)
               header
-                .small-5.columns
-                  h1.left.upcase = letter
-                .small-7.text-right.columns
-                  = image_tag "apartments/by-price-list/building-#{letter}.jpg"
+                .row
+                  .small-5.columns
+                    h1.left.upcase = letter
+                  .small-7.text-right.columns
+                    = image_tag "apartments/by-price-list/building-#{letter}.jpg"
 
               .content
                 = render partial: 'price_list_table', locals: { block: letter }

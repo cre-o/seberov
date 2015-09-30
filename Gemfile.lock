@@ -42,13 +42,6 @@ GIT
       dragonfly (~> 1.0.0)
       refinerycms-core (= 3.0.0)
 
-PATH
-  remote: vendor/extensions
-  specs:
-    refinerycms-apartments (1.0)
-      acts_as_indexed (~> 0.8.0)
-      refinerycms-core (~> 3.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,7 +189,6 @@ GEM
     json (1.8.3)
     lazyload-rails (0.3.1)
       nokogiri (~> 1.5)
-    libv8 (3.16.14.11)
     listen (3.0.1)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -268,7 +260,6 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
-    ref (1.0.5)
     refinerycms-acts-as-indexed (2.0.1)
       acts_as_indexed (~> 0.8.0)
       decorators (~> 2.0.0)
@@ -323,9 +314,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
     temple (0.7.6)
-    therubyracer (0.12.2)
-      libv8 (~> 3.16.14.0)
-      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -382,7 +370,6 @@ DEPENDENCIES
   rb-fsevent
   refinerycms!
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
-  refinerycms-apartments!
   refinerycms-i18n
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   rename
@@ -393,8 +380,10 @@ DEPENDENCIES
   slim-rails
   spring
   sqlite3
-  therubyracer
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   wicked_pdf
   wkhtmltopdf-binary
+
+BUNDLED WITH
+   1.10.6

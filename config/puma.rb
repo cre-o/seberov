@@ -2,7 +2,7 @@
 workers 2
 
 # Min and Max threads per worker
-threads 0, 4
+threads 1, 5
 
 app_dir = File.expand_path("../..", __FILE__)
 shared_dir = '/root/www/seberov'
@@ -10,6 +10,8 @@ shared_dir = '/root/www/seberov'
 # Default to production
 rails_env = ENV['RAILS_ENV'] || "production"
 environment rails_env
+# Preload app in memory
+preload_app!
 
 # Set up socket location
 bind "unix://#{shared_dir}/tmp/sockets/puma.sock"

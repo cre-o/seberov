@@ -1,9 +1,3 @@
-#= require_self
-#= require angular/controllers/application_controller
-#= require angular/controllers/home_controller
-#= require angular/controllers/location_controller
-#= require angular/controllers/apartments_controller
-
 # Initialisation
 app = angular.module('seberov', ['duScroll', 'uiGmapgoogle-maps'])
 

@@ -31,19 +31,19 @@ angular.module('seberov').controller 'HomeController', ($scope, uiGmapGoogleMapA
   $scope.slider = multiSliderService
 
   #
-  $scope.totalApartmentsPlural = (lang) ->
+  $scope.totalApartmentsPlural = (word) ->
     total = $scope.totalApartments
 
-    if lang == 'en'
+    if word == 'apartment'
       if _.includes([1,21,31], $scope.totalApartments) then "#{total} apartment" else "#{total} apartments"
-    else if lang == 'ru'
+    else if word == 'квартира'
       if _.includes([1,21,31], $scope.totalApartments)
         return "#{total} квартира"
       else if _.includes([2,3,4,22,24], $scope.totalApartments)
         return "#{total} квартиры"
       else if _.includes([5..20], $scope.totalApartments)
         return "#{total} квартир"
-    else if lang == 'cs'
+    else if word == 'byt'
       if _.includes([1,21,31], $scope.totalApartments) then "#{total} byt" else "#{total} bytů"
 
   return $scope

@@ -16,9 +16,8 @@ html lang="#{::I18n.locale}" ng-app="seberov"
       footer
         = render 'refinery/footer'
 
-    = javascript_include_tag 'application'
-    = javascript_include_tag 'angular/application'
-    = javascript_include_tag 'modernizr-min'
+      = render 'yandex_counter'
+      = render 'google_counter'
 
-    = render 'yandex_counter'
-    = render 'google_counter'
+  = javascript_include_tag 'application'
+  = javascript_include_tag 'modernizr-min'

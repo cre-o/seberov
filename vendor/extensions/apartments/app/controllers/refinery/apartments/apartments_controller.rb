@@ -7,10 +7,12 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @apartment in the line below:
-        respond_to do |format|
-          format.html { present(@page) }
-          format.json { render json: @apartments, root: false }
-        end
+        #respond_to do |format|
+        #  format.html { present(@page) }
+        #  format.json { render json: @apartments, root: false }
+        #end
+        redirect_to refinery.by_parameters_apartments_apartments_path
+        #return false
       end
 
       def show

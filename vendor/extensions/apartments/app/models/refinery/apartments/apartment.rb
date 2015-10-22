@@ -40,6 +40,7 @@ module Refinery
       def downcase
         self.block = block.downcase
       end
+
     end
   end
 end

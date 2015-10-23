@@ -274,7 +274,7 @@ header.application {
 // Mobile menu
 .ui.vertical.menu {
   .item {
-    font-size: rem-calc(18);
+    font-size: rem-calc(22);
   }
 
   .item.lang {
@@ -357,6 +357,10 @@ footer {
     margin-top: rem-calc(20);
     font-weight: 300;
     line-height: rem-calc(24);
+
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
   }
 
   .investment-fix {
@@ -381,6 +385,14 @@ footer {
         width: rem-calc(140);
       }
     }
+
+    h6 {
+
+      @media #{$small-only} {
+        font-size: rem-calc(16);
+      }
+
+    }
   }
 
   .contacts {
@@ -396,18 +408,27 @@ footer {
         clear: both;
       }
 
-      span {
-        font-weight: bold;
-        padding-right: rem-calc(10);
-        display: inline-block;
-        float: left;
-      }
-
       a {
-        text-decoration: underline;
+        font-weight: bold;
         font-size: rem-calc(12);
         display: inline-block;
         float: left;
+        padding-right: rem-calc(10);
+
+        &.callback {
+          font-weight: normal;
+          text-decoration: underline;
+        }
+
+        @media #{$small-only} {
+          font-size: rem-calc(16);
+        }
+      }
+    }
+
+    a {
+      @media #{$small-only} {
+        font-size: rem-calc(16);
       }
     }
 

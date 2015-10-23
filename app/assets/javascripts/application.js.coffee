@@ -33,10 +33,17 @@
 #= require semantic-ui
 #= require semantic-ui/transition
 #= require location
+#= require standards
 
 jQuery ->
 
-  $(document).foundation()
+  $(document).foundation({
+    accordion:
+      content_class: 'content'
+      active_class: 'active'
+      multi_expand: true
+      toggleable: true
+  })
 
   # Lazy load images (not load before user can see it)
   $('img.lazy').lazyload()

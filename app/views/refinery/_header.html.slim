@@ -3,7 +3,8 @@
     .logo
       = link_to home_path_h do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
-        = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
+        .hide-for-small-only
+          = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
 
   .small-6.large-6.columns.upcase.show-for-medium-up
     = render 'refinery/nav'
@@ -28,7 +29,7 @@
           = link_to "tel:#{Settings.phones.default_short_dashed}" do
             = Settings.phones.default_short
 
-          = link_to "viber://#{Settings.phones.default_short_dashed}", class: 'viber small-4 columns right' do
+          = link_to "viber:#{Settings.phones.default_short_dashed}", class: 'viber small-4 columns right' do
             = image_tag 'icons/viber-logo.png', width: 60, height: 28
 
         li.skype.upcase.

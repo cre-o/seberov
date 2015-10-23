@@ -28,13 +28,13 @@ jQuery ->
   if $('.js-multi-slider').length > 0
     $('.js-multi-slider.orbit').foundation
       orbit:
-        animation: 'slide',
+        #animation: 'slide',
         next_on_click: true,
         animation_speed: 500,
-        navigation_arrows: false,
+        navigation_arrows: true,
         slide_number: false,
-        next_class: 'orbit-next-bottom',
-        prev_class: 'orbit-prev-bottom',
+        #next_class: 'orbit-next-bottom',
+        #prev_class: 'orbit-prev-bottom',
         caption_class: 'orbit-caption-bottom',
         bullets: false,
         circular: true,

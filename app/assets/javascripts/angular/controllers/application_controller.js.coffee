@@ -6,7 +6,7 @@ angular.module('seberov').controller 'ApplicationController', ($scope, $window, 
   $scope.locale = gon.locale
 
   # <== Fixed header
-  $scope.fixedHeader = Foundation.utils.is_small_only()
+  $scope.fixedHeader = false
 
   # Main page scroll feature
   $document.on 'scroll', ->

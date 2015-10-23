@@ -12,15 +12,15 @@
       .orbit-caption-bottom
         = t(translation_path)[t]
         a href="#" class="orbit-prev-bottom"
-          .fa.fa-1.z5x.fa-chevron-left
+          / .fa.fa-1.z5x.fa-chevron-left
         a href="#" class="orbit-next-bottom"
-          .fa.fa-1.z5x.fa-chevron-right
+          / .fa.fa-1.z5x.fa-chevron-right
 - else
   li
     = image_tag "/#{image_path("#{img_path}-xl.jpg")}", lazy: true, class: 'lazy'
     .orbit-caption-bottom
       = description
       a href="#" class="orbit-prev-bottom"
-        .fa.fa-1.z5x.fa-chevron-left
+        / .fa.fa-1.z5x.fa-chevron-left
       a href="#" class="orbit-next-bottom"
-        .fa.fa-1.z5x.fa-chevron-right
+        / .fa.fa-1.z5x.fa-chevron-right

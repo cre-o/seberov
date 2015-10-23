@@ -18,7 +18,7 @@
                   .small-2.columns.text-left
                     label for="price-min" = t('forms.from')
                   .small-4.columns.input data-content-after=(t('defaults.currency_sign'))
-                    = text_field_tag :price_min, '0', id: 'price-min', 'ng-model' => 'a.minPrice', 'ng-init' => "a.minPrice = 0"
+                    = number_field_tag :price_min, '',  id: 'price-min', 'ng-model' => 'a.minPrice', 'ng-init' => "a.minPrice = #{@apartments_decorator.minimal_price}"
                   .small-2.columns.text-center
                     label for="price-max" = t('forms.to')
                   .small-4.columns.left.input data-content-after=(t('defaults.currency_sign'))
@@ -26,7 +26,7 @@
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-12.columns
-                    #appartments-price-slider data-min-value="0" data-max-value=(@apartments_decorator.most_expensive_price)
+                    #appartments-price-slider data-min-value=(@apartments_decorator.minimal_price) data-max-value=(@apartments_decorator.most_expensive_price)
 
               // Floorspace
               .small-12.medium-4.columns

@@ -1,4 +1,11 @@
 jQuery ->
+  # Important redirect
+  # Redirect on price list page if this is mobile phone
+  if $('#l-apartments.__parameters-page').size() > 0 && Foundation.utils.is_small_only()
+    window.location.replace Routes.refinery_by_price_list_apartments_apartments_path()
+    return false
+
+
   #
   # GET apartments/by-parameters
   # Search by parameters page
@@ -60,5 +67,4 @@ jQuery ->
     ).on "ajax:error", (e, data, xhr, status, error) ->
       $("#application-form .errors").removeClass('hide')
       $("#application-form .errors").append data.responseJSON.errors.join(',')
-
 

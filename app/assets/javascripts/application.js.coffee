@@ -21,12 +21,12 @@
 #= require angular
 #= require angular-scroll
 #= require angular-google-maps
-#= require magnific-popup
 #= require angular/application
 #= require angular/controllers/application_controller
 #= require angular/controllers/home_controller
 #= require angular/controllers/location_controller
 #= require angular/controllers/apartments_controller
+#= require magnific-popup
 #= require utility
 #= require home
 #= require apartments

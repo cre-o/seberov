@@ -22,10 +22,6 @@
 #= require angular-scroll
 #= require angular-google-maps
 #= require angular/application
-#= require angular/controllers/application_controller
-#= require angular/controllers/home_controller
-#= require angular/controllers/location_controller
-#= require angular/controllers/apartments_controller
 #= require magnific-popup
 #= require utility
 #= require home
@@ -64,5 +60,7 @@ jQuery ->
 
   # Menu fix for mobile devises
   if Foundation.utils.is_small_only()
-    $('.sidebar a[href="/apartments"], .sidebar a[href="/ru/apartments"], .sidebar a[href="/en/apartments"]').each ->
-      $(@).prop('href', $(@).prop('href').replace('apartments', 'apartments/by-parameters'))
+    $('.sidebar a[href="/apartments/by-parameters"], .sidebar a[href="/ru/apartments/by-parameters"],
+      .sidebar a[href="/en/apartments/by-parameters"]').each ->
+      $(@).prop('href', $(@).prop('href').replace('apartments/by-parameters', 'apartments/by-price-list'))
+

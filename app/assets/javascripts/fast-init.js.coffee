@@ -1,14 +1,20 @@
+#= require jquery
+#= require jquery_ujs
+#= require lazyload
 #= require foundation/foundation
+#= require foundation/foundation.interchange
+#= require foundation/foundation.orbit
 #= require foundation/foundation.slider
 #= require foundation/foundation.accordion
 #= require foundation/foundation.alert
 #= require foundation/foundation.clearing
-#= require foundation/foundation.interchange
-#= require foundation/foundation.orbit
 #= require foundation/foundation.offcanvas
 #= require foundation/foundation.reveal
 
 jQuery ->
+
+  # Lazy load images (not load before user can see it)
+  $('img.lazy').lazyload()
 
   # Main big slider
   if $('#main-orbit').length > 0
@@ -41,4 +47,12 @@ jQuery ->
         timer: false,
         swipe: true
 
+
+  $(document).foundation({
+    accordion:
+      content_class: 'content'
+      active_class: 'active'
+      multi_expand: true
+      toggleable: true
+  })
 

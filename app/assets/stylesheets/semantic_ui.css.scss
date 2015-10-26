@@ -105,3 +105,11 @@ $radius: 30px;
 .circular image {
   @extend .circular.image;
 }
+
+.view-ui.item {
+  z-index: 999;
+}
+
+.js-sidebar-toggle {
+  position: fixed;
+}

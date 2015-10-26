@@ -5,8 +5,19 @@ html lang="#{::I18n.locale}" ng-app="seberov"
     = render '/refinery/site_bar', head: false
     // Passing server data into JS
     = Gon::Base.render_data({camel_case: true})
-  body ng-controller="ApplicationController as app" ng-init="app.development = false" ng-class="{ development: app.development == true }"
-    .inner-wrap.pusher id="#{canonical_id @page}"
+    = javascript_include_tag 'fast-init'
+  body.pusher ng-controller="ApplicationController as app" ng-init="app.development = false" ng-class="{ development: app.development == true }"
+    .ui.js-sidebar.right.vertical.labeled.icon.sidebar.menu.show-for-small-only
+      = Refinery::Pages::SidebarPresenter.new(refinery_menu_pages, self).to_html
+      / Languages
+      .langs
+        a.item.lang href="#{change_lang_hack('cs')}"
+          = image_tag 'components/languages/cs.png'
+        a.item.lang href="#{change_lang_hack('en')}"
+          = image_tag 'components/languages/en.png'
+        a.item.lang href="#{change_lang_hack('ru')}"
+          = image_tag 'components/languages/ru.png'
+    .inner-wrap id="#{canonical_id @page}"
       header.application ng-class="{ fixed: fixedHeader == true }"
         = render 'refinery/header'
       section#flash

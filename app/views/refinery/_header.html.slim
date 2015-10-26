@@ -45,14 +45,3 @@
     .view-ui.item.js-sidebar-toggle.right
       i.fa.fa-lg.fa-bars
 
-  .ui.js-sidebar.right.vertical.labeled.icon.sidebar.menu.show-for-small-only
-    = Refinery::Pages::SidebarPresenter.new(refinery_menu_pages, self).to_html
-    / Languages
-    .langs
-      a.item.lang href="#{change_lang_hack('cs')}"
-        = image_tag 'components/languages/cs.png'
-      a.item.lang href="#{change_lang_hack('en')}"
-        = image_tag 'components/languages/en.png'
-      a.item.lang href="#{change_lang_hack('ru')}"
-        = image_tag 'components/languages/ru.png'
-

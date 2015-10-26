@@ -7,6 +7,11 @@ module Refinery
         .last.object.price
       end
 
+      def min_floor_space
+        sort_by { |obj| obj.apartment_area.to_i }
+        .first.object.apartment_area
+      end
+
       def minimal_price
         sort_by { |obj| obj.price.to_i }
         .first.object.price

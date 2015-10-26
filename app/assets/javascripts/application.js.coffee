@@ -9,40 +9,24 @@
 #
 # Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 # about supported directives.
-#! turbolinks
 #
-#= require jquery
-#= require jquery_ujs
 #= require lodash
-#= require lazyload
 #= require jquery.nouislider.all.min
 #= require js-routes
-#= require foundation-init
 #= require angular
 #= require angular-scroll
 #= require angular-google-maps
-#= require angular/application
+#= require angular/app
 #= require magnific-popup
 #= require utility
 #= require home
 #= require apartments
-#= require semantic-ui
+#= require semantic-ui/sidebar
 #= require semantic-ui/transition
 #= require location
 #= require standards
 
 jQuery ->
-
-  $(document).foundation({
-    accordion:
-      content_class: 'content'
-      active_class: 'active'
-      multi_expand: true
-      toggleable: true
-  })
-
-  # Lazy load images (not load before user can see it)
-  $('img.lazy').lazyload()
 
   # MagnificPopup for enlarge images
   $('.zoom-in').magnificPopup({type:'image'})

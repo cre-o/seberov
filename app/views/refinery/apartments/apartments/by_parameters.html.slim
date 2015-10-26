@@ -38,15 +38,15 @@
                   .small-2.columns.text-left
                     label for="foorspace-min" = t('forms.from')
                   .small-4.columns.input data-content-after=(t('defaults.square_sign'))
-                    = number_field_tag :floorspace_min, '0', id: 'floorspace-min', 'ng-model' => 'a.minFloorSpace', 'ng-init' => "a.minFloorSpace = 0"
+                    = number_field_tag :floorspace_min, '', id: 'floorspace-min', 'ng-model' => 'a.minFloorSpace', 'ng-init' => "a.minFloorSpace = #{@apartments_decorator.min_floor_space}"
                   .small-2.columns.text-center
                     label for="floorspace-max" = t('forms.to')
                   .small-4.columns.input data-content-after=(t('defaults.square_sign'))
-                    = number_field_tag :floorspace_max, '0', id: 'floorspace-max', 'ng-model' => 'a.maxFloorSpace', 'ng-init' => "a.maxFloorSpace = #{@apartments_decorator.max_floor_space}"
+                    = number_field_tag :floorspace_max, '', id: 'floorspace-max', 'ng-model' => 'a.maxFloorSpace', 'ng-init' => "a.maxFloorSpace = #{@apartments_decorator.max_floor_space}"
                 .row.collapse
                   // Minimum price and maximum price gets from database
                   .small-.columns
-                    #appartments-floorspace-slider data-min-value="0" data-max-value=(@apartments_decorator.max_floor_space)
+                    #appartments-floorspace-slider data-min-value=(@apartments_decorator.min_floor_space) data-max-value=(@apartments_decorator.max_floor_space)
 
               // Floor
               .small-12.medium-4.columns

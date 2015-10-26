@@ -1,4 +1,4 @@
-footer
+footer class=(content_for?(:scale) ? 'scaled' : '')
   .row.collapse.fluid.container
     .small-4.medium-3.columns
       .small-logo.show-for-medium-up
@@ -42,7 +42,7 @@ footer
         .show-for-small-only.small-contacts
 
           .small-12.columns
-            = link_to "viber:#{Settings.phones.default_short_dashed}" do
+            = link_to "tel:#{Settings.phones.default_short_dashed}" do
                 i.fa.fa-phone.fa-lg
                 = t 'footer.call_on_viber'
 

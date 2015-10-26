@@ -291,6 +291,38 @@ footer {
     list-style-type: none;
   }
 
+  &.scaled {
+    $scaled-bonus: 5;
+
+    .container {
+      a {
+        @media #{$small-only} {
+          font-size: rem-calc(16 + $scaled-bonus);
+        }
+      }
+    }
+
+    p {
+      @media #{$small-only} {
+        font-size: rem-calc(17 + $scaled-bonus);
+      }
+    }
+
+    a {
+      @media #{$small-only} {
+        font-size: rem-calc(18 + $scaled-bonus);
+      }
+    }
+
+    .investment {
+      h6 {
+        @media #{$small-only} {
+          font-size: rem-calc(18 + $scaled-bonus);
+        }
+      }
+    }
+  }
+
   // Informational container
   .container {
     background-color: $green;
@@ -462,7 +494,7 @@ footer {
   .madeby {
     background-color: $dark_green2;
     color: $white;
-    font-size: rem-calc(12);
+    font-size: rem-calc(12) !important;
     line-height: rem-calc(25);
     padding-bottom: rem-calc(3);
 
@@ -475,6 +507,7 @@ footer {
       padding-left: rem-calc(5);
       font-weight: 300;
       text-decoration: underline;
+      font-size: rem-calc(12);
     }
   }
 }

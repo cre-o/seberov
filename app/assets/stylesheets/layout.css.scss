@@ -300,7 +300,11 @@ footer {
 
     a {
       color: $white;
-      font-size: rem-calc(14)
+      font-size: rem-calc(14);
+
+      @media #{$small-only} {
+        font-size: rem-calc(16);
+      }
     }
 
     h6 {
@@ -359,7 +363,7 @@ footer {
     line-height: rem-calc(24);
 
     @media #{$small-only} {
-      font-size: rem-calc(16);
+      font-size: rem-calc(17);
     }
   }
 
@@ -389,7 +393,7 @@ footer {
     h6 {
 
       @media #{$small-only} {
-        font-size: rem-calc(16);
+        font-size: rem-calc(18);
       }
 
     }
@@ -421,14 +425,14 @@ footer {
         }
 
         @media #{$small-only} {
-          font-size: rem-calc(16);
+          font-size: rem-calc(18);
         }
       }
     }
 
     a {
       @media #{$small-only} {
-        font-size: rem-calc(16);
+        font-size: rem-calc(18);
       }
     }
 

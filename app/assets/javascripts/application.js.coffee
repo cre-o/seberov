@@ -40,7 +40,7 @@ jQuery ->
       gallery: enabled: true
 
   # Sidebar feature
-  $('.js-sidebar').sidebar('attach events', '.js-sidebar-toggle')
+  $('.js-sidebar').sidebar('attach events', '.js-sidebar-toggle', 'show')
 
   # Menu fix for mobile devises
   if Foundation.utils.is_small_only()

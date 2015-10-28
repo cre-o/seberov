@@ -3,8 +3,7 @@
     .logo
       = link_to home_path_h do
         = image_tag 'logo.png', width: 217, height: 130, :'ng-show' => 'fixedHeader == false'
-        .hide-for-small-only
-          = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide', :'ng-show' => 'fixedHeader == true'
+      = image_tag 'logo-fixed.png', width: 217, height: 58, class: 'ng-hide hide-for-small-only', :'ng-show' => 'fixedHeader == true'
 
   .small-6.large-6.columns.upcase.show-for-medium-up
     = render 'refinery/nav'

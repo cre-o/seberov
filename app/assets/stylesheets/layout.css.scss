@@ -279,6 +279,7 @@ header.application {
 
 // Mobile menu
 .ui.vertical.menu {
+
   .item {
     font-size: rem-calc(22);
   }
@@ -295,38 +296,6 @@ footer {
 
   li {
     list-style-type: none;
-  }
-
-  &.scaled {
-    $scaled-bonus: 5;
-
-    .container {
-      a {
-        @media #{$small-only} {
-          font-size: rem-calc(16 + $scaled-bonus);
-        }
-      }
-    }
-
-    p {
-      @media #{$small-only} {
-        font-size: rem-calc(17 + $scaled-bonus);
-      }
-    }
-
-    a {
-      @media #{$small-only} {
-        font-size: rem-calc(18 + $scaled-bonus);
-      }
-    }
-
-    .investment {
-      h6 {
-        @media #{$small-only} {
-          font-size: rem-calc(18 + $scaled-bonus);
-        }
-      }
-    }
   }
 
   // Informational container

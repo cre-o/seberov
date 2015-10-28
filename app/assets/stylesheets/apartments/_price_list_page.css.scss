@@ -32,6 +32,10 @@
     position: relative;
     margin-bottom: rem-calc(10);
 
+    @media #{$small-only} {
+      font-size: rem-calc(12);
+    }
+
     thead {
       padding-top: rem-calc(20);
       padding-bottom: rem-calc(15);
@@ -44,7 +48,8 @@
 
         @media #{$small-only} {
           padding: rem(8);
-          font-size: rem-calc(14);
+          font-size: rem-calc(10);
+          line-height: rem-calc(20);
         }
       }
     }

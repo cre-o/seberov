@@ -28,7 +28,7 @@ cs:
     floor_2_3: "2+3 patro"
     galerie: 'galerie'
     sign_up_to_see: 'Přihlaste se na prohlídku bytu:'
-    sign_up_to_see_advice: 'Nechte své kontakty a my vás co nejdříve budeme kontaktovat'
+    sign_up_to_see_advice: 'Zanechte zde své kontakty a my Vás budeme kontaktovat'
     download_pdf: 'Stáhnout katalogový list'
     calculator:
       count_payment: 'Spočítat hypotéku'
@@ -153,7 +153,7 @@ cs:
       subheader: 'Co nejdříve zavoláme vám zpět'
   footer:
     order_callback: 'objednat zpětné volání'
-    call_on_viber: Vyzývá Viber
+    call_on_viber: Volat
   controller:
     callback_mail_send: 'Co nejdříve zavoláme vám zpět!'
     callback_mail_send_error: 'Při odesílání zpětné volání došlo k chybě'
@@ -230,7 +230,7 @@ cs:
         - Za asistence makléře proběhne v bance podpis dokumentů
         - Získáváte hypoteční úvěr
       get_loan: 'Získat hypoteční úvěr'
-      leave_creadentials: 'Nechte prosim své kontakty a my Vás co nejdříve budeme kontaktovat.'
+      leave_creadentials: 'Zanechte zde své kontakty a my Vás budeme kontaktovat.'
 
   mailers:
     callback_subject: 'CallBack request from statekseberov website'

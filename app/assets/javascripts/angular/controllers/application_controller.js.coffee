@@ -9,7 +9,11 @@ angular.module('seberov').controller 'ApplicationController', ($scope, $window, 
   $scope.fixedHeader = false
 
   # Main page scroll feature
-  $document.on 'scroll', ->
+  $(window).on 'scroll', ->
+    $scope.fixedHeader = true
+    return $scope.$apply()
+
+  $(window).on 'touchmove', ->
     $scope.fixedHeader = true
     return $scope.$apply()
 

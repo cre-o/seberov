@@ -153,7 +153,7 @@ en:
       subheader: 'and our manager will call you shortly'
   footer:
     order_callback: 'order callback'
-    call_on_viber: Call on viber
+    call_on_viber: Call
   controller:
     callback_mail_send: 'Thank you, We will call you shortly !'
     callback_mail_send_error: 'An error occurred when order call back'

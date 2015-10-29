@@ -27,7 +27,7 @@ cs:
     floor_3: "3 patro"
     floor_2_3: "2+3 patro"
     galerie: 'galerie'
-    sign_up_to_see: 'Přihlaste se na prohlídku bytu:'
+    sign_up_to_see: 'Chci si objednat prohlídku bytu:'
     sign_up_to_see_advice: 'Zanechte zde své kontakty a my Vás budeme kontaktovat'
     download_pdf: 'Stáhnout katalogový list'
     calculator:

@@ -2,6 +2,11 @@
 .row {
   &.fluid {
     @include grid-row($behavior: nest-collapse);
+
+    @media #{$xxlarge-up} {
+      margin: 0 auto;
+      max-width: 75rem !important;
+    }
   }
 }
 
